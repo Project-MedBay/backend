@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
 @Entity
 @Builder
@@ -14,16 +15,12 @@ public class Therapy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String therapyCode;
-    private String description;
+    @OneToOne
+    private TherapyType therapyType;
 
-    @ManyToOne
-    @JoinColumn(name = "required_specialization_id")
-    private Specialization requiredSpecialization;
+    @OneToMany(mappedBy = "therapy")
+    List<Appointment> appointments;
 
-    @ManyToOne
-    @JoinColumn(name = "required_equipment_id")
-    private Equipment requiredEquipment;
 
 
 }

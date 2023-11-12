@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 @Getter
 @ToString
-public class CreateUserRequest {
+public class CreatePatientRequest {
 
     private String email;
     private String password;

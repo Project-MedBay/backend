@@ -1,6 +1,6 @@
 package com.medbay.controller;
 
-import com.medbay.domain.request.CreateUserRequest;
+import com.medbay.domain.request.CreatePatientRequest;
 import com.medbay.domain.request.LoginRequest;
 import com.medbay.service.SecurityService;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +20,7 @@ public class SecurityController {
     private final SecurityService securityService;
 
     @PostMapping("/register")
-    public ResponseEntity<Void> register(@RequestBody CreateUserRequest request) {
+    public ResponseEntity<Void> register(@RequestBody CreatePatientRequest request) {
         return securityService.register(request);
     }
 

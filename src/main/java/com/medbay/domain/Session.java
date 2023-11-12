@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import org.hibernate.mapping.ToOne;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Builder
@@ -15,15 +18,14 @@ public class Session {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "appointment_id")
+    @OneToOne(mappedBy = "session")
     private Appointment appointment;
 
     @ManyToOne
-    @JoinColumn(name = "staff_id")
-    private User staff;
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
 
     private String feedback;
-    private String dateTime;
+    private LocalDateTime dateTime;
 
 }

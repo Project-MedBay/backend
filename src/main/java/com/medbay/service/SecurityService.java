@@ -1,10 +1,10 @@
 package com.medbay.service;
 
-import com.medbay.domain.PatientDetails;
+import com.medbay.domain.Patient;
 import com.medbay.domain.User;
-import com.medbay.domain.request.CreateUserRequest;
+import com.medbay.domain.request.CreatePatientRequest;
 import com.medbay.domain.request.LoginRequest;
-import com.medbay.repository.PatientDetailsRepository;
+import com.medbay.repository.PatientRepository;
 import com.medbay.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import static com.medbay.domain.enums.Role.ROLE_PATIENT;
@@ -27,39 +28,28 @@ public class SecurityService {
     private final BCryptPasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
-    private final PatientDetailsRepository patientDetailsRepository;
+    private final PatientRepository patientRepository;
 
-    public ResponseEntity<Void> register(CreateUserRequest request) {
+    public ResponseEntity<Void> register(CreatePatientRequest request) {
 
         if(userRepository.existsByEmail(request.getEmail())) {
             return ResponseEntity.badRequest().build();
         }
 
-        User user = User.builder()
-                .email(request.getEmail())
-                .password(passwordEncoder.encode(request.getPassword()))
+        Patient patient = Patient.builder()
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
+                .email(request.getEmail())
+                .password(passwordEncoder.encode(request.getPassword()))
+                .address(request.getAddress())
+                .MBO(request.getMBO())
+                .appointments(new ArrayList<>())
+                .dateOfBirth(request.getDateOfBirth())
                 .active(true)
                 .role(ROLE_PATIENT)
                 .build();
 
-        user = userRepository.save(user);
-
-        PatientDetails patientDetails = PatientDetails.builder()
-                .address(request.getAddress())
-                .MBO(request.getMBO())
-                .dateOfBirth(request.getDateOfBirth())
-                .phoneNumber(request.getPhoneNumber())
-                .user(user)
-                .build();
-
-        patientDetailsRepository.save(patientDetails);
-
-        user.setPatientDetails(patientDetails);
-
-        userRepository.save(user);
-
+        userRepository.save(patient);
         return ResponseEntity.ok().build();
     }
 
