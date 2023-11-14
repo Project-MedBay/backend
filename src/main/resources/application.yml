@@ -1,4 +1,7 @@
 spring:
+  mvc:
+    servlet:
+      path: /api
   datasource:
     url: jdbc:postgresql://ec2-34-250-252-161.eu-west-1.compute.amazonaws.com:5432/dbqbnaapcr6344?sslmode=require
     username: iuxapgzwlcyceq

@@ -26,7 +26,6 @@ public class WebConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http){
         http
                 .csrf(AbstractHttpConfigurer::disable)
-                .cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/security/**").permitAll()
                         .anyRequest().authenticated())
