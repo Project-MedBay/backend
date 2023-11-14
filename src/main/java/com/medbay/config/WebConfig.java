@@ -29,7 +29,7 @@ public class WebConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/security/**").permitAll()
+                        .requestMatchers("/api/security/**").permitAll()
                         .anyRequest().authenticated())
 
                 .sessionManagement(session -> session
