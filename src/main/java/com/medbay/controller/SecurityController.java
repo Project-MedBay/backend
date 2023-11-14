@@ -5,16 +5,14 @@ import com.medbay.domain.request.LoginRequest;
 import com.medbay.service.SecurityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
 @RequestMapping("/security")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class SecurityController {
 
     private final SecurityService securityService;
