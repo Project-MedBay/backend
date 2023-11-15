@@ -49,11 +49,15 @@ public class EmployeeService {
         return ResponseEntity.ok().build();
     }
 
-    public ResponseEntity<Void> deleteEmployee(Long id) {
-        if (!employeeRepository.existsById(id)) {
+    public ResponseEntity<Void> deactivateEmployee(Long id) {
+
+        Optional<Employee> employee = employeeRepository.findById(id);
+        if (employee.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        employeeRepository.deleteById(id);
+
+        employee.get().setActive(false);
+        employeeRepository.save(employee.get());
         return ResponseEntity.ok().build();
     }
 }

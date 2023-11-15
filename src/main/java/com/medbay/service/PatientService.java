@@ -51,12 +51,15 @@ public class PatientService {
         return ResponseEntity.ok().build();
     }
 
-    public ResponseEntity<Void> deletePatient(Long id) {
+    public ResponseEntity<Void> deactivatePatient(Long id) {
 
-        if(!patientRepository.existsById(id)) {
+        Optional<Patient> patient = patientRepository.findById(id);
+        if(patient.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        patientRepository.deleteById(id);
+
+        patient.get().setActive(false);
+        patientRepository.save(patient.get());
         return ResponseEntity.ok().build();
     }
 }

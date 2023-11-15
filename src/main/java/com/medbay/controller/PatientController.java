@@ -2,7 +2,6 @@ package com.medbay.controller;
 
 
 import com.medbay.domain.Patient;
-import com.medbay.domain.request.CreatePatientRequest;
 import com.medbay.service.PatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -22,13 +21,9 @@ public class PatientController {
         return patientService.getPatients();
     }
 
-    @PostMapping
-    public ResponseEntity<Void> createPatient(@RequestBody CreatePatientRequest patient){
-        return patientService.createPatient(patient);
-    }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePatient(@PathVariable("id") Long id) {
-        return patientService.deletePatient(id);
+    public ResponseEntity<Void> deactivatePatient(@PathVariable("id") Long id) {
+        return patientService.deactivatePatient(id);
     }
 }
