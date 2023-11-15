@@ -20,7 +20,5 @@ public class CreatePatientRequest {
     @JsonProperty("MBO")
     private String MBO;
     private String phoneNumber;
-    private boolean active;
-    public Role role;
 
 }

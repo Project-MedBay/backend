@@ -17,6 +17,4 @@ public class CreateEmployeeRequest {
     private String firstName;
     private String lastName;
     private Specialization specialization;
-    private boolean active;
-    private Role role;
 }
