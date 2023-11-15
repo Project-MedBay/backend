@@ -1,5 +1,6 @@
 package com.medbay.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,10 +20,12 @@ public class Session {
     private Long id;
 
     @OneToOne(mappedBy = "session")
+    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private Appointment appointment;
 
     @ManyToOne
     @JoinColumn(name = "employee_id")
+    @JsonIgnoreProperties("appointments")
     private Employee employee;
 
     private String feedback;

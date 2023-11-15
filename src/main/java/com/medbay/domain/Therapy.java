@@ -1,5 +1,6 @@
 package com.medbay.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,6 +20,7 @@ public class Therapy {
     private TherapyType therapyType;
 
     @OneToMany(mappedBy = "therapy")
+    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     List<Appointment> appointments;
 
 

@@ -1,5 +1,6 @@
 package com.medbay.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.medbay.domain.enums.Specialization;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -19,6 +20,7 @@ public class Employee extends User {
     private Specialization specialization;
 
     @OneToMany(mappedBy = "employee")
+    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
 
 

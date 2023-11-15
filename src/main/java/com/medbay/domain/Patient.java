@@ -1,5 +1,6 @@
 package com.medbay.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,5 +22,6 @@ public class Patient extends User {
     private String MBO;
     private String phoneNumber;
     @OneToMany(mappedBy = "employee")
+    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
 }

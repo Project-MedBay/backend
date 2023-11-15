@@ -1,5 +1,6 @@
 package com.medbay.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,18 +25,22 @@ public class Appointment {
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
+    @JsonIgnoreProperties("appointments")
     private Patient patient;
 
     @ManyToOne
     @JoinColumn(name = "therapy_id")
+    @JsonIgnoreProperties("appointments")
     private Therapy therapy;
 
     @ManyToOne
     @JoinColumn(name = "employee_id")
+    @JsonIgnoreProperties("appointments")
     private Employee employee;
 
     @OneToOne
     @JoinColumn(name = "session_id")
+    @JsonIgnoreProperties("appointments")
     private Session session;
 
 
