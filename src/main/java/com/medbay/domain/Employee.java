@@ -9,12 +9,14 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.util.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 public class Employee extends User {
 
     private Specialization specialization;
