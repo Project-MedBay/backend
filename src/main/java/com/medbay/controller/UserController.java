@@ -1,5 +1,6 @@
 package com.medbay.controller;
 
+import com.medbay.domain.User;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class UserController {
 
-
+    @GetMapping
+    public User getUser() {
+        return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    }
 
 }
