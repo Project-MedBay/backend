@@ -1,0 +1,17 @@
+spring:
+  mvc:
+    servlet:
+      path: /api
+  datasource:
+    url: jdbc:postgresql://ec2-34-250-252-161.eu-west-1.compute.amazonaws.com:5432/dbqbnaapcr6344?sslmode=require
+    username: iuxapgzwlcyceq
+    password: c2c6b574f4e4d6d0f565a9775636a8531e04e4f16091819f7fda0d4026a9f9a5
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    #show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
