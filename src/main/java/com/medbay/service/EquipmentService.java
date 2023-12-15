@@ -22,7 +22,6 @@ public class EquipmentService {
 
         Equipment equipment = Equipment.builder()
                 .name(request.getName())
-                .description(request.getDescription())
                 .capacity(request.getCapacity())
                 .build();
 
