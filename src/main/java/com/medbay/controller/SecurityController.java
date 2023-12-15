@@ -32,4 +32,15 @@ public class SecurityController {
         return securityService.refreshToken(request);
     }
 
+    @PostMapping("/forgot-password")
+    public ResponseEntity<Void> changePasswordEmail(@RequestParam String email) {
+        return securityService.sendTokenEmailForForgotPassword(email);
+    }
+
+    @PutMapping("/change-password")
+    public ResponseEntity<Void> changePassword(@RequestParam String token,
+                                               @RequestParam String password) {
+        return securityService.changePassword(token, password);
+    }
+
 }

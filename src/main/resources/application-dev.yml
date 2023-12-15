@@ -15,3 +15,15 @@ spring:
       hibernate:
         format_sql: true
     database: postgresql
+  mail:
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    host: smtppro.zoho.eu
+    username: noreply@medbay.life
+    password: "#W4p.%G#&hQA93v"
+    port: '587'
+

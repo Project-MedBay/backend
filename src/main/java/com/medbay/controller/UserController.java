@@ -1,20 +1,28 @@
 package com.medbay.controller;
 
-import com.medbay.domain.User;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.medbay.service.UserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
+@RequiredArgsConstructor
 @CrossOrigin("*")
 public class UserController {
 
-    @GetMapping
-    public User getUser() {
-        return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    private final UserService userService;
+
+    @PutMapping("/activity/{id}")
+    public ResponseEntity<Void> changeActivityStatus(@RequestParam String status,
+                                                     @PathVariable Long id) {
+        return userService.changeActivityStatus(status, id);
     }
+
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+//        return userService.deleteUser(id);
+//    }
+//
 
 }

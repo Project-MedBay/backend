@@ -19,6 +19,7 @@ public class Patient extends User {
 
     private String address;
     private LocalDate dateOfBirth;
+    private String OIB;
     private String MBO;
     private String phoneNumber;
     @OneToMany(mappedBy = "employee")

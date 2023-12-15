@@ -16,5 +16,5 @@ public class CreateEmployeeRequest {
     private String password;
     private String firstName;
     private String lastName;
-    private Specialization specialization;
+    private String specialization;
 }

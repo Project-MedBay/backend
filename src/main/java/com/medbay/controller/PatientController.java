@@ -16,14 +16,15 @@ import java.util.*;
 public class PatientController {
     private final PatientService patientService;
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Patient>> getPatients(){
         return patientService.getPatients();
     }
 
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deactivatePatient(@PathVariable("id") Long id) {
-        return patientService.deactivatePatient(id);
+    @GetMapping("/pending")
+    public ResponseEntity<List<Patient>> getPendingPatients(){
+        return patientService.getPendingPatients();
     }
+
+
 }

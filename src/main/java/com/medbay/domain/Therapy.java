@@ -19,10 +19,12 @@ public class Therapy {
     @OneToOne
     private TherapyType therapyType;
 
+    //Therapy status: PENDING, ACTIVE
+
     @OneToMany(mappedBy = "therapy")
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     List<Appointment> appointments;
 
-
+    //equipment
 
 }

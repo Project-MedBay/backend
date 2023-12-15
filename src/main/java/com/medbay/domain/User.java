@@ -1,13 +1,16 @@
 package com.medbay.domain;
 
+import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
@@ -22,15 +25,20 @@ import java.util.List;
 public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "IdGenerator")
+    @GenericGenerator(name = "IdGenerator", strategy = "com.medbay.config.IdGenerator")
     private Long id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-    private boolean active;
+    @Enumerated(EnumType.STRING)
+    private ActivityStatus status;
     @Enumerated(EnumType.STRING)
     private Role role;
+    private LocalDateTime createdAt;
+
+    //BLOB photo
 
 
 

@@ -23,6 +23,8 @@ public class Appointment {
     private LocalDateTime dateTime;
     private String status;
 
+    //add feedback
+
     @ManyToOne
     @JoinColumn(name = "patient_id")
     @JsonIgnoreProperties("appointments")
@@ -37,11 +39,11 @@ public class Appointment {
     @JoinColumn(name = "employee_id")
     @JsonIgnoreProperties("appointments")
     private Employee employee;
-
-    @OneToOne
-    @JoinColumn(name = "session_id")
-    @JsonIgnoreProperties("appointments")
-    private Session session;
+//
+//    @OneToOne
+//    @JoinColumn(name = "session_id")
+//    @JsonIgnoreProperties("appointments")
+//    private Session session;
 
 
 
