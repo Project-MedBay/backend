@@ -10,24 +10,21 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TherapyType {
+public class HealthRefferal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //add therapy code
+    private String health_refferal_id;
+    private String hlkid;
+    private int MBO;
     private String therapyCode;
-    private int numOfSessions;
-    private String name;
-    //add number of sessions
+    public void setHealth_refferal_id(Long id) {
+        this.id = id;
+    }
 
-    private String description;
-
-    //One to one
-    @ManyToOne
-    @JoinColumn(name = "required_equipment_id")
-    private Equipment requiredEquipment;
-
-
+    public Long getId() {
+        return id;
+    }
 }
