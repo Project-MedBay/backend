@@ -1,6 +1,7 @@
 package com.medbay.service;
 
 import com.medbay.domain.AppointmentInfo;
+import com.medbay.domain.Equipment;
 import com.medbay.domain.request.CreateAppointmentInfoRequest;
 import com.medbay.repository.AppointmentInfoRepository;
 import com.medbay.repository.EmployeeRepository;
@@ -38,16 +39,18 @@ public class AppointmentInfoService {
         List<AppointmentInfo> generatedSchedule = generateAppointmentInfo(selectedDate);
 
         for (AppointmentInfo appointmentInfo : generatedSchedule) {
-            //ovo moram sredit u equipment i employee
-           // appointmentInfo.setEmployeeCapacity(appointmentInfo.getEmployee().getAvailableDoctorCount());
-            //appointmentInfo.setEquipmentCapacity(appointmentInfo.getEquipment().getAvailableCapacity());
-            continue;
+            Equipment equipment = equipmentRepository.findById(request.getEquipmentId())
+                    .orElseThrow(() -> new EntityNotFoundException("Equipment not found with id: " + request.getEquipmentId()));
+
+            appointmentInfo.setEquipmentCapacity(equipment.getCapacity());
+            appointmentInfo.setEmployeeCapacity(employeeRepository.employeeCapacity());
         }
 
         appointmentInfoRepository.saveAll(generatedSchedule);
 
         return ResponseEntity.ok().build();
     }
+
 
     @Transactional
     public ResponseEntity<Void> deleteAppointmentInfo(Long id) {
@@ -72,11 +75,9 @@ public class AppointmentInfoService {
         while (startDateTime.getHour() < 16) {
             endDateTime = startDateTime.plusMinutes(45);
 
+            // Stvaranje i dodavanje AppointmentInfo objekta u listu
             AppointmentInfo appointmentInfo = new AppointmentInfo();
             appointmentInfo.setAppointmentDate(startDateTime);
-            //OVO MORAM POPRAVIT
-         //   appointmentInfo.setEquipmentCapacity(appointmentInfo.getEquipment().getAvailableCapacity());
-           // appointmentInfo.setEmployeeCapacity(appointmentInfo.getEmployee().getAvailableDoctorCount());
 
             appointmentInfoList.add(appointmentInfo);
 
@@ -85,4 +86,5 @@ public class AppointmentInfoService {
 
         return appointmentInfoList;
     }
+
 }
