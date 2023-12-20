@@ -6,6 +6,9 @@ INSERT INTO equipment (capacity, id, name) VALUES (20, 1, 'Gym'); --physical the
 INSERT INTO equipment (capacity, id, name) VALUES (2, 2, 'Electrical Muscle Stimulation unit');
 INSERT INTO equipment (capacity, id, name) VALUES (2, 3, 'Cryotherapy machine');
 INSERT INTO equipment (capacity, id, name) VALUES (4, 4, 'Hydrotherapy pool');
+INSERT INTO equipment (capacity, id, name) VALUES (4, 5, 'Paraffin wax baths and infrared lamp');
+
+
 
 --shoulder
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions) VALUES (1, 'Rotator cuff tear', 'Physical therapy focuses on strengthening the shoulder muscles, improving range of motion, and reducing pain through targeted exercises.', '#5G3Y4', 12);
@@ -52,6 +55,11 @@ INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions) VALUES (4, 'Post-Stroke rehabilitation', 'Hydrotherapy offers a supportive and buoyant environment for stroke survivors to work on regaining ', '#8D2H9', 20);
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions) VALUES (4, 'Post-Operative Rehabilitation', 'Hydrotherapy can aid in the recovery process after surgery by offering a gentle way to regain mobility, reduce swelling, and improve overall conditioning through aquatic exercises and controlled movements in warm water.', '#5I9K8', 12);
 
+INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions) VALUES (5, 'Muscle spasms and tension management', 'Thermotherapy in a wax bath involves immersing affected muscles in warm wax to relax and soothe muscle spasms, reduce tension, and promote blood flow for pain relief.', '#6L2M9', 6);
+INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions) VALUES (5, 'Bursitis', 'Thermotherapy may be used to alleviate pain and inflammation associated with bursitis by increasing blood flow and promoting the relaxation of affected tissues, often applied through warm compresses or therapeutic ultrasound.', '#4N8P5' , 8);
+INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions) VALUES (5, 'Rheumatoid Arthritis', 'Thermotherapy, such as paraffin wax baths, can help ease joint stiffness and reduce pain in individuals with rheumatoid arthritis by enhancing joint flexibility and reducing inflammation.', '#7R3N6', 8);
+INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions) VALUES (5, 'Chronic muscle pain management', 'Regular heat therapy, including hot baths, warm packs, or infrared heat, may be part of a comprehensive pain management strategy for chronic muscle pain, providing temporary relief and improving muscle relaxation.', '#2K6H8', 7);
+
 
 INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167819/015H2463F8T600004D7J', 'HR019618', 160378294, '#3N4P6');
 INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167820/015H2463F8T600004D7K', 'HR061864', 234567890, '#9P1H4');
@@ -64,4 +72,13 @@ INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167827/015H2463F8T600004D7R', 'HR095677', 901234567, '#4W3F2');
 INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167828/015H2463F8T600004D7S', 'HR233633', 987654321, '#4D5C2');
 INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167829/015H2463F8T600004D7T', 'HR206450', 876543210, '#8D2H9');
-
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167830/015H2463F8T600004D7U', 'HR019618', 160378294, '#1V2V2');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167831/015H2463F8T600004D7V', 'HR171737', 234567890, '#8I5F5');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167832/015H2463F8T600004D7W', 'HR295432', 345678901, '#4C7X3');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167833/015H2463F8T600004D7X', 'HR197286', 456789012, '#1R2Y1');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167834/015H2463F8T600004D7Y', 'HR207887', 567890123, '#3H4O2');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167835/015H2463F8T600004D7Z', 'HR224558', 678901234, '#6F2G1');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167836/015H2463F8T600004D7A', 'HR233300', 789012345, '#8L2Q4');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167837/015H2463F8T600004D7B', 'HR221049', 890123456, '#7P3Y5');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167838/015H2463F8T600004D7C', 'HR177695', 901234567, '#9M8D2');
+INSERT INTO health_refferal (health_refferal_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839/015H2463F8T600004D7D', 'HR219873', 876543210, '#6W1E6');
