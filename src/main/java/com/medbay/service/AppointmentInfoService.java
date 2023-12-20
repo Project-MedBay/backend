@@ -27,24 +27,16 @@ public class AppointmentInfoService {
     private final EquipmentRepository equipmentRepository;
 
     @Transactional(readOnly = true)
-    public ResponseEntity<List<AppointmentInfo>> getAppointmentInfo() {
-        List<AppointmentInfo> appointmentInfos = appointmentInfoRepository.findAll();
-        return ResponseEntity.ok(appointmentInfos);
+    public List<AppointmentInfo> getAppointmentInfo(LocalDate selectedDate) {
+        return appointmentInfoRepository.findByDate(selectedDate);
     }
 
     @Transactional
     public ResponseEntity<Void> createAppointmentInfo(CreateAppointmentInfoRequest request) {
         LocalDate selectedDate = request.getAppointmentDate();
 
-        List<AppointmentInfo> generatedSchedule = generateAppointmentInfo(selectedDate);
+        List<AppointmentInfo> generatedSchedule = generateAppointmentInfo(selectedDate, request.getEquipmentId());
 
-        for (AppointmentInfo appointmentInfo : generatedSchedule) {
-            Equipment equipment = equipmentRepository.findById(request.getEquipmentId())
-                    .orElseThrow(() -> new EntityNotFoundException("Equipment not found with id: " + request.getEquipmentId()));
-
-            appointmentInfo.setEquipmentCapacity(equipment.getCapacity());
-            appointmentInfo.setEmployeeCapacity(employeeRepository.employeeCapacity());
-        }
 
         appointmentInfoRepository.saveAll(generatedSchedule);
 
@@ -66,19 +58,24 @@ public class AppointmentInfoService {
         return ResponseEntity.ok().build();
     }
 
-    private List<AppointmentInfo> generateAppointmentInfo(LocalDate selectedDate) {
+    public List<AppointmentInfo> generateAppointmentInfo(LocalDate selectedDate, long equipmentId) {
         List<AppointmentInfo> appointmentInfoList = new ArrayList<>();
 
         LocalDateTime startDateTime = LocalDateTime.of(selectedDate, LocalTime.of(8, 0));
         LocalDateTime endDateTime;
 
-        while (startDateTime.getHour() < 16) {
+        while (startDateTime.getHour() < 20) {
             endDateTime = startDateTime.plusMinutes(45);
 
             // Stvaranje i dodavanje AppointmentInfo objekta u listu
             AppointmentInfo appointmentInfo = new AppointmentInfo();
             appointmentInfo.setAppointmentDate(startDateTime);
+            appointmentInfo.setEmployeeCapacity(employeeRepository.employeeCapacity());
+            Equipment equipment = equipmentRepository.findById(equipmentId)
+                    .orElseThrow(() -> new EntityNotFoundException("Equipment not found with id: " + equipmentId));
 
+            appointmentInfo.setEquipmentCapacity(equipment.getCapacity());
+            appointmentInfo.setEmployeeCapacity(employeeRepository.employeeCapacity());
             appointmentInfoList.add(appointmentInfo);
 
             startDateTime = endDateTime;
@@ -86,5 +83,32 @@ public class AppointmentInfoService {
 
         return appointmentInfoList;
     }
+
+    public List<AppointmentInfo> getAppointmentInfoForMonth(LocalDate startDate, LocalDate endDate, Long equipmentId) {
+        List<AppointmentInfo> appointmentInfoList = new ArrayList<>();
+
+        while (!startDate.isAfter(endDate)) {
+            List<AppointmentInfo> dailyAppointments = getExistingAppointmentsOrGenerate(startDate, equipmentId);
+            appointmentInfoList.addAll(dailyAppointments);
+
+            startDate = startDate.plusDays(1);
+        }
+
+        return appointmentInfoList;
+    }
+
+    private List<AppointmentInfo> getExistingAppointmentsOrGenerate(LocalDate date, Long equipmentId) {
+        List<AppointmentInfo> existingAppointments = appointmentInfoRepository.findByDate(date);
+
+        if (existingAppointments.isEmpty()) {
+            // Ako ne postoje termini za taj datum, generiraj ih
+            return generateAppointmentInfo(date, equipmentId);
+        } else {
+            // Ako postoje, vrati ih
+            return existingAppointments;
+        }
+    }
+
+
 
 }

@@ -7,7 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.time.LocalDate;
+import java.util.*;
 
 @RestController
 @RequestMapping("/appointmentInfo")
@@ -17,10 +18,30 @@ public class AppointmentInfoController {
 
     private final AppointmentInfoService appointmentInfoService;
 
+
     @GetMapping
-    public ResponseEntity<List<AppointmentInfo>> getAppointmentInfo() {
-        return appointmentInfoService.getAppointmentInfo();
+    public ResponseEntity<List<AppointmentInfo>> getAppointmentInfo(@RequestBody CreateAppointmentInfoRequest request) {
+        List<AppointmentInfo> appointmentInfos;
+
+        if (request.getAppointmentDate() == null) {
+            // Ako datum nije odabran, dohvati sve termine za trenutni mjesec
+            LocalDate firstDayOfMonth = LocalDate.now().withDayOfMonth(1);
+            LocalDate lastDayOfMonth = LocalDate.now().withDayOfMonth(LocalDate.now().lengthOfMonth());
+
+            appointmentInfos = appointmentInfoService.getAppointmentInfoForMonth(firstDayOfMonth, lastDayOfMonth, request.getEquipmentId());
+        } else {
+            // Ako je odabran određeni datum, dohvati termine za taj datum
+            appointmentInfos = appointmentInfoService.getAppointmentInfo(request.getAppointmentDate());
+
+            // Ako nema termina za odabrani datum, generiraj ih
+            if (appointmentInfos.isEmpty()) {
+                appointmentInfos = appointmentInfoService.generateAppointmentInfo(request.getAppointmentDate(), request.getEquipmentId());
+            }
+        }
+
+        return ResponseEntity.ok(appointmentInfos);
     }
+
 
     @PostMapping
     public ResponseEntity<Void> createAppointmentInfo(@RequestBody CreateAppointmentInfoRequest request) {
