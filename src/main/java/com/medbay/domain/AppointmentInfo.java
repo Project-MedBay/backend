@@ -33,6 +33,7 @@ public class AppointmentInfo {
     @JoinColumn(name = "equipment_id")
     private Equipment equipment;
 
+
    // @ManyToOne
     //@JoinColumn(name = "employee_id")
     //private Employee employee;

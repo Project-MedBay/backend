@@ -12,3 +12,4 @@ public interface AppointmentInfoRepository extends JpaRepository<AppointmentInfo
     List<AppointmentInfo> findByDate(LocalDate date);
 }
 
+

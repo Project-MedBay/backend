@@ -29,6 +29,7 @@ public class AppointmentInfoService {
     @Transactional(readOnly = true)
     public List<AppointmentInfo> getAppointmentInfo(LocalDate selectedDate) {
         return appointmentInfoRepository.findByDate(selectedDate);
+
     }
 
     @Transactional
@@ -36,8 +37,6 @@ public class AppointmentInfoService {
         LocalDate selectedDate = request.getAppointmentDate();
 
         List<AppointmentInfo> generatedSchedule = generateAppointmentInfo(selectedDate, request.getEquipmentId());
-
-
         appointmentInfoRepository.saveAll(generatedSchedule);
 
         return ResponseEntity.ok().build();
