@@ -62,24 +62,24 @@ INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code
 
 
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167819/015H2463F8T600004D7J', 'HR019618', 160378294, '#3N4P6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167820/015H2463F8T600004D7K', 'HR061864', 234567890, '#9P1H4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167820/015H2463F8T600004D7K', 'HR061864', 234567890, '#9P1H4'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167821/015H2463F8T600004D7L', 'HR271982', 345678901, '#5R9N7');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167822/015H2463F8T600004D7M', 'HR282164', 456789012, '#8G5H3');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167823/015H2463F8T600004D7N', 'HR005951', 567890123, '#8H6H1');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167824/015H2463F8T600004D7O', 'HR211078', 678901234, '#8K1H7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167825/015H2463F8T600004D7P', 'HR026260', 789012345, '#3J6K2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167825/015H2463F8T600004D7P', 'HR026260', 789012345, '#3J6K2'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167826/015H2463F8T600004D7Q', 'HR166491', 890123456, '#9P3R1');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167827/015H2463F8T600004D7R', 'HR095677', 901234567, '#4W3F2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167828/015H2463F8T600004D7S', 'HR233633', 987654321, '#4D5C2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167829/015H2463F8T600004D7T', 'HR206450', 876543210, '#8D2H9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167829/015H2463F8T600004D7T', 'HR206450', 876543210, '#8D2H9'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167830/015H2463F8T600004D7U', 'HR019618', 160378294, '#1V2V2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167831/015H2463F8T600004D7V', 'HR171737', 234567890, '#8I5F5');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167832/015H2463F8T600004D7W', 'HR295432', 345678901, '#4C7X3');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167833/015H2463F8T600004D7X', 'HR197286', 456789012, '#1R2Y1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167834/015H2463F8T600004D7Y', 'HR207887', 567890123, '#3H4O2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167834/015H2463F8T600004D7Y', 'HR207887', 567890123, '#3H4O2'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167835/015H2463F8T600004D7Z', 'HR224558', 678901234, '#6F2G1');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167836/015H2463F8T600004D7A', 'HR233300', 789012345, '#8L2Q4');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167837/015H2463F8T600004D7B', 'HR221049', 890123456, '#7P3Y5');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167838/015H2463F8T600004D7C', 'HR177695', 901234567, '#9M8D2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839/015H2463F8T600004D7D', 'HR219873', 876543210, '#6W1E6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839/015H2463F8T600004D7D', 'HR219873', 876543210, '#6W1E6'); --inactive
 
