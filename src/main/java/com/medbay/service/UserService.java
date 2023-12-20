@@ -25,7 +25,7 @@ public class UserService {
             user.setStatus(ActivityStatus.valueOf(status.toUpperCase()));
             userRepository.save(user);
         }
-        emailService.sendEmail(user);
+        emailService.sendConfirmationEmail(user);
         return ResponseEntity.ok().build();
     }
 

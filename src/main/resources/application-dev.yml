@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5434/MedBay
     username: postgres
-    password: kristijan
+    password: bazepodataka
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -22,8 +22,8 @@ spring:
           starttls:
             enable: 'true'
           auth: 'true'
-    host: smtppro.zoho.eu
-    username: noreply@medbay.life
-    password: "#W4p.%G#&hQA93v"
+    host: smtp.gmail.com
+    username: ivan7575k@gmail.com
+    password: "rnje ggip hqis uwyy"
     port: '587'
 
