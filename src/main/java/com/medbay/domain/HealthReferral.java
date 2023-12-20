@@ -16,9 +16,8 @@ public class HealthReferral {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String healthReferralId;
     private String hlkid;
-    private int MBO;
+    private String MBO;
     private String therapyCode;
 }
