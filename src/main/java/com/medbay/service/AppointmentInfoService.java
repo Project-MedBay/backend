@@ -27,9 +27,13 @@ public class AppointmentInfoService {
     private final EquipmentRepository equipmentRepository;
 
     @Transactional(readOnly = true)
-    public List<AppointmentInfo> getAppointmentInfo(LocalDate selectedDate) {
-        return appointmentInfoRepository.findByDate(selectedDate);
+    public List<AppointmentInfo> getAppointmentInfo(CreateAppointmentInfoRequest request) {
+        List<AppointmentInfo> foundAppointmentInfo = appointmentInfoRepository.findByDate(request.getAppointmentDate());
+        if(foundAppointmentInfo.isEmpty()){
+            foundAppointmentInfo = generateAppointmentInfo(request.getAppointmentDate(), request.getEquipmentId());
 
+        }
+return foundAppointmentInfo;
     }
 
     @Transactional
@@ -45,7 +49,7 @@ public class AppointmentInfoService {
 
     @Transactional
     public ResponseEntity<Void> deleteAppointmentInfo(Long id) {
-//trenutno nije gotovo
+//nisam sigurna je li nam potreban delete jer nikad necemo brisat datume i te kombinacije iz baze, nego cemo prilikom prijave terapije samo smanjivat capacity
        // AppointmentInfo appointmentInfo = appointmentInfoRepository.findById(id)
          //       .orElseThrow(() -> new EntityNotFoundException("AppointmentInfo not found with id: " + id));
 
@@ -64,17 +68,17 @@ public class AppointmentInfoService {
         LocalDateTime endDateTime;
 
         while (startDateTime.getHour() < 20) {
-            endDateTime = startDateTime.plusMinutes(45);
+            endDateTime = startDateTime.plusMinutes(60);
 
-            // Stvaranje i dodavanje AppointmentInfo objekta u listu
-            AppointmentInfo appointmentInfo = new AppointmentInfo();
-            appointmentInfo.setAppointmentDate(startDateTime);
-            appointmentInfo.setEmployeeCapacity(employeeRepository.employeeCapacity());
             Equipment equipment = equipmentRepository.findById(equipmentId)
                     .orElseThrow(() -> new EntityNotFoundException("Equipment not found with id: " + equipmentId));
 
-            appointmentInfo.setEquipmentCapacity(equipment.getCapacity());
-            appointmentInfo.setEmployeeCapacity(employeeRepository.employeeCapacity());
+            AppointmentInfo appointmentInfo = AppointmentInfo.builder()
+                    .appointmentDate(startDateTime)
+                    .equipmentCapacity(equipment.getCapacity())
+                    .employeeCapacity(employeeRepository.employeeCapacity())
+                    .build();
+
             appointmentInfoList.add(appointmentInfo);
 
             startDateTime = endDateTime;
