@@ -23,6 +23,7 @@ public class AppointmentInfoController {
     @GetMapping
     public ResponseEntity<List<AppointmentInfo>> getAppointmentInfo(@RequestBody CreateAppointmentInfoRequest request) {
         List<AppointmentInfo> appointmentInfos;
+        
             appointmentInfos = appointmentInfoService.getAppointmentInfo(request.getAppointmentDate());
 
             // Ako nema termina za odabrani datum(nitko ga u kalendaru jos nije do sad oznacio), generiraj ih

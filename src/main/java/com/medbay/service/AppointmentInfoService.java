@@ -45,9 +45,9 @@ public class AppointmentInfoService {
 
     @Transactional
     public ResponseEntity<Void> deleteAppointmentInfo(Long id) {
-
-        AppointmentInfo appointmentInfo = appointmentInfoRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("AppointmentInfo not found with id: " + id));
+//trenutno nije gotovo
+       // AppointmentInfo appointmentInfo = appointmentInfoRepository.findById(id)
+         //       .orElseThrow(() -> new EntityNotFoundException("AppointmentInfo not found with id: " + id));
 
         // employeeRepository.updateEmployeeAvailability(appointmentInfo.getEmployee().getId(), 1);
         // equipmentRepository.updateEquipmentAvailability(appointmentInfo.getEquipment().getId(), 1);
