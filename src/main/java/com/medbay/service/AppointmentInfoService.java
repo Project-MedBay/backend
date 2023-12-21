@@ -83,30 +83,7 @@ public class AppointmentInfoService {
         return appointmentInfoList;
     }
 
-    public List<AppointmentInfo> getAppointmentInfoForMonth(LocalDate startDate, LocalDate endDate, Long equipmentId) {
-        List<AppointmentInfo> appointmentInfoList = new ArrayList<>();
 
-        while (!startDate.isAfter(endDate)) {
-            List<AppointmentInfo> dailyAppointments = getExistingAppointmentsOrGenerate(startDate, equipmentId);
-            appointmentInfoList.addAll(dailyAppointments);
-
-            startDate = startDate.plusDays(1);
-        }
-
-        return appointmentInfoList;
-    }
-
-    private List<AppointmentInfo> getExistingAppointmentsOrGenerate(LocalDate date, Long equipmentId) {
-        List<AppointmentInfo> existingAppointments = appointmentInfoRepository.findByDate(date);
-
-        if (existingAppointments.isEmpty()) {
-            // Ako ne postoje termini za taj datum, generiraj ih
-            return generateAppointmentInfo(date, equipmentId);
-        } else {
-            // Ako postoje, vrati ih
-            return existingAppointments;
-        }
-    }
 
 
 
