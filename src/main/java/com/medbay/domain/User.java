@@ -38,11 +38,7 @@ public class User implements UserDetails {
     private Role role;
     private LocalDateTime createdAt;
 
-    public User(Long id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+
 //BLOB photo
 
 
