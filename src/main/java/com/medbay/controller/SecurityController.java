@@ -1,7 +1,10 @@
 package com.medbay.controller;
 
+import com.medbay.domain.User;
 import com.medbay.domain.request.CreatePatientRequest;
 import com.medbay.domain.request.LoginRequest;
+import com.medbay.repository.UserRepository;
+import com.medbay.service.EmailService;
 import com.medbay.service.SecurityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -38,7 +38,8 @@ public class User implements UserDetails {
     private Role role;
     private LocalDateTime createdAt;
 
-    //BLOB photo
+
+//BLOB photo
 
 
 
