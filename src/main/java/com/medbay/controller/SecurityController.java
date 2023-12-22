@@ -45,16 +45,5 @@ public class SecurityController {
                                                @RequestParam String password) {
         return securityService.changePassword(token, password);
     }
-    private final EmailService emailService;
-    private final UserRepository userRepository;
 
-
-    @GetMapping("/idemo")
-    public void moja() {
-        System.out.println("usao");
-        User user = new User(3L,"Niko","Kordić");
-        emailService.sendChangePasswordEmail("user", "deidmeas");
-        emailService.sendConfirmationEmail(user);
-        emailService.sendTherapyConfirmationEmail(user);
-    }
 }

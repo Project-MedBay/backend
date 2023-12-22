@@ -24,8 +24,8 @@ public class EmailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-        helper.setFrom("ivan7575k@gmail.com", "MedBay Team");
-        helper.setTo("ivan@kordic.org"); // Assuming the user's email is stored in the 'User' object
+        helper.setFrom("noreply@medbay.life", "MedBay Team");
+        helper.setTo(user.getEmail()); // Assuming the user's email is stored in the 'User' object
         helper.setSubject("Welcome to MedBay - Registration Confirmation");
 
         String emailContent = "<!DOCTYPE html>"
@@ -79,7 +79,7 @@ public class EmailService {
                 + "<p>Hello " + user.getFirstName() + ",</p>"
                 + "<p>Your registration with MedBay has been confirmed! Welcome to our community dedicated to medical rehabilitation.</p>"
                 + "<p>Explore our platform and discover the various tools and resources available to support your health journey.</p>"
-                + "<p>Get started now and benefit from our services!</p>"
+                + "<p><a href='https://medbay.life' style='text-decoration: none; color: #4eae78;'>Get started now</a> and benefit from our services!</p>"
                 + "</div>"
                 + "<div class=\"footer\">"
                 + "<p>Sincerely,</p>"
@@ -103,8 +103,8 @@ public class EmailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message,true);
 
-        helper.setFrom("ivan7575k@gmail.com", "MedBay Team");
-        helper.setTo("ivan@kordic.org"); // Assuming
+        helper.setFrom("noreply@medbay.life", "MedBay Team");
+        helper.setTo(user.getEmail());
         String emailContent = "<!DOCTYPE html>"
                 + "<html lang=\"en\">"
                 + "<head>"
@@ -186,7 +186,6 @@ public class EmailService {
                 + "<p>Hello " + user.getFirstName() + ",</p>"
                 + "<p>Your selected therapy terms have been confirmed. We are excited to proceed with your requested therapies!</p>"
                 + "<p>You can now explore our website and find more details about your therapy sessions.</p>"
-                + "<img class=\"email-img\"  src='cid:identifier1234' alt=\"Registration Image\"\n>"
                 + "<div class=\"btn-container\">"
                 + "<a class=\"btn\" href=\"https://medbay.life\">Visit Our Website</a>"
                 + "</div>"
@@ -199,31 +198,19 @@ public class EmailService {
                 + "</div>"
                 + "</body>"
                 + "</html>";
-        System.out.println("idemo0");
 
         helper.setSubject("MedBay - Therapy Confirmation");
-        System.out.println("idemo1");
         helper.setText(emailContent, true);
-        System.out.println("idemo2");
 
-        ClassPathResource image = new ClassPathResource("../../../../resources/plus_icon.jpg");
-        System.out.println("idemo3");
-
-        helper.addInline("identifier1234", image);
-        System.out.println("idemo4");
 
         try {
-            System.out.println("idemo4");
 
             mailSender.send(message);
-            System.out.println("idemo4");
 
         } catch (Exception e) {
-            System.out.println("idemo4");
 
             log("Error sending email: " + e.getMessage());
         }
-        System.out.println("idemo4");
 
     }
 
@@ -235,8 +222,8 @@ public class EmailService {
         String resetLink = "https://medbay.life/api/security/change-password?token=" + token;
 
 
-        helper.setFrom("ivan7575k@gmail.com", "MedBay Team");
-        helper.setTo("ivan@kordic.org");
+        helper.setFrom("noreply@medbay.life", "MedBay Team");
+        helper.setTo(email);
         String emailContent = "<!DOCTYPE html>"
                     + "<html lang=\"en\">"
                     + "<head>"
