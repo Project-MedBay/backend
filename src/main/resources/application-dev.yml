@@ -2,11 +2,6 @@ spring:
   mvc:
     servlet:
       path: /api
-  datasource:
-    url: jdbc:postgresql://localhost:5434/MedBay
-    username: postgres
-    password:
-    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -24,6 +19,5 @@ spring:
           auth: 'true'
     host: smtppro.zoho.eu
     username: noreply@medbay.life
-    password: "#W4p.%G#&hQA93v"
     port: '587'
 
