@@ -28,7 +28,7 @@ public class AppointmentInfoService {
 
     @Transactional(readOnly = true)
     public List<AppointmentInfo> getAppointmentInfo(CreateAppointmentInfoRequest request) {
-        List<AppointmentInfo> foundAppointmentInfo = appointmentInfoRepository.findByDate(request.getAppointmentDate());
+        List<AppointmentInfo> foundAppointmentInfo = appointmentInfoRepository.findByAppointmentDate(request.getAppointmentDate());
         if(foundAppointmentInfo.isEmpty()){
             foundAppointmentInfo = generateAppointmentInfo(request.getAppointmentDate(), request.getEquipmentId());
 
