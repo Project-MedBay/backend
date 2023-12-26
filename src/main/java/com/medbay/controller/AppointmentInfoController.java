@@ -25,6 +25,11 @@ public class AppointmentInfoController {
         return ResponseEntity.ok(appointmentInfoService.getAppointmentInfo(request));
     }
 
+//    @GetMapping("/admin/calendar")
+//    public ResponseEntity<List<Integer>> getNumAppointmentsPerDay(@RequestBody CreateAppointmentInfoRequest request){
+//        return ResponseEntity.ok(appointmentInfoService.getNumAppointmentsPerDay(request));
+//    }
+
 
     @PostMapping
     public ResponseEntity<Void> createAppointmentInfo(@RequestBody CreateAppointmentInfoRequest request) {

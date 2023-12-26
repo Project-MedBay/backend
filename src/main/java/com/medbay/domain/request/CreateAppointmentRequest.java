@@ -1,6 +1,7 @@
 package com.medbay.domain.request;
 
 
+import com.medbay.domain.enums.ActivityStatus;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -9,7 +10,7 @@ import java.time.LocalDateTime;
 public class CreateAppointmentRequest {
 
     private LocalDateTime dateTime;
-    private String status;
+    private ActivityStatus status;
 
     private Long patientId;
 

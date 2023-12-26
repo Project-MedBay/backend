@@ -1,9 +1,11 @@
 package com.medbay.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.medbay.domain.enums.ActivityStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.mapping.ToOne;
 
@@ -21,8 +23,9 @@ public class Appointment {
     private Long id;
 
     private LocalDateTime dateTime;
-    private String status;
-
+    @Getter
+    @Enumerated(EnumType.STRING)
+    private ActivityStatus status;
     //add feedback
 
     @ManyToOne

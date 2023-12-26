@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import java.util.List;
 
@@ -21,10 +22,10 @@ public class Therapy {
 
     //Therapy status: PENDING, ACTIVE
 
+    //equipment
+    @Getter
     @OneToMany(mappedBy = "therapy")
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     List<Appointment> appointments;
-
-    //equipment
 
 }

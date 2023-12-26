@@ -1,9 +1,7 @@
 package com.medbay.service;
 
-import com.medbay.domain.Appointment;
-import com.medbay.domain.Employee;
-import com.medbay.domain.Patient;
-import com.medbay.domain.Therapy;
+import com.medbay.domain.*;
+import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.repository.AppointmentRepository;
 import com.medbay.repository.EmployeeRepository;
@@ -15,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,5 +55,20 @@ public class TherapyService {
         }
         therapyRepository.deleteById(id);
         return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity<List<Therapy>> getTherapyRequests() {
+        List<Therapy> allTherapies = therapyRepository.findAll();
+        List<Therapy> therapyRequests = new ArrayList<>();
+
+        for(Therapy therapy : allTherapies) {
+            for(Appointment appointment : therapy.getAppointments()) {
+                if (appointment.getStatus().equals(ActivityStatus.PENDING)) {
+                    therapyRequests.add(therapy);
+                    break;
+                }
+            }
+        }
+        return ResponseEntity.ok(therapyRequests);
     }
 }

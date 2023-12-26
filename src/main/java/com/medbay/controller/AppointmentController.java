@@ -24,6 +24,11 @@ public class AppointmentController {
         return appointmentService.getAppointments();
     }
 
+//    @GetMapping("/admin/calendar")
+//    public  ResponseEntity<List<Appointment>> getAppointmentsPerTimeSlot(@RequestBody CreateAppointmentRequest request) {
+//        return appointmentService.getAppointmentsPerTimeSlot(request.getDateTime());
+//    }
+
     @PostMapping
     public ResponseEntity<Void> createAppointment(@RequestBody CreateAppointmentRequest appointment) {
         return appointmentService.createAppointment(appointment);
