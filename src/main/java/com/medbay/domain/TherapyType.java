@@ -17,7 +17,9 @@ public class TherapyType {
     private Long id;
 
     //add therapy code
-
+    private String therapyCode;
+    private int numOfSessions;
+    private String name;
     //add number of sessions
 
     private String description;
