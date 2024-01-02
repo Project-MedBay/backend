@@ -1,15 +1,14 @@
 package com.medbay.service;
 
-import com.medbay.domain.PasswordResetToken;
-import com.medbay.domain.Patient;
-import com.medbay.domain.User;
+import com.medbay.domain.*;
 import com.medbay.domain.enums.ActivityStatus;
+import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreatePatientRequest;
+import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.domain.request.LoginRequest;
-import com.medbay.repository.PasswordResetTokenRepository;
-import com.medbay.repository.PatientRepository;
-import com.medbay.repository.UserRepository;
+import com.medbay.repository.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,6 +19,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 import static com.medbay.domain.enums.Role.ROLE_PATIENT;
@@ -30,10 +30,13 @@ import static org.springframework.http.HttpStatus.*;
 public class SecurityService {
 
     private final UserRepository userRepository;
+    private final EmployeeRepository employeeRepository;
     private final BCryptPasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     private final PatientRepository patientRepository;
+    private final TherapyTypeRepository therapyTypeRepository;
+    private final TherapyRepository therapyRepository;
     private final PasswordResetTokenRepository passwordResetTokenRepository;
     private final EmailService emailService;
 
@@ -125,4 +128,47 @@ public class SecurityService {
         userRepository.save(user);
         return ResponseEntity.ok().build();
     }
+
+
+    public ResponseEntity<Void> createNewTherapy(CreateTherapyRequest request) {
+        Optional<Patient> patientOptional = patientRepository.findById(request.getPatientId());
+        Optional<Employee> employeeOptional = employeeRepository.findById(request.getEmployeeId());
+
+        if (patientOptional.isEmpty() || employeeOptional.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+
+        LocalDateTime appointmentDateTime = request.getAppointmentDate();
+        Patient patient = patientOptional.get();
+        User employee = employeeOptional.get();
+
+        Therapy therapy = Therapy.builder()
+                .therapyStatus(TherapyStatus.PENDING)
+                .therapyType(request.getTherapyType())
+                .build();
+
+        // Dodajem terapiju pacijentu
+        patient.addTherapy(therapy);
+
+        // Spremi ažuriranog pacijenta u repozitorij
+        patientRepository.save(patient);
+
+        // Slanje zahtjeva adminu
+        sendRequestToAdmin(request.getTherapyCode(), appointmentDateTime, patient.getMBO());
+
+        return ResponseEntity.ok().build();
+    }
+
+    private void sendRequestToAdmin(String therapyCode, LocalDateTime therapyDate, String patientMBO) {
+        boolean verify = false;
+        TherapyType therapyType = therapyTypeRepository.findByTherapyCode(therapyCode);
+        Therapy therapy = therapyRepository.findByTherapyType(therapyType);
+
+        if (verify) {
+            therapy.setTherapyStatus(TherapyStatus.VERIFIED);
+        }
+
+        therapyRepository.save(therapy);
+    }
+
 }

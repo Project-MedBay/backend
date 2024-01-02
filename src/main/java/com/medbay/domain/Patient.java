@@ -4,16 +4,19 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
+@Data
 public class Patient extends User {
 
 
@@ -25,4 +28,16 @@ public class Patient extends User {
     @OneToMany(mappedBy = "employee")
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
+
+    @OneToMany(mappedBy = "patient")
+    @JsonIgnoreProperties("patient")
+    private List<Therapy> therapies;
+
+    public void addTherapy(Therapy therapy) {
+        if (therapies == null) {
+            therapies = new ArrayList<>();
+        }
+        therapies.add(therapy);
+        therapy.setPatient(this);
+    }
 }
