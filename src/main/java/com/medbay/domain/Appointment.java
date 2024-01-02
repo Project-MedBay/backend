@@ -3,17 +3,14 @@ package com.medbay.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.medbay.domain.enums.ActivityStatus;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.hibernate.mapping.ToOne;
+import lombok.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
 @Builder
+@Getter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Appointment {
@@ -47,7 +44,6 @@ public class Appointment {
 //    @JoinColumn(name = "session_id")
 //    @JsonIgnoreProperties("appointments")
 //    private Session session;
-
 
 
 }

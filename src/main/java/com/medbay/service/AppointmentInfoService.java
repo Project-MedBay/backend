@@ -37,24 +37,6 @@ public class AppointmentInfoService {
     }
 
     @Transactional
-    public List<Integer> getNumAppointmentsPerDay(CreateAppointmentInfoRequest request) {
-        List<AppointmentInfo> foundAppointmentInfo = appointmentInfoRepository.findByAppointmentDate(request.getAppointmentDate());
-        List<Integer> numAppointmentsPerDay = new ArrayList<>();
-        for (int i = 8; i <= 19; i++) {
-            int count = 0;
-            for(AppointmentInfo appointmentInfo : foundAppointmentInfo) {
-                if(appointmentInfo.getAppointmentDate().getHour() == i) {
-                    count++;
-                }
-            }
-            numAppointmentsPerDay.add(count);
-        }
-        return numAppointmentsPerDay;
-    }
-
-
-
-    @Transactional
     public ResponseEntity<Void> createAppointmentInfo(CreateAppointmentInfoRequest request) {
         LocalDate selectedDate = request.getAppointmentDate();
 
@@ -104,6 +86,4 @@ public class AppointmentInfoService {
 
         return appointmentInfoList;
     }
-
-
 }
