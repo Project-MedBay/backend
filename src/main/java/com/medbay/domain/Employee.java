@@ -32,11 +32,4 @@ public class Employee extends User {
     @JsonIgnoreProperties("employee")
     private List<Therapy> therapies;
 
-    public void addTherapy(Therapy therapy) {
-        if (therapies == null) {
-            therapies = new ArrayList<>();
-        }
-        therapies.add(therapy);
-        therapy.setEmployee(this);
-    }
 }

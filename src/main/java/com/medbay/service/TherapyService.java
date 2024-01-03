@@ -21,7 +21,8 @@ import java.util.Optional;
 public class TherapyService {
     private final TherapyRepository therapyRepository;
     private final  TherapyTypeRepository therapyTypeRepository;
-
+    private  final   PatientService patientService;
+    private final   EmailService emailService;
     private final AppointmentRepository appointmentRepository;
     private final PatientRepository patientRepository;
     private final EmployeeRepository employeeRepository;
@@ -78,30 +79,39 @@ TherapyType therapyType = therapyTypeRepository.findByTherapyCode(request.getThe
      User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Patient patient = (Patient)user;
         // Dodajem terapiju pacijentu
-        patient.addTherapy(therapy);
+        patientService.addTherapy(therapy, patient.getId());
 
         //Dodajem terapiju employee, na lraju ne znam jel se nama salje employeeId pa ne stvaram to tu
         //employee.addTherapy(therapy);
 
-        // Spremi ažuriranog pacijenta u repozitorij
-        patientRepository.save(patient);
+        // Spremi ažuriranog pacijenta u repozitorij, ovo vec spremam pozivom addTherapy u patientRepositoryu
+       // patientRepository.save(patient);
 
-        // Slanje zahtjeva adminu
-        sendRequestToAdmin(request.getTherapyCode(), appointmentDateTime, patient.getMBO());
+        // Slanje zahtjeva adminu, s fronta mi salju razlog i status mogu mijenati
+        sendRequestToAdmin(request.getTherapyCode(), appointmentDateTime, patient.getMBO(), TherapyStatus.PENDING, " ");
 
         return ResponseEntity.ok().build();
     }
 
-    private void sendRequestToAdmin(String therapyCode, LocalDateTime therapyDate, String patientMBO) {
-        boolean verify = false;
-        //tu tzreba provjera zeli li admin odobriti, ne znam kako su to na frontu planirali simulirati pa sam samo postavila boolean verify
+    private void sendRequestToAdmin(String therapyCode, LocalDateTime therapyDate, String patientMBO, TherapyStatus status, String reason) {
         TherapyType therapyType = therapyTypeRepository.findByTherapyCode(therapyCode);
         Therapy therapy = therapyRepository.findByTherapyType(therapyType);
 
-        if (verify) {
-            therapy.setTherapyStatus(TherapyStatus.VERIFIED);
+        Patient patient = patientRepository.findByMBO(patientMBO);
+
+        therapy.setTherapyStatus(status);
+
+        // Ako je terapija odbijena, postavi razlog
+        if (status == TherapyStatus.DECLINED) {
+            therapy.setRejectionReason(reason);
+        } else {
+            // Ako je terapija odobrena, postavi razlog na null (ako već ima neki razlog)
+            therapy.setRejectionReason(null);
         }
 
+        emailService.sendTherapyConfirmationEmail(patient);
+
+        // Spremam izmjene ako su se dogodile oko statusa ili RejectionReasona
         therapyRepository.save(therapy);
     }
 }

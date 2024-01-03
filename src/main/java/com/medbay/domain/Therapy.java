@@ -39,6 +39,6 @@ public class Therapy {
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
 
-
+   String rejectionReason;
 }
 

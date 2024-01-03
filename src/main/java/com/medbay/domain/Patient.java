@@ -33,6 +33,7 @@ public class Patient extends User {
     @JsonIgnoreProperties({"patient", "employee"})
     private List<Therapy> therapies;
 
+    /*
     public void addTherapy(Therapy therapy) {
         if (therapies == null) {
             therapies = new ArrayList<>();
@@ -40,4 +41,6 @@ public class Patient extends User {
         therapies.add(therapy);
         therapy.setPatient(this);
     }
+
+     */
 }

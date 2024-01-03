@@ -20,4 +20,6 @@ public interface PatientRepository extends JpaRepository<Patient, Long>{
     Optional<Patient> findByIdWithTherapies(@Param("patientId") Long patientId);
 
     List<Patient> findAllByStatus(ActivityStatus activityStatus);
+
+    Patient findByMBO(String patientMBO);
 }
