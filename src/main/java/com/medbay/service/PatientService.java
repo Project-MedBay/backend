@@ -32,4 +32,5 @@ public class PatientService {
         List<Patient> patients = patientRepository.findAllByStatus(ActivityStatus.PENDING);
         return ResponseEntity.ok(patients);
     }
+
 }

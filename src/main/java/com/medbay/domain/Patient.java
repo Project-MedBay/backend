@@ -25,12 +25,12 @@ public class Patient extends User {
     private String OIB;
     private String MBO;
     private String phoneNumber;
-    @OneToMany(mappedBy = "employee")
+    @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
 
-    @OneToMany(mappedBy = "patient")
-    @JsonIgnoreProperties("patient")
+    @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties({"patient", "employee"})
     private List<Therapy> therapies;
 
     public void addTherapy(Therapy therapy) {

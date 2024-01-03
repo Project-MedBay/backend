@@ -2,7 +2,6 @@ package com.medbay.controller;
 
 import com.medbay.domain.User;
 import com.medbay.domain.request.CreatePatientRequest;
-import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.domain.request.LoginRequest;
 import com.medbay.repository.UserRepository;
 import com.medbay.service.EmailService;
@@ -47,9 +46,6 @@ public class SecurityController {
         return securityService.changePassword(token, password);
     }
 
-    @PostMapping("/create-new-therapy")
-    public ResponseEntity<Void> createNewTherapy(@RequestBody CreateTherapyRequest request) {
-        return securityService.createNewTherapy(request);
-    }
+
 
 }

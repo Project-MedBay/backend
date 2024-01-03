@@ -24,6 +24,11 @@ public class Therapy {
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
+
     @OneToOne
     private TherapyType therapyType;
 
@@ -34,8 +39,6 @@ public class Therapy {
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
 
-    // Dodatne informacije o terapiji, npr. opis, trajanje, oprema itd.
 
-    // Konstruktori, getteri, setteri i ostale metode prema potrebi...
 }
 

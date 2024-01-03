@@ -8,6 +8,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
@@ -17,6 +18,7 @@ import java.util.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+@Data
 public class Employee extends User {
 
     private Specialization specialization;
@@ -26,4 +28,15 @@ public class Employee extends User {
     private List<Appointment> appointments;
 
 
+    @OneToMany(mappedBy = "employee")
+    @JsonIgnoreProperties("employee")
+    private List<Therapy> therapies;
+
+    public void addTherapy(Therapy therapy) {
+        if (therapies == null) {
+            therapies = new ArrayList<>();
+        }
+        therapies.add(therapy);
+        therapy.setEmployee(this);
+    }
 }

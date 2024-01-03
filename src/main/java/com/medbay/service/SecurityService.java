@@ -76,9 +76,11 @@ public class SecurityService {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-        if(user.getStatus().equals(ActivityStatus.PENDING)) {
+     /*   if(user.getStatus().equals(ActivityStatus.PENDING)) {
             return ResponseEntity.status(UNAUTHORIZED).build();
         }
+
+      */
 
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
@@ -130,45 +132,5 @@ public class SecurityService {
     }
 
 
-    public ResponseEntity<Void> createNewTherapy(CreateTherapyRequest request) {
-        Optional<Patient> patientOptional = patientRepository.findById(request.getPatientId());
-        Optional<Employee> employeeOptional = employeeRepository.findById(request.getEmployeeId());
-
-        if (patientOptional.isEmpty() || employeeOptional.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-
-        LocalDateTime appointmentDateTime = request.getAppointmentDate();
-        Patient patient = patientOptional.get();
-        User employee = employeeOptional.get();
-
-        Therapy therapy = Therapy.builder()
-                .therapyStatus(TherapyStatus.PENDING)
-                .therapyType(request.getTherapyType())
-                .build();
-
-        // Dodajem terapiju pacijentu
-        patient.addTherapy(therapy);
-
-        // Spremi ažuriranog pacijenta u repozitorij
-        patientRepository.save(patient);
-
-        // Slanje zahtjeva adminu
-        sendRequestToAdmin(request.getTherapyCode(), appointmentDateTime, patient.getMBO());
-
-        return ResponseEntity.ok().build();
-    }
-
-    private void sendRequestToAdmin(String therapyCode, LocalDateTime therapyDate, String patientMBO) {
-        boolean verify = false;
-        TherapyType therapyType = therapyTypeRepository.findByTherapyCode(therapyCode);
-        Therapy therapy = therapyRepository.findByTherapyType(therapyType);
-
-        if (verify) {
-            therapy.setTherapyStatus(TherapyStatus.VERIFIED);
-        }
-
-        therapyRepository.save(therapy);
-    }
 
 }
