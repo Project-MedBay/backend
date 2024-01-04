@@ -6,11 +6,13 @@ import com.medbay.domain.Patient;
 import com.medbay.domain.Therapy;
 import com.medbay.domain.request.CreateAppointmentRequest;
 import com.medbay.repository.*;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
@@ -27,8 +29,18 @@ public class AppointmentService {
         List<Appointment> appointments = appointmentRepository.findAll();
         return ResponseEntity.ok(appointments);
     }
+    public Appointment getAppointmentById(Long appointmentId) {
+        return appointmentRepository.findById(appointmentId).get();
+    }
 
+    public ResponseEntity<List<Appointment>> getAppointmentsFromEmployee(Employee employee){
+        return ResponseEntity.ok(employee.getAppointments());
+    }
 
+    public ResponseEntity<List<Appointment>> getAllAppointmentsPerTimeSlot(LocalDateTime dateTime) {
+        List<Appointment> appointments = appointmentRepository.findByDateTime(dateTime);
+        return ResponseEntity.ok(appointments);
+    }
     public ResponseEntity<Void> createAppointment(CreateAppointmentRequest request) {
 
         Optional<Patient> patient = patientRepository.findById(request.getPatientId());
@@ -65,5 +77,22 @@ public class AppointmentService {
         }
         appointmentRepository.deleteById(id);
         return ResponseEntity.ok().build();
+    }
+
+    public void updateAppointmentDescription(Long appointmentId, String newDescription) {
+        Appointment appointment = appointmentRepository.findById(appointmentId)
+                    .orElseThrow(() -> new EntityNotFoundException("Appointment not found"));
+
+            //!!!!!!!!!!appointment.setDescription(newDescription); ovo sam komentirao jer koliko shvacam appointment jos nema description u sebi
+            appointmentRepository.save(appointment);
+    }
+
+    public void rescheduleAppointment(Long appointmentId, LocalDateTime newDateTime) {
+        Appointment appointment = appointmentRepository.findById(appointmentId)
+                .orElseThrow(() -> new EntityNotFoundException("Appointment not found"));
+
+
+        appointment.setDateTime(newDateTime);
+        appointmentRepository.save(appointment);
     }
 }

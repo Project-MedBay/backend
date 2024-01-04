@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -35,5 +36,10 @@ public class EquipmentService {
         }
         equipmentRepository.deleteById(id);
         return ResponseEntity.ok().build();
+    }
+
+    public Equipment findById(Long id) {
+         Optional<Equipment> equipmentOptional = equipmentRepository.findById(id);
+        return equipmentOptional.orElse(null);
     }
 }

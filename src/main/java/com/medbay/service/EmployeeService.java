@@ -1,6 +1,8 @@
 package com.medbay.service;
 
-import com.medbay.domain.Employee;
+import com.medbay.DTO.EmployeeFrontDTO;
+import com.medbay.DTO.ExtendedAppointmentDTO;
+import com.medbay.domain.*;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Role;
 import com.medbay.domain.enums.Specialization;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -22,7 +25,10 @@ public class EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-
+    private final AppointmentService appointmentService;
+    private final TherapyService therapyService;
+    private final EquipmentService equipmentService;
+    private final TherapyTypeService therapyTypeService;
     public ResponseEntity<List<Employee>> getEmployees() {
         List<Employee> employees = employeeRepository.findAll();
         return ResponseEntity.ok(employees);
@@ -59,5 +65,46 @@ public class EmployeeService {
         employee.get().setStatus(ActivityStatus.DEACTIVATED);
         employeeRepository.save(employee.get());
         return ResponseEntity.ok().build();
+    }
+
+    public Employee getEmployeeById(Long employeeId) {
+
+        return employeeRepository.findById(employeeId).orElse(new Employee());
+    }
+
+    public ResponseEntity<List<EmployeeFrontDTO>> getAppointmentsForEmployee(Employee employee) {
+        ResponseEntity<List<Appointment>> response = appointmentService.getAppointmentsFromEmployee(employee);
+        List<Appointment> appointments = response.getBody();
+        if (appointments == null || appointments.isEmpty()) {
+            return null;
+        }
+        List<EmployeeFrontDTO> appointmentDetails = appointments.stream().map(appointment -> {
+            Therapy therapy = therapyService.findById(appointment.getTherapy().getId());
+            TherapyType therapyType = therapyTypeService.findById(therapy.getTherapyType().getId());
+            Equipment equipment = equipmentService.findById(therapyType.getRequiredEquipment().getId());
+
+            return new EmployeeFrontDTO(appointment, equipment);
+        }).collect(Collectors.toList());
+
+        return ResponseEntity.ok(appointmentDetails);
+    }
+
+    public ResponseEntity<ExtendedAppointmentDTO> getAppointmentDetails(Employee employee, Long appointmentId) {
+        Appointment appointment = appointmentService.getAppointmentById(appointmentId);
+
+        Therapy therapy = therapyService.findById(appointment.getTherapy().getId());
+        TherapyType therapyType = therapyTypeService.findById(therapy.getTherapyType().getId());
+        Equipment equipment = equipmentService.findById(therapyType.getRequiredEquipment().getId());
+
+        Patient patient = appointment.getPatient();
+
+        ExtendedAppointmentDTO extendedAppointmentDTO = new ExtendedAppointmentDTO(
+                appointment.getDateTime(),
+                equipment,
+                patient,
+                therapyType.getDescription()
+        );
+
+        return ResponseEntity.ok(extendedAppointmentDTO);
     }
 }

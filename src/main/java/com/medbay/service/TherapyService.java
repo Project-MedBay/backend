@@ -50,6 +50,11 @@ public class TherapyService {
         therapyRepository.save(therapy);
         return ResponseEntity.ok().build();
     }
+
+    public Therapy findById(Long id) {
+        Optional<Therapy> therapy = therapyRepository.findById(id);
+        return therapy.orElseThrow(() -> new RuntimeException("Therapy not found with id: " + id));
+    }
     public ResponseEntity<Void> deleteTherapy(Long id){
         if(!therapyRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
