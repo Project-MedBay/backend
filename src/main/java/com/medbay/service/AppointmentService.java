@@ -80,7 +80,6 @@ public class AppointmentService {
 
         Appointment appointment = Appointment.builder()
                 .dateTime(request.getDateTime())
-                .status(request.getStatus())
                 .patient(patient.get())
                 .therapy(therapy.get())
                 .employee(employee.get())

@@ -22,10 +22,6 @@ public class UserController {
         return userService.changeActivityStatus(status, id);
     }
 
-//    @GetMapping
-//    public ResponseEntity<List<User>> getRegistrationsRequests() {
-//        return userService.getRegistrationRequests();
-//    }
 
 //    @DeleteMapping("/{id}")
 //    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {

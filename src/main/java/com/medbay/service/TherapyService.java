@@ -5,6 +5,7 @@ import com.medbay.domain.Employee;
 import com.medbay.domain.Patient;
 import com.medbay.domain.Therapy;
 import com.medbay.domain.enums.ActivityStatus;
+import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.repository.AppointmentRepository;
 import com.medbay.repository.EmployeeRepository;
@@ -64,22 +65,8 @@ public class TherapyService {
     }
 
     public ResponseEntity<List<Therapy>> getTherapyRequests() {
-        ;
-        List<Appointment> appointments = appointmentRepository.findAppointmentsByStatus(ActivityStatus.PENDING);
-        List<Long> therapyIds = new ArrayList<>();
-        List<Therapy> pendingTherapies = new ArrayList<>();
-        for (Appointment app : appointments) {
-            Long ids = app.getTherapy().getId();
-            therapyIds.add(ids);
-        }
-        therapyIds = therapyIds.stream().distinct().collect(Collectors.toList());
-        for (Long id : therapyIds) {
-            pendingTherapies.add(therapyRepository.getReferenceById(id));
-        }
 
-        /*
         List<Therapy> pendingTherapies = therapyRepository.findByTherapyStatus(TherapyStatus.PENDING);
-         */
 
         return ResponseEntity.ok(pendingTherapies);
     }

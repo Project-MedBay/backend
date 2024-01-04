@@ -13,5 +13,4 @@ import java.util.List;
 @Repository
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
     List<Appointment> findByDateTime(LocalDateTime dateTime);
-    List<Appointment> findAppointmentsByStatus(ActivityStatus activityStatus);
 }

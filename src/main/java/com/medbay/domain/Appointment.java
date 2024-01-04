@@ -20,9 +20,6 @@ public class Appointment {
     private Long id;
 
     private LocalDateTime dateTime;
-    @Getter
-    @Enumerated(EnumType.STRING)
-    private ActivityStatus status;
     //add feedback
 
     @ManyToOne

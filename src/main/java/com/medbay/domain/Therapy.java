@@ -1,6 +1,7 @@
 package com.medbay.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.medbay.domain.enums.TherapyStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,8 +11,8 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Builder
 @Getter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Therapy {
@@ -23,10 +24,10 @@ public class Therapy {
     @OneToOne
     private TherapyType therapyType;
 
-    //Therapy status: PENDING, ACTIVE
+    @Enumerated(EnumType.STRING)
+    private TherapyStatus therapyStatus;
 
     //equipment
-    @Getter
     @OneToMany(mappedBy = "therapy")
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     List<Appointment> appointments;

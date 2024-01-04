@@ -33,13 +33,4 @@ public class TherapyTypeController {
         return therapyTypeService.deleteTherapyType(id);
     }
 
-    @GetMapping("/manage/therapies")
-    public ResponseEntity<List<TherapyType>> getTherapies() {
-        return therapyTypeService.getTherapyType();
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<TherapyType>> getTherapyTypeById(@PathVariable("id") Long id) {
-        return therapyTypeService.getTherapyTypeById(id);
-    }
 }

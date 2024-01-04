@@ -96,8 +96,17 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839/015H2463F8T600004D7D', 'HR219873', 876543210, '#6W1E6'); --inactive
 
 
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (1, '2000-01-01', 'tesna ulica 1', '0123445289', '127856789', '0911223456');
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (2, '2003-01-01', 'tesna ulica 4', '0123456789', '123436789', '0911223456');
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (3, '2002-04-01', 'tesna ulica 2', '0123456489', '123696789', '0911223456');
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (4, '2004-01-01', 'tesna ulica 1', '0123455889', '121256789', '0911223456');
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (5, '2001-01-05', 'tesna ulica 8', '0123447789', '124556789', '0911223456');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (1, '2000-01-01', 'tesna ulica 1', '1279525045', '531113693', '0911223456');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (2, '2003-01-01', 'tesna ulica 4', '1899935409', '463243045', '0911223457');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (3, '2002-04-01', 'tesna ulica 2', '1264166032', '357092999', '0911223458');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (4, '2004-01-01', 'tesna ulica 1', '1487949723', '349047109', '0911223459');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (5, '2001-01-05', 'tesna ulica 8', '1509125019', '620361537', '0911223460');
+
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (3, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (5, 'PENDING');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (4, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (9, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (2, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (7, 'PENDING');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (1, 'PENDING');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (6, 'VERIFIED');

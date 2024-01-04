@@ -13,8 +13,6 @@ public class CreateAppointmentRequest {
 
     private LocalDateTime dateTime;
 
-    private ActivityStatus status;
-
     private Long patientId;
 
     private Long therapyId;

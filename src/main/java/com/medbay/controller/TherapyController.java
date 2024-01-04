@@ -31,7 +31,7 @@ public class TherapyController {
         return therapyService.deleteTherapy(id);
     }
 
-    @GetMapping("/verifications/therapies")
+    @GetMapping("/verifications")
     public ResponseEntity<List<Therapy>> getTherapyRequests() {
         return therapyService.getTherapyRequests();
     }

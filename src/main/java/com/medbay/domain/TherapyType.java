@@ -30,8 +30,4 @@ public class TherapyType {
     @JoinColumn(name = "required_equipment_id")
     private Equipment requiredEquipment;
 
-    @Override
-    public String toString() {
-        return name;
-    }
 }

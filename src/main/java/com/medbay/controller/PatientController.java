@@ -26,7 +26,7 @@ public class PatientController {
         return patientService.getPendingPatients();
     }
 
-    @GetMapping("/verifications/users")
+    @GetMapping("/verifications")
     public ResponseEntity<List<Patient>> getRegistrationsRequests() {
         return patientService.getPendingPatients();
     }
