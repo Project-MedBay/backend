@@ -24,6 +24,10 @@ public class TherapyTypeService {
         return ResponseEntity.ok(therapyTypes);
     }
 
+    public ResponseEntity<Optional<TherapyType>> getTherapyTypeById(Long id) {
+        return ResponseEntity.ok(therapyTypeRepository.findById(id));
+    }
+
     public ResponseEntity<Void> createTherapyType(CreateTherapyTypeRequest request) {
         Optional<Equipment> equipment = equipmentRepository.findById(request.getRequiredEquipmentId());
         if (equipment.isEmpty()) {

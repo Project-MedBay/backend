@@ -20,6 +20,7 @@ import java.util.Optional;
 public class PatientService {
 
     private final PatientRepository patientRepository;
+    private final UserRepository userRepository;
 
 
     public ResponseEntity<List<Patient>> getPatients() {

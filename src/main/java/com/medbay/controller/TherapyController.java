@@ -17,16 +17,23 @@ public class TherapyController {
     private final TherapyService therapyService;
 
     @GetMapping
-    public ResponseEntity<List<Therapy>> getTherapies(){
+    public ResponseEntity<List<Therapy>> getTherapies() {
         return therapyService.getTherapies();
     }
 
     @PostMapping
-    public ResponseEntity<Void> createTherapy(@RequestBody CreateTherapyRequest therapy){
+    public ResponseEntity<Void> createTherapy(@RequestBody CreateTherapyRequest therapy) {
         return therapyService.createTherapy(therapy);
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTherapy(@PathVariable("id") Long id) {
         return therapyService.deleteTherapy(id);
     }
+
+    @GetMapping("/verifications")
+    public ResponseEntity<List<Therapy>> getTherapyRequests() {
+        return therapyService.getTherapyRequests();
+    }
+
 }

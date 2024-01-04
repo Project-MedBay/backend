@@ -7,8 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
-import java.util.*;
+import java.util.List;
 
 
 @RestController
@@ -19,12 +18,9 @@ public class AppointmentInfoController {
 
     private final AppointmentInfoService appointmentInfoService;
 
-
-    @GetMapping
     public ResponseEntity<List<AppointmentInfo>> getAppointmentInfo(@RequestBody CreateAppointmentInfoRequest request) {
         return ResponseEntity.ok(appointmentInfoService.getAppointmentInfo(request));
     }
-
 
     @PostMapping
     public ResponseEntity<Void> createAppointmentInfo(@RequestBody CreateAppointmentInfoRequest request) {
