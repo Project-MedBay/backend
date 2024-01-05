@@ -2,15 +2,22 @@ package com.medbay.domain;
 
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
+@Data
 public class Patient extends User {
 
 
@@ -19,8 +26,14 @@ public class Patient extends User {
     private String OIB;
     private String MBO;
     private String phoneNumber;
-//    @OneToMany(mappedBy = "employee")
-//    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
-//    private List<Appointment> appointments;
-//}
+
+    @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
+    private List<Appointment> appointments;
+
+    @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties({"patient", "employee"})
+    private List<Therapy> therapies;
+
+
 }

@@ -4,4 +4,5 @@ public enum TherapyStatus {
     PENDING,
     VERIFIED,
     DECLINED
+      
 }
