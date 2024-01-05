@@ -102,6 +102,10 @@ public class TherapyService {
 
         // Spremam izmjene ako su se dogodile oko statusa ili RejectionReasona
         therapyRepository.save(therapy);
+
+    }
+
+
     public ResponseEntity<List<Therapy>> getTherapyRequests() {
 
         List<Therapy> pendingTherapies = therapyRepository.findByTherapyStatus(TherapyStatus.PENDING);
