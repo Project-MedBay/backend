@@ -1,9 +1,12 @@
 package com.medbay.controller;
 
+import com.medbay.domain.User;
 import com.medbay.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -19,9 +22,10 @@ public class UserController {
         return userService.changeActivityStatus(status, id);
     }
 
+
 //    @DeleteMapping("/{id}")
 //    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-//        return userService.deleteUser(id);
+//        return userService.deleteUser(id);¸¸
 //    }
 //
 

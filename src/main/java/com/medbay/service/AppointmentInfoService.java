@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -29,11 +30,10 @@ public class AppointmentInfoService {
     @Transactional(readOnly = true)
     public List<AppointmentInfo> getAppointmentInfo(CreateAppointmentInfoRequest request) {
         List<AppointmentInfo> foundAppointmentInfo = appointmentInfoRepository.findByAppointmentDate(request.getAppointmentDate());
-        if(foundAppointmentInfo.isEmpty()){
+        if (foundAppointmentInfo.isEmpty()) {
             foundAppointmentInfo = generateAppointmentInfo(request.getAppointmentDate(), request.getEquipmentId());
-
         }
-return foundAppointmentInfo;
+        return foundAppointmentInfo;
     }
 
     @Transactional
@@ -50,8 +50,8 @@ return foundAppointmentInfo;
     @Transactional
     public ResponseEntity<Void> deleteAppointmentInfo(Long id) {
 //nisam sigurna je li nam potreban delete jer nikad necemo brisat datume i te kombinacije iz baze, nego cemo prilikom prijave terapije samo smanjivat capacity
-       // AppointmentInfo appointmentInfo = appointmentInfoRepository.findById(id)
-         //       .orElseThrow(() -> new EntityNotFoundException("AppointmentInfo not found with id: " + id));
+        // AppointmentInfo appointmentInfo = appointmentInfoRepository.findById(id)
+        //       .orElseThrow(() -> new EntityNotFoundException("AppointmentInfo not found with id: " + id));
 
         // employeeRepository.updateEmployeeAvailability(appointmentInfo.getEmployee().getId(), 1);
         // equipmentRepository.updateEquipmentAvailability(appointmentInfo.getEquipment().getId(), 1);
@@ -86,9 +86,4 @@ return foundAppointmentInfo;
 
         return appointmentInfoList;
     }
-
-
-
-
-
 }

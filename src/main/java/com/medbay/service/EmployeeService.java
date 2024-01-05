@@ -3,6 +3,8 @@ package com.medbay.service;
 import com.medbay.DTO.EmployeeFrontDTO;
 import com.medbay.DTO.ExtendedAppointmentDTO;
 import com.medbay.domain.*;
+import com.medbay.domain.Employee;
+import com.medbay.domain.Therapy;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Role;
 import com.medbay.domain.enums.Specialization;
@@ -14,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -33,7 +36,24 @@ public class EmployeeService {
         List<Employee> employees = employeeRepository.findAll();
         return ResponseEntity.ok(employees);
     }
+    public void addTherapy(Therapy therapy, Long employeeId) {
+        Optional<Employee> employeeOptional = employeeRepository.findById(employeeId);
 
+        if (employeeOptional.isPresent()) {
+            Employee employee = employeeOptional.get();
+
+
+            if (employee.getTherapies().isEmpty()) {
+                employee.setTherapies(new ArrayList<>());
+            }
+            employee.getTherapies().add(therapy);
+            therapy.setEmployee(employee);
+
+            // Sačuvaj ažuriranog zaposlenog sa dodatom terapijom
+            employeeRepository.save(employee);
+
+        }
+    }
     public ResponseEntity<Void> createEmployee(CreateEmployeeRequest request) {
 
         if(userRepository.existsByEmail(request.getEmail())) {

@@ -1,19 +1,18 @@
 package com.medbay.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.medbay.domain.enums.ActivityStatus;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.mapping.ToOne;
+import lombok.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
 @Builder
+@Getter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Appointment {
@@ -23,8 +22,6 @@ public class Appointment {
     private Long id;
 
     private LocalDateTime dateTime;
-    private String status;
-
     //add feedback
 
     @ManyToOne
@@ -41,7 +38,6 @@ public class Appointment {
     @JoinColumn(name = "employee_id")
     @JsonIgnoreProperties("appointments")
     private Employee employee;
-
 
 
 }

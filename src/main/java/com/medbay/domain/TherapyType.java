@@ -1,15 +1,13 @@
 package com.medbay.domain;
 
-import com.medbay.domain.Equipment;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Builder
 @Data
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class TherapyType {
@@ -30,6 +28,5 @@ public class TherapyType {
     @ManyToOne
     @JoinColumn(name = "required_equipment_id")
     private Equipment requiredEquipment;
-
 
 }

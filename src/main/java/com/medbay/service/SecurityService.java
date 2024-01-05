@@ -1,15 +1,14 @@
 package com.medbay.service;
 
-import com.medbay.domain.PasswordResetToken;
-import com.medbay.domain.Patient;
-import com.medbay.domain.User;
+import com.medbay.domain.*;
 import com.medbay.domain.enums.ActivityStatus;
+import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreatePatientRequest;
+import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.domain.request.LoginRequest;
-import com.medbay.repository.PasswordResetTokenRepository;
-import com.medbay.repository.PatientRepository;
-import com.medbay.repository.UserRepository;
+import com.medbay.repository.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,6 +19,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 import static com.medbay.domain.enums.Role.ROLE_PATIENT;
@@ -30,10 +30,13 @@ import static org.springframework.http.HttpStatus.*;
 public class SecurityService {
 
     private final UserRepository userRepository;
+    private final EmployeeRepository employeeRepository;
     private final BCryptPasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     private final PatientRepository patientRepository;
+    private final TherapyTypeRepository therapyTypeRepository;
+    private final TherapyRepository therapyRepository;
     private final PasswordResetTokenRepository passwordResetTokenRepository;
     private final EmailService emailService;
 
@@ -56,7 +59,6 @@ public class SecurityService {
                 .MBO(request.getMBO())
                 .OIB(request.getOIB())
                 .phoneNumber(request.getPhoneNumber())
-                .appointments(new ArrayList<>())
                 .dateOfBirth(request.getDateOfBirth())
                 .status(ActivityStatus.PENDING)
                 .createdAt(LocalDateTime.now())
@@ -73,9 +75,10 @@ public class SecurityService {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-        //if(user.getStatus().equals(ActivityStatus.PENDING)) {
-        //    return ResponseEntity.status(UNAUTHORIZED).build();
-        //}
+
+//        if(user.getStatus().equals(ActivityStatus.PENDING)) {
+//            return ResponseEntity.status(UNAUTHORIZED).build();
+//        }
 
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
@@ -125,4 +128,7 @@ public class SecurityService {
         userRepository.save(user);
         return ResponseEntity.ok().build();
     }
+
+
+
 }

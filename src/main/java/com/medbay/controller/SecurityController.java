@@ -46,4 +46,6 @@ public class SecurityController {
         return securityService.changePassword(token, password);
     }
 
+
+
 }

@@ -94,4 +94,10 @@ public class EmployeeController {
     public ResponseEntity<Void> deactivateEmployee(@PathVariable("id") Long id){
         return employeeService.deactivateEmployee(id);
     }
+
+    @GetMapping("/manage/therapists")
+    public ResponseEntity<List<Employee>> getTherapists() {
+        return employeeService.getEmployees();
+    }
+
 }

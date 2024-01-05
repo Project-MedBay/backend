@@ -29,4 +29,8 @@ public class EquipmentController {
     public ResponseEntity<Void> deleteEquipment(@PathVariable("id") Long id) {
         return equipmentService.deleteEquipment(id);
     }
+    @GetMapping("/manage/facility")
+    public ResponseEntity<List<Equipment>> getResources() {
+        return equipmentService.getEquipment();
+    }
 }
