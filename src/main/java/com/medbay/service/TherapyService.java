@@ -1,6 +1,11 @@
 package com.medbay.service;
 
 import com.medbay.domain.*;
+import com.medbay.domain.Appointment;
+import com.medbay.domain.Employee;
+import com.medbay.domain.Patient;
+import com.medbay.domain.Therapy;
+import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.repository.*;
@@ -13,8 +18,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -26,35 +36,14 @@ public class TherapyService {
     private final AppointmentRepository appointmentRepository;
     private final PatientRepository patientRepository;
     private final EmployeeRepository employeeRepository;
+
     public ResponseEntity<List<Therapy>> getTherapies() {
         List<Therapy> therapies = therapyRepository.findAll();
         return ResponseEntity.ok(therapies);
     }
-/*
-    public ResponseEntity<Void> createTherapy(CreateTherapyRequest request){
-        Optional<Patient> patient = patientRepository.findById(request.getPatientId());
-        if(patient.isEmpty()){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-        Optional<Employee> employee = employeeRepository.findById(request.getEmployeeId());
-        if(employee.isEmpty()){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-        Optional<Appointment> appointment = appointmentRepository.findById(request.getAppointmentId());
-        if(appointment.isEmpty()){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
 
-        Therapy therapy = Therapy.builder()
-                .therapyType(request.getTherapyType())
-                .build();
-        therapyRepository.save(therapy);
-        return ResponseEntity.ok().build();
-    }
-
- */
-    public ResponseEntity<Void> deleteTherapy(Long id){
-        if(!therapyRepository.existsById(id)) {
+    public ResponseEntity<Void> deleteTherapy(Long id) {
+        if (!therapyRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
         therapyRepository.deleteById(id);
@@ -70,7 +59,7 @@ public class TherapyService {
         }
 
         LocalDateTime appointmentDateTime = request.getAppointmentDate();
-TherapyType therapyType = therapyTypeRepository.findByTherapyCode(request.getTherapyCode());
+        TherapyType therapyType = therapyTypeRepository.findByTherapyCode(request.getTherapyCode());
         Therapy therapy = Therapy.builder()
                 .therapyStatus(TherapyStatus.PENDING)
                 .therapyType(therapyType)
@@ -113,5 +102,10 @@ TherapyType therapyType = therapyTypeRepository.findByTherapyCode(request.getThe
 
         // Spremam izmjene ako su se dogodile oko statusa ili RejectionReasona
         therapyRepository.save(therapy);
+    public ResponseEntity<List<Therapy>> getTherapyRequests() {
+
+        List<Therapy> pendingTherapies = therapyRepository.findByTherapyStatus(TherapyStatus.PENDING);
+
+        return ResponseEntity.ok(pendingTherapies);
     }
 }

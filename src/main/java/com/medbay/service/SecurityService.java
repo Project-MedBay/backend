@@ -59,7 +59,6 @@ public class SecurityService {
                 .MBO(request.getMBO())
                 .OIB(request.getOIB())
                 .phoneNumber(request.getPhoneNumber())
-                .appointments(new ArrayList<>())
                 .dateOfBirth(request.getDateOfBirth())
                 .status(ActivityStatus.PENDING)
                 .createdAt(LocalDateTime.now())
@@ -76,11 +75,12 @@ public class SecurityService {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-     /*   if(user.getStatus().equals(ActivityStatus.PENDING)) {
-            return ResponseEntity.status(UNAUTHORIZED).build();
-        }
 
-      */
+
+//        if(user.getStatus().equals(ActivityStatus.PENDING)) {
+//            return ResponseEntity.status(UNAUTHORIZED).build();
+//        }
+
 
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(

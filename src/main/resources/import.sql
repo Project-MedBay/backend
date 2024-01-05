@@ -1,6 +1,18 @@
 INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 1, 'admin@gmail.com', 'John', 'Doe', '$2a$12$AgOr5O5nmLlIgsBgHrP57eouuZ9XRgOX.evYytR7oZ.XRBrgCS65W', 'ROLE_ADMIN');
 --employees
-INSERT INTO _user(status,id,  email, first_name, last_name, password, role) VALUES ('ACTIVE',2,  'ivo.ivic@gmail.com', 'Ivo', 'Ivic', 'testPass', 'ROLE_STAFF');
+--INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (1, 'employee1@example.com', 'Employee', 'One', '$2a$12$vt1ex4tEN.mRrg1w.43CuejrCJ4qVnRJWcBNE2TewGlR7BYjRTfMG', 'ROLE_STAFF', 'ACTIVE');
+--INSERT INTO employee (specialization, id)  VALUES ('PHYSICAL_THERAPIST', 1);
+--INSERT INTO _user(status,id,  email, first_name, last_name, password, role) VALUES ('ACTIVE',2,  'ivo.ivic@gmail.com', 'Ivo', 'Ivic', 'testPass', 'ROLE_STAFF');
+INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (2, 'patient1@example.com', 'Patient', 'One', '$2a$12$9eweklLdaOLp.VVZDQBiz.LFR4xO1RMqKHD2ZKCVu1a3sYyP/kXAm', 'ROLE_PATIENT', 'ACTIVE');
+
+INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (3, 'patient2@example.com', 'Patient', 'Two', '$2a$12$Zd8PdG0ypHVmQKPj34159OZ8GGaR1761mziLDZ76LWf528vAovboK', 'ROLE_PATIENT', 'PENDING');
+
+INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (4, 'patient3@example.com', 'Patient', 'Three', '$2a$12$KEB.lcTkLt2ymUvUVaycfOYVcVzIq/n9Qd4z2TZMgRbpedzwx/sYq', 'ROLE_PATIENT', 'PENDING');
+
+INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (5, 'patient4@example.com', 'Patient', 'Four', '$2a$12$hBBBlx.IKKe0mv4n43Vp8eRbblKaVXZjTXoRVrAn/BRsoO7Q81Sei', 'ROLE_PATIENT', 'ACTIVE');
+
+INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (6, 'patient5@example.com', 'Patient', 'Five', '$2a$12$4Bceack6KQ/KzjMja4ZaoepC1/t8V/KFNYukUjJ.RfrXZMsBshy2C', 'ROLE_PATIENT', 'ACTIVE');
+
 
 INSERT INTO equipment (capacity, id, name) VALUES (20, 1, 'Gym'); --physical therapy
 INSERT INTO equipment (capacity, id, name) VALUES (2, 2, 'Electrical Muscle Stimulation unit');
@@ -83,3 +95,18 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167838/015H2463F8T600004D7C', 'HR177695', 901234567, '#9M8D2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839/015H2463F8T600004D7D', 'HR219873', 876543210, '#6W1E6'); --inactive
 
+
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (1, '2000-01-01', 'tesna ulica 1', '1279525045', '531113693', '0911223456');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (2, '2003-01-01', 'tesna ulica 4', '1899935409', '463243045', '0911223457');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (3, '2002-04-01', 'tesna ulica 2', '1264166032', '357092999', '0911223458');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (4, '2004-01-01', 'tesna ulica 1', '1487949723', '349047109', '0911223459');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (5, '2001-01-05', 'tesna ulica 8', '1509125019', '620361537', '0911223460');
+
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (3, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (5, 'PENDING');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (4, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (9, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (2, 'VERIFIED');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (7, 'PENDING');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (1, 'PENDING');
+INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (6, 'VERIFIED');

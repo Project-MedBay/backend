@@ -1,16 +1,17 @@
 package com.medbay.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Entity
 @NoArgsConstructor
@@ -25,6 +26,7 @@ public class Patient extends User {
     private String OIB;
     private String MBO;
     private String phoneNumber;
+
     @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
@@ -33,14 +35,5 @@ public class Patient extends User {
     @JsonIgnoreProperties({"patient", "employee"})
     private List<Therapy> therapies;
 
-    /*
-    public void addTherapy(Therapy therapy) {
-        if (therapies == null) {
-            therapies = new ArrayList<>();
-        }
-        therapies.add(therapy);
-        therapy.setPatient(this);
-    }
 
-     */
 }
