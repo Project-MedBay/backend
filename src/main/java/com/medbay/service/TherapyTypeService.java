@@ -51,4 +51,9 @@ public class TherapyTypeService {
         therapyTypeRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
+
+    public TherapyType findById(Long id) {
+        Optional<TherapyType> therapyType = therapyTypeRepository.findById(id);
+        return therapyType.orElseThrow(() -> new RuntimeException("Therapy Type not found with id: " + id));
+    }
 }

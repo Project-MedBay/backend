@@ -3,11 +3,13 @@ package com.medbay.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.medbay.domain.enums.ActivityStatus;
 import jakarta.persistence.*;
+import org.hibernate.mapping.ToOne;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Data
 @Builder
 @Getter
 @ToString
@@ -36,11 +38,6 @@ public class Appointment {
     @JoinColumn(name = "employee_id")
     @JsonIgnoreProperties("appointments")
     private Employee employee;
-//
-//    @OneToOne
-//    @JoinColumn(name = "session_id")
-//    @JsonIgnoreProperties("appointments")
-//    private Session session;
 
 
 }

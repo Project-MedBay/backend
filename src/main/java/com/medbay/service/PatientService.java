@@ -1,5 +1,7 @@
 package com.medbay.service;
 
+import com.medbay.domain.Appointment;
+import com.medbay.domain.Employee;
 import com.medbay.domain.Patient;
 import com.medbay.domain.Therapy;
 import com.medbay.domain.User;
@@ -16,12 +18,15 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class PatientService {
 
     private final PatientRepository patientRepository;
+    private final AppointmentRepository appointmentRepository;
+
     private final UserRepository userRepository;
 
 
@@ -30,8 +35,21 @@ public class PatientService {
         return ResponseEntity.ok(patients);
     }
 
+    public ResponseEntity<List<Patient>> getPatientsFromEmployee(Employee employee) {
+        List<Appointment> appointments = appointmentRepository.findByEmployeeId(employee.getId());
 
-    public ResponseEntity<List<Patient>> getPendingPatients() {
+        List<Patient> patients = appointments.stream()
+                .map(Appointment::getPatient)
+                .distinct()
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(patients);
+    }
+
+
+
+
+        public ResponseEntity<List<Patient>> getPendingPatients() {
         List<Patient> patients = patientRepository.findAllByStatus(ActivityStatus.PENDING);
         return ResponseEntity.ok(patients);
     }

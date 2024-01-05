@@ -12,6 +12,7 @@ import lombok.experimental.SuperBuilder;
 import java.util.*;
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder

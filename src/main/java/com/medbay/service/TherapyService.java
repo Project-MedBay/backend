@@ -82,6 +82,17 @@ public class TherapyService {
         return ResponseEntity.ok().build();
     }
 
+    public Therapy findById(Long id) {
+        Optional<Therapy> therapy = therapyRepository.findById(id);
+        return therapy.orElseThrow(() -> new RuntimeException("Therapy not found with id: " + id));
+    }
+  
+    public ResponseEntity<Void> deleteTherapy(Long id){
+        if(!therapyRepository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     private void sendRequestToAdmin(String therapyCode, LocalDateTime therapyDate, String patientMBO, TherapyStatus status, String reason) {
         TherapyType therapyType = therapyTypeRepository.findByTherapyCode(therapyCode);
         Therapy therapy = therapyRepository.findByTherapyType(therapyType);
