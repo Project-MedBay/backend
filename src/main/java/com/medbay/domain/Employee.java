@@ -16,15 +16,14 @@ import java.util.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-@Data
 public class Employee extends User {
 
     @Enumerated(EnumType.STRING)
     private Specialization specialization;
 
-//    @OneToMany(mappedBy = "employee")
-//    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
-//    private List<Appointment> appointments;
+    @OneToMany(mappedBy = "employee")
+    @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
+    private List<Appointment> appointments;
 
 
     @OneToMany(mappedBy = "employee")
