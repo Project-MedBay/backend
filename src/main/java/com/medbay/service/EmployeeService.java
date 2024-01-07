@@ -3,12 +3,11 @@ package com.medbay.service;
 import com.medbay.DTO.EmployeeFrontDTO;
 import com.medbay.DTO.ExtendedAppointmentDTO;
 import com.medbay.domain.*;
-import com.medbay.domain.Employee;
-import com.medbay.domain.Therapy;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Role;
 import com.medbay.domain.enums.Specialization;
 import com.medbay.domain.request.CreateEmployeeRequest;
+import com.medbay.repository.AppointmentRepository;
 import com.medbay.repository.EmployeeRepository;
 import com.medbay.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -16,9 +15,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.time.LocalDateTime;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -26,16 +24,19 @@ import java.util.stream.Collectors;
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
+    private final AppointmentRepository appointmentRepository;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
     private final AppointmentService appointmentService;
     private final TherapyService therapyService;
     private final EquipmentService equipmentService;
     private final TherapyTypeService therapyTypeService;
+
     public ResponseEntity<List<Employee>> getEmployees() {
         List<Employee> employees = employeeRepository.findAll();
         return ResponseEntity.ok(employees);
     }
+
     public void addTherapy(Therapy therapy, Long employeeId) {
         Optional<Employee> employeeOptional = employeeRepository.findById(employeeId);
 
@@ -54,9 +55,10 @@ public class EmployeeService {
 
         }
     }
+
     public ResponseEntity<Void> createEmployee(CreateEmployeeRequest request) {
 
-        if(userRepository.existsByEmail(request.getEmail())) {
+        if (userRepository.existsByEmail(request.getEmail())) {
             return ResponseEntity.badRequest().build();
         }
 
@@ -126,5 +128,21 @@ public class EmployeeService {
         );
 
         return ResponseEntity.ok(extendedAppointmentDTO);
+    }
+
+    public ResponseEntity<Map<Employee, Integer>> getPatientsTreated() {
+        List<Employee> employees = employeeRepository.findAll();
+        List<Appointment> appointments = appointmentRepository.findAll();
+        Map<Employee, Integer> mapa = new HashMap<>();
+        for (Employee e : employees) {
+            int count = 0;
+            for (Appointment a : appointments) {
+                if (a.getDateTime().isBefore(LocalDateTime.now()) && a.getEmployee().equals(e)) {
+                    count++;
+                }
+            }
+            mapa.put(e, count);
+        }
+        return ResponseEntity.ok(mapa);
     }
 }

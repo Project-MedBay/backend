@@ -5,13 +5,6 @@ import com.medbay.DTO.ExtendedAppointmentDTO;
 import com.medbay.domain.Employee;
 import com.medbay.domain.Patient;
 import com.medbay.domain.request.CreateEmployeeRequest;
-import com.medbay.service.EmployeeService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import com.medbay.domain.*;
-import com.medbay.domain.request.CreateAppointmentInfoRequest;
-import com.medbay.domain.request.CreateAppointmentRequest;
 import com.medbay.service.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/employee")
@@ -35,9 +28,6 @@ public class EmployeeController {
     private final PatientService patientService;
     private final EquipmentService equipmentService;
     private final TherapyTypeService therapyTypeService;
-
-
-
 
 
     @GetMapping("/{employeeId}")
@@ -58,7 +48,6 @@ public class EmployeeController {
         return employeeService.getAppointmentDetails(employee, appointmentId);
 
 
-
     }
 
     @GetMapping("/patients")
@@ -69,7 +58,6 @@ public class EmployeeController {
     //public ResponseEntity<List<Appointment>> getSessions(@RequestParam Employee employee) {
     //    return appointmentService.getAppointmentsFromEmployee(employee);
     //}
-
 
 
     @PutMapping("/{appointmentId}/reschedule")
@@ -83,21 +71,28 @@ public class EmployeeController {
 
 
     @GetMapping
-    public ResponseEntity<List<Employee>> getEmployees(){
+    public ResponseEntity<List<Employee>> getEmployees() {
         return employeeService.getEmployees();
     }
+
     @PostMapping
-    public ResponseEntity<Void> createEmployee(@RequestBody CreateEmployeeRequest employee){
+    public ResponseEntity<Void> createEmployee(@RequestBody CreateEmployeeRequest employee) {
         return employeeService.createEmployee(employee);
     }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deactivateEmployee(@PathVariable("id") Long id){
+    public ResponseEntity<Void> deactivateEmployee(@PathVariable("id") Long id) {
         return employeeService.deactivateEmployee(id);
     }
 
     @GetMapping("/manage/therapists")
     public ResponseEntity<List<Employee>> getTherapists() {
         return employeeService.getEmployees();
+    }
+
+    @GetMapping("/statistics")
+    public ResponseEntity<Map<Employee, Integer>> get() {
+        return employeeService.getPatientsTreated();
     }
 
 }
