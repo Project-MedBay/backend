@@ -1,9 +1,7 @@
 package com.medbay.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.medbay.domain.enums.ActivityStatus;
 import jakarta.persistence.*;
-import org.hibernate.mapping.ToOne;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -22,7 +20,8 @@ public class Appointment {
     private Long id;
 
     private LocalDateTime dateTime;
-    //add feedback
+
+    private String sessionNotes;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")

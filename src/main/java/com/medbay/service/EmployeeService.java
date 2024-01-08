@@ -1,25 +1,29 @@
 package com.medbay.service;
 
-import com.medbay.DTO.EmployeeFrontDTO;
-import com.medbay.DTO.ExtendedAppointmentDTO;
+import com.medbay.domain.DTO.EmployeeSessionsDTO;
 import com.medbay.domain.*;
-import com.medbay.domain.Employee;
-import com.medbay.domain.Therapy;
+import com.medbay.domain.DTO.PatientDTO;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Role;
 import com.medbay.domain.enums.Specialization;
 import com.medbay.domain.request.CreateEmployeeRequest;
+import com.medbay.repository.AppointmentRepository;
 import com.medbay.repository.EmployeeRepository;
 import com.medbay.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @Service
 @RequiredArgsConstructor
@@ -28,32 +32,14 @@ public class EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-    private final AppointmentService appointmentService;
-    private final TherapyService therapyService;
-    private final EquipmentService equipmentService;
-    private final TherapyTypeService therapyTypeService;
+    private final AppointmentRepository appointmentRepository;
+
     public ResponseEntity<List<Employee>> getEmployees() {
-        List<Employee> employees = employeeRepository.findAll();
+        List<Employee> employees = employeeRepository.findAllByStatus(ActivityStatus.ACTIVE);
         return ResponseEntity.ok(employees);
     }
-    public void addTherapy(Therapy therapy, Long employeeId) {
-        Optional<Employee> employeeOptional = employeeRepository.findById(employeeId);
-
-        if (employeeOptional.isPresent()) {
-            Employee employee = employeeOptional.get();
 
 
-            if (employee.getTherapies().isEmpty()) {
-                employee.setTherapies(new ArrayList<>());
-            }
-            employee.getTherapies().add(therapy);
-            therapy.setEmployee(employee);
-
-            // Sačuvaj ažuriranog zaposlenog sa dodatom terapijom
-            employeeRepository.save(employee);
-
-        }
-    }
     public ResponseEntity<Void> createEmployee(CreateEmployeeRequest request) {
 
         if(userRepository.existsByEmail(request.getEmail())) {
@@ -67,7 +53,7 @@ public class EmployeeService {
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .status(ActivityStatus.ACTIVE)
-                .role(Role.ROLE_STAFF)
+                .role(Role.STAFF)
                 .specialization(Specialization.valueOf(request.getSpecialization().toUpperCase()))
                 .build();
 
@@ -87,44 +73,69 @@ public class EmployeeService {
         return ResponseEntity.ok().build();
     }
 
-    public Employee getEmployeeById(Long employeeId) {
+    public ResponseEntity<List<Patient>> getPatientsFromEmployee(Employee employee) {
+        List<Appointment> appointments = appointmentRepository.findByEmployee(employee);
 
-        return employeeRepository.findById(employeeId).orElse(new Employee());
+        List<Patient> patients = appointments.stream()
+                .map(Appointment::getPatient)
+                .distinct()
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(patients);
     }
 
-    public ResponseEntity<List<EmployeeFrontDTO>> getAppointmentsForEmployee(Employee employee) {
-        ResponseEntity<List<Appointment>> response = appointmentService.getAppointmentsFromEmployee(employee);
-        List<Appointment> appointments = response.getBody();
-        if (appointments == null || appointments.isEmpty()) {
-            return null;
-        }
-        List<EmployeeFrontDTO> appointmentDetails = appointments.stream().map(appointment -> {
-            Therapy therapy = therapyService.findById(appointment.getTherapy().getId());
-            TherapyType therapyType = therapyTypeService.findById(therapy.getTherapyType().getId());
-            Equipment equipment = equipmentService.findById(therapyType.getRequiredEquipment().getId());
 
-            return new EmployeeFrontDTO(appointment, equipment);
-        }).collect(Collectors.toList());
-
-        return ResponseEntity.ok(appointmentDetails);
+    private static LocalDate getStartOfWeek(LocalDate date) {
+        return date.with(DayOfWeek.MONDAY);
     }
 
-    public ResponseEntity<ExtendedAppointmentDTO> getAppointmentDetails(Employee employee, Long appointmentId) {
-        Appointment appointment = appointmentService.getAppointmentById(appointmentId);
+    public ResponseEntity<Map<LocalDate, List<EmployeeSessionsDTO>>> getEmployeesAppointments() {
+        Employee employee = (Employee) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        List<Appointment> appointments = appointmentRepository.findByEmployeeAndDateTimeAfter(employee, LocalDateTime.now());
 
-        Therapy therapy = therapyService.findById(appointment.getTherapy().getId());
-        TherapyType therapyType = therapyTypeService.findById(therapy.getTherapyType().getId());
-        Equipment equipment = equipmentService.findById(therapyType.getRequiredEquipment().getId());
+        Map<LocalDate, List<EmployeeSessionsDTO>> employeeSessionsByWeek = appointments.stream()
+                .map(appointment -> {
+                    Therapy therapy = appointment.getTherapy();
+                    int numOfSessions = therapy.getAppointments().size();
+                    int index = IntStream.range(0, numOfSessions)
+                            .filter(i -> therapy.getAppointments().get(i).getId().equals(appointment.getId()))
+                            .findFirst().orElseThrow(() -> new RuntimeException("Appointment not found"));
 
-        Patient patient = appointment.getPatient();
+                    return buildEmployeeSessionsDTO(appointment, appointments, numOfSessions, index);
+                })
+                .collect(Collectors.groupingBy(dto -> getStartOfWeek(dto.getDateTime().toLocalDate())));
 
-        ExtendedAppointmentDTO extendedAppointmentDTO = new ExtendedAppointmentDTO(
-                appointment.getDateTime(),
-                equipment,
-                patient,
-                therapyType.getDescription()
-        );
-
-        return ResponseEntity.ok(extendedAppointmentDTO);
+        return ResponseEntity.ok(employeeSessionsByWeek);
     }
+
+    private static EmployeeSessionsDTO buildEmployeeSessionsDTO(Appointment appointment, List<Appointment> appointments,
+                                                                int numOfSessions, int index) {
+        return EmployeeSessionsDTO.builder()
+                .id(appointments.indexOf(appointment) + 1)
+                .sessionNotes(appointment.getSessionNotes())
+                .therapyTypeName(appointment.getTherapy().getTherapyType().getName())
+                .dateTime(appointment.getDateTime())
+                .equipmentRoomName(appointment.getTherapy().getTherapyType().getRequiredEquipment().getRoomName())
+                .numberOfSessions(numOfSessions + 1)
+                .numberOfSessionsCompleted(index + 1)
+                .patient(buildPatientDTO(appointment))
+                .build();
+    }
+
+    private static PatientDTO buildPatientDTO(Appointment appointment) {
+        return PatientDTO.builder()
+                .id(appointment.getPatient().getId())
+                .OIB(appointment.getPatient().getOIB())
+                .MBO(appointment.getPatient().getMBO())
+                .firstName(appointment.getPatient().getFirstName())
+                .lastName(appointment.getPatient().getLastName()).email(appointment.getPatient().getEmail())
+                .phoneNumber(appointment.getPatient().getPhoneNumber())
+                .address(appointment.getPatient().getAddress())
+                .createdAt(appointment.getPatient().getCreatedAt())
+                .dateOfBirth(appointment.getPatient().getDateOfBirth())
+                .photo(appointment.getPatient().getPhoto())
+                .build();
+    }
+
+
 }

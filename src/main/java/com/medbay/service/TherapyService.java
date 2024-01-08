@@ -1,41 +1,42 @@
 package com.medbay.service;
 
 import com.medbay.domain.*;
-import com.medbay.domain.Appointment;
-import com.medbay.domain.Employee;
-import com.medbay.domain.Patient;
-import com.medbay.domain.Therapy;
-import com.medbay.domain.enums.ActivityStatus;
+import com.medbay.domain.enums.Specialization;
 import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.repository.*;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
-import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.Random;
+
+import static com.medbay.domain.enums.TherapyStatus.PENDING;
+import static org.springframework.http.HttpStatus.CONFLICT;
 
 @Service
 @RequiredArgsConstructor
 public class TherapyService {
     private final TherapyRepository therapyRepository;
-    private final  TherapyTypeRepository therapyTypeRepository;
-    private  final   PatientService patientService;
-    private final   EmailService emailService;
+    private final TherapyTypeRepository therapyTypeRepository;
+    private final PatientService patientService;
+    private final EmailService emailService;
     private final AppointmentRepository appointmentRepository;
+    private final EquipmentRepository equipmentRepository;
     private final PatientRepository patientRepository;
     private final EmployeeRepository employeeRepository;
+    private final HealthReferralRepository healthReferralRepository;
+    private final DoctorRepository doctorRepository;
+
+    private final Random random = new Random();
 
     public ResponseEntity<List<Therapy>> getTherapies() {
         List<Therapy> therapies = therapyRepository.findAll();
@@ -50,72 +51,99 @@ public class TherapyService {
         return ResponseEntity.ok().build();
     }
 
-    public ResponseEntity<Void> createNewTherapy(CreateTherapyRequest request) {
-      //  Optional<Patient> patientOptional = patientRepository.findById(request.getPatientId());
-        //Optional<Employee> employeeOptional = employeeRepository.findById(request.getEmployeeId());
-
-        if (request.getTherapyCode().isEmpty() || request.getAppointmentDate().toString().isEmpty()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-
-        LocalDateTime appointmentDateTime = request.getAppointmentDate();
-        TherapyType therapyType = therapyTypeRepository.findByTherapyCode(request.getTherapyCode());
-        Therapy therapy = Therapy.builder()
-                .therapyStatus(TherapyStatus.PENDING)
-                .therapyType(therapyType)
-                .build();
-
-     User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Patient patient = (Patient)user;
-        // Dodajem terapiju pacijentu
-        patientService.addTherapy(therapy, patient.getId());
-
-        //Dodajem terapiju employee, na lraju ne znam jel se nama salje employeeId pa ne stvaram to tu
-        //employee.addTherapy(therapy);
-
-        // Spremi ažuriranog pacijenta u repozitorij, ovo vec spremam pozivom addTherapy u patientRepositoryu
-       // patientRepository.save(patient);
-
-        // Slanje zahtjeva adminu, s fronta mi salju razlog i status mogu mijenati
-        sendRequestToAdmin(request.getTherapyCode(), appointmentDateTime, patient.getMBO(), TherapyStatus.PENDING, " ");
-
-        return ResponseEntity.ok().build();
-    }
-
     public Therapy findById(Long id) {
         Optional<Therapy> therapy = therapyRepository.findById(id);
         return therapy.orElseThrow(() -> new RuntimeException("Therapy not found with id: " + id));
     }
 
-
-    private void sendRequestToAdmin(String therapyCode, LocalDateTime therapyDate, String patientMBO, TherapyStatus status, String reason) {
-        TherapyType therapyType = therapyTypeRepository.findByTherapyCode(therapyCode);
-        Therapy therapy = therapyRepository.findByTherapyType(therapyType);
-
-        Patient patient = patientRepository.findByMBO(patientMBO);
-
-        therapy.setTherapyStatus(status);
-
-        // Ako je terapija odbijena, postavi razlog
-        if (status == TherapyStatus.DECLINED) {
-            therapy.setRejectionReason(reason);
-        } else {
-            // Ako je terapija odobrena, postavi razlog na null (ako već ima neki razlog)
-            therapy.setRejectionReason(null);
-        }
-
-        emailService.sendTherapyConfirmationEmail(patient);
-
-        // Spremam izmjene ako su se dogodile oko statusa ili RejectionReasona
-        therapyRepository.save(therapy);
-
-    }
-
-
     public ResponseEntity<List<Therapy>> getTherapyRequests() {
-
-        List<Therapy> pendingTherapies = therapyRepository.findByTherapyStatus(TherapyStatus.PENDING);
-
+        List<Therapy> pendingTherapies = therapyRepository.findByTherapyStatus(PENDING);
         return ResponseEntity.ok(pendingTherapies);
     }
+
+    public ResponseEntity<String> changeTherapyStatus(Long id, String status, String rejectionReason) {
+        Therapy therapy = therapyRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Therapy not found"));
+        if(status.equals(TherapyStatus.DECLINED.name())) {
+            if(rejectionReason == null || rejectionReason.isEmpty()) {
+                return ResponseEntity.status(CONFLICT).body("Rejection reason is required.");
+            }
+            therapyRepository.delete(therapy);
+            //emailService.sendTherapyRejectionEmail(therapy.getPatient(), rejectionReason);
+        }
+        else{
+            therapy.setTherapyStatus(TherapyStatus.VERIFIED);
+            therapyRepository.save(therapy);
+            emailService.sendTherapyConfirmationEmail(therapy.getPatient());
+        }
+        emailService.sendTherapyConfirmationEmail(therapy.getPatient());
+        return ResponseEntity.ok().build();
+    }
+
+    @Transactional
+    public ResponseEntity<String> createNewTherapy(CreateTherapyRequest request) {
+        Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        ResponseEntity<String> validationResponse = validateRequest(request);
+        if (validationResponse != null) {
+            return validationResponse;
+        }
+
+        TherapyType therapyType = therapyTypeRepository.findByTherapyCode(request.getTherapyCode())
+                .orElseThrow(() -> new RuntimeException("Therapy type not found with code: " + request.getTherapyCode()));
+        List<Appointment> appointments = createAppointments(request, patient, therapyType);
+
+        if (appointments.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Unable to schedule any appointments.");
+        }
+
+        Therapy therapy = Therapy.builder()
+                .therapyStatus(PENDING)
+                .appointments(appointments)
+                .patient(patient)
+                .therapyType(therapyType)
+                .build();
+        therapyRepository.save(therapy);
+
+        return ResponseEntity.ok().build();
+    }
+
+    private ResponseEntity<String> validateRequest(CreateTherapyRequest request) {
+        if (!doctorRepository.isActiveById(request.getHlkid())) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Doctor is not active.");
+        }
+
+        if (!healthReferralRepository.existsByHlkidAndHealthReferralIdAndTherapyCode(
+                request.getHlkid(), request.getHealthReferralId(), request.getTherapyCode())) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Health referral not found.");
+        }
+
+        return null;
+    }
+
+    private List<Appointment> createAppointments(CreateTherapyRequest request, Patient patient, TherapyType therapyType) {
+        List<Appointment> appointments = new ArrayList<>();
+        Specialization specialization = therapyType.getRequiredEquipment().getSpecialization();
+        Equipment equipment = therapyType.getRequiredEquipment();
+
+        for (LocalDateTime dateTime : request.getAppointmentDates()) {
+            List<Employee> employees = employeeRepository.findAllByAppointmentsDateTimeAndSpecialization(
+                    dateTime, specialization.toString());
+
+            if (employees.isEmpty() || equipmentRepository.isCapacityReachedForEquipmentOnDate(equipment.getId(), dateTime) == null) {
+                return new ArrayList<>();
+            }
+
+            Appointment appointment = Appointment.builder()
+                    .patient(patient)
+                    .dateTime(dateTime)
+                    .employee(employees.get(random.nextInt(employees.size())))
+                    .build();
+            appointments.add(appointment);
+        }
+
+        return appointments;
+    }
+
+
 }

@@ -1,12 +1,7 @@
 package com.medbay.domain.request;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.medbay.domain.enums.Role;
-import com.medbay.domain.enums.Specialization;
 import lombok.Getter;
 import lombok.ToString;
-
-import java.time.LocalDate;
 
 @Getter
 @ToString

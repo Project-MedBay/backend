@@ -27,8 +27,15 @@ public class TherapyController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Void> createNewTherapy(@RequestBody CreateTherapyRequest request) {
+    public ResponseEntity<String> createNewTherapy(@RequestBody CreateTherapyRequest request) {
         return therapyService.createNewTherapy(request);
+    }
+
+    @PostMapping("/change-status/{id}")
+    public ResponseEntity<String> changeTherapyStatus(@PathVariable("id") Long id,
+                                                      @RequestParam String status,
+                                                      @RequestParam(required = false) String rejectionReason) {
+        return therapyService.changeTherapyStatus(id, status, rejectionReason);
     }
 
     @GetMapping("/verifications")

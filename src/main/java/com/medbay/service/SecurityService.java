@@ -2,13 +2,10 @@ package com.medbay.service;
 
 import com.medbay.domain.*;
 import com.medbay.domain.enums.ActivityStatus;
-import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreatePatientRequest;
-import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.domain.request.LoginRequest;
 import com.medbay.repository.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -17,12 +14,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Map;
-import java.util.Optional;
 import java.util.UUID;
 
-import static com.medbay.domain.enums.Role.ROLE_PATIENT;
+import static com.medbay.domain.enums.Role.PATIENT;
 import static org.springframework.http.HttpStatus.*;
 
 @Service
@@ -62,7 +57,7 @@ public class SecurityService {
                 .dateOfBirth(request.getDateOfBirth())
                 .status(ActivityStatus.PENDING)
                 .createdAt(LocalDateTime.now())
-                .role(ROLE_PATIENT)
+                .role(PATIENT)
                 .build();
 
         patientRepository.save(patient);
@@ -89,23 +84,10 @@ public class SecurityService {
 
 
         String token = jwtService.generateAccessToken(user);
-        String refreshToken = jwtService.generateRefreshToken(user);
-        return ResponseEntity.ok(Map.of("accessToken", token, "refreshToken", refreshToken));
+        return ResponseEntity.ok(Map.of("accessToken", token));
 
     }
 
-    public ResponseEntity<String> refreshToken(Map<String, String> request) {
-        String refreshToken = request.get("refreshToken");
-        String email = jwtService.extractEmail(refreshToken);
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        if(jwtService.isTokenValid(refreshToken, user)) {
-            String newToken = jwtService.generateAccessToken(user);
-            return ResponseEntity.ok(newToken);
-        } else {
-            return new ResponseEntity<>("Invalid refresh token", UNAUTHORIZED);
-        }
-    }
 
     public ResponseEntity<Void> sendTokenEmailForForgotPassword(String email) {
         User user = userRepository.findByEmail(email)

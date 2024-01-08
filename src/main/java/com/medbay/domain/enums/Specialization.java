@@ -1,7 +1,10 @@
 package com.medbay.domain.enums;
 
 public enum Specialization {
-
-    //TODO add more specializations
-    PHYSICAL_THERAPIST, CYROTHERAPIST, HYDROTHERAPIST, THERMOTHERAPIST
+    PHYSICAL_THERAPIST, // For general physical therapy using Gym equipment
+    ELECTROTHERAPIST,   // For Electrical Muscle Stimulation therapies
+    CRYOTHERAPIST,      // For Cryotherapy treatments
+    HYDROTHERAPIST,     // For Hydrotherapy treatments
+    THERMOTHERAPIST     // For Thermotherapy treatments using Paraffin wax baths and infrared lamp
 }
+

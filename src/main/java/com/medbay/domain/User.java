@@ -28,6 +28,7 @@ public class User implements UserDetails {
     @GeneratedValue(generator = "IdGenerator")
     @GenericGenerator(name = "IdGenerator", strategy = "com.medbay.config.IdGenerator")
     private Long id;
+
     private String firstName;
     private String lastName;
     private String email;
@@ -37,10 +38,6 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
     private LocalDateTime createdAt;
-
-
-//BLOB photo
-
 
 
 

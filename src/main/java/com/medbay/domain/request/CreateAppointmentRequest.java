@@ -1,7 +1,6 @@
 package com.medbay.domain.request;
 
 
-import com.medbay.domain.enums.ActivityStatus;
 import lombok.Getter;
 import lombok.ToString;
 

@@ -1,10 +1,7 @@
 package com.medbay.controller;
 
-import com.medbay.domain.User;
 import com.medbay.domain.request.CreatePatientRequest;
 import com.medbay.domain.request.LoginRequest;
-import com.medbay.repository.UserRepository;
-import com.medbay.service.EmailService;
 import com.medbay.service.SecurityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -28,11 +25,6 @@ public class SecurityController {
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest request) {
         return securityService.login(request);
-    }
-
-    @PostMapping("/refresh-token")
-    public ResponseEntity<String> refreshToken(@RequestBody Map<String, String> request) {
-        return securityService.refreshToken(request);
     }
 
     @PostMapping("/forgot-password")

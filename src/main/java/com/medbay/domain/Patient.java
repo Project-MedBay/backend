@@ -5,14 +5,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -29,6 +27,7 @@ public class Patient extends User {
     private String OIB;
     private String MBO;
     private String phoneNumber;
+    private byte[] photo;
 
     @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})

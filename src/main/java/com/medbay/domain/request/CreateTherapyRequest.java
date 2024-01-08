@@ -1,22 +1,25 @@
 package com.medbay.domain.request;
 
-import com.medbay.domain.TherapyType;
-import lombok.Data;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
-@ToString
-@Data
 @NoArgsConstructor
 public class CreateTherapyRequest {
-  //  private TherapyType therapyType;
+
+    @NotBlank
     private String therapyCode;
-   // private Long patientId;
-    private LocalDateTime appointmentDate;
-    private Long employeeId;
-   // private Long appointmentId;
+    @NotNull
+    private List<LocalDateTime> appointmentDates;
+    @NotBlank
+    private String hlkid;
+    @NotBlank
+    private String healthReferralId;
+
+
 }

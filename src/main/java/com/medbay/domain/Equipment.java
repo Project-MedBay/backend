@@ -1,5 +1,6 @@
 package com.medbay.domain;
 
+import com.medbay.domain.enums.Specialization;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,8 +20,8 @@ public class Equipment {
     private Long id;
     private String name;
     private int capacity;
-
-    //Reservation table
-    // date, equipment/capacity, spec employee
+    @Enumerated(EnumType.STRING)
+    private Specialization specialization;
+    private String roomName;
 
 }

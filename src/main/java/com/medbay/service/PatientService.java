@@ -1,23 +1,18 @@
 package com.medbay.service;
 
-import com.medbay.domain.Appointment;
+import com.medbay.domain.DTO.PatientDTO;
 import com.medbay.domain.Employee;
 import com.medbay.domain.Patient;
-import com.medbay.domain.Therapy;
-import com.medbay.domain.User;
 import com.medbay.domain.enums.ActivityStatus;
-import com.medbay.domain.enums.Role;
-import com.medbay.domain.request.CreatePatientRequest;
 import com.medbay.repository.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,50 +20,47 @@ import java.util.stream.Collectors;
 public class PatientService {
 
     private final PatientRepository patientRepository;
-    private final AppointmentRepository appointmentRepository;
-
-    private final UserRepository userRepository;
 
 
-    public ResponseEntity<List<Patient>> getPatients() {
-        List<Patient> patients = patientRepository.findAll();
-        return ResponseEntity.ok(patients);
-    }
+    public ResponseEntity<List<PatientDTO>> getPatients() {
+        List<Patient> patients = patientRepository.findAllByStatus(ActivityStatus.ACTIVE);
 
-    public ResponseEntity<List<Patient>> getPatientsFromEmployee(Employee employee) {
-        List<Appointment> appointments = appointmentRepository.findByEmployeeId(employee.getId());
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean isEmployee = authentication.getAuthorities()
+                .stream()
+                .anyMatch(auth -> "ROLE_STAFF".equals(auth.getAuthority()));
 
-        List<Patient> patients = appointments.stream()
-                .map(Appointment::getPatient)
-                .distinct()
+        Employee employee = isEmployee ? (Employee) authentication.getPrincipal() : null;
+
+        List<PatientDTO> patientDTOs = patients.stream()
+                .map(patient -> createPatientDTO(patient, isEmployee, employee))
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(patients);
+        return ResponseEntity.ok(patientDTOs);
+    }
+
+    private PatientDTO createPatientDTO(Patient patient, boolean isEmployee, Employee employee) {
+        boolean hasAppointmentWithEmployee = isEmployee && patient.getAppointments().stream()
+                .anyMatch(appointment -> appointment.getEmployee() != null && appointment.getEmployee().equals(employee));
+
+        return PatientDTO.builder()
+                .firstName(patient.getFirstName())
+                .lastName(patient.getLastName())
+                .email(patient.getEmail())
+                .createdAt(patient.getCreatedAt())
+                .address(patient.getAddress())
+                .dateOfBirth(patient.getDateOfBirth())
+                .OIB(patient.getOIB())
+                .MBO(patient.getMBO())
+                .phoneNumber(patient.getPhoneNumber())
+                .show(hasAppointmentWithEmployee)
+                .build();
     }
 
 
-
-
-        public ResponseEntity<List<Patient>> getPendingPatients() {
+    public ResponseEntity<List<Patient>> getPendingPatients() {
         List<Patient> patients = patientRepository.findAllByStatus(ActivityStatus.PENDING);
         return ResponseEntity.ok(patients);
     }
 
-    public void addTherapy(Therapy therapy, Long patientId) {
-        Optional<Patient> patientOptional = patientRepository.findById(patientId);
-
-        if (patientOptional.isPresent()) {
-            Patient patient = patientOptional.get();
-
-            if (patient.getTherapies() == null) {
-                patient.setTherapies(new ArrayList<>());
-            }
-            patient.getTherapies().add(therapy);
-            therapy.setPatient(patient);
-
-            // Sačuvaj ažuriranog pacijenta sa dodatom terapijom
-            patientRepository.save(patient);
-
-        }
-    }
 }

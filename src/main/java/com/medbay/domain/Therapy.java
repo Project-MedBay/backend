@@ -6,13 +6,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
-@Getter
 @Builder
 @Data
 @NoArgsConstructor
@@ -31,18 +29,15 @@ public class Therapy {
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
-    @OneToOne
+    @ManyToOne
     private TherapyType therapyType;
 
     @Enumerated(EnumType.STRING)
     private TherapyStatus therapyStatus;
 
-    //equipment
     @OneToMany(mappedBy = "therapy")
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
-
-    String rejectionReason;
 
 }
 

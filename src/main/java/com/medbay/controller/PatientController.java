@@ -1,6 +1,7 @@
 package com.medbay.controller;
 
 
+import com.medbay.domain.DTO.PatientDTO;
 import com.medbay.domain.Patient;
 import com.medbay.service.PatientService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class PatientController {
     private final PatientService patientService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Patient>> getPatients(){
+    public ResponseEntity<List<PatientDTO>> getPatients(){
         return patientService.getPatients();
     }
 
@@ -26,10 +27,4 @@ public class PatientController {
         return patientService.getPendingPatients();
     }
 
-    @GetMapping("/verifications")
-    public ResponseEntity<List<Patient>> getRegistrationsRequests() {
-        return patientService.getPendingPatients();
-    }
-
-    
 }

@@ -1,131 +1,113 @@
 package com.medbay.service;
 
 import com.medbay.domain.Appointment;
-import com.medbay.domain.Employee;
-import com.medbay.domain.Patient;
-import com.medbay.domain.Therapy;
-import com.medbay.domain.request.CreateAppointmentRequest;
+import com.medbay.domain.DTO.AdminCalendarDTO;
+import com.medbay.domain.Equipment;
+import com.medbay.domain.TherapyType;
 import com.medbay.repository.*;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+import static com.medbay.util.Helper.log;
 
 @Service
 @RequiredArgsConstructor
 public class AppointmentService {
 
     private final AppointmentRepository appointmentRepository;
-    private final PatientRepository patientRepository;
-    private final TherapyRepository therapyRepository;
     private final EmployeeRepository employeeRepository;
+    private final TherapyTypeRepository therapyTypeRepository;
 
 
-    public ResponseEntity<List<Appointment>> getAppointments() {
-        List<Appointment> appointments = appointmentRepository.findAll();
-        return ResponseEntity.ok(appointments);
-    }
-    public Appointment getAppointmentById(Long appointmentId) {
-        return appointmentRepository.findById(appointmentId).get();
-    }
 
-    public ResponseEntity<List<Appointment>> getAppointmentsFromEmployee(Employee employee){
-        return ResponseEntity.ok(employee.getAppointments());
-    }
-    public ResponseEntity<List<Appointment>> getAppointmentsPerTimeSlot(LocalDateTime dateTime) {
-        List<Appointment> appointments = appointmentRepository.findByDateTime(dateTime);
-        return ResponseEntity.ok(appointments);
-    }
-    public ResponseEntity<Integer> getNumOfAppointmentsPerTimeSlot(LocalDateTime dateTime) {
-//        LocalDate ld;
-//        DateTimeFormatter df = new DateTimeFormatterBuilder()
-//                // case insensitive to parse JAN and FEB
-//                .parseCaseInsensitive()
-//                // add pattern
-//                .appendPattern("\"yyyy-MM-dd\"")
-//                // create formatter (use English Locale to parse month names)
-//                .toFormatter(Locale.ENGLISH);
-//        ld = LocalDate.parse(date, df);
-        List<Appointment> appointments = appointmentRepository.findByDateTime(dateTime);
-        return ResponseEntity.ok(appointments.size());
-    }
-
-    public ResponseEntity<List<Integer>> getNumOfAppointments(LocalDate localDate) {
-        List<Integer> count = new ArrayList<>();
-        for(int i = 8; i<20; i++) {
-            List<Appointment> appointments = appointmentRepository.findByDateTime(localDate.atTime(i, 0));
-            count.add(appointments.size());
-        }
-        return ResponseEntity.ok(count);
-    }
-
-
-    public ResponseEntity<List<Appointment>> getAllAppointmentsPerTimeSlot(LocalDateTime dateTime) {
-        List<Appointment> appointments = appointmentRepository.findByDateTime(dateTime);
-        return ResponseEntity.ok(appointments);
-    }
-    public ResponseEntity<Void> createAppointment(CreateAppointmentRequest request) {
-
-        Optional<Patient> patient = patientRepository.findById(request.getPatientId());
-        if(patient.isEmpty()){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-        Optional<Therapy> therapy = therapyRepository.findById(request.getTherapyId());
-        if(therapy.isEmpty()){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-        Optional<Employee> employee = employeeRepository.findById(request.getEmployeeId());
-        if(employee.isEmpty()){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    public ResponseEntity<Map<LocalDateTime, List<AdminCalendarDTO>>> getAppointmentsForWeek(LocalDate date) {
+        if (date.getDayOfWeek() != DayOfWeek.MONDAY) {
+            return ResponseEntity.badRequest().build();
         }
 
+        Map<LocalDateTime, List<AdminCalendarDTO>> appointmentsPerHour = new LinkedHashMap<>();
 
-        Appointment appointment = Appointment.builder()
-                .dateTime(request.getDateTime())
-                .patient(patient.get())
-                .therapy(therapy.get())
-                .employee(employee.get())
+        // Loop over the 5 workdays of the week
+        IntStream.range(0, 5).forEach(dayOffset -> {
+            LocalDate currentDate = date.plusDays(dayOffset);
+            // Loop over the working hours of each day
+            IntStream.rangeClosed(8, 19).forEach(hour -> {
+                LocalDateTime dateTime = currentDate.atTime(hour, 0);
+                List<Appointment> appointments = appointmentRepository.findByDateTime(dateTime);
+
+                // Map appointments to AdminCalendarDTO and collect to list
+                List<AdminCalendarDTO> dtos = appointments.stream()
+                        .map(this::createAdminCalendarDTO)
+                        .collect(Collectors.toList());
+
+                appointmentsPerHour.put(dateTime, dtos);
+            });
+        });
+
+        return ResponseEntity.ok(appointmentsPerHour);
+    }
+
+    private AdminCalendarDTO createAdminCalendarDTO(Appointment appointment) {
+        return AdminCalendarDTO.builder()
+                .therapyId(appointment.getTherapy().getId())
+                .patientFirstName(appointment.getTherapy().getPatient().getFirstName())
+                .patientLastName(appointment.getTherapy().getPatient().getLastName())
+                .employeeFirstName(appointment.getEmployee().getFirstName())
+                .employeeLastName(appointment.getEmployee().getLastName())
+                .therapyTypeName(appointment.getTherapy().getTherapyType().getName())
                 .build();
-
-        appointmentRepository.save(appointment);
-
-        return ResponseEntity.ok().build();
     }
 
-    public ResponseEntity<Void> deleteAppointment(Long id) {
 
-        if(!appointmentRepository.existsById(id)){
-            return ResponseEntity.notFound().build();
-        }
-        appointmentRepository.deleteById(id);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Map<LocalDate, List<Integer>>> getAvailability(String therapyCode, int days) {
+        TherapyType therapyType = therapyTypeRepository.findByTherapyCode(therapyCode)
+                .orElseThrow(() -> new EntityNotFoundException("Therapy type with code " + therapyCode + " not found"));
+        Equipment equipment = therapyType.getRequiredEquipment();
+
+        LocalDate start = LocalDate.now();
+
+        Map<LocalDate, List<Integer>> availability = IntStream.range(0, days)
+                .mapToObj(start::plusDays)
+                .filter(date -> !(date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY))
+                .collect(Collectors.toMap(
+                        date -> date,
+                        date -> calculateDailyAvailability(date, therapyType, equipment),
+                        (u, v) -> { throw new IllegalStateException(String.format("Duplicate key %s", u)); },
+                        LinkedHashMap::new
+                ));
+
+        return ResponseEntity.ok(availability);
     }
 
-    public void updateAppointmentDescription(Long appointmentId, String newDescription) {
+    private List<Integer> calculateDailyAvailability(LocalDate date, TherapyType therapyType, Equipment equipment) {
+        return IntStream.rangeClosed(8, 19)
+                .mapToObj(hour -> date.atTime(hour, 0))
+                .map(dateTime -> {
+                    int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
+                    int availableEquipment = equipment.getCapacity();
+                    int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
+                    // Ensures the slots available is not negative
+                    return Math.max(Math.min(availableEquipment, availableEmployees) - appointmentsCount, 0);
+                })
+                .collect(Collectors.toList());
+    }
+
+
+    public ResponseEntity<Void> updateAppointmentSessionNotes(Long appointmentId, String sessionNotes) {
         Appointment appointment = appointmentRepository.findById(appointmentId)
                     .orElseThrow(() -> new EntityNotFoundException("Appointment not found"));
-
-            //!!!!!!!!!!appointment.setDescription(newDescription); ovo sam komentirao jer koliko shvacam appointment jos nema description u sebi
-            appointmentRepository.save(appointment);
-    }
-
-    public void rescheduleAppointment(Long appointmentId, LocalDateTime newDateTime) {
-        Appointment appointment = appointmentRepository.findById(appointmentId)
-                .orElseThrow(() -> new EntityNotFoundException("Appointment not found"));
-
-
-        appointment.setDateTime(newDateTime);
+        appointment.setSessionNotes(sessionNotes);
         appointmentRepository.save(appointment);
+        return ResponseEntity.ok().build();
     }
 
 }

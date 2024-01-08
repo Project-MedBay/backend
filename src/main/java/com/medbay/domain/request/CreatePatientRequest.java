@@ -1,7 +1,6 @@
 package com.medbay.domain.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.medbay.domain.enums.Role;
 import lombok.Getter;
 import lombok.ToString;
 
