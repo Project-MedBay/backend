@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -26,6 +27,8 @@ public class AppointmentService {
     private final AppointmentRepository appointmentRepository;
     private final EmployeeRepository employeeRepository;
     private final TherapyTypeRepository therapyTypeRepository;
+
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
 
 
@@ -68,37 +71,42 @@ public class AppointmentService {
     }
 
 
-    public ResponseEntity<Map<LocalDate, List<Integer>>> getAvailability(String therapyCode, int days) {
+    public ResponseEntity<Map<String, List<Integer>>> getAvailability(String therapyCode, int days) {
+        Map<String, List<Integer>> availability = new LinkedHashMap<>();
         TherapyType therapyType = therapyTypeRepository.findByTherapyCode(therapyCode)
                 .orElseThrow(() -> new EntityNotFoundException("Therapy type with code " + therapyCode + " not found"));
+
         Equipment equipment = therapyType.getRequiredEquipment();
 
-        LocalDate start = LocalDate.now();
+        LocalDate today = LocalDate.now();
+        for (int day = 0; day < days; day++) {
+            LocalDate date = today.plusDays(day);
 
-        Map<LocalDate, List<Integer>> availability = IntStream.range(0, days)
-                .mapToObj(start::plusDays)
-                .filter(date -> !(date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY))
-                .collect(Collectors.toMap(
-                        date -> date,
-                        date -> calculateDailyAvailability(date, therapyType, equipment),
-                        (u, v) -> { throw new IllegalStateException(String.format("Duplicate key %s", u)); },
-                        LinkedHashMap::new
-                ));
+            if (date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+                continue;
+            }
+
+            List<Integer> availableHours = new ArrayList<>();
+            for (int hour = 8; hour <= 19; hour++) {
+                LocalDateTime dateTime = date.atTime(hour, 0);
+
+                int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
+                int availableEquipment = equipment.getCapacity();
+                int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
+
+                int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
+                if (slotsAvailable < 0) {
+                    throw new RuntimeException("Error: Negative slots available");
+                }
+                else if(slotsAvailable > 0) {
+                    availableHours.add(hour);
+                }
+            }
+
+            availability.put(date.format(DATE_FORMATTER), availableHours);
+        }
 
         return ResponseEntity.ok(availability);
-    }
-
-    private List<Integer> calculateDailyAvailability(LocalDate date, TherapyType therapyType, Equipment equipment) {
-        return IntStream.rangeClosed(8, 19) // Assuming the working hours are from 8 to 19 inclusive.
-                .filter(hour -> {
-                    LocalDateTime dateTime = date.atTime(hour, 0);
-                    int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
-                    int availableEquipment = equipment.getCapacity();
-                    int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
-                    return Math.max(Math.min(availableEquipment, availableEmployees) - appointmentsCount, 0) > 0;
-                })
-                .boxed() // Box the int values to Integers, so they can be collected to a List<Integer>.
-                .collect(Collectors.toList());
     }
 
 

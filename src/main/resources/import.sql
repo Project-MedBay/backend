@@ -1,13 +1,14 @@
 INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 1, 'admin@gmail.com', 'John', 'Doe', '$2a$12$AgOr5O5nmLlIgsBgHrP57eouuZ9XRgOX.evYytR7oZ.XRBrgCS65W', 'ADMIN');
 --employees
 --INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (1, 'employee1@example.com', 'Employee', 'One', '$2a$12$vt1ex4tEN.mRrg1w.43CuejrCJ4qVnRJWcBNE2TewGlR7BYjRTfMG', 'STAFF', 'ACTIVE');
-INSERT INTO employee (specialization, id)  VALUES ('PHYSICAL_THERAPIST', 6);
 --INSERT INTO _user(status,id,  email, first_name, last_name, password, role) VALUES ('ACTIVE',2,  'ivo.ivic@gmail.com', 'Ivo', 'Ivic', 'testPass', 'STAFF');
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (2, 'patient1@example.com', 'Patient', 'One', '$2a$12$9eweklLdaOLp.VVZDQBiz.LFR4xO1RMqKHD2ZKCVu1a3sYyP/kXAm', 'PATIENT', 'ACTIVE');
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (3, 'patient2@example.com', 'Patient', 'Two', '$2a$12$Zd8PdG0ypHVmQKPj34159OZ8GGaR1761mziLDZ76LWf528vAovboK', 'PATIENT', 'PENDING');
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (4, 'patient3@example.com', 'Patient', 'Three', '$2a$12$KEB.lcTkLt2ymUvUVaycfOYVcVzIq/n9Qd4z2TZMgRbpedzwx/sYq', 'PATIENT', 'PENDING');
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (5, 'patient4@example.com', 'Patient', 'Four', '$2a$12$hBBBlx.IKKe0mv4n43Vp8eRbblKaVXZjTXoRVrAn/BRsoO7Q81Sei', 'PATIENT', 'ACTIVE');
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (6, 'patient5@example.com', 'Patient', 'Five', '$2a$12$4Bceack6KQ/KzjMja4ZaoepC1/t8V/KFNYukUjJ.RfrXZMsBshy2C', 'PATIENT', 'ACTIVE');
+
+INSERT INTO employee (specialization, id)  VALUES ('PHYSICAL_THERAPIST', 6);
 
 
 INSERT INTO equipment (capacity, id, name, specialization, room_name) VALUES (20, 1, 'Gym', 'PHYSICAL_THERAPIST', 'Physiotherapy Suite'); --physical therapy

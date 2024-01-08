@@ -18,7 +18,6 @@ public class TherapyTypeController {
 
     @GetMapping
     public ResponseEntity<List<TherapyType>> getTherapyType() {
-
         return therapyTypeService.getTherapyType();
     }
 
