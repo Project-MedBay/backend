@@ -20,6 +20,7 @@ import java.util.Optional;
 import java.util.Random;
 
 import static com.medbay.domain.enums.TherapyStatus.PENDING;
+import static com.medbay.util.Helper.log;
 import static org.springframework.http.HttpStatus.CONFLICT;
 
 @Service
@@ -130,7 +131,9 @@ public class TherapyService {
             List<Employee> employees = employeeRepository.findAllByAppointmentsDateTimeAndSpecialization(
                     dateTime, specialization);
 
-            if (employees.isEmpty() || equipmentRepository.isCapacityReachedForEquipmentOnDate(equipment.getId(), dateTime) == null) {
+
+
+            if (employees.isEmpty() || equipmentRepository.isCapacityReachedForEquipmentOnDate(equipment.getId(), dateTime) != null) {
                 return new ArrayList<>();
             }
 
