@@ -3,9 +3,9 @@ spring:
     servlet:
       path: /api
   datasource:
-    url: jdbc:postgresql://ec2-34-250-252-161.eu-west-1.compute.amazonaws.com:5432/dbqbnaapcr6344?sslmode=require
+    url: jdbc:postgresql://ec2-18-202-8-133.eu-west-1.compute.amazonaws.com:5432/dchravp02iqvc7?sslmode=require
     username: iuxapgzwlcyceq
-    password: c2c6b574f4e4d6d0f565a9775636a8531e04e4f16091819f7fda0d4026a9f9a5
+    password: 57f3bdf387a0979cd7ff8941aba9feb48e65d0758746716e10ba8ca092a5cb73
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -15,3 +15,15 @@ spring:
       hibernate:
         format_sql: true
     database: postgresql
+  mail:
+    properties:
+      mail:
+        debug: 'true'
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    host: smtppro.zoho.eu
+    username: noreply@medbay.life
+    password: "#W4p.%G#&hQA93v"
+    port: '587'

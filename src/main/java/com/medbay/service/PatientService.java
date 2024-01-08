@@ -44,6 +44,7 @@ public class PatientService {
                 .anyMatch(appointment -> appointment.getEmployee() != null && appointment.getEmployee().equals(employee));
 
         return PatientDTO.builder()
+                .id(patient.getId())
                 .firstName(patient.getFirstName())
                 .lastName(patient.getLastName())
                 .email(patient.getEmail())
@@ -58,9 +59,23 @@ public class PatientService {
     }
 
 
-    public ResponseEntity<List<Patient>> getPendingPatients() {
+    public ResponseEntity<List<PatientDTO>> getPendingPatients() {
         List<Patient> patients = patientRepository.findAllByStatus(ActivityStatus.PENDING);
-        return ResponseEntity.ok(patients);
+        List<PatientDTO> patientDTOs = patients.stream()
+                .map(patient -> PatientDTO.builder()
+                        .id(patient.getId())
+                        .firstName(patient.getFirstName())
+                        .lastName(patient.getLastName())
+                        .email(patient.getEmail())
+                        .createdAt(patient.getCreatedAt())
+                        .address(patient.getAddress())
+                        .dateOfBirth(patient.getDateOfBirth())
+                        .OIB(patient.getOIB())
+                        .MBO(patient.getMBO())
+                        .phoneNumber(patient.getPhoneNumber())
+                        .build())
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(patientDTOs);
     }
 
 }

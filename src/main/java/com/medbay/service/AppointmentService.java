@@ -89,17 +89,18 @@ public class AppointmentService {
     }
 
     private List<Integer> calculateDailyAvailability(LocalDate date, TherapyType therapyType, Equipment equipment) {
-        return IntStream.rangeClosed(8, 19)
-                .mapToObj(hour -> date.atTime(hour, 0))
-                .map(dateTime -> {
+        return IntStream.rangeClosed(8, 19) // Assuming the working hours are from 8 to 19 inclusive.
+                .filter(hour -> {
+                    LocalDateTime dateTime = date.atTime(hour, 0);
                     int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
                     int availableEquipment = equipment.getCapacity();
                     int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
-                    // Ensures the slots available is not negative
-                    return Math.max(Math.min(availableEquipment, availableEmployees) - appointmentsCount, 0);
+                    return Math.max(Math.min(availableEquipment, availableEmployees) - appointmentsCount, 0) > 0;
                 })
+                .boxed() // Box the int values to Integers, so they can be collected to a List<Integer>.
                 .collect(Collectors.toList());
     }
+
 
 
     public ResponseEntity<Void> updateAppointmentSessionNotes(Long appointmentId, String sessionNotes) {

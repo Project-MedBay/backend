@@ -23,7 +23,7 @@ public class PatientController {
     }
 
     @GetMapping("/pending")
-    public ResponseEntity<List<Patient>> getPendingPatients(){
+    public ResponseEntity<List<PatientDTO>> getPendingPatients(){
         return patientService.getPendingPatients();
     }
 

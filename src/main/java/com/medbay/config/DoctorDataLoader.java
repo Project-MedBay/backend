@@ -22,26 +22,26 @@ public class DoctorDataLoader implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) {
-//        ClassPathResource resource = new ClassPathResource("doctors.txt");
-//
-//        try (BufferedReader reader = new BufferedReader(
-//                new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8))) {
-//
-//
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                String[] fields = line.split(",");
-//
-//                Doctor doctor = Doctor.builder()
-//                        .hlkid(fields[0].trim())
-//                        .firstName(fields[1].trim())
-//                        .lastName(fields[2].trim())
-//                        .active("t".equals(fields[3].trim()))  //active (convert "t" to true)
-//                        .build();
-//                doctorRepository.save(doctor);
-//            }
-//        } catch (Exception e) {
-//            log("Error occurred while loading doctor data: " + e.getMessage());
-//        }
+        ClassPathResource resource = new ClassPathResource("doctors.txt");
+
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8))) {
+
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] fields = line.split(",");
+
+                Doctor doctor = Doctor.builder()
+                        .hlkid(fields[0].trim())
+                        .firstName(fields[1].trim())
+                        .lastName(fields[2].trim())
+                        .active("t".equals(fields[3].trim()))  //active (convert "t" to true)
+                        .build();
+                doctorRepository.save(doctor);
+            }
+        } catch (Exception e) {
+            log("Error occurred while loading doctor data: " + e.getMessage());
+        }
     }
 }

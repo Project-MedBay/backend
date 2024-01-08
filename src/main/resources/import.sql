@@ -1,16 +1,12 @@
 INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 1, 'admin@gmail.com', 'John', 'Doe', '$2a$12$AgOr5O5nmLlIgsBgHrP57eouuZ9XRgOX.evYytR7oZ.XRBrgCS65W', 'ADMIN');
 --employees
 --INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (1, 'employee1@example.com', 'Employee', 'One', '$2a$12$vt1ex4tEN.mRrg1w.43CuejrCJ4qVnRJWcBNE2TewGlR7BYjRTfMG', 'STAFF', 'ACTIVE');
---INSERT INTO employee (specialization, id)  VALUES ('PHYSICAL_THERAPIST', 1);
+INSERT INTO employee (specialization, id)  VALUES ('PHYSICAL_THERAPIST', 6);
 --INSERT INTO _user(status,id,  email, first_name, last_name, password, role) VALUES ('ACTIVE',2,  'ivo.ivic@gmail.com', 'Ivo', 'Ivic', 'testPass', 'STAFF');
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (2, 'patient1@example.com', 'Patient', 'One', '$2a$12$9eweklLdaOLp.VVZDQBiz.LFR4xO1RMqKHD2ZKCVu1a3sYyP/kXAm', 'PATIENT', 'ACTIVE');
-
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (3, 'patient2@example.com', 'Patient', 'Two', '$2a$12$Zd8PdG0ypHVmQKPj34159OZ8GGaR1761mziLDZ76LWf528vAovboK', 'PATIENT', 'PENDING');
-
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (4, 'patient3@example.com', 'Patient', 'Three', '$2a$12$KEB.lcTkLt2ymUvUVaycfOYVcVzIq/n9Qd4z2TZMgRbpedzwx/sYq', 'PATIENT', 'PENDING');
-
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (5, 'patient4@example.com', 'Patient', 'Four', '$2a$12$hBBBlx.IKKe0mv4n43Vp8eRbblKaVXZjTXoRVrAn/BRsoO7Q81Sei', 'PATIENT', 'ACTIVE');
-
 INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (6, 'patient5@example.com', 'Patient', 'Five', '$2a$12$4Bceack6KQ/KzjMja4ZaoepC1/t8V/KFNYukUjJ.RfrXZMsBshy2C', 'PATIENT', 'ACTIVE');
 
 
@@ -76,6 +72,7 @@ INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part) VALUES (5, 'Muscle spasms and tension management', 'Thermotherapy in a wax bath involves immersing affected muscles in warm wax to relax and soothe muscle spasms, reduce tension, and promote blood flow for pain relief.', '#6L2M9', 6, 'any');
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part) VALUES (5, 'Chronic muscle pain management', 'Regular heat therapy, including hot baths, warm packs, or infrared heat, may be part of a comprehensive pain management strategy for chronic muscle pain, providing temporary relief and improving muscle relaxation.', '#2K6H8', 7, 'any');
 
+
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167819', 'HR019618', '160378294', '#3N4P6');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167820', 'HR061864', '234567890', '#9P1H4'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167821', 'HR271982', '345678901', '#5R9N7');
@@ -98,11 +95,10 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167838', 'HR177695', '901234567', '#9M8D2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839', 'HR219873', '876543210', '#6W1E6'); --inactive
 
--- INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (1, '2000-01-01', 'tesna ulica 1', '1279525045', '531113693', '0911223456');
--- INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (2, '2003-01-01', 'tesna ulica 4', '1899935409', '463243045', '0911223457');
--- INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (3, '2002-04-01', 'tesna ulica 2', '1264166032', '357092999', '0911223458');
--- INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (4, '2004-01-01', 'tesna ulica 1', '1487949723', '349047109', '0911223459');
--- INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (5, '2001-01-05', 'tesna ulica 8', '1509125019', '620361537', '0911223460');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (2, '2003-01-01', 'tesna ulica 4', '1899935409', '463243045', '0911223457');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (3, '2002-04-01', 'tesna ulica 2', '1264166032', '357092999', '0911223458');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (4, '2004-01-01', 'tesna ulica 1', '1487949723', '349047109', '0911223459');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (5, '2001-01-05', 'tesna ulica 8', '1509125019', '620361537', '0911223460');
 
 INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (3, 'VERIFIED');
 INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (5, 'PENDING');

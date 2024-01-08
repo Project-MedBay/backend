@@ -21,7 +21,7 @@ public class AppointmentController {
     private final AppointmentService appointmentService;
 
     @GetMapping("/admin")
-    public ResponseEntity<Map<LocalDateTime, List<AdminCalendarDTO>>> getNumOfAppointmentsPerTimeSlot(@RequestParam LocalDate date) {
+    public ResponseEntity<Map<LocalDateTime, List<AdminCalendarDTO>>> getAppointmentsForWeek(@RequestParam LocalDate date) {
         return appointmentService.getAppointmentsForWeek(date);
     }
 
