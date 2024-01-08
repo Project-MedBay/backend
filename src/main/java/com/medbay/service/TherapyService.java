@@ -128,7 +128,7 @@ public class TherapyService {
 
         for (LocalDateTime dateTime : request.getAppointmentDates()) {
             List<Employee> employees = employeeRepository.findAllByAppointmentsDateTimeAndSpecialization(
-                    dateTime, specialization.toString());
+                    dateTime, specialization);
 
             if (employees.isEmpty() || equipmentRepository.isCapacityReachedForEquipmentOnDate(equipment.getId(), dateTime) == null) {
                 return new ArrayList<>();

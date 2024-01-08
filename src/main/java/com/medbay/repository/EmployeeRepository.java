@@ -23,7 +23,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("SELECT e FROM Employee e WHERE e NOT IN " +
             "(SELECT a.employee FROM Appointment a WHERE a.dateTime = :dateTime)" +
             "AND e.specialization = :specialization")
-    List<Employee> findAllByAppointmentsDateTimeAndSpecialization(LocalDateTime dateTime, String specialization);
+    List<Employee> findAllByAppointmentsDateTimeAndSpecialization(LocalDateTime dateTime, Specialization specialization);
 
     List<Employee> findAllByStatus(ActivityStatus status);
 
