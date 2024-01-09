@@ -1,22 +1,311 @@
-INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 1, 'admin@gmail.com', 'John', 'Doe', '$2a$12$AgOr5O5nmLlIgsBgHrP57eouuZ9XRgOX.evYytR7oZ.XRBrgCS65W', 'ADMIN');
---employees
---INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (1, 'employee1@example.com', 'Employee', 'One', '$2a$12$vt1ex4tEN.mRrg1w.43CuejrCJ4qVnRJWcBNE2TewGlR7BYjRTfMG', 'STAFF', 'ACTIVE');
---INSERT INTO _user(status,id,  email, first_name, last_name, password, role) VALUES ('ACTIVE',2,  'ivo.ivic@gmail.com', 'Ivo', 'Ivic', 'testPass', 'STAFF');
-INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (2, 'patient1@example.com', 'Patient', 'One', '$2a$12$9eweklLdaOLp.VVZDQBiz.LFR4xO1RMqKHD2ZKCVu1a3sYyP/kXAm', 'PATIENT', 'ACTIVE');
-INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (3, 'patient2@example.com', 'Patient', 'Two', '$2a$12$Zd8PdG0ypHVmQKPj34159OZ8GGaR1761mziLDZ76LWf528vAovboK', 'PATIENT', 'PENDING');
-INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (4, 'patient3@example.com', 'Patient', 'Three', '$2a$12$KEB.lcTkLt2ymUvUVaycfOYVcVzIq/n9Qd4z2TZMgRbpedzwx/sYq', 'PATIENT', 'PENDING');
-INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (5, 'patient4@example.com', 'Patient', 'Four', '$2a$12$hBBBlx.IKKe0mv4n43Vp8eRbblKaVXZjTXoRVrAn/BRsoO7Q81Sei', 'PATIENT', 'ACTIVE');
-INSERT INTO _user (id, email, first_name, last_name, password, role, status) VALUES (6, 'patient5@example.com', 'Patient', 'Five', '$2a$12$4Bceack6KQ/KzjMja4ZaoepC1/t8V/KFNYukUjJ.RfrXZMsBshy2C', 'PATIENT', 'ACTIVE');
-
-INSERT INTO employee (specialization, id)  VALUES ('PHYSICAL_THERAPIST', 6);
-
+INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 6000, 'admin@gmail.com', 'John', 'Doe', '$2a$12$AgOr5O5nmLlIgsBgHrP57eouuZ9XRgOX.evYytR7oZ.XRBrgCS65W', 'ADMIN');
+--password : password
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-01-08T01:07', 1, 'željana.šimić@yahoo.com', 'Željana', 'Šimić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (1, '1955-06-08', 'Ulica kneza Mislava 43', '5770257924', '339748797', '0956017346');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-07T05:13', 2, 'korina.grubišić@outlook.com', 'Korina', 'Grubišić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (2, '1970-01-03', 'Krvavi most 16', '9431489538', '943920802', '0925040995');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-09-09T10:08', 3, 'regina.petrović@yahoo.com', 'Regina', 'Petrović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (3, '1953-11-06', 'Amruševa 47', '3767946689', '928669806', '0987371136');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-14T17:52', 4, 'mia.bošnjak@yahoo.com', 'Mia', 'Bošnjak', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (4, '1986-08-18', 'Deželićeva 30', '5681062102', '638952181', '0978865320');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-21T10:24', 5, 'cvita.vlašić@icloud.com', 'Cvita', 'Vlašić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (5, '1960-06-12', 'Šoštarićeva 42', '3259976205', '787497363', '0985223255');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-04-09T20:14', 6, 'đurđa.špoljarić@icloud.com', 'Đurđa', 'Špoljarić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (6, '1986-03-25', 'Sermageova 22', '0808313347', '260964604', '0972135634');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-02-06T23:18', 7, 'đurđica.stipić@outlook.com', 'Đurđica', 'Stipić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (7, '1953-02-24', 'Gajeva 07', '9738761358', '957075328', '0981126210');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-14T21:46', 8, 'zdravka.đukić@icloud.com', 'Zdravka', 'Đukić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (8, '1959-08-10', 'Cesarčeva 39', '2511154520', '545012810', '0928852374');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-04-07T15:54', 9, 'zvjezdana.kovačić@outlook.com', 'Zvjezdana', 'Kovačić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (9, '1968-05-01', 'Ulica Ljudevita Posavskog 26', '8058465136', '636984985', '0971477016');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-08-25T16:19', 10, 'iris.kos@icloud.com', 'Iris', 'Kos', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (10, '1983-03-28', 'Bauerova 33', '5658466294', '355234403', '0956143156');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-19T08:46', 11, 'cvita.sekulić@gmail.com', 'Cvita', 'Sekulić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (11, '1965-01-19', 'Ulica kneza Domagoja 44', '0953074064', '067048079', '0928391527');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-15T04:35', 12, 'margita.radočaj@outlook.com', 'Margita', 'Radočaj', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (12, '1977-02-28', 'Trg hrvatskih velikana 47', '5988184939', '177670341', '0920527144');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-03T03:39', 13, 'sanda.valentić@yahoo.com', 'Sanda', 'Valentić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (13, '1982-06-29', 'Nodilova 01', '2513279531', '746581055', '0920865675');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-07T12:09', 14, 'olga.perić@gmail.com', 'Olga', 'Perić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (14, '1998-02-06', 'Martićeva 07', '8893939141', '134835010', '0918503072');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-13T02:44', 15, 'jasmina.dujmović@yahoo.com', 'Jasmina', 'Dujmović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (15, '1962-08-05', 'Ilica 49', '6380757607', '347263522', '0959326910');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-08-12T16:17', 16, 'majda.vidović@gmail.com', 'Majda', 'Vidović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (16, '1964-12-02', 'Antuna Vrančića 48', '8473764383', '746598122', '0983254445');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-05-02T16:49', 17, 'spomenka.pejić@yahoo.com', 'Spomenka', 'Pejić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (17, '1965-03-22', 'Petrinjska 46', '9908792852', '645213534', '0977922164');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-11-14T17:51', 18, 'nika.krznarić@gmail.com', 'Nika', 'Krznarić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (18, '1995-04-11', 'Rusanova 20', '0862904277', '293106271', '0921568301');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-09-29T11:38', 19, 'tereza.martinović@outlook.com', 'Tereza', 'Martinović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (19, '1969-04-06', 'Ulica Ivana Trnskog 41', '5063496018', '687186057', '0959306474');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-10T01:21', 20, 'željana.ružić@yahoo.com', 'Željana', 'Ružić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (20, '1963-06-23', 'Rokova ulica 25', '6861624794', '786027490', '0910044079');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-02T06:07', 21, 'sara.antunović@outlook.com', 'Sara', 'Antunović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (21, '1977-11-15', 'Laginjina 17', '3083766406', '322665121', '0979595851');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-03T20:38', 22, 'jela.lončar@gmail.com', 'Jela', 'Lončar', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (22, '1972-08-01', 'Ribnjak 09', '5782926976', '158837599', '0914758693');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-06-13T19:22', 23, 'mirna.jukić@outlook.com', 'Mirna', 'Jukić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (23, '1996-04-25', 'Bogišićeva 22', '1682785128', '445024200', '0972454954');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-28T08:13', 24, 'božana.delić@outlook.com', 'Božana', 'Delić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (24, '1952-05-08', 'Bogišićeva 30', '9246405274', '018955441', '0958608942');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-16T09:09', 25, 'branislava.stojanović@yahoo.com', 'Branislava', 'Stojanović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (25, '1962-10-15', 'Mrazovićeva 34', '6510505543', '081435514', '0919174798');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-08-28T06:12', 26, 'katica.stanić@gmail.com', 'Katica', 'Stanić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (26, '2001-01-22', 'Mažuranićev trg 40', '8755867594', '759541471', '0928036082');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-01T02:54', 27, 'vjera.sabljak@gmail.com', 'Vjera', 'Sabljak', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (27, '1967-02-23', 'Ulica fra Filipa Grabovca 22', '8673856162', '379457242', '0910393786');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-16T14:58', 28, 'erna.tomić@icloud.com', 'Erna', 'Tomić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (28, '1973-10-25', 'Kružićeva 37', '3075653987', '218550501', '0917809294');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-25T18:00', 29, 'željkica.andrić@icloud.com', 'Željkica', 'Andrić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (29, '1980-04-06', 'Hebrangova 20', '9174776918', '416845492', '0914955345');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-06-16T03:07', 30, 'kristina.tadić@yahoo.com', 'Kristina', 'Tadić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (30, '1962-12-26', 'Bogišićeva 26', '3400165671', '783448101', '0923476986');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-10T00:17', 31, 'vjekoslava.abramović@gmail.com', 'Vjekoslava', 'Abramović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (31, '1986-07-20', 'Ivana Belostenca 37', '4471415020', '305771316', '0957005104');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-15T18:25', 32, 'marjana.knežević@outlook.com', 'Marjana', 'Knežević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (32, '1979-03-06', 'Trg hrvatskih velikana 42', '4976726358', '115093169', '0950612239');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-26T01:09', 33, 'slobodanka.franjić@gmail.com', 'Slobodanka', 'Franjić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (33, '1999-03-23', 'Derenčinova 09', '9467442839', '139240011', '0975521816');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-02-24T15:36', 34, 'nedjeljka.glavaš@yahoo.com', 'Nedjeljka', 'Glavaš', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (34, '1979-02-28', 'Bogovićeva 46', '0150272989', '135709788', '0913200704');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-23T21:08', 35, 'ljuba.martinović@icloud.com', 'Ljuba', 'Martinović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (35, '1954-07-24', 'Branimirova 36', '6819502476', '798722558', '0989826076');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-04T05:43', 36, 'davorka.grgurić@icloud.com', 'Davorka', 'Grgurić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (36, '1991-05-02', 'Streljačka 17', '6898638912', '522107285', '0989645371');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-28T18:22', 37, 'zvjezdana.vukelić@outlook.com', 'Zvjezdana', 'Vukelić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (37, '1971-11-22', 'Runjaninova 47', '6218762695', '467501756', '0987094157');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-16T05:01', 38, 'vladimira.mustapić@yahoo.com', 'Vladimira', 'Mustapić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (38, '1974-01-29', 'Zrinjevac 24', '3140928622', '460062588', '0927810180');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-08-31T20:10', 39, 'snežana.grubišić@icloud.com', 'Snežana', 'Grubišić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (39, '1999-06-08', 'Britanski trg 46', '9817569784', '422925353', '0955588150');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-22T22:40', 40, 'gabriela.karlović@gmail.com', 'Gabriela', 'Karlović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (40, '1987-11-10', 'Ulica Ljudevita Posavskog 02', '6502563286', '701517022', '0911444103');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-07T05:00', 41, 'ana.kordić@outlook.com', 'Ana', 'Kordić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (41, '2001-10-10', 'Skalinska 38', '1724138512', '741597405', '0987962836');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-06-10T13:18', 42, 'lucia.gregurić@yahoo.com', 'Lucia', 'Gregurić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (42, '1968-05-15', 'Svačićev trg 08', '5717156740', '978471024', '0920117208');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-24T15:31', 43, 'vukosava.matić@icloud.com', 'Vukosava', 'Matić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (43, '1968-01-26', 'Zavrtnica 03', '8740243661', '485379736', '0910566681');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-01-16T15:12', 44, 'manuela.radić@outlook.com', 'Manuela', 'Radić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (44, '1954-08-04', 'Šubićeva 23', '7826637967', '242654366', '0973281546');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-08-21T03:10', 45, 'sonja.matković@icloud.com', 'Sonja', 'Matković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (45, '1990-10-10', 'Trg Republike Hrvatske 15', '6179771451', '512684837', '0920225113');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-07T15:34', 46, 'mirela.filipović@yahoo.com', 'Mirela', 'Filipović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (46, '1963-04-29', 'Rakovčeva 05', '8939401023', '579302776', '0910582006');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-17T01:52', 47, 'spomenka.babić@gmail.com', 'Spomenka', 'Babić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (47, '1950-02-27', 'Ulica Bartola Kašića 38', '8119271688', '743372639', '0989368403');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-21T07:02', 48, 'rafaela.kovačić@icloud.com', 'Rafaela', 'Kovačić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (48, '2003-10-15', 'Gupčeva zvijezda 49', '8859828273', '899726942', '0927423672');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-24T13:16', 49, 'natalija.knežević@outlook.com', 'Natalija', 'Knežević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (49, '1970-12-01', 'Strossmayerov trg 48', '8396089205', '338700608', '0912620383');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-22T07:05', 50, 'klara.đukić@gmail.com', 'Klara', 'Đukić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (50, '1999-05-24', 'Crvenog križa 29', '5049232759', '356750763', '0915973647');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-06T23:49', 51, 'daliborka.herceg@icloud.com', 'Daliborka', 'Herceg', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (51, '1970-09-18', 'Novakova 23', '3224558115', '801953848', '0958560026');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-08T22:42', 52, 'nikolina.miletić@outlook.com', 'Nikolina', 'Miletić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (52, '1969-08-11', 'Erdodyeva 41', '7317193015', '540466880', '0911517222');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-07T22:18', 53, 'dražena.stojanović@icloud.com', 'Dražena', 'Stojanović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (53, '1976-11-30', 'Ulica Ante Kovačića 36', '3724662477', '708944901', '0924945017');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-09T15:07', 54, 'dajana.cvitković@yahoo.com', 'Dajana', 'Cvitković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (54, '1962-01-25', 'Trg svibanjskih žrtava 1995. 09', '0983170501', '242187619', '0923307685');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-04T12:17', 55, 'mladenka.grgić@icloud.com', 'Mladenka', 'Grgić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (55, '1971-02-12', 'Zvonarnička 41', '3791759791', '620728032', '0959084192');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-01T04:13', 56, 'radmila.katić@outlook.com', 'Radmila', 'Katić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (56, '1996-02-03', 'Jurišićeva 25', '8148851379', '119250170', '0988429447');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-02T15:08', 57, 'zorka.sekulić@icloud.com', 'Zorka', 'Sekulić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (57, '2004-10-12', 'Lepušićeva 30', '6776163895', '181062102', '0950481309');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-08T05:44', 58, 'zdenka.zorić@outlook.com', 'Zdenka', 'Zorić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (58, '1984-09-09', 'Šulekova 44', '9313763222', '452383886', '0982515871');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-09T08:10', 59, 'marinka.radočaj@icloud.com', 'Marinka', 'Radočaj', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (59, '1971-08-28', 'Trg Vladka Mačeka 42', '1433896068', '790115136', '0918194079');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-30T01:09', 60, 'stella.kovačević@yahoo.com', 'Stella', 'Kovačević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (60, '1998-09-27', 'Degenova 21', '9532586792', '801037936', '0984689788');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-09-27T13:39', 61, 'desanka.jukić@gmail.com', 'Desanka', 'Jukić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (61, '1977-11-12', 'Lepušićeva 39', '4008872710', '890030531', '0957562522');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-10T21:42', 62, 'bojana.benković@yahoo.com', 'Bojana', 'Benković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (62, '1967-11-05', 'Bogišićeva 24', '1949378377', '135559600', '0973226658');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-17T13:54', 63, 'silvana.kovačević@icloud.com', 'Silvana', 'Kovačević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (63, '1976-10-07', 'Iblerov trg 17', '4019517712', '403301777', '0972304350');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-19T00:49', 64, 'ida.dujmović@yahoo.com', 'Ida', 'Dujmović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (64, '2002-12-29', 'Hochmannova 18', '9718993369', '685619027', '0976169561');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-16T07:48', 65, 'damira.pranjić@yahoo.com', 'Damira', 'Pranjić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (65, '1981-06-23', 'Plemićeva 30', '6026722411', '452759804', '0929376347');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-24T11:37', 66, 'frane.radočaj@outlook.com', 'Frane', 'Radočaj', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (66, '1987-10-25', 'Berislavićeva 42', '7693197610', '939599940', '0986671330');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-05-19T18:39', 67, 'miro.bašić@icloud.com', 'Miro', 'Bašić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (67, '2002-02-24', 'Degenova 40', '4615421994', '124913342', '0915773616');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-05-28T20:44', 68, 'emanuel.vojnović@gmail.com', 'Emanuel', 'Vojnović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (68, '1963-11-24', 'Marulićev trg 08', '8594698156', '210717555', '0952178357');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-13T05:37', 69, 'damjan.jurišić@gmail.com', 'Damjan', 'Jurišić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (69, '1973-06-08', 'Tomislavov trg 21', '7338441049', '804191744', '0917917336');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-29T13:35', 70, 'radovan.starčević@outlook.com', 'Radovan', 'Starčević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (70, '1983-06-16', 'Trg Vladka Mačeka 36', '3099042264', '821637837', '0970386314');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-24T01:04', 71, 'milan.matošević@icloud.com', 'Milan', 'Matošević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (71, '1995-09-22', 'Varšavska 17', '8500387822', '519751953', '0979936848');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-02T02:09', 72, 'mihael.šimunić@yahoo.com', 'Mihael', 'Šimunić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (72, '1968-05-18', 'Gundulićeva 43', '6651343183', '099260264', '0917756250');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-04T10:42', 73, 'mate.vukelić@gmail.com', 'Mate', 'Vukelić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (73, '1978-06-04', 'Kurelčeva 32', '8268805207', '430035056', '0955482300');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-12T12:50', 74, 'radovan.martić@icloud.com', 'Radovan', 'Martić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (74, '2004-03-01', 'Račkoga 05', '2343995953', '711045908', '0917010773');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-08T22:27', 75, 'marijo.jurković@icloud.com', 'Marijo', 'Jurković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (75, '1988-07-08', 'Derenčinova 14', '1939157313', '201571923', '0919139761');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-02-23T15:14', 76, 'stanislav.tomašić@outlook.com', 'Stanislav', 'Tomašić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (76, '1962-02-05', 'Sermageova 08', '5886281568', '330636889', '0978459459');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-05-05T23:37', 77, 'danko.vučković@icloud.com', 'Danko', 'Vučković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (77, '1950-07-20', 'Amruševa 13', '4966908124', '814942443', '0923268116');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-11-03T04:31', 78, 'mile.lovrić@yahoo.com', 'Mile', 'Lovrić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (78, '1993-08-26', 'Ulica kneza Mutimira 46', '0515465079', '959784344', '0950092719');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-01-03T11:52', 79, 'antonijo.grgurić@outlook.com', 'Antonijo', 'Grgurić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (79, '1964-12-18', 'Tvrtkova 40', '0087563212', '218884577', '0922100802');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-26T12:18', 80, 'dinko.posavec@icloud.com', 'Dinko', 'Posavec', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (80, '1985-11-14', 'Dežmanova 39', '5364056968', '786535380', '0973118547');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-13T00:01', 81, 'pavo.gudelj@outlook.com', 'Pavo', 'Gudelj', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (81, '1996-12-22', 'Kordunska 27', '9531182693', '400648779', '0978324998');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-24T00:24', 82, 'tihomir.bogović@outlook.com', 'Tihomir', 'Bogović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (82, '1986-11-27', 'Nodilova 37', '1531101918', '259871205', '0954566910');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-03T16:01', 83, 'igor.radić@gmail.com', 'Igor', 'Radić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (83, '1986-06-09', 'Masarykova 27', '6295186921', '538851629', '0927014195');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-31T15:53', 84, 'velimir.štimac@icloud.com', 'Velimir', 'Štimac', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (84, '1980-08-16', 'Trg bana J. Jelačića 29', '5722883108', '843900986', '0983175836');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-23T20:12', 85, 'renato.dujmović@outlook.com', 'Renato', 'Dujmović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (85, '1959-11-22', 'Ilica 31', '9486174498', '513256789', '0988079316');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-27T13:47', 86, 'dejan.knežević@outlook.com', 'Dejan', 'Knežević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (86, '1996-06-01', 'Ratkajev prolaz 03', '9670763709', '443578504', '0952102409');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-20T03:38', 87, 'nikica.barišić@gmail.com', 'Nikica', 'Barišić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (87, '1996-06-06', 'Martićeva 37', '1433008567', '387128855', '0955967216');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-23T15:15', 88, 'nenad.jelić@outlook.com', 'Nenad', 'Jelić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (88, '1995-10-20', 'Erdodyeva 11', '1146590616', '693229284', '0989193798');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-16T16:47', 89, 'milivoj.crnković@icloud.com', 'Milivoj', 'Crnković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (89, '1971-03-04', 'Trg hrvatskih velikana 22', '6517361434', '803812645', '0925825527');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-02T08:34', 90, 'srđan.barić@outlook.com', 'Srđan', 'Barić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (90, '1950-07-07', 'Fišerova 22', '1406367563', '732729776', '0912646475');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-09-02T02:25', 91, 'vjekoslav.brkić@yahoo.com', 'Vjekoslav', 'Brkić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (91, '1990-07-27', 'Preradovićeva 48', '2047250912', '907143859', '0916590234');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-24T15:32', 92, 'željko.tadić@gmail.com', 'Željko', 'Tadić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (92, '1979-01-08', 'Ulica Izidora Kršnjavog 03', '9600795236', '957140482', '0911200876');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-04-08T06:14', 93, 'romano.božić@yahoo.com', 'Romano', 'Božić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (93, '2002-10-28', 'Dolac 01', '7383986348', '601662112', '0985811670');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-20T15:53', 94, 'tin.babić@outlook.com', 'Tin', 'Babić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (94, '1979-06-27', 'Žigrovićeva 36', '2586994704', '262782158', '0959825231');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-05T15:07', 95, 'vlatko.mandić@outlook.com', 'Vlatko', 'Mandić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (95, '1993-11-14', 'Krvavi most 25', '8104779003', '801455222', '0911432372');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-02T02:15', 96, 'gojko.vlašić@yahoo.com', 'Gojko', 'Vlašić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (96, '1962-02-15', 'Starčevićev trg 26', '6700631176', '410193588', '0989809991');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-07T06:46', 97, 'saša.klarić@yahoo.com', 'Saša', 'Klarić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (97, '1997-08-29', 'Jukićeva 48', '7151398734', '716459179', '0957622090');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-15T02:09', 98, 'lovro.božić@gmail.com', 'Lovro', 'Božić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (98, '1978-05-31', 'Tomićeva 14', '9717958282', '758053364', '0952396045');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-25T18:52', 99, 'antun.vlahović@yahoo.com', 'Antun', 'Vlahović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (99, '1966-07-11', 'Ulica kneza Mutimira 04', '7108033913', '180443538', '0920775068');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-04T22:01', 100, 'stevan.filipović@gmail.com', 'Stevan', 'Filipović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (100, '1975-10-02', 'Mrazovićeva 24', '8557738089', '447632041', '0957300513');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-17T16:10', 101, 'dorijan.crnković@icloud.com', 'Dorijan', 'Crnković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (101, '1997-06-02', 'Rokov perivoj 34', '1386876371', '939508303', '0911248691');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-24T16:05', 102, 'franko.kujundžić@yahoo.com', 'Franko', 'Kujundžić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (102, '2003-03-24', 'Opatovina 46', '3487319872', '888070303', '0971839713');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-05T07:33', 103, 'vladimir.andrić@yahoo.com', 'Vladimir', 'Andrić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (103, '1986-05-30', 'Žigrovićeva 46', '3084092812', '277873037', '0951052304');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-06-27T18:01', 104, 'dorijan.horvatić@gmail.com', 'Dorijan', 'Horvatić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (104, '2003-05-26', 'Martićeva 29', '4150829373', '899322596', '0986779114');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-09T04:33', 105, 'alan.jurić@outlook.com', 'Alan', 'Jurić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (105, '1953-10-18', 'Jukićeva 23', '4473381850', '574879837', '0974598791');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-08T02:33', 106, 'stanislav.božić@outlook.com', 'Stanislav', 'Božić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (106, '1991-11-28', 'Lepušićeva 32', '2215790844', '895064471', '0974052627');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-04T02:13', 107, 'đorđe.pavlović@gmail.com', 'Đorđe', 'Pavlović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (107, '1966-03-07', 'Britanski trg 43', '4910132182', '232654104', '0984522498');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-30T13:09', 108, 'milenko.matijašević@gmail.com', 'Milenko', 'Matijašević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (108, '1999-12-30', 'Gajeva 08', '4322527637', '769313443', '0911968585');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-05T14:03', 109, 'vid.gudelj@icloud.com', 'Vid', 'Gudelj', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (109, '1958-02-25', 'Amruševa 12', '4961729802', '994508935', '0923120555');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-06T18:33', 110, 'benjamin.tomašević@icloud.com', 'Benjamin', 'Tomašević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (110, '2003-03-20', 'Tomislavov trg 18', '2705517497', '528555688', '0915681846');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-08T17:14', 111, 'mihovil.dukić@yahoo.com', 'Mihovil', 'Dukić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (111, '1985-08-29', 'Bauerova 23', '0927747129', '764036428', '0971689051');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-09T20:44', 112, 'drago.savić@gmail.com', 'Drago', 'Savić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (112, '1975-07-27', 'Vlaška 07', '3088797567', '254972900', '0927440903');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-30T04:27', 113, 'mihajlo.jozić@gmail.com', 'Mihajlo', 'Jozić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (113, '1977-05-13', 'Jagićeva 49', '7343232583', '296159838', '0921270626');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-09T20:57', 114, 'vid.mikulić@gmail.com', 'Vid', 'Mikulić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (114, '1959-09-21', 'Ulica Republike Austrije 23', '0666779643', '513132707', '0921566366');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-09T13:36', 115, 'ratko.kurtović@outlook.com', 'Ratko', 'Kurtović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (115, '1997-09-22', 'Šoštarićeva 29', '8113026080', '329752355', '0910076666');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-07T15:24', 116, 'milivoj.novak@gmail.com', 'Milivoj', 'Novak', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (116, '1991-03-19', 'Ulica baruna Trenka 20', '2613230995', '941051279', '0913272022');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2024-01-07T23:40', 117, 'denis.ilić@yahoo.com', 'Denis', 'Ilić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'PENDING');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (117, '1984-12-17', 'Skalinska 32', '9554882825', '644862692', '0913358749');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-07T01:42', 118, 'vilim.kolar@gmail.com', 'Vilim', 'Kolar', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (118, '1982-10-20', 'Hatzova 39', '8765412483', '284509879', '0985709030');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-25T18:24', 119, 'karlo.kovačević@yahoo.com', 'Karlo', 'Kovačević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (119, '2001-06-13', 'Livadićeva 34', '5285677950', '077624449', '0988534591');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-31T15:00', 120, 'emil.jakovljević@outlook.com', 'Emil', 'Jakovljević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (120, '1964-02-17', 'Deželićeva 20', '6641708345', '890065155', '0983822478');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-09T11:43', 121, 'milan.kovačević@yahoo.com', 'Milan', 'Kovačević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (121, '1951-12-05', 'Fabkovićeva 25', '6547508529', '660478105', '0971371724');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-09T13:08', 122, 'dorian.marinović@gmail.com', 'Dorian', 'Marinović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (122, '1968-10-15', 'Račkoga 26', '8949914007', '052094019', '0989270411');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-01T06:40', 123, 'radovan.stanković@yahoo.com', 'Radovan', 'Stanković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (123, '1975-01-10', 'Iblerov trg 41', '6207072304', '939830344', '0977141727');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-13T12:15', 124, 'perica.jakšić@icloud.com', 'Perica', 'Jakšić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (124, '1969-01-27', 'Novakova 36', '7124083810', '990893798', '0913630819');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-25T01:17', 125, 'mihajlo.miletić@icloud.com', 'Mihajlo', 'Miletić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'DEACTIVATED');
+INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (125, '1979-05-12', 'Ulica fra Filipa Grabovca 34', '9245210543', '357743151', '0975450040');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-12-21T09:11', 126, 'dragica.tomašić@outlook.com', 'Dragica', 'Tomašić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (126, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-01T04:37', 127, 'ilinka.budimir@outlook.com', 'Ilinka', 'Budimir', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (127, 'ELECTROTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-09T02:44', 128, 'vilma.stojanović@icloud.com', 'Vilma', 'Stojanović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (128, 'THERMOTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-06-20T12:21', 129, 'tina.vlašić@yahoo.com', 'Tina', 'Vlašić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (129, 'HYDROTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-27T07:15', 130, 'patricia.kordić@yahoo.com', 'Patricia', 'Kordić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (130, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-01T09:42', 131, 'klaudija.gregurić@icloud.com', 'Klaudija', 'Gregurić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (131, 'HYDROTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-24T19:05', 132, 'tomislava.brkić@outlook.com', 'Tomislava', 'Brkić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (132, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-07-13T14:36', 133, 'irma.vlahović@gmail.com', 'Irma', 'Vlahović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (133, 'CRYOTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-17T20:55', 134, 'paulina.ćosić@icloud.com', 'Paulina', 'Ćosić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (134, 'HYDROTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-10T21:37', 135, 'ena.grgić@yahoo.com', 'Ena', 'Grgić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (135, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-15T01:35', 136, 'jakov.savić@outlook.com', 'Jakov', 'Savić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (136, 'ELECTROTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-01-10T08:36', 137, 'marinko.ivanković@gmail.com', 'Marinko', 'Ivanković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (137, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-10-29T05:58', 138, 'niko.turković@yahoo.com', 'Niko', 'Turković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (138, 'HYDROTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-11-10T05:43', 139, 'siniša.ivančić@gmail.com', 'Siniša', 'Ivančić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (139, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-18T07:44', 140, 'viktor.pavlović@outlook.com', 'Viktor', 'Pavlović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (140, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-05-11T04:21', 141, 'jerko.jurić@yahoo.com', 'Jerko', 'Jurić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (141, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-17T20:08', 142, 'ivan.hrženjak@outlook.com', 'Ivan', 'Hrženjak', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (142, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-03-09T04:17', 143, 'eugen.turković@yahoo.com', 'Eugen', 'Turković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (143, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-13T22:26', 144, 'miro.balić@icloud.com', 'Miro', 'Balić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (144, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-08-14T03:25', 145, 'nediljko.kordić@yahoo.com', 'Nediljko', 'Kordić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (145, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-10T21:36', 146, 'božidar.jelić@outlook.com', 'Božidar', 'Jelić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (146, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-28T18:21', 147, 'eduard.matijević@outlook.com', 'Eduard', 'Matijević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (147, 'THERMOTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-08T23:50', 148, 'nedjeljko.đurđević@outlook.com', 'Nedjeljko', 'Đurđević', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (148, 'PHYSICAL_THERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-09-25T13:43', 149, 'leo.crnković@outlook.com', 'Leo', 'Crnković', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (149, 'CRYOTHERAPIST');
+INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-10-02T08:56', 150, 'bernard.duvnjak@gmail.com', 'Bernard', 'Duvnjak', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'STAFF', 'ACTIVE');
+INSERT INTO employee (id, specialization) VALUES (150, 'CRYOTHERAPIST');
 
 INSERT INTO equipment (capacity, id, name, specialization, room_name) VALUES (20, 1, 'Gym', 'PHYSICAL_THERAPIST', 'Physiotherapy Suite'); --physical therapy
 INSERT INTO equipment (capacity, id, name, specialization, room_name) VALUES (2, 2, 'Electrical Muscle Stimulation unit', 'ELECTROTHERAPIST', 'Electrotherapy Zone');
 INSERT INTO equipment (capacity, id, name, specialization, room_name) VALUES (2, 3, 'Cryotherapy machine', 'CRYOTHERAPIST', 'CryoRecovery Room');
 INSERT INTO equipment (capacity, id, name, specialization, room_name) VALUES (4, 4, 'Hydrotherapy pool', 'HYDROTHERAPIST', 'Hydro Rehab Pool');
 INSERT INTO equipment (capacity, id, name, specialization, room_name) VALUES (4, 5, 'Paraffin wax baths and infrared lamp', 'THERMOTHERAPIST', 'Thermal Wellness Space');
-
 
 --shoulder
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part) VALUES (1, 'Rotator cuff tear', 'Physical therapy focuses on strengthening the shoulder muscles, improving range of motion, and reducing pain through targeted exercises.', '#5G3Y4', 12, 'shoulder');
@@ -95,17 +384,383 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167837', 'HR221049', '890123456', '#7P3Y5');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167838', 'HR177695', '901234567', '#9M8D2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839', 'HR219873', '876543210', '#6W1E6'); --inactive
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_793727', 'HR185246', '6253185365', '#2T8L4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_636693', 'HR160786', '4289487088', '#8D2H9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_390107', 'HR256292', '3866991777', '#6L2M9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_565429', 'HR059632', '4589588830', '#8H6H1'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_032759', 'HR163325', '2506031451', '#6F6P9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_385430', 'HR014630', '9123546065', '#6W1E6'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_385136', 'HR189325', '2806721438', '#4N8P5'); --f
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_337700', 'HR169945', '4922359384', '#8H6H1'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_282125', 'HR133104', '4161888076', '#8H6H1'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_999141', 'HR255263', '5896293771', '#1R2Y1'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_198002', 'HR193381', '2944470785', '#8H6H1'); --f
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_942024', 'HR276291', '1532378204', '#5C3G3'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_656575', 'HR052618', '4173413342', '#3J6K2'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_969413', 'HR161846', '6446944801', '#5G3Y4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_869437', 'HR267695', '1850507374', '#5C3G3'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_749456', 'HR119458', '1216575762', '#3N4P6'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_877584', 'HR163856', '5347456189', '#2K6H8'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_687246', 'HR245252', '3868794331', '#7R3N6'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_446004', 'HR204355', '9757861017', '#8I5F5'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_262041', 'HR285214', '6423700800', '#7R3N6'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_661199', 'HR131035', '3440637107', '#9M8D2'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_637202', 'HR222183', '5275142380', '#7P3Y5'); --f
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_869826', 'HR150977', '0571334333', '#2K6H8'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_918222', 'HR160786', '3819700726', '#7X4N5'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_623808', 'HR178655', '1297818258', '#1G8Z3'); --f
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_443294', 'HR249603', '9565800943', '#4N8P5'); --f
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_826397', 'HR155697', '1532378204', '#2T8L4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_791929', 'HR059191', '6136194437', '#5M8P4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_791516', 'HR051109', '0985222002', '#6L2M9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_969339', 'HR041091', '2491959663', '#4W3F2'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_381880', 'HR018635', '6446944801', '#6W1E6'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_808830', 'HR286651', '2944470785', '#6F6P9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_541132', 'HR288020', '2490725791', '#6F2G1'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_553471', 'HR142441', '2491959663', '#6L2M9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_126662', 'HR152518', '0767789053', '#6F6P9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_776897', 'HR133035', '9442590631', '#9P1H4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_976369', 'HR230176', '3360604548', '#7X4N5'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_790265', 'HR194996', '7411648759', '#1R2Y1'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_496383', 'HR141610', '0729410772', '#6F6P9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_110225', 'HR031191', '4912183658', '#7P3Y5'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_886726', 'HR263804', '2482714851', '#7X4N5'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_306846', 'HR105980', '2535230493', '#2T8L4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_753053', 'HR261579', '5524769923', '#2T8L4'); --f
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_113518', 'HR087812', '2922579756', '#4D5C2'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_242123', 'HR045112', '4802053809', '#5G3Y4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_655498', 'HR155464', '5524769923', '#5G3Y4'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_137620', 'HR128565', '4161888076', '#5I9K8'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_770549', 'HR207080', '5130029178', '#2J6Z7'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_482579', 'HR277139', '5441593808', '#6B5Q3'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_999382', 'HR107297', '4769035776', '#7Z8V8'); --t
 
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (2, '2003-01-01', 'tesna ulica 4', '1899935409', '463243045', '0911223457');
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (3, '2002-04-01', 'tesna ulica 2', '1264166032', '357092999', '0911223458');
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (4, '2004-01-01', 'tesna ulica 1', '1487949723', '349047109', '0911223459');
-INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (5, '2001-01-05', 'tesna ulica 8', '1509125019', '620361537', '0911223460');
 
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (3, 'VERIFIED');
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (5, 'PENDING');
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (4, 'VERIFIED');
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (9, 'VERIFIED');
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (2, 'VERIFIED');
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (7, 'PENDING');
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (1, 'PENDING');
-INSERT INTO therapy (therapy_type_id, therapy_status) VALUES (6, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (1, 2, 1, 'DECLINED'); --inactive doctor
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (2, 105, 7, 'PENDING');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (3, 39, 2, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (4, 37, 19, 'PENDING');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (5, 18, 37, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (6, 95, 16, 'PENDING');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (7, 2, 11, 'PENDING');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (8, 78, 4, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (9, 35, 9, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (10, 21, 5, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (11, 52, 8, 'PENDING');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (12, 68, 22, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (13, 83, 17, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (14, 29, 30, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (15, 60, 12, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (16, 24, 35, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (17, 42, 15, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (18, 14, 20, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (19, 97, 3, 'PENDING');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (20, 50, 31, 'PENDING');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (21, 33, 13, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (22, 47, 1, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (23, 81, 6, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (24, 74, 25, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (25, 28, 23, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (26, 46, 26, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (27, 65, 29, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (28, 54, 10, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (29, 102, 34, 'VERIFIED');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (30, 8, 18, 'VERIFIED');
+
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (1, '2023-09-07T08:00', 126, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (2, '2023-09-12T08:00', 144, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (3, '2023-09-15T08:00', 130, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (4, '2023-09-20T08:00', 135, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (5, '2023-09-25T08:00', 140, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (6, '2023-09-28T08:00', 139, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (7, '2023-10-02T08:00', 144, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (8, '2023-10-09T08:00', 146, 46, 26, ''); --#8G5H3, 26
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (9, '2023-08-09T09:00', 126, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (10, '2023-08-14T09:00', 148, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (11, '2023-08-18T09:00', 146, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (12, '2023-08-23T09:00', 146, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (13, '2023-08-28T09:00', 148, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (14, '2023-09-04T09:00', 137, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (15, '2023-09-11T09:00', 148, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (16, '2023-09-18T09:00', 141, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (17, '2023-09-22T09:00', 130, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (18, '2023-09-26T09:00', 135, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (19, '2023-10-02T09:00', 141, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (20, '2023-10-09T09:00', 140, 2, 1, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (21, '2022-11-29T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (22, '2022-12-02T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (23, '2022-12-06T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (24, '2022-12-12T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (25, '2022-12-16T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (26, '2022-12-20T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (27, '2022-12-26T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (28, '2023-01-02T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (29, '2023-01-09T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (30, '2023-01-16T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (31, '2023-01-23T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (32, '2023-01-26T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (33, '2023-01-30T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (34, '2023-02-03T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (35, '2023-02-08T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (36, '2023-02-13T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (37, '2023-02-16T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (38, '2023-02-20T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (39, '2023-02-24T08:00', 127, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (40, '2023-02-27T08:00', 136, 65, 27, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (41, '2023-09-07T16:00', 127, 50, 20, ''); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (42, '2023-09-12T16:00', 136, 50, 20, ''); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (43, '2023-09-18T16:00', 136, 50, 20, ''); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (44, '2023-09-21T16:00', 136, 50, 20, ''); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (45, '2023-09-25T16:00', 127, 50, 20, ''); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (46, '2023-09-28T16:00', 127, 50, 20, ''); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (47, '2024-02-08T13:00', 128, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (48, '2024-02-12T13:00', 128, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (49, '2024-02-15T13:00', 128, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (50, '2024-02-19T13:00', 128, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (51, '2024-02-23T13:00', 128, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (52, '2024-02-28T13:00', 147, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (53, '2024-03-04T13:00', 147, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (54, '2024-03-08T13:00', 128, 54, 28, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (55, '2023-08-14T10:00', 128, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (56, '2023-08-17T10:00', 147, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (57, '2023-08-21T10:00', 147, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (58, '2023-08-24T10:00', 147, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (59, '2023-08-29T10:00', 147, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (60, '2023-09-01T10:00', 147, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (61, '2023-09-04T10:00', 147, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (62, '2023-09-08T10:00', 128, 2, 7, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (63, '2024-01-18T11:00', 129, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (64, '2024-01-22T11:00', 129, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (65, '2024-01-26T11:00', 131, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (66, '2024-01-31T11:00', 129, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (67, '2024-02-05T11:00', 138, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (68, '2024-02-08T11:00', 138, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (69, '2024-02-13T11:00', 138, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (70, '2024-02-16T11:00', 131, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (71, '2024-02-19T11:00', 131, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (72, '2024-02-26T11:00', 138, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (73, '2024-02-29T11:00', 129, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (74, '2024-03-04T11:00', 134, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (75, '2024-03-11T11:00', 131, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (76, '2024-03-18T11:00', 129, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (77, '2024-03-22T11:00', 129, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (78, '2024-03-25T11:00', 134, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (79, '2024-04-01T11:00', 131, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (80, '2024-04-04T11:00', 134, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (81, '2024-04-09T11:00', 129, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (82, '2024-04-15T11:00', 134, 102, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (83, '2023-08-29T12:00', 130, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (84, '2023-09-01T12:00', 130, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (85, '2023-09-04T12:00', 141, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (86, '2023-09-07T12:00', 148, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (87, '2023-09-12T12:00', 130, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (88, '2023-09-18T12:00', 145, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (89, '2023-09-25T12:00', 148, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (90, '2023-09-28T12:00', 139, 8, 30, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (91, '2023-04-28T17:00', 130, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (92, '2023-05-03T17:00', 130, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (93, '2023-05-08T17:00', 140, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (94, '2023-05-12T17:00', 145, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (95, '2023-05-16T17:00', 132, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (96, '2023-05-22T17:00', 137, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (97, '2023-05-29T17:00', 139, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (98, '2023-06-05T17:00', 148, 78, 8, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (99, '2023-04-18T16:00', 131, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (100, '2023-04-24T16:00', 129, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (101, '2023-04-28T16:00', 134, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (102, '2023-05-03T16:00', 131, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (103, '2023-05-08T16:00', 129, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (104, '2023-05-11T16:00', 134, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (105, '2023-05-15T16:00', 129, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (106, '2023-05-22T16:00', 134, 35, 9, ''); --#4D5C2, 9
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (107, '2023-02-28T09:00', 132, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (108, '2023-03-06T09:00', 140, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (109, '2023-03-10T09:00', 126, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (110, '2023-03-13T09:00', 141, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (111, '2023-03-17T09:00', 143, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (112, '2023-03-21T09:00', 139, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (113, '2023-03-24T09:00', 140, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (114, '2023-03-27T09:00', 144, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (115, '2023-03-31T09:00', 145, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (116, '2023-04-03T09:00', 130, 21, 10, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (117, '2023-07-05T08:00', 133, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (118, '2023-07-10T08:00', 133, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (119, '2023-07-13T08:00', 133, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (120, '2023-07-17T08:00', 133, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (121, '2023-07-24T08:00', 150, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (122, '2023-07-27T08:00', 150, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (123, '2023-07-31T08:00', 150, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (124, '2023-08-04T08:00', 149, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (125, '2023-08-08T08:00', 150, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (126, '2023-08-14T08:00', 149, 52, 11, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (127, '2023-10-27T15:00', 133, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (128, '2023-11-01T15:00', 137, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (129, '2023-11-06T15:00', 139, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (130, '2023-11-10T15:00', 126, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (131, '2023-11-14T15:00', 130, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (132, '2023-11-20T15:00', 135, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (133, '2023-11-27T15:00', 132, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (134, '2023-11-30T15:00', 142, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (135, '2023-12-04T15:00', 142, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (136, '2023-12-08T15:00', 139, 83, 13, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (137, '2022-09-22T10:00', 134, 68, 12, ''); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (138, '2022-09-26T10:00', 144, 68, 12, ''); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (139, '2022-09-30T10:00', 148, 68, 12, ''); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (140, '2022-10-04T10:00', 130, 68, 12, ''); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (141, '2022-10-10T10:00', 143, 68, 12, ''); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (142, '2022-10-13T10:00', 126, 68, 12, ''); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (143, '2022-10-17T10:00', 144, 68, 12, ''); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (144, '2023-02-13T18:00', 134, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (145, '2023-02-16T18:00', 133, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (146, '2023-02-20T18:00', 149, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (147, '2023-02-24T18:00', 133, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (148, '2023-03-01T18:00', 133, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (149, '2023-03-06T18:00', 133, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (150, '2023-03-13T18:00', 150, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (151, '2023-03-20T18:00', 133, 105, 2, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (152, '2022-11-09T17:00', 135, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (153, '2022-11-14T17:00', 131, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (154, '2022-11-18T17:00', 138, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (155, '2022-11-23T17:00', 138, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (156, '2022-11-28T17:00', 131, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (157, '2022-12-05T17:00', 129, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (158, '2022-12-12T17:00', 129, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (159, '2022-12-19T17:00', 129, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (160, '2022-12-22T17:00', 129, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (161, '2022-12-26T17:00', 131, 28, 25, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (162, '2023-04-10T15:00', 135, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (163, '2023-04-13T15:00', 141, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (164, '2023-04-17T15:00', 126, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (165, '2023-04-24T15:00', 135, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (166, '2023-05-01T15:00', 141, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (167, '2023-05-08T15:00', 146, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (168, '2023-05-11T15:00', 139, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (169, '2023-05-16T15:00', 137, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (170, '2023-05-22T15:00', 146, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (171, '2023-05-25T15:00', 143, 39, 3, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (172, '2022-08-24T10:00', 135, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (173, '2022-08-29T10:00', 145, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (174, '2022-09-05T10:00', 140, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (175, '2022-09-08T10:00', 141, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (176, '2022-09-12T10:00', 140, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (177, '2022-09-15T10:00', 140, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (178, '2022-09-19T10:00', 142, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (179, '2022-09-23T10:00', 142, 37, 4, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (180, '2022-11-08T08:00', 136, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (181, '2022-11-14T08:00', 127, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (182, '2022-11-21T08:00', 136, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (183, '2022-11-25T08:00', 136, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (184, '2022-11-30T08:00', 136, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (185, '2022-12-05T08:00', 127, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (186, '2022-12-08T08:00', 127, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (187, '2022-12-12T08:00', 136, 29, 14, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (188, '2023-03-20T08:00', 137, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (189, '2023-03-24T08:00', 140, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (190, '2023-03-27T08:00', 144, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (191, '2023-03-31T08:00', 143, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (192, '2023-04-04T08:00', 148, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (193, '2023-04-07T08:00', 143, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (194, '2023-04-11T08:00', 130, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (195, '2023-04-17T08:00', 145, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (196, '2023-04-21T08:00', 140, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (197, '2023-04-25T08:00', 140, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (198, '2023-05-01T08:00', 132, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (199, '2023-05-05T08:00', 144, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (200, '2023-05-09T08:00', 143, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (201, '2023-05-15T08:00', 142, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (202, '2023-05-18T08:00', 146, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (203, '2023-05-22T08:00', 144, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (204, '2023-05-25T08:00', 132, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (205, '2023-05-30T08:00', 141, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (206, '2023-06-02T08:00', 148, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (207, '2023-06-07T08:00', 130, 60, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (208, '2023-01-10T15:00', 138, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (209, '2023-01-16T15:00', 131, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (210, '2023-01-19T15:00', 138, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (211, '2023-01-23T15:00', 129, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (212, '2023-01-26T15:00', 134, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (213, '2023-01-31T15:00', 134, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (214, '2023-02-06T15:00', 129, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (215, '2023-02-09T15:00', 131, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (216, '2023-02-14T15:00', 131, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (217, '2023-02-20T15:00', 131, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (218, '2023-02-24T15:00', 138, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (219, '2023-02-27T15:00', 131, 24, 16, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (220, '2022-11-24T17:00', 139, 42, 17, ''); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (221, '2022-11-28T17:00', 135, 42, 17, ''); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (222, '2022-12-05T17:00', 143, 42, 17, ''); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (223, '2022-12-08T17:00', 143, 42, 17, ''); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (224, '2022-12-12T17:00', 137, 42, 17, ''); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (225, '2022-12-16T17:00', 144, 42, 17, ''); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (226, '2023-11-13T17:00', 140, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (227, '2023-11-16T17:00', 132, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (228, '2023-11-21T17:00', 146, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (229, '2023-11-27T17:00', 132, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (230, '2023-11-30T17:00', 141, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (231, '2023-12-04T17:00', 148, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (232, '2023-12-07T17:00', 132, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (233, '2023-12-11T17:00', 146, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (234, '2023-12-18T17:00', 143, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (235, '2023-12-25T17:00', 126, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (236, '2023-12-28T17:00', 141, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (237, '2024-01-02T17:00', 145, 14, 18, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (238, '2023-12-08T08:00', 141, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (239, '2023-12-13T08:00', 142, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (240, '2023-12-18T08:00', 132, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (241, '2023-12-22T08:00', 143, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (242, '2023-12-27T08:00', 141, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (243, '2024-01-01T08:00', 148, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (244, '2024-01-05T08:00', 139, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (245, '2024-01-08T08:00', 144, 97, 19, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (246, '2023-10-03T09:00', 142, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (247, '2023-10-06T09:00', 143, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (248, '2023-10-11T09:00', 144, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (249, '2023-10-16T09:00', 141, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (250, '2023-10-20T09:00', 144, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (251, '2023-10-24T09:00', 145, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (252, '2023-10-30T09:00', 132, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (253, '2023-11-06T09:00', 145, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (254, '2023-11-10T09:00', 148, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (255, '2023-11-14T09:00', 137, 95, 6, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (256, '2023-06-12T16:00', 143, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (257, '2023-06-19T16:00', 145, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (258, '2023-06-23T16:00', 142, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (259, '2023-06-27T16:00', 146, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (260, '2023-07-03T16:00', 137, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (261, '2023-07-06T16:00', 139, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (262, '2023-07-10T16:00', 130, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (263, '2023-07-17T16:00', 137, 33, 21, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (264, '2023-05-24T10:00', 144, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (265, '2023-05-29T10:00', 140, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (266, '2023-06-05T10:00', 130, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (267, '2023-06-09T10:00', 144, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (268, '2023-06-12T10:00', 130, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (269, '2023-06-19T10:00', 141, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (270, '2023-06-26T10:00', 135, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (271, '2023-06-29T10:00', 148, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (272, '2023-07-03T10:00', 145, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (273, '2023-07-06T10:00', 140, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (274, '2023-07-10T10:00', 132, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (275, '2023-07-14T10:00', 143, 47, 22, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (276, '2023-02-03T11:00', 145, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (277, '2023-02-07T11:00', 139, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (278, '2023-02-13T11:00', 141, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (279, '2023-02-17T11:00', 130, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (280, '2023-02-22T11:00', 132, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (281, '2023-02-27T11:00', 140, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (282, '2023-03-06T11:00', 145, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (283, '2023-03-10T11:00', 141, 81, 23, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (284, '2023-11-10T18:00', 146, 74, 24, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (285, '2023-11-13T18:00', 143, 74, 24, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (286, '2023-11-17T18:00', 148, 74, 24, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (287, '2023-11-20T18:00', 143, 74, 24, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (288, '2023-11-24T18:00', 126, 74, 24, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (289, '2023-11-29T18:00', 142, 74, 24, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (290, '2023-12-04T18:00', 142, 74, 24, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (291, '2023-05-22T08:00', 147, 18, 5, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (292, '2023-05-29T08:00', 147, 18, 5, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (293, '2023-06-05T08:00', 147, 18, 5, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (294, '2023-06-08T08:00', 128, 18, 5, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (295, '2023-06-12T08:00', 128, 18, 5, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (296, '2023-06-16T08:00', 147, 18, 5, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (297, '2023-06-20T08:00', 147, 18, 5, ''); --#2K6H8, 37
