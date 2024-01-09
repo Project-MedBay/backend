@@ -1,4 +1,5 @@
-INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 6000, 'admin@gmail.com', 'John', 'Doe', '$2a$12$AgOr5O5nmLlIgsBgHrP57eouuZ9XRgOX.evYytR7oZ.XRBrgCS65W', 'ADMIN');
+INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 6000, 'admin@medbay.life', 'John', 'Doe', '$2a$12$ctrMIil.vx4xEUXMjORKZuSdCPdX8vrpX3REtxAZSahPkV.sA8ko6
+', 'ADMIN');
 --password : password
 INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-01-08T01:07', 1, 'željana.šimić@yahoo.com', 'Željana', 'Šimić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
 INSERT INTO patient (id, date_of_birth, address, mbo, oib, phone_number) VALUES (1, '1955-06-08', 'Ulica kneza Mislava 43', '5770257924', '339748797', '0956017346');
