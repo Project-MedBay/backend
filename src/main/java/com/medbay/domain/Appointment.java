@@ -3,6 +3,7 @@ package com.medbay.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDateTime;
 
@@ -14,7 +15,8 @@ import java.time.LocalDateTime;
 public class Appointment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "IdGenerator")
+    @GenericGenerator(name = "IdGenerator", strategy = "com.medbay.config.IdGenerator")
     private Long id;
 
     private LocalDateTime dateTime;

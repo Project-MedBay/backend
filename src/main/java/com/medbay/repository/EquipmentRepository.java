@@ -11,4 +11,7 @@ public interface EquipmentRepository extends JpaRepository<Equipment, Long> {
            "(SELECT COUNT(a) FROM Appointment a JOIN a.therapy t JOIN t.therapyType tt " +
            "WHERE tt.requiredEquipment = e AND a.dateTime = :dateTime) >= e.capacity")
     Equipment isCapacityReachedForEquipmentOnDate(Long equipmentId, LocalDateTime dateTime);
+
+    @Query(value = "SELECT MAX(id) FROM equipment", nativeQuery = true)
+    Long findByMaxId();
 }

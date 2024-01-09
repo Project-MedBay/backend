@@ -4,6 +4,7 @@ import com.medbay.domain.Therapy;
 import com.medbay.domain.TherapyType;
 import com.medbay.domain.enums.TherapyStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,5 +13,8 @@ import java.util.List;
 public interface TherapyRepository extends JpaRepository<Therapy, Long> {
     Therapy findByTherapyType(TherapyType therapyType);
     List<Therapy> findByTherapyStatus(TherapyStatus therapyStatus);
+
+    @Query(value = "SELECT MAX(id) FROM therapy", nativeQuery = true)
+    Long findByMaxId();
 
 }
