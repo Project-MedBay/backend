@@ -78,4 +78,20 @@ public class PatientService {
         return ResponseEntity.ok(patientDTOs);
     }
 
+    public ResponseEntity<PatientDTO> getLoggedInPatient() {
+        Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        PatientDTO patientDTO = PatientDTO.builder()
+                .id(patient.getId())
+                .firstName(patient.getFirstName())
+                .lastName(patient.getLastName())
+                .email(patient.getEmail())
+                .createdAt(patient.getCreatedAt())
+                .address(patient.getAddress())
+                .dateOfBirth(patient.getDateOfBirth())
+                .OIB(patient.getOIB())
+                .MBO(patient.getMBO())
+                .phoneNumber(patient.getPhoneNumber())
+                .build();
+        return ResponseEntity.ok(patientDTO);
+    }
 }
