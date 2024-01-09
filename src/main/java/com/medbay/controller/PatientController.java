@@ -27,4 +27,9 @@ public class PatientController {
         return patientService.getPendingPatients();
     }
 
+    @GetMapping("/logged-in")
+    public ResponseEntity<PatientDTO> getLoggedInPatient(){
+        return patientService.getLoggedInPatient();
+    }
+
 }
