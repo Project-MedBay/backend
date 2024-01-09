@@ -2,6 +2,7 @@ package com.medbay.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Builder
@@ -11,7 +12,8 @@ import lombok.*;
 public class TherapyType {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "IdGenerator")
+    @GenericGenerator(name = "IdGenerator", strategy = "com.medbay.config.IdGenerator")
     private Long id;
     private String bodyPart;
     private String therapyCode;

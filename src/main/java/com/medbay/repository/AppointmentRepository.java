@@ -21,4 +21,7 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
     int countAppointmentsByTherapyTypeAndDateTime(@Param("therapyType") TherapyType therapyType, @Param("dateTime") LocalDateTime dateTime);
 
     int countAppointmentsByDateTime(LocalDateTime dateTime);
+
+    @Query(value = "SELECT MAX(id) FROM appointment", nativeQuery = true)
+    Long findByMaxId();
 }
