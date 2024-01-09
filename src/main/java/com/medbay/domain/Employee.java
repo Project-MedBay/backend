@@ -25,8 +25,4 @@ public class Employee extends User {
     private List<Appointment> appointments;
 
 
-    @OneToMany(mappedBy = "employee")
-    @JsonIgnoreProperties("employee")
-    private List<Therapy> therapies;
-
 }

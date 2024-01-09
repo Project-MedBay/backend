@@ -52,11 +52,6 @@ public class TherapyService {
         return ResponseEntity.ok().build();
     }
 
-    public Therapy findById(Long id) {
-        Optional<Therapy> therapy = therapyRepository.findById(id);
-        return therapy.orElseThrow(() -> new RuntimeException("Therapy not found with id: " + id));
-    }
-
     public ResponseEntity<List<Therapy>> getTherapyRequests() {
         List<Therapy> pendingTherapies = therapyRepository.findByTherapyStatus(PENDING);
         return ResponseEntity.ok(pendingTherapies);
@@ -70,7 +65,7 @@ public class TherapyService {
                 return ResponseEntity.status(CONFLICT).body("Rejection reason is required.");
             }
             therapyRepository.delete(therapy);
-            //emailService.sendTherapyRejectionEmail(therapy.getPatient(), rejectionReason);
+            emailService.sendTherapyRejectionEmail(therapy.getPatient(), rejectionReason);
         }
         else{
             therapy.setTherapyStatus(TherapyStatus.VERIFIED);
@@ -100,16 +95,24 @@ public class TherapyService {
 
         Therapy therapy = Therapy.builder()
                 .therapyStatus(PENDING)
-                .appointments(appointments)
                 .patient(patient)
                 .therapyType(therapyType)
                 .build();
+
         therapyRepository.save(therapy);
+
+        appointments.forEach(appointment -> appointment.setTherapy(therapy));
+        appointmentRepository.saveAll(appointments);
 
         return ResponseEntity.ok().build();
     }
 
     private ResponseEntity<String> validateRequest(CreateTherapyRequest request) {
+
+        if(!doctorRepository.existsByHlkid(request.getHlkid())){
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Doctor not found by hlkid.");
+        }
+
         if (!doctorRepository.isActiveById(request.getHlkid())) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Doctor is not active.");
         }

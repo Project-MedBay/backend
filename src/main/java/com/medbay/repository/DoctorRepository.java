@@ -12,4 +12,6 @@ public interface DoctorRepository extends JpaRepository<Doctor, String> {
     @Query("SELECT d.active FROM Doctor d WHERE d.hlkid = :hlkid")
     boolean isActiveById(String hlkid);
 
+    boolean existsByHlkid(String hlkid);
+
 }

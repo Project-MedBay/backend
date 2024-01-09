@@ -26,10 +26,6 @@ public class Therapy {
     private Patient patient;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
-
-    @ManyToOne
     private TherapyType therapyType;
 
     @Enumerated(EnumType.STRING)

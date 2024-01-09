@@ -9,8 +9,6 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @Builder
-@Getter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Appointment {
@@ -28,7 +26,7 @@ public class Appointment {
     @JsonIgnoreProperties("appointments")
     private Patient patient;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "therapy_id")
     @JsonIgnoreProperties("appointments")
     private Therapy therapy;
