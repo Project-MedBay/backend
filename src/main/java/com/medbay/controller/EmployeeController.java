@@ -19,15 +19,7 @@ import java.util.Map;
 @CrossOrigin("*")
 public class EmployeeController {
 
-    private final AppointmentService appointmentService;
-    private final UserService userService;
-    private final TherapyService therapyService;
     private final EmployeeService employeeService;
-    private final PatientService patientService;
-    private final EquipmentService equipmentService;
-    private final TherapyTypeService therapyTypeService;
-
-
 
     @GetMapping("/appointments")
     public ResponseEntity<Map<LocalDate, List<EmployeeSessionsDTO>>> getAppointmentsForEmployee() {

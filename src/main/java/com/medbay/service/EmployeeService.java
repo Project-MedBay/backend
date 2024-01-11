@@ -126,6 +126,7 @@ public class EmployeeService {
     private static EmployeeSessionsDTO buildEmployeeSessionsDTO(Appointment appointment, List<Appointment> appointments,
                                                                 int numOfSessions, int index) {
         return EmployeeSessionsDTO.builder()
+                .appointmentId(appointment.getId())
                 .id(appointments.indexOf(appointment) + 1)
                 .sessionNotes(appointment.getSessionNotes())
                 .therapyTypeName(appointment.getTherapy().getTherapyType().getName())
