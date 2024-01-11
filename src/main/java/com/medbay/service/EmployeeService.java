@@ -126,6 +126,7 @@ public class EmployeeService {
 
     private static EmployeeSessionsDTO buildEmployeeSessionsDTO(Appointment appointment, List<Appointment> appointments,
                                                                 int numOfSessions, int index) {
+        Employee employee = (Employee) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return EmployeeSessionsDTO.builder()
                 .appointmentId(appointment.getId())
                 .id(appointments.indexOf(appointment) + 1)
@@ -135,11 +136,11 @@ public class EmployeeService {
                 .equipmentRoomName(appointment.getTherapy().getTherapyType().getRequiredEquipment().getRoomName())
                 .numberOfSessions(numOfSessions + 1)
                 .numberOfSessionsCompleted(index + 1)
-                .patient(buildPatientDTO(appointment))
+                .patient(buildPatientDTO(appointment, employee))
                 .build();
     }
 
-    private static PatientDTO buildPatientDTO(Appointment appointment) {
+    private static PatientDTO buildPatientDTO(Appointment appointment, Employee employee) {
         return PatientDTO.builder()
                 .id(appointment.getPatient().getId())
                 .OIB(appointment.getPatient().getOIB())
@@ -157,6 +158,7 @@ public class EmployeeService {
                                 .appointmentDate(app.getDateTime())
                                 .therapyName(app.getTherapy().getTherapyType().getName())
                                 .sessionNotes(app.getSessionNotes())
+                                .show(employee.getId().equals(app.getEmployee().getId()))
                                 .build()).sorted(Comparator.comparing(AppointmentDTO::getAppointmentDate))
                         .collect(Collectors.toList()))
                 .build();
