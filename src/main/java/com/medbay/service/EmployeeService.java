@@ -19,11 +19,15 @@ import org.springframework.stereotype.Service;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.LinkedHashMap;
 import java.util.stream.IntStream;
+
+import static com.medbay.util.Helper.log;
 
 @Service
 @RequiredArgsConstructor
@@ -93,20 +97,31 @@ public class EmployeeService {
         Employee employee = (Employee) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         List<Appointment> appointments = appointmentRepository.findByEmployeeAndDateTimeAfter(employee, LocalDateTime.now());
 
-        Map<LocalDate, List<EmployeeSessionsDTO>> employeeSessionsByWeek = appointments.stream()
+        // Sort appointments by date-time before processing
+        List<Appointment> sortedAppointments = appointments.stream()
+                .sorted(Comparator.comparing(Appointment::getDateTime))
+                .collect(Collectors.toList());
+
+        // Group by start of the week and map to DTOs
+        Map<LocalDate, List<EmployeeSessionsDTO>> employeeSessionsByWeek = sortedAppointments.stream()
                 .map(appointment -> {
                     Therapy therapy = appointment.getTherapy();
                     int numOfSessions = therapy.getAppointments().size();
                     int index = IntStream.range(0, numOfSessions)
                             .filter(i -> therapy.getAppointments().get(i).getId().equals(appointment.getId()))
                             .findFirst().orElseThrow(() -> new RuntimeException("Appointment not found"));
-
-                    return buildEmployeeSessionsDTO(appointment, appointments, numOfSessions, index);
+                    return buildEmployeeSessionsDTO(appointment, sortedAppointments, numOfSessions, index);
                 })
-                .collect(Collectors.groupingBy(dto -> getStartOfWeek(dto.getDateTime().toLocalDate())));
+                .collect(Collectors.groupingBy(dto -> getStartOfWeek(dto.getDateTime().toLocalDate()),
+                        LinkedHashMap::new, // Use LinkedHashMap to maintain order
+                        Collectors.toList()));
+
+        // Sort the DTOs within each week by date-time
+        employeeSessionsByWeek.forEach((week, sessions) -> sessions.sort(Comparator.comparing(dto -> dto.getDateTime())));
 
         return ResponseEntity.ok(employeeSessionsByWeek);
     }
+
 
     private static EmployeeSessionsDTO buildEmployeeSessionsDTO(Appointment appointment, List<Appointment> appointments,
                                                                 int numOfSessions, int index) {
