@@ -95,7 +95,7 @@ public class EmployeeService {
 
     public ResponseEntity<Map<LocalDate, List<EmployeeSessionsDTO>>> getEmployeesAppointments() {
         Employee employee = (Employee) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        List<Appointment> appointments = appointmentRepository.findByEmployeeAndDateTimeAfter(employee, LocalDateTime.now());
+        List<Appointment> appointments = appointmentRepository.findByEmployee(employee);
 
         // Sort appointments by date-time before processing
         List<Appointment> sortedAppointments = appointments.stream()
