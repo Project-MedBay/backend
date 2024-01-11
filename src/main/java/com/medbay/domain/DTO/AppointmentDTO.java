@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 public class AppointmentDTO {
 
     private Long appointmentId;
+    private String sessionNotes;
     private String therapyName;
     private LocalDateTime appointmentDate;
 }

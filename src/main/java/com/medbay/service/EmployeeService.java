@@ -156,6 +156,7 @@ public class EmployeeService {
                                 .appointmentId(app.getId())
                                 .appointmentDate(app.getDateTime())
                                 .therapyName(app.getTherapy().getTherapyType().getName())
+                                .sessionNotes(app.getSessionNotes())
                                 .build()).sorted(Comparator.comparing(AppointmentDTO::getAppointmentDate))
                         .collect(Collectors.toList()))
                 .build();
