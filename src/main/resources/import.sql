@@ -436,35 +436,30 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_999382', 'HR107297', '4769035776', '#7Z8V8'); --t
 
 
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (2, 105, 7, 'PENDING');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (3, 39, 2, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (4, 37, 19, 'PENDING');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (5, 18, 37, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (6, 95, 16, 'PENDING');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (7, 2, 11, 'PENDING');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (8, 78, 4, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (9, 35, 9, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (10, 21, 5, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (11, 52, 8, 'PENDING');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (12, 68, 22, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (13, 83, 17, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (14, 29, 30, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (15, 60, 12, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (16, 24, 35, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (17, 42, 15, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (18, 14, 20, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (19, 97, 3, 'PENDING');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (20, 50, 31, 'PENDING');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (21, 33, 13, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (22, 47, 1, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (23, 81, 6, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (24, 74, 25, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (25, 28, 23, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (26, 46, 26, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (27, 65, 29, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (28, 54, 10, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (29, 102, 34, 'VERIFIED');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status) VALUES (30, 8, 18, 'VERIFIED');
+-- VERIFIED records with random dates between 2024-01-11 and the month prior
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (2, 105, 7, 'VERIFIED', '2024-01-02T10:30');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (3, 39, 2, 'VERIFIED', '2024-01-10T14:45');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (5, 18, 37, 'VERIFIED', '2024-01-03T09:15');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (8, 78, 4, 'VERIFIED', '2024-01-10T16:20');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (12, 68, 22, 'VERIFIED', '2024-01-19T08:55');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (14, 29, 30, 'VERIFIED', '2023-12-01T11:30');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (17, 42, 15, 'VERIFIED', '2023-12-13T17:40');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (21, 33, 13, 'VERIFIED', '2024-01-12T13:10');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (24, 74, 25, 'VERIFIED', '2023-12-22T18:05');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (26, 46, 26, 'VERIFIED', '2023-12-07T21:00');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (28, 54, 10, 'VERIFIED', '2023-12-14T15:25');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (30, 8, 18, 'VERIFIED', '2024-01-05T12:15');
+
+-- PENDING records closer to today's date
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (4, 37, 19, 'PENDING', '2024-01-10T20:30');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (6, 95, 16, 'PENDING', '2024-01-11T09:40');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (7, 2, 11, 'PENDING', '2024-01-14T14:15');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (11, 52, 8, 'PENDING', '2024-01-11T17:20');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (19, 97, 3, 'PENDING', '2024-01-09T11:55');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (20, 50, 31, 'PENDING', '2024-01-15T08:10');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (27, 65, 29, 'PENDING', '2024-01-11T22:45');
+INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (29, 102, 34, 'PENDING', '2024-01-11T19:05');
+
 
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (1, '2023-09-07T08:00', 126, 46, 26, ''); --#8G5H3, 26
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (2, '2023-09-12T08:00', 144, 46, 26, ''); --#8G5H3, 26

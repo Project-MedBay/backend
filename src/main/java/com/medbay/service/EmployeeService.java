@@ -1,5 +1,6 @@
 package com.medbay.service;
 
+import com.medbay.domain.DTO.AppointmentDTO;
 import com.medbay.domain.DTO.EmployeeSessionsDTO;
 import com.medbay.domain.*;
 import com.medbay.domain.DTO.PatientDTO;
@@ -111,7 +112,7 @@ public class EmployeeService {
                             .filter(i -> therapy.getAppointments().get(i).getId().equals(appointment.getId()))
                             .findFirst().orElseThrow(() -> new RuntimeException("Appointment not found"));
                     return buildEmployeeSessionsDTO(appointment, sortedAppointments, numOfSessions, index);
-                })
+                }).sorted(Comparator.comparing(EmployeeSessionsDTO::getDateTime))
                 .collect(Collectors.groupingBy(dto -> getStartOfWeek(dto.getDateTime().toLocalDate()),
                         LinkedHashMap::new, // Use LinkedHashMap to maintain order
                         Collectors.toList()));
@@ -150,6 +151,13 @@ public class EmployeeService {
                 .createdAt(appointment.getPatient().getCreatedAt())
                 .dateOfBirth(appointment.getPatient().getDateOfBirth())
                 .photo(appointment.getPatient().getPhoto())
+                .appointments(appointment.getPatient().getAppointments().stream()
+                        .map(app -> AppointmentDTO.builder()
+                                .appointmentId(app.getId())
+                                .appointmentDate(app.getDateTime())
+                                .therapyName(app.getTherapy().getTherapyType().getName())
+                                .build()).sorted(Comparator.comparing(AppointmentDTO::getAppointmentDate))
+                        .collect(Collectors.toList()))
                 .build();
     }
 
