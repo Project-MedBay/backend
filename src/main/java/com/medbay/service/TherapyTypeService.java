@@ -24,10 +24,6 @@ public class TherapyTypeService {
         return ResponseEntity.ok(therapyTypes);
     }
 
-    public ResponseEntity<Optional<TherapyType>> getTherapyTypeById(Long id) {
-        return ResponseEntity.ok(therapyTypeRepository.findById(id));
-    }
-
 
     public ResponseEntity<Void> createTherapyType(CreateTherapyTypeRequest request) {
         Optional<Equipment> equipment = equipmentRepository.findById(request.getRequiredEquipmentId());
@@ -52,8 +48,4 @@ public class TherapyTypeService {
         return ResponseEntity.ok().build();
     }
 
-    public TherapyType findById(Long id) {
-        Optional<TherapyType> therapyType = therapyTypeRepository.findById(id);
-        return therapyType.orElseThrow(() -> new RuntimeException("Therapy Type not found with id: " + id));
-    }
 }

@@ -17,4 +17,5 @@ public class AppointmentDTO {
     private String sessionNotes;
     private String therapyName;
     private LocalDateTime appointmentDate;
+    private boolean show;
 }

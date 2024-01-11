@@ -436,7 +436,6 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_999382', 'HR107297', '4769035776', '#7Z8V8'); --t
 
 
--- VERIFIED records with random dates between 2024-01-11 and the month prior
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (2, 105, 7, 'VERIFIED', '2024-01-02T10:30');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (3, 39, 2, 'VERIFIED', '2024-01-10T14:45');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (5, 18, 37, 'VERIFIED', '2024-01-03T09:15');
@@ -459,7 +458,6 @@ INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_da
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (28, 54, 10, 'VERIFIED', '2023-12-14T15:25');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (30, 8, 18, 'VERIFIED', '2024-01-05T12:15');
 
--- PENDING records closer to today's date
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (4, 37, 19, 'PENDING', '2024-01-10T20:30');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (6, 95, 16, 'PENDING', '2024-01-11T09:40');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (7, 2, 11, 'PENDING', '2024-01-14T14:15');
