@@ -1,0 +1,335 @@
+[
+    {
+        "num_of_sessions": 12,
+        "id": 1,
+        "required_equipment_id": 1,
+        "body_part": "shoulder",
+        "description": "Physical therapy focuses on strengthening the shoulder muscles, improving range of motion, and reducing pain through targeted exercises.",
+        "name": "Rotator cuff tear",
+        "therapy_code": "#5G3Y4"
+    },
+    {
+        "num_of_sessions": 10,
+        "id": 2,
+        "required_equipment_id": 1,
+        "body_part": "shoulder",
+        "description": "Therapy aims to restore shoulder mobility through stretching and range of motion exercises.",
+        "name": "Frozen shoulder",
+        "therapy_code": "#7Z8V8"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 3,
+        "required_equipment_id": 1,
+        "body_part": "arm",
+        "description": "Treatment includes strengthening forearm muscles.",
+        "name": "Tennis elbow",
+        "therapy_code": "#1V2V2"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 4,
+        "required_equipment_id": 1,
+        "body_part": "arm",
+        "description": "Physical therapy involves strengthening and stretching exercises for the forearm muscles and may include modalities for pain relief.",
+        "name": "Golfers elbow",
+        "therapy_code": "#8I5F5"
+    },
+    {
+        "num_of_sessions": 10,
+        "id": 5,
+        "required_equipment_id": 1,
+        "body_part": "arm",
+        "description": "Therapy focuses on strengthening the biceps and shoulder muscles while reducing inflammation through modalities.",
+        "name": "Biceps tendinitis",
+        "therapy_code": "#4C7X3"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 6,
+        "required_equipment_id": 1,
+        "body_part": "hand",
+        "description": "Exercises to improve wrist and hand flexibility, along with techniques to relieve pressure on the median nerve.",
+        "name": "Carpal tunnel",
+        "therapy_code": "#1R2Y1"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 7,
+        "required_equipment_id": 3,
+        "body_part": "hand",
+        "description": "Cryotherapy helps alleviate arthritis pain by numbing the affected joints, reducing inflammation, and temporarily easing discomfort and stiffness.",
+        "name": "Arthritis pain management",
+        "therapy_code": "#6F6P9"
+    },
+    {
+        "num_of_sessions": 10,
+        "id": 8,
+        "required_equipment_id": 3,
+        "body_part": "hand",
+        "description": "Cryotherapy can be employed to reduce inflammation and alleviate pain associated with tendinitis by constricting blood vessels and diminishing tissue swelling in the affected area.",
+        "name": "Tendinitis",
+        "therapy_code": "#1G8Z3"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 9,
+        "required_equipment_id": 4,
+        "body_part": "hand",
+        "description": "Hydrotherapy provides a low-impact environment for joint mobility exercises and pain relief, helping individuals with osteoarthritis improve joint function and reduce discomfort.",
+        "name": "Osteoarthritis management",
+        "therapy_code": "#4D5C2"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 10,
+        "required_equipment_id": 5,
+        "body_part": "hand",
+        "description": "Thermotherapy may be used to alleviate pain and inflammation associated with bursitis by increasing blood flow and promoting the relaxation of affected tissues, often applied through warm compresses or therapeutic ultrasound.",
+        "name": "Bursitis",
+        "therapy_code": "#4N8P5"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 11,
+        "required_equipment_id": 5,
+        "body_part": "hand",
+        "description": "Thermotherapy, such as paraffin wax baths, can help ease joint stiffness and reduce pain in individuals with rheumatoid arthritis by enhancing joint flexibility and reducing inflammation.",
+        "name": "Rheumatoid Arthritis",
+        "therapy_code": "#7R3N6"
+    },
+    {
+        "num_of_sessions": 20,
+        "id": 12,
+        "required_equipment_id": 1,
+        "body_part": "leg",
+        "description": "Rehabilitation includes exercises to strengthen the knee and improve stability, often following surgical repair.",
+        "name": "ACL injury",
+        "therapy_code": "#3H4O2"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 13,
+        "required_equipment_id": 1,
+        "body_part": "leg",
+        "description": "Therapy emphasizes range of motion exercises and strengthening of the muscles around the knee.",
+        "name": "Meniscus tear",
+        "therapy_code": "#6F2G1"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 14,
+        "required_equipment_id": 1,
+        "body_part": "leg",
+        "description": "Treatment involves stretching and strengthening the IT band and hip muscles.",
+        "name": "IT band syndrome",
+        "therapy_code": "#8L2Q4"
+    },
+    {
+        "num_of_sessions": 6,
+        "id": 15,
+        "required_equipment_id": 1,
+        "body_part": "leg",
+        "description": "Rehabilitation focuses on reducing inflammation and improving lower leg strength and flexibility.",
+        "name": "Shin splints",
+        "therapy_code": "#7P3Y5"
+    },
+    {
+        "num_of_sessions": 10,
+        "id": 16,
+        "required_equipment_id": 1,
+        "body_part": "leg",
+        "description": "Rest and gradual return to weight-bearing activities are essential, along with exercises to maintain bone density.",
+        "name": "Stress fractures",
+        "therapy_code": "#9M8D2"
+    },
+    {
+        "num_of_sessions": 10,
+        "id": 17,
+        "required_equipment_id": 1,
+        "body_part": "leg",
+        "description": "Exercises to improve hip muscle strength and flexibility, along with modalities for pain management.",
+        "name": "Hip bursitis",
+        "therapy_code": "#2T8L4"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 18,
+        "required_equipment_id": 1,
+        "body_part": "foot",
+        "description": "Therapy includes balance exercises, strengthening the ankle, and improving flexibility.",
+        "name": "Ankle sprain",
+        "therapy_code": "#6W1E6"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 19,
+        "required_equipment_id": 1,
+        "body_part": "foot",
+        "description": "Treatment involves stretching and strengthening exercises for the calf and foot muscles, along with modalities for pain relief.",
+        "name": "Plantar fasciitis ",
+        "therapy_code": "#6B5Q3"
+    },
+    {
+        "num_of_sessions": 12,
+        "id": 20,
+        "required_equipment_id": 1,
+        "body_part": "foot",
+        "description": "Therapy aims to strengthen the calf muscles and Achilles tendon while reducing inflammation.",
+        "name": "Achilles tendinitis ",
+        "therapy_code": "#5C3G3"
+    },
+    {
+        "num_of_sessions": 14,
+        "id": 21,
+        "required_equipment_id": 1,
+        "body_part": "lower torso",
+        "description": "Physical therapy focuses on relieving pain and improving spinal stability through exercises.",
+        "name": "Lumbar herniated disc ",
+        "therapy_code": "#3N4P6"
+    },
+    {
+        "num_of_sessions": 7,
+        "id": 22,
+        "required_equipment_id": 1,
+        "body_part": "lower torso",
+        "description": "Treatment involves exercises to alleviate sciatic nerve compression and improve lumbar spine function.",
+        "name": "Sciatica",
+        "therapy_code": "#9P1H4"
+    },
+    {
+        "num_of_sessions": 10,
+        "id": 23,
+        "required_equipment_id": 4,
+        "body_part": "lower_torso",
+        "description": "Hydrotherapy involves warm water exercises and aquatic therapy techniques to improve flexibility, reduce pain, and enhance core strength in individuals with chronic low back pain.",
+        "name": "Chronic low back pain management",
+        "therapy_code": "#4W3F2"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 24,
+        "required_equipment_id": 1,
+        "body_part": "upper torso",
+        "description": "Therapy includes exercises to improve spinal alignment, flexibility, and muscle balance.",
+        "name": "Scoliosis",
+        "therapy_code": "#5R9N7"
+    },
+    {
+        "num_of_sessions": 7,
+        "id": 25,
+        "required_equipment_id": 1,
+        "body_part": "upper torso",
+        "description": "Treatment includes exercises to correct posture and improve muscle balance to relieve pain and prevent future issues.",
+        "name": "Postural disorders",
+        "therapy_code": "#8K1H7"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 26,
+        "required_equipment_id": 1,
+        "body_part": "head",
+        "description": "Rehabilitation aims to reduce neck pain and nerve symptoms through neck exercises and modalities.",
+        "name": "Cervical radiculopathy ",
+        "therapy_code": "#8G5H3"
+    },
+    {
+        "num_of_sessions": 10,
+        "id": 27,
+        "required_equipment_id": 1,
+        "body_part": "head",
+        "description": "Physical therapy focuses on neck strengthening and range of motion exercises to alleviate pain and stiffness.",
+        "name": "Whiplash",
+        "therapy_code": "#8H6H1"
+    },
+    {
+        "num_of_sessions": 12,
+        "id": 28,
+        "required_equipment_id": 2,
+        "body_part": "any",
+        "description": "EMS therapy aids in muscle activation and circulation for post-operative patients, helping to prevent muscle atrophy and accelerate recovery through controlled electrical muscle contractions.",
+        "name": "Post-Operative rehabilitation",
+        "therapy_code": "#3J6K2"
+    },
+    {
+        "num_of_sessions": 20,
+        "id": 29,
+        "required_equipment_id": 2,
+        "body_part": "any",
+        "description": "EMS can be used to stimulate paralyzed or weakened muscles, aiding in muscle re-education and motor function recovery for stroke survivors.",
+        "name": "Stroke rehabilitation",
+        "therapy_code": "#9P3R1"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 30,
+        "required_equipment_id": 2,
+        "body_part": "any",
+        "description": "EMS assists in maintaining muscle strength and mass in individuals with limited mobility, such as bedridden or immobilized patients, by providing passive muscle contractions",
+        "name": "Muscle atrophy prevention",
+        "therapy_code": "#2J6Z7"
+    },
+    {
+        "num_of_sessions": 6,
+        "id": 31,
+        "required_equipment_id": 2,
+        "body_part": "any",
+        "description": "EMS therapy can help manage chronic pain conditions by stimulating endorphin release, reducing pain perception, and improving blood circulation in targeted areas.",
+        "name": "Chronic pain management",
+        "therapy_code": "#7X4N5"
+    },
+    {
+        "num_of_sessions": 6,
+        "id": 32,
+        "required_equipment_id": 3,
+        "body_part": "any",
+        "description": "Cryotherapy involves the application of cold therapy to reduce post-operative swelling and inflammation, promoting faster healing and pain relief.",
+        "name": "Post-Operative swelling minimization",
+        "therapy_code": "#5M8P4"
+    },
+    {
+        "num_of_sessions": 8,
+        "id": 33,
+        "required_equipment_id": 3,
+        "body_part": "any",
+        "description": "Cryotherapy is used immediately after an acute sports injury to minimize swelling, numb the area, and provide pain relief while facilitating faster recovery.",
+        "name": "Acute sports injury",
+        "therapy_code": "#5Z9B5"
+    },
+    {
+        "num_of_sessions": 20,
+        "id": 34,
+        "required_equipment_id": 4,
+        "body_part": "any",
+        "description": "Hydrotherapy offers a supportive and buoyant environment for stroke survivors to work on regaining ",
+        "name": "Post-Stroke rehabilitation",
+        "therapy_code": "#8D2H9"
+    },
+    {
+        "num_of_sessions": 12,
+        "id": 35,
+        "required_equipment_id": 4,
+        "body_part": "any",
+        "description": "Hydrotherapy can aid in the recovery process after surgery by offering a gentle way to regain mobility, reduce swelling, and improve overall conditioning through aquatic exercises and controlled movements in warm water.",
+        "name": "Post-Operative Rehabilitation",
+        "therapy_code": "#5I9K8"
+    },
+    {
+        "num_of_sessions": 6,
+        "id": 36,
+        "required_equipment_id": 5,
+        "body_part": "any",
+        "description": "Thermotherapy in a wax bath involves immersing affected muscles in warm wax to relax and soothe muscle spasms, reduce tension, and promote blood flow for pain relief.",
+        "name": "Muscle spasms and tension management",
+        "therapy_code": "#6L2M9"
+    },
+    {
+        "num_of_sessions": 7,
+        "id": 37,
+        "required_equipment_id": 5,
+        "body_part": "any",
+        "description": "Regular heat therapy, including hot baths, warm packs, or infrared heat, may be part of a comprehensive pain management strategy for chronic muscle pain, providing temporary relief and improving muscle relaxation.",
+        "name": "Chronic muscle pain management",
+        "therapy_code": "#2K6H8"
+    }
+]

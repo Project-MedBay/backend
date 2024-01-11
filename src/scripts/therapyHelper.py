@@ -1,73 +1,53 @@
-import os, sys, json
+import os, sys
 from dotenv import load_dotenv
-import openai
-from langchain.llms.openai import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
-from langchain.chains import RetrievalQA
+from langchain.chains import LLMChain
+from langchain_community.document_loaders import TextLoader
+
 
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
-llm = OpenAI(temperature=0.3, model_name = 'text-davinci-003', max_tokens=1024)
-
 patient_id = sys.argv[1]
-symptoms = sys.argv[2]
+input = sys.argv[2]
 
-file_path = 'therapy_type.json'
+loader = TextLoader("./essay_style_therapy_type.txt")
+docsFull = loader.load()
 
-
-
-# Debugging: Check if the file exists and is not empty
-if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
-    with open(file_path, 'r') as file:
-        # Debugging: Print the first few lines to check file content
-        for _ in range(5):
-            print(file.readline())
-        file.seek(0)  # Reset file pointer to the start
-
-        therapies = json.load(file)
-else:
-    print(f"Error: File '{file_path}' not found or is empty.")
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+therapies = text_splitter.split_documents(docsFull)
 
 embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
-jsonsearch = FAISS.from_documents(therapies, embeddings)
+db = FAISS.from_documents(therapies, embeddings)
 
-qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=jsonsearch.as_retriever())
+docs = db.similarity_search(input, k=8)
+docs_page_content = " ".join([d.page_content for d in docs])
+
+llm = ChatOpenAI(temperature=0.3, model_name = 'gpt-3.5-turbo', max_tokens=1024)
 
 prompt = PromptTemplate(
-    input_variables=["patient_id", "symptoms"],
+    input_variables=["patient_id", "input", "docs"],
     template="""
+        You are a friendly chatbot for Medical Rehabilitation system that gives info about therapies or therapy recommendations to patients based on their symptoms. 
+
         Patient's name: {patient_id}. 
-        Patient's question: {symptoms}.
+        Patient's question: {input}.
+        Create clear, emphathetic answer by searching for information on user input here: {docs}
 
-        Action:
-            - Analyze symptoms to identify suitable therapy.
-            - Provide an overview of the recommended therapy. Say as much as possible about it, including the benefits and risks.
-            - You can also provide information about the therapy's duration, cost, and availability.
-            - You can give info about therapy not only from given vector but also from your own knowledge.
-
-        Guidelines:
-            - Use clear, empathetic language.
-            - Tailor the recommendation to the patient's symptoms.
-            - Emphasize safety and the importance of following the therapy plan.
-
-        For non-medical rehabilitation queries:
+        For totally uncorrelated questions:
             - Respond briefly and guide the patient back to therapy-related topics.
             - Example: "I'm here to assist with your therapy questions. Let's focus on your rehabilitation needs."
 
         Disclaimer to always include:
             - This is not medical advice. Always consult a doctor before starting any therapy.
-
-        Note: Keep the response focused on therapy guidance, avoiding technical jargon and emphasizing the need for professional medical consultation.
     """
 )
 
-final_prompt = prompt.format(
-    patient_id=patient_id,
-    symptoms=symptoms
-)
-
-qa.run(final_prompt)
+chain = LLMChain(llm=llm, prompt=prompt)
+response = chain.run(input=input, docs=docsFull, patient_id=patient_id)
+print(response)

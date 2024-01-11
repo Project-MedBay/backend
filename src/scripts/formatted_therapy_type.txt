@@ -1,0 +1,296 @@
+ROTATOR CUFF TEAR
+Num_of_sessions: 12
+Id: 1
+Required_equipment_id: 1
+Body_part: shoulder
+Description: Physical therapy focuses on strengthening the shoulder muscles, improving range of motion, and reducing pain through targeted exercises.
+Therapy_code: #5G3Y4
+
+FROZEN SHOULDER
+Num_of_sessions: 10
+Id: 2
+Required_equipment_id: 1
+Body_part: shoulder
+Description: Therapy aims to restore shoulder mobility through stretching and range of motion exercises.
+Therapy_code: #7Z8V8
+
+TENNIS ELBOW
+Num_of_sessions: 8
+Id: 3
+Required_equipment_id: 1
+Body_part: arm
+Description: Treatment includes strengthening forearm muscles.
+Therapy_code: #1V2V2
+
+GOLFERS ELBOW
+Num_of_sessions: 8
+Id: 4
+Required_equipment_id: 1
+Body_part: arm
+Description: Physical therapy involves strengthening and stretching exercises for the forearm muscles and may include modalities for pain relief.
+Therapy_code: #8I5F5
+
+BICEPS TENDINITIS
+Num_of_sessions: 10
+Id: 5
+Required_equipment_id: 1
+Body_part: arm
+Description: Therapy focuses on strengthening the biceps and shoulder muscles while reducing inflammation through modalities.
+Therapy_code: #4C7X3
+
+CARPAL TUNNEL
+Num_of_sessions: 8
+Id: 6
+Required_equipment_id: 1
+Body_part: hand
+Description: Exercises to improve wrist and hand flexibility, along with techniques to relieve pressure on the median nerve.
+Therapy_code: #1R2Y1
+
+ARTHRITIS PAIN MANAGEMENT
+Num_of_sessions: 8
+Id: 7
+Required_equipment_id: 3
+Body_part: hand
+Description: Cryotherapy helps alleviate arthritis pain by numbing the affected joints, reducing inflammation, and temporarily easing discomfort and stiffness.
+Therapy_code: #6F6P9
+
+TENDINITIS
+Num_of_sessions: 10
+Id: 8
+Required_equipment_id: 3
+Body_part: hand
+Description: Cryotherapy can be employed to reduce inflammation and alleviate pain associated with tendinitis by constricting blood vessels and diminishing tissue swelling in the affected area.
+Therapy_code: #1G8Z3
+
+OSTEOARTHRITIS MANAGEMENT
+Num_of_sessions: 8
+Id: 9
+Required_equipment_id: 4
+Body_part: hand
+Description: Hydrotherapy provides a low-impact environment for joint mobility exercises and pain relief, helping individuals with osteoarthritis improve joint function and reduce discomfort.
+Therapy_code: #4D5C2
+
+BURSITIS
+Num_of_sessions: 8
+Id: 10
+Required_equipment_id: 5
+Body_part: hand
+Description: Thermotherapy may be used to alleviate pain and inflammation associated with bursitis by increasing blood flow and promoting the relaxation of affected tissues, often applied through warm compresses or therapeutic ultrasound.
+Therapy_code: #4N8P5
+
+RHEUMATOID ARTHRITIS
+Num_of_sessions: 8
+Id: 11
+Required_equipment_id: 5
+Body_part: hand
+Description: Thermotherapy, such as paraffin wax baths, can help ease joint stiffness and reduce pain in individuals with rheumatoid arthritis by enhancing joint flexibility and reducing inflammation.
+Therapy_code: #7R3N6
+
+ACL INJURY
+Num_of_sessions: 20
+Id: 12
+Required_equipment_id: 1
+Body_part: leg
+Description: Rehabilitation includes exercises to strengthen the knee and improve stability, often following surgical repair.
+Therapy_code: #3H4O2
+
+MENISCUS TEAR
+Num_of_sessions: 8
+Id: 13
+Required_equipment_id: 1
+Body_part: leg
+Description: Therapy emphasizes range of motion exercises and strengthening of the muscles around the knee.
+Therapy_code: #6F2G1
+
+IT BAND SYNDROME
+Num_of_sessions: 8
+Id: 14
+Required_equipment_id: 1
+Body_part: leg
+Description: Treatment involves stretching and strengthening the IT band and hip muscles.
+Therapy_code: #8L2Q4
+
+SHIN SPLINTS
+Num_of_sessions: 6
+Id: 15
+Required_equipment_id: 1
+Body_part: leg
+Description: Rehabilitation focuses on reducing inflammation and improving lower leg strength and flexibility.
+Therapy_code: #7P3Y5
+
+STRESS FRACTURES
+Num_of_sessions: 10
+Id: 16
+Required_equipment_id: 1
+Body_part: leg
+Description: Rest and gradual return to weight-bearing activities are essential, along with exercises to maintain bone density.
+Therapy_code: #9M8D2
+
+HIP BURSITIS
+Num_of_sessions: 10
+Id: 17
+Required_equipment_id: 1
+Body_part: leg
+Description: Exercises to improve hip muscle strength and flexibility, along with modalities for pain management.
+Therapy_code: #2T8L4
+
+ANKLE SPRAIN
+Num_of_sessions: 8
+Id: 18
+Required_equipment_id: 1
+Body_part: foot
+Description: Therapy includes balance exercises, strengthening the ankle, and improving flexibility.
+Therapy_code: #6W1E6
+
+PLANTAR FASCIITIS 
+Num_of_sessions: 8
+Id: 19
+Required_equipment_id: 1
+Body_part: foot
+Description: Treatment involves stretching and strengthening exercises for the calf and foot muscles, along with modalities for pain relief.
+Therapy_code: #6B5Q3
+
+ACHILLES TENDINITIS 
+Num_of_sessions: 12
+Id: 20
+Required_equipment_id: 1
+Body_part: foot
+Description: Therapy aims to strengthen the calf muscles and Achilles tendon while reducing inflammation.
+Therapy_code: #5C3G3
+
+LUMBAR HERNIATED DISC 
+Num_of_sessions: 14
+Id: 21
+Required_equipment_id: 1
+Body_part: lower torso
+Description: Physical therapy focuses on relieving pain and improving spinal stability through exercises.
+Therapy_code: #3N4P6
+
+SCIATICA
+Num_of_sessions: 7
+Id: 22
+Required_equipment_id: 1
+Body_part: lower torso
+Description: Treatment involves exercises to alleviate sciatic nerve compression and improve lumbar spine function.
+Therapy_code: #9P1H4
+
+CHRONIC LOW BACK PAIN MANAGEMENT
+Num_of_sessions: 10
+Id: 23
+Required_equipment_id: 4
+Body_part: lower_torso
+Description: Hydrotherapy involves warm water exercises and aquatic therapy techniques to improve flexibility, reduce pain, and enhance core strength in individuals with chronic low back pain.
+Therapy_code: #4W3F2
+
+SCOLIOSIS
+Num_of_sessions: 8
+Id: 24
+Required_equipment_id: 1
+Body_part: upper torso
+Description: Therapy includes exercises to improve spinal alignment, flexibility, and muscle balance.
+Therapy_code: #5R9N7
+
+POSTURAL DISORDERS
+Num_of_sessions: 7
+Id: 25
+Required_equipment_id: 1
+Body_part: upper torso
+Description: Treatment includes exercises to correct posture and improve muscle balance to relieve pain and prevent future issues.
+Therapy_code: #8K1H7
+
+CERVICAL RADICULOPATHY 
+Num_of_sessions: 8
+Id: 26
+Required_equipment_id: 1
+Body_part: head
+Description: Rehabilitation aims to reduce neck pain and nerve symptoms through neck exercises and modalities.
+Therapy_code: #8G5H3
+
+WHIPLASH
+Num_of_sessions: 10
+Id: 27
+Required_equipment_id: 1
+Body_part: head
+Description: Physical therapy focuses on neck strengthening and range of motion exercises to alleviate pain and stiffness.
+Therapy_code: #8H6H1
+
+POST-OPERATIVE REHABILITATION
+Num_of_sessions: 12
+Id: 28
+Required_equipment_id: 2
+Body_part: any
+Description: EMS therapy aids in muscle activation and circulation for post-operative patients, helping to prevent muscle atrophy and accelerate recovery through controlled electrical muscle contractions.
+Therapy_code: #3J6K2
+
+STROKE REHABILITATION
+Num_of_sessions: 20
+Id: 29
+Required_equipment_id: 2
+Body_part: any
+Description: EMS can be used to stimulate paralyzed or weakened muscles, aiding in muscle re-education and motor function recovery for stroke survivors.
+Therapy_code: #9P3R1
+
+MUSCLE ATROPHY PREVENTION
+Num_of_sessions: 8
+Id: 30
+Required_equipment_id: 2
+Body_part: any
+Description: EMS assists in maintaining muscle strength and mass in individuals with limited mobility, such as bedridden or immobilized patients, by providing passive muscle contractions
+Therapy_code: #2J6Z7
+
+CHRONIC PAIN MANAGEMENT
+Num_of_sessions: 6
+Id: 31
+Required_equipment_id: 2
+Body_part: any
+Description: EMS therapy can help manage chronic pain conditions by stimulating endorphin release, reducing pain perception, and improving blood circulation in targeted areas.
+Therapy_code: #7X4N5
+
+POST-OPERATIVE SWELLING MINIMIZATION
+Num_of_sessions: 6
+Id: 32
+Required_equipment_id: 3
+Body_part: any
+Description: Cryotherapy involves the application of cold therapy to reduce post-operative swelling and inflammation, promoting faster healing and pain relief.
+Therapy_code: #5M8P4
+
+ACUTE SPORTS INJURY
+Num_of_sessions: 8
+Id: 33
+Required_equipment_id: 3
+Body_part: any
+Description: Cryotherapy is used immediately after an acute sports injury to minimize swelling, numb the area, and provide pain relief while facilitating faster recovery.
+Therapy_code: #5Z9B5
+
+POST-STROKE REHABILITATION
+Num_of_sessions: 20
+Id: 34
+Required_equipment_id: 4
+Body_part: any
+Description: Hydrotherapy offers a supportive and buoyant environment for stroke survivors to work on regaining 
+Therapy_code: #8D2H9
+
+POST-OPERATIVE REHABILITATION
+Num_of_sessions: 12
+Id: 35
+Required_equipment_id: 4
+Body_part: any
+Description: Hydrotherapy can aid in the recovery process after surgery by offering a gentle way to regain mobility, reduce swelling, and improve overall conditioning through aquatic exercises and controlled movements in warm water.
+Therapy_code: #5I9K8
+
+MUSCLE SPASMS AND TENSION MANAGEMENT
+Num_of_sessions: 6
+Id: 36
+Required_equipment_id: 5
+Body_part: any
+Description: Thermotherapy in a wax bath involves immersing affected muscles in warm wax to relax and soothe muscle spasms, reduce tension, and promote blood flow for pain relief.
+Therapy_code: #6L2M9
+
+CHRONIC MUSCLE PAIN MANAGEMENT
+Num_of_sessions: 7
+Id: 37
+Required_equipment_id: 5
+Body_part: any
+Description: Regular heat therapy, including hot baths, warm packs, or infrared heat, may be part of a comprehensive pain management strategy for chronic muscle pain, providing temporary relief and improving muscle relaxation.
+Therapy_code: #2K6H8
+
