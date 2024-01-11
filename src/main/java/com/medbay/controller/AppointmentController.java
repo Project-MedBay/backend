@@ -27,7 +27,7 @@ public class AppointmentController {
 
     @GetMapping("/availability")
     public ResponseEntity<Map<String, List<Integer>>> getAvailability(@RequestParam String therapyCode,
-                                                                         @RequestParam int days) {
+                                                                      @RequestParam int days) {
         return appointmentService.getAvailability(therapyCode, days);
     }
 

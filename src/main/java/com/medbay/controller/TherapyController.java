@@ -1,5 +1,6 @@
 package com.medbay.controller;
 
+import com.medbay.domain.DTO.VerificationsDTO;
 import com.medbay.domain.Therapy;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.service.TherapyService;
@@ -39,8 +40,8 @@ public class TherapyController {
     }
 
     @GetMapping("/verifications")
-    public ResponseEntity<List<Therapy>> getTherapyRequests() {
-        return therapyService.getTherapyRequests();
+    public ResponseEntity<VerificationsDTO> getRequests() {
+        return therapyService.getRequests();
     }
 
 }

@@ -22,10 +22,6 @@ public class PatientController {
         return patientService.getPatients();
     }
 
-    @GetMapping("/pending")
-    public ResponseEntity<List<PatientDTO>> getPendingPatients(){
-        return patientService.getPendingPatients();
-    }
 
     @GetMapping("/logged-in")
     public ResponseEntity<PatientDTO> getLoggedInPatient(){

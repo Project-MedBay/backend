@@ -1,6 +1,10 @@
 package com.medbay.service;
 
 import com.medbay.domain.*;
+import com.medbay.domain.DTO.PatientDTO;
+import com.medbay.domain.DTO.TherapyDTO;
+import com.medbay.domain.DTO.VerificationsDTO;
+import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Specialization;
 import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreateTherapyRequest;
@@ -15,12 +19,12 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import static com.medbay.domain.enums.TherapyStatus.PENDING;
-import static com.medbay.util.Helper.log;
 import static org.springframework.http.HttpStatus.CONFLICT;
 
 @Service
@@ -52,9 +56,53 @@ public class TherapyService {
         return ResponseEntity.ok().build();
     }
 
-    public ResponseEntity<List<Therapy>> getTherapyRequests() {
-        List<Therapy> pendingTherapies = therapyRepository.findByTherapyStatus(PENDING);
-        return ResponseEntity.ok(pendingTherapies);
+    public ResponseEntity<VerificationsDTO> getRequests() {
+        List<TherapyDTO> therapyDTOS = therapyRepository.findByTherapyStatus(PENDING)
+                .stream()
+                .map(therapy -> {
+                    List<LocalDateTime> sessionDates = therapy.getAppointments().stream()
+                            .map(Appointment::getDateTime)
+                            .sorted()
+                            .collect(Collectors.toList());
+
+                    return TherapyDTO.builder()
+                            .therapyId(therapy.getId())
+                            .patientId(therapy.getPatient().getId())
+                            .therapyTypeCode(therapy.getTherapyType().getTherapyCode())
+                            .therapyTypeName(therapy.getTherapyType().getName())
+                            .numberOfSessions(therapy.getTherapyType().getNumOfSessions())
+                            .requestDate(therapy.getRequestDate())
+                            .sessionDates(sessionDates)
+                            .build();
+                })
+                .collect(Collectors.toList());
+
+        therapyDTOS.sort(Comparator.comparing(TherapyDTO::getRequestDate));
+
+        List<PatientDTO> patients = patientRepository.findAllByStatus(ActivityStatus.PENDING)
+                .stream()
+                .map(patient -> PatientDTO.builder()
+                        .id(patient.getId())
+                        .firstName(patient.getFirstName())
+                        .lastName(patient.getLastName())
+                        .email(patient.getEmail())
+                        .MBO(patient.getMBO())
+                        .OIB(patient.getOIB())
+                        .dateOfBirth(patient.getDateOfBirth())
+                        .address(patient.getAddress())
+                        .phoneNumber(patient.getPhoneNumber())
+                        .createdAt(patient.getCreatedAt())
+                        .build())
+                .collect(Collectors.toList());
+
+        patients.sort(Comparator.comparing(PatientDTO::getCreatedAt));
+
+        VerificationsDTO pendingVerifications = VerificationsDTO.builder()
+                .patients(patients)
+                .therapies(therapyDTOS)
+                .build();
+
+        return ResponseEntity.ok(pendingVerifications);
     }
 
     public ResponseEntity<String> changeTherapyStatus(Long id, String status, String rejectionReason) {
@@ -94,6 +142,7 @@ public class TherapyService {
         }
 
         Therapy therapy = Therapy.builder()
+                .requestDate(LocalDateTime.now())
                 .therapyStatus(PENDING)
                 .patient(patient)
                 .therapyType(therapyType)

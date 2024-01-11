@@ -21,6 +21,5 @@ public class PatientSessionsDTO {
     private String therapyTypeName;
     private String employeeFirstName;
     private String employeeLastName;
-    private byte[] patientPhoto;
 
 }

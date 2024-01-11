@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -26,6 +27,8 @@ public class Therapy {
     @ManyToOne
     @JoinColumn(name = "patient_id")
     private Patient patient;
+
+    private LocalDateTime requestDate;
 
     @ManyToOne
     private TherapyType therapyType;
