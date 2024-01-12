@@ -1,0 +1,29 @@
+1. Home Page / Dashboard
+Automatically displayed after logging into the system.
+My Schedule: Displays the schedule of therapies for the current week.
+Navigate through weeks using left and right arrows.
+The schedule for the selected week is displayed immediately below.
+Below all this, there are cards with upcoming therapies.
+Therapies are chronologically arranged.
+Additional information is available by clicking on a specific therapy in the schedule, which opens it on the right side of the screen.
+Details include the time, name, location on the floor plan, number of therapy, remaining number of therapies (e.g., Session 9/11). The name of the therapist is also displayed.
+The floor plan of the building is shown at the bottom of the window with therapy information so that patients can easily find where the therapy is held.
+"View notes" and "Reschedule" buttons are at the bottom of the window.
+"View notes": Displays the doctor's notes about the therapy.
+"Reschedule": Opens a calendar with available dates for rescheduling.
+The question "Are you sure?" is asked with options "Yes" and "No."
+
+2. Creating New Therapy
+The "New therapy" button leads to the interface for creating a new therapy.
+Therapy selection:
+Choose the type of injury or enter the code given by the doctor.
+Choose dates according to availability and therapy requirements.
+Review the therapy and dates, enter the referral number and MBO.
+After submitting the request, wait for approval from the administrator.
+Notification of approval via email.
+
+3. User Profile
+Clicking on "My Profile" accesses the page with personal data.
+Display and possibility to edit data from registration.
+Display of past therapies with details.
+Option to view more information about selected therapies by clicking on "View more."
