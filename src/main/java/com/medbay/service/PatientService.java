@@ -1,9 +1,12 @@
 package com.medbay.service;
 
-import com.medbay.domain.DTO.PatientDTO;
+import com.medbay.domain.Appointment;
+import com.medbay.domain.DTO.*;
 import com.medbay.domain.Employee;
 import com.medbay.domain.Patient;
+import com.medbay.domain.Therapy;
 import com.medbay.domain.enums.ActivityStatus;
+import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +14,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @Service
 @RequiredArgsConstructor
@@ -63,7 +68,7 @@ public class PatientService {
     }
 
 
-    public ResponseEntity<PatientDTO> getLoggedInPatient() {
+    public ResponseEntity<PatientProfileDTO> getLoggedInPatient() {
         Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         PatientDTO patientDTO = PatientDTO.builder()
                 .id(patient.getId())
@@ -77,7 +82,37 @@ public class PatientService {
                 .MBO(patient.getMBO())
                 .phoneNumber(patient.getPhoneNumber())
                 .build();
-        return ResponseEntity.ok(patientDTO);
+
+        List<Therapy> therapies = patient.getTherapies().stream()
+                .filter(therapy -> therapy.getTherapyStatus().equals(TherapyStatus.VERIFIED))
+                .toList();
+
+        List<TherapyDTO> therapyDTOs = therapies.stream()
+                .map(therapy ->
+                    TherapyDTO.builder()
+                            .therapyId(therapy.getId())
+                            .patientId(patient.getId())
+                            .requestDate(therapy.getRequestDate())
+                            .therapyTypeCode(therapy.getTherapyType().getTherapyCode())
+                            .numberOfSessions(therapy.getTherapyType().getNumOfSessions())
+                            .therapyTypeName(therapy.getTherapyType().getName())
+                            .sessionDates(therapy.getAppointments().stream()
+                                    .map(Appointment::getDateTime)
+                                    .sorted(Comparator.comparing(dateTime -> dateTime))
+                                    .collect(Collectors.toList()))
+                            .sessionNotes(therapy.getAppointments().stream()
+                                    .map(Appointment::getSessionNotes)
+                                    .sorted(Comparator.comparing(dateTime -> dateTime))
+                                    .collect(Collectors.toList()))
+                        .build())
+                .collect(Collectors.toList());
+
+        PatientProfileDTO patientProfileDTO = PatientProfileDTO.builder()
+                .patient(patientDTO)
+                .therapies(therapyDTOs)
+                .build();
+
+        return ResponseEntity.ok(patientProfileDTO);
     }
 
     public ResponseEntity<Void> updatePatient(PatientDTO patient) {
@@ -94,8 +129,59 @@ public class PatientService {
         patientToUpdate.setPhoneNumber(patient.getPhoneNumber());
         patientToUpdate.setOIB(patient.getOIB());
         patientToUpdate.setMBO(patient.getMBO());
+        patientToUpdate.setPhoto(patient.getPhoto());
 
         patientRepository.save(patientToUpdate);
         return ResponseEntity.ok().build();
     }
+
+    private static LocalDate getStartOfWeek(LocalDate date) {
+        return date.with(DayOfWeek.MONDAY);
+    }
+
+
+    public ResponseEntity<Map<LocalDate, List<PatientSessionsDTO>>> getPatientDashboard() {
+        Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        List<Appointment> appointments = patient.getAppointments();
+
+        // Sort appointments by date-time before processing
+        List<Appointment> sortedAppointments = appointments.stream()
+                .sorted(Comparator.comparing(Appointment::getDateTime))
+                .collect(Collectors.toList());
+
+
+        Map<LocalDate, List<PatientSessionsDTO>> patientSessionsByWeek = sortedAppointments.stream()
+                .map(appointment -> {
+                    Therapy therapy = appointment.getTherapy();
+                    int numOfSessions = therapy.getAppointments().size();
+                    int index = IntStream.range(0, numOfSessions)
+                            .filter(i -> therapy.getAppointments().get(i).getId().equals(appointment.getId()))
+                            .findFirst().orElseThrow(() -> new RuntimeException("Appointment not found"));
+                    return buildPatientSessionsDTO(appointment, sortedAppointments, numOfSessions, index);
+                }).sorted(Comparator.comparing(PatientSessionsDTO::getDateTime))
+                .collect(Collectors.groupingBy(dto -> getStartOfWeek(dto.getDateTime().toLocalDate()),
+                        LinkedHashMap::new, // Use LinkedHashMap to maintain order
+                        Collectors.toList()));
+
+        // Sort the DTOs within each week by date-time
+        patientSessionsByWeek.forEach((week, sessions) -> sessions.sort(Comparator.comparing(dto -> dto.getDateTime())));
+
+        return ResponseEntity.ok(patientSessionsByWeek);
+    }
+
+    private PatientSessionsDTO buildPatientSessionsDTO(Appointment appointment, List<Appointment> appointments, int numOfSessions, int index) {
+        return PatientSessionsDTO.builder()
+                .equipmentRoomName(appointment.getTherapy().getTherapyType().getRequiredEquipment().getRoomName())
+                .appointmentId(appointments.indexOf(appointment) + 1)
+                .dateTime(appointment.getDateTime())
+                .sessionNotes(appointment.getSessionNotes())
+                .numberOfSessions(numOfSessions)
+                .numberOfSessionsCompleted(index + 1)
+                .therapyTypeName(appointment.getTherapy().getTherapyType().getName())
+                .employeeFirstName(appointment.getEmployee().getFirstName())
+                .employeeLastName(appointment.getEmployee().getLastName())
+                .build();
+    }
+
+
 }

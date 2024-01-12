@@ -21,5 +21,6 @@ public class TherapyDTO {
     private LocalDateTime requestDate;
     private int numberOfSessions;
     private List<LocalDateTime> sessionDates;
+    private List<String> sessionNotes;
 
 }

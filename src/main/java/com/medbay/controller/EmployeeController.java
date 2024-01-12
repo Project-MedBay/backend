@@ -46,6 +46,7 @@ public class EmployeeController {
     public ResponseEntity<Void> createEmployee(@RequestBody CreateEmployeeRequest employee){
         return employeeService.createEmployee(employee);
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deactivateEmployee(@PathVariable("id") Long id){
         return employeeService.deactivateEmployee(id);
