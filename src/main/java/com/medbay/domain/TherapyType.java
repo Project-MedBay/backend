@@ -6,7 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Builder
-@Getter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class TherapyType {

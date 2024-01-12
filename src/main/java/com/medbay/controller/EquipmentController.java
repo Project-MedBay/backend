@@ -15,7 +15,11 @@ public class EquipmentController {
 
     private final EquipmentService equipmentService;
 
-
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateEquipment(@PathVariable("id") Long id,
+                                                @RequestBody CreateEquipmentRequest equipment){
+        return equipmentService.updateEquipment(equipment, id);
+    }
     @PostMapping
     public ResponseEntity<Void> createEquipment(@RequestBody CreateEquipmentRequest equipment){
         return equipmentService.createEquipment(equipment);

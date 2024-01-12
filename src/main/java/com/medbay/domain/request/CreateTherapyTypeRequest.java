@@ -1,11 +1,16 @@
 package com.medbay.domain.request;
 
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
-@Getter
-@ToString
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CreateTherapyTypeRequest {
+
+    private String name;
+    private String bodyPart;
+    private int numberOfSessions;
     private String description;
     private Long requiredEquipmentId;
 }

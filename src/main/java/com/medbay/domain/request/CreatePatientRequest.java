@@ -1,13 +1,14 @@
 package com.medbay.domain.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Getter
-@ToString
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CreatePatientRequest {
 
     private String firstName;

@@ -1,13 +1,14 @@
 package com.medbay.domain.request;
 
 
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Getter
-@ToString
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CreateAppointmentRequest {
 
     private LocalDateTime dateTime;
