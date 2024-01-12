@@ -165,4 +165,19 @@ public class EmployeeService {
     }
 
 
+    public ResponseEntity<Void> updateEmployee(CreateEmployeeRequest employee, Long id) {
+        Optional<Employee> employeeOptional = employeeRepository.findById(id);
+        if (employeeOptional.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Employee employeeToUpdate = employeeOptional.get();
+        employeeToUpdate.setFirstName(employee.getFirstName());
+        employeeToUpdate.setLastName(employee.getLastName());
+        employeeToUpdate.setEmail(employee.getEmail());
+        employeeToUpdate.setSpecialization(Specialization.valueOf(employee.getSpecialization().toUpperCase()));
+
+        employeeRepository.save(employeeToUpdate);
+        return ResponseEntity.ok().build();
+    }
 }

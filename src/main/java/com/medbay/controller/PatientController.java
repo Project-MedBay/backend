@@ -22,6 +22,10 @@ public class PatientController {
         return patientService.getPatients();
     }
 
+    @PutMapping
+    public ResponseEntity<Void> updatePatient(@RequestBody PatientDTO patient){
+        return patientService.updatePatient(patient);
+    }
 
     @GetMapping("/logged-in")
     public ResponseEntity<PatientDTO> getLoggedInPatient(){

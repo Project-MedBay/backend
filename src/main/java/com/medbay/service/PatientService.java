@@ -30,16 +30,20 @@ public class PatientService {
                 .stream()
                 .anyMatch(auth -> "ROLE_STAFF".equals(auth.getAuthority()));
 
+        boolean isAdmin = authentication.getAuthorities()
+                .stream()
+                .anyMatch(auth -> "ROLE_ADMIN".equals(auth.getAuthority()));
+
         Employee employee = isEmployee ? (Employee) authentication.getPrincipal() : null;
 
         List<PatientDTO> patientDTOs = patients.stream()
-                .map(patient -> createPatientDTO(patient, isEmployee, employee))
+                .map(patient -> createPatientDTO(patient, isEmployee, isAdmin, employee))
                 .collect(Collectors.toList());
 
         return ResponseEntity.ok(patientDTOs);
     }
 
-    private PatientDTO createPatientDTO(Patient patient, boolean isEmployee, Employee employee) {
+    private PatientDTO createPatientDTO(Patient patient, boolean isEmployee, boolean isAdmin, Employee employee) {
         boolean hasAppointmentWithEmployee = isEmployee && patient.getAppointments().stream()
                 .anyMatch(appointment -> appointment.getEmployee() != null && appointment.getEmployee().equals(employee));
 
@@ -54,29 +58,10 @@ public class PatientService {
                 .OIB(patient.getOIB())
                 .MBO(patient.getMBO())
                 .phoneNumber(patient.getPhoneNumber())
-                .show(hasAppointmentWithEmployee)
+                .show(hasAppointmentWithEmployee || isAdmin)
                 .build();
     }
 
-
-    public ResponseEntity<List<PatientDTO>> getPendingPatients() {
-        List<Patient> patients = patientRepository.findAllByStatus(ActivityStatus.PENDING);
-        List<PatientDTO> patientDTOs = patients.stream()
-                .map(patient -> PatientDTO.builder()
-                        .id(patient.getId())
-                        .firstName(patient.getFirstName())
-                        .lastName(patient.getLastName())
-                        .email(patient.getEmail())
-                        .createdAt(patient.getCreatedAt())
-                        .address(patient.getAddress())
-                        .dateOfBirth(patient.getDateOfBirth())
-                        .OIB(patient.getOIB())
-                        .MBO(patient.getMBO())
-                        .phoneNumber(patient.getPhoneNumber())
-                        .build())
-                .collect(Collectors.toList());
-        return ResponseEntity.ok(patientDTOs);
-    }
 
     public ResponseEntity<PatientDTO> getLoggedInPatient() {
         Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -93,5 +78,24 @@ public class PatientService {
                 .phoneNumber(patient.getPhoneNumber())
                 .build();
         return ResponseEntity.ok(patientDTO);
+    }
+
+    public ResponseEntity<Void> updatePatient(PatientDTO patient) {
+        Patient patientToUpdate = patientRepository.findById(patient.getId()).orElse(null);
+        if (patientToUpdate == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        patientToUpdate.setFirstName(patient.getFirstName());
+        patientToUpdate.setLastName(patient.getLastName());
+        patientToUpdate.setEmail(patient.getEmail());
+        patientToUpdate.setAddress(patient.getAddress());
+        patientToUpdate.setDateOfBirth(patient.getDateOfBirth());
+        patientToUpdate.setPhoneNumber(patient.getPhoneNumber());
+        patientToUpdate.setOIB(patient.getOIB());
+        patientToUpdate.setMBO(patient.getMBO());
+
+        patientRepository.save(patientToUpdate);
+        return ResponseEntity.ok().build();
     }
 }

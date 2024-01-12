@@ -33,6 +33,9 @@ public class TherapyTypeService {
 
         TherapyType therapyType = TherapyType.builder()
                 .description(request.getDescription())
+                .name(request.getName())
+                .bodyPart(request.getBodyPart())
+                .numOfSessions(request.getNumberOfSessions())
                 .requiredEquipment(equipment.get())
                 .build();
 
@@ -48,4 +51,25 @@ public class TherapyTypeService {
         return ResponseEntity.ok().build();
     }
 
+    public ResponseEntity<Void> updateTherapyType(CreateTherapyTypeRequest therapyType, Long id) {
+        Optional<TherapyType> therapyTypeOptional = therapyTypeRepository.findById(id);
+        if (therapyTypeOptional.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Optional<Equipment> equipment = equipmentRepository.findById(therapyType.getRequiredEquipmentId());
+        if (equipment.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+
+        TherapyType therapyTypeToUpdate = therapyTypeOptional.get();
+        therapyTypeToUpdate.setBodyPart(therapyType.getBodyPart());
+        therapyTypeToUpdate.setDescription(therapyType.getDescription());
+        therapyTypeToUpdate.setName(therapyType.getName());
+        therapyTypeToUpdate.setNumOfSessions(therapyType.getNumberOfSessions());
+        therapyTypeToUpdate.setRequiredEquipment(equipment.get());
+
+        therapyTypeRepository.save(therapyTypeToUpdate);
+        return ResponseEntity.ok().build();
+    }
 }

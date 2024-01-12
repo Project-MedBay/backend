@@ -3,6 +3,7 @@ package com.medbay.service;
 import com.medbay.domain.DTO.FacilityDTO;
 import com.medbay.domain.Equipment;
 import com.medbay.domain.TherapyType;
+import com.medbay.domain.enums.Specialization;
 import com.medbay.domain.request.CreateEquipmentRequest;
 import com.medbay.repository.EquipmentRepository;
 import com.medbay.repository.TherapyTypeRepository;
@@ -32,6 +33,9 @@ public class EquipmentService {
         Equipment equipment = Equipment.builder()
                 .name(request.getName())
                 .capacity(request.getCapacity())
+                .description(request.getDescription())
+                .roomName(request.getRoomName())
+                .specialization(Specialization.valueOf(request.getSpecialization().toUpperCase()))
                 .build();
 
         equipmentRepository.save(equipment);
@@ -46,8 +50,19 @@ public class EquipmentService {
         return ResponseEntity.ok().build();
     }
 
-    public Equipment findById(Long id) {
-         Optional<Equipment> equipmentOptional = equipmentRepository.findById(id);
-        return equipmentOptional.orElse(null);
+
+    public ResponseEntity<Void> updateEquipment(CreateEquipmentRequest equipment, Long id) {
+        Optional<Equipment> equipmentOptional = equipmentRepository.findById(id);
+        if (equipmentOptional.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        Equipment equipment1 = equipmentOptional.get();
+        equipment1.setName(equipment.getName());
+        equipment1.setCapacity(equipment.getCapacity());
+        equipment1.setDescription(equipment.getDescription());
+        equipment1.setRoomName(equipment.getRoomName());
+        equipment1.setSpecialization(Specialization.valueOf(equipment.getSpecialization().toUpperCase()));
+        equipmentRepository.save(equipment1);
+        return ResponseEntity.ok().build();
     }
 }

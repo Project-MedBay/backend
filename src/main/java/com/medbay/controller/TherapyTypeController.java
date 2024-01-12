@@ -21,6 +21,12 @@ public class TherapyTypeController {
         return therapyTypeService.getTherapyType();
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateTherapyType(@RequestBody CreateTherapyTypeRequest therapyType,
+                                                  @PathVariable("id") Long id) {
+        return therapyTypeService.updateTherapyType(therapyType, id);
+    }
+
     @PostMapping
     public ResponseEntity<Void> createTherapyType(@RequestBody CreateTherapyTypeRequest therapyType) {
         return therapyTypeService.createTherapyType(therapyType);

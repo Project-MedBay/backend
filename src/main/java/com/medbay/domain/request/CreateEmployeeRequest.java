@@ -1,10 +1,11 @@
 package com.medbay.domain.request;
 
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
-@Getter
-@ToString
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CreateEmployeeRequest {
 
     private String email;
