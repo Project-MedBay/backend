@@ -340,7 +340,7 @@ INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code
 --lower torso
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part, id) VALUES (1, 'Lumbar herniated disc ', 'Physical therapy focuses on relieving pain and improving spinal stability through exercises.', '#3N4P6', 14, 'lower torso', 21);
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part, id) VALUES (1, 'Sciatica', 'Treatment involves exercises to alleviate sciatic nerve compression and improve lumbar spine function.', '#9P1H4', 7, 'lower torso', 22);
-INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part, id) VALUES (4, 'Chronic low back pain management', 'Hydrotherapy involves warm water exercises and aquatic therapy techniques to improve flexibility, reduce pain, and enhance core strength in individuals with chronic low back pain.', '#4W3F2', 10, 'lower_torso', 23);
+INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part, id) VALUES (4, 'Chronic low back pain management', 'Hydrotherapy involves warm water exercises and aquatic therapy techniques to improve flexibility, reduce pain, and enhance core strength in individuals with chronic low back pain.', '#4W3F2', 10, 'lower torso', 23);
 
 --upper torso
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part, id) VALUES (1, 'Scoliosis', 'Therapy includes exercises to improve spinal alignment, flexibility, and muscle balance.', '#5R9N7', 8, 'upper torso', 24);

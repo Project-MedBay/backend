@@ -56,6 +56,7 @@ public class EmployeeService {
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
                 .email(request.getEmail())
+                .createdAt(LocalDateTime.now())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .status(ActivityStatus.ACTIVE)
                 .role(Role.STAFF)
@@ -96,7 +97,7 @@ public class EmployeeService {
 
     public ResponseEntity<Map<LocalDate, List<EmployeeSessionsDTO>>> getEmployeesAppointments() {
         Employee employee = (Employee) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        List<Appointment> appointments = appointmentRepository.findByEmployee(employee);
+        List<Appointment> appointments = employee.getAppointments();
 
         // Sort appointments by date-time before processing
         List<Appointment> sortedAppointments = appointments.stream()

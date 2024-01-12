@@ -13,7 +13,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class PatientSessionsDTO {
 
-    private String equipmentName;
+    private String equipmentRoomName;
+    private long appointmentId;
     private LocalDateTime dateTime;
     private String sessionNotes;
     private int numberOfSessions;

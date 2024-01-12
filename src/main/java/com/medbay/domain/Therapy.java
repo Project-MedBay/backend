@@ -36,7 +36,7 @@ public class Therapy {
     @Enumerated(EnumType.STRING)
     private TherapyStatus therapyStatus;
 
-    @OneToMany(mappedBy = "therapy", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "therapy", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
 
