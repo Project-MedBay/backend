@@ -1,13 +1,11 @@
 package com.medbay.controller;
 
-import com.medbay.domain.Equipment;
+import com.medbay.domain.DTO.FacilityDTO;
 import com.medbay.domain.request.CreateEquipmentRequest;
 import com.medbay.service.EquipmentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/equipment")
@@ -17,10 +15,7 @@ public class EquipmentController {
 
     private final EquipmentService equipmentService;
 
-    @GetMapping
-    public ResponseEntity<List<Equipment>> getEquipment(){
-        return equipmentService.getEquipment();
-    }
+
     @PostMapping
     public ResponseEntity<Void> createEquipment(@RequestBody CreateEquipmentRequest equipment){
         return equipmentService.createEquipment(equipment);
@@ -29,8 +24,8 @@ public class EquipmentController {
     public ResponseEntity<Void> deleteEquipment(@PathVariable("id") Long id) {
         return equipmentService.deleteEquipment(id);
     }
-    @GetMapping("/manage/facility")
-    public ResponseEntity<List<Equipment>> getResources() {
-        return equipmentService.getEquipment();
+    @GetMapping("/facility")
+    public ResponseEntity<FacilityDTO> getResources() {
+        return equipmentService.getFacilities();
     }
 }
