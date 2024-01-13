@@ -1,6 +1,6 @@
 1. Home Page / Dashboard
 Automatically displayed after logging into the system.
-At the top of the homepage, you'll find buttons: "Dashboard," "New Therapy," "My Profile," "Switch" for toggling dark mode, and "Logout."
+At the top of the home page, buttons include "Dashboard," "New Therapy," "My Profile," a toggle button for dark mode and "Logout."
 My Schedule: Displays the schedule of therapies for the current week.
 Navigate through weeks using left and right arrows.
 The schedule for the selected week is displayed immediately below.
