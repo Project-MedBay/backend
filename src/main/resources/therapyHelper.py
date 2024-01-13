@@ -10,7 +10,7 @@ from langchain_community.document_loaders import TextLoader
 
 
 load_dotenv()
-openai_api_key = os.getenv("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")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 patient_id = sys.argv[1]
 input = sys.argv[2]
