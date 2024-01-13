@@ -11,8 +11,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -24,7 +26,8 @@ public class EquipmentService {
     public ResponseEntity<FacilityDTO> getFacilities() {
         List<Equipment> equipment = equipmentRepository.findAll();
         List<TherapyType> therapyTypes = therapyTypeRepository.findAll();
-        FacilityDTO facilityDTO = new FacilityDTO(equipment, therapyTypes);
+        List<Specialization> specializations = Arrays.stream(Specialization.values()).toList();
+        FacilityDTO facilityDTO = new FacilityDTO(equipment, therapyTypes, specializations);
         return ResponseEntity.ok(facilityDTO);
     }
 
