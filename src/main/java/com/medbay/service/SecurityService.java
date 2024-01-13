@@ -41,7 +41,7 @@ public class SecurityService {
             return ResponseEntity.badRequest().build();
         }
 
-        else if(patientRepository.existsByMBOOrOIB(request.getMBO(), request.getOIB())) {
+        else if(patientRepository.existsByMBO(request.getMBO())) {
             return ResponseEntity.status(CONFLICT).build();
         }
 
@@ -52,7 +52,6 @@ public class SecurityService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .address(request.getAddress())
                 .MBO(request.getMBO())
-                .OIB(request.getOIB())
                 .phoneNumber(request.getPhoneNumber())
                 .dateOfBirth(request.getDateOfBirth())
                 .status(ActivityStatus.PENDING)

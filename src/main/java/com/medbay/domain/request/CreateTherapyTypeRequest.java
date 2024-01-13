@@ -10,7 +10,7 @@ public class CreateTherapyTypeRequest {
 
     private String name;
     private String bodyPart;
-    private int numberOfSessions;
+    private Integer numberOfSessions;
     private String description;
     private Long requiredEquipmentId;
 }

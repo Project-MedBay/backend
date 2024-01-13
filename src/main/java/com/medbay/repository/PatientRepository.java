@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Long>{
-    boolean existsByMBOOrOIB(String mbo, String oib);
+    boolean existsByMBO(String mbo);
 
     @Query(value = "SELECT MAX(id) FROM _user", nativeQuery = true)
     Long findByMaxId();

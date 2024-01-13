@@ -19,8 +19,6 @@ public class CreatePatientRequest {
     private LocalDate dateOfBirth;
     @JsonProperty("MBO")
     private String MBO;
-    @JsonProperty("OIB")
-    private String OIB;
     private String phoneNumber;
 
 }
