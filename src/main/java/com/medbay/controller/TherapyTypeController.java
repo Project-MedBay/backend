@@ -27,7 +27,7 @@ public class TherapyTypeController {
         return therapyTypeService.updateTherapyType(therapyType, id);
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Void> createTherapyType(@RequestBody CreateTherapyTypeRequest therapyType) {
         return therapyTypeService.createTherapyType(therapyType);
     }
