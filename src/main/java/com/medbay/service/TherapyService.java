@@ -87,7 +87,6 @@ public class TherapyService {
                         .lastName(patient.getLastName())
                         .email(patient.getEmail())
                         .MBO(patient.getMBO())
-                        .OIB(patient.getOIB())
                         .dateOfBirth(patient.getDateOfBirth())
                         .address(patient.getAddress())
                         .phoneNumber(patient.getPhoneNumber())

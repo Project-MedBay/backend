@@ -144,7 +144,6 @@ public class EmployeeService {
     private static PatientDTO buildPatientDTO(Appointment appointment, Employee employee) {
         return PatientDTO.builder()
                 .id(appointment.getPatient().getId())
-                .OIB(appointment.getPatient().getOIB())
                 .MBO(appointment.getPatient().getMBO())
                 .firstName(appointment.getPatient().getFirstName())
                 .lastName(appointment.getPatient().getLastName()).email(appointment.getPatient().getEmail())

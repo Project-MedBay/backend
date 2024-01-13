@@ -60,7 +60,6 @@ public class PatientService {
                 .createdAt(patient.getCreatedAt())
                 .address(patient.getAddress())
                 .dateOfBirth(patient.getDateOfBirth())
-                .OIB(patient.getOIB())
                 .MBO(patient.getMBO())
                 .phoneNumber(patient.getPhoneNumber())
                 .show(hasAppointmentWithEmployee || isAdmin)
@@ -78,7 +77,6 @@ public class PatientService {
                 .createdAt(patient.getCreatedAt())
                 .address(patient.getAddress())
                 .dateOfBirth(patient.getDateOfBirth())
-                .OIB(patient.getOIB())
                 .MBO(patient.getMBO())
                 .phoneNumber(patient.getPhoneNumber())
                 .build();
@@ -127,7 +125,6 @@ public class PatientService {
         patientToUpdate.setAddress(patient.getAddress());
         patientToUpdate.setDateOfBirth(patient.getDateOfBirth());
         patientToUpdate.setPhoneNumber(patient.getPhoneNumber());
-        patientToUpdate.setOIB(patient.getOIB());
         patientToUpdate.setMBO(patient.getMBO());
         patientToUpdate.setPhoto(patient.getPhoto());
 
