@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-
+import java.time.LocalDateTime;
 @Entity
 @Builder
 @Data
@@ -25,12 +25,15 @@ public class Therapy {
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
+    private LocalDateTime requestDate;
+
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
     @ManyToOne
     private TherapyType therapyType;
+
 
     @Enumerated(EnumType.STRING)
     private TherapyStatus therapyStatus;
