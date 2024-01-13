@@ -10,12 +10,7 @@ import java.io.InputStreamReader;
 @Component
 public class PythonScriptRunner {
 
-    @PostConstruct
-    public void runScript(//String patientId, String input
-                           ) {
-        String patientId = "1";
-        String input = "Boli me miško.";
-
+    public void runScript(String patientId, String input) {
         try {
             ProcessBuilder processBuilder = new ProcessBuilder("python", "src/main/resources/therapyHelper.py", patientId, input);
             processBuilder.redirectErrorStream(true);
