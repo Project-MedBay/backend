@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -83,6 +84,7 @@ public class AppointmentService {
             LocalDate date = today.plusDays(day);
 
             if (date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+                availability.put(date.format(DATE_FORMATTER), new ArrayList<>());
                 continue;
             }
 
@@ -93,8 +95,12 @@ public class AppointmentService {
                 int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
                 int availableEquipment = equipment.getCapacity();
                 int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
+                log("Available equipment: " + availableEquipment);
+                log("Available employees: " + availableEmployees);
+                log("Appointments count: " + appointmentsCount);
 
                 int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
+                log("Slots available: " + slotsAvailable);
                 if (slotsAvailable < 0) {
                     throw new RuntimeException("Error: Negative slots available");
                 }
@@ -119,4 +125,75 @@ public class AppointmentService {
         return ResponseEntity.ok().build();
     }
 
+    public ResponseEntity<Map<String, List<Integer>>> getAvailabilityForReschedule(Long appointmentId) {
+        Appointment appointment = appointmentRepository.findById(appointmentId)
+                .orElseThrow(() -> new EntityNotFoundException("Appointment not found"));
+
+        TherapyType therapyType = appointment.getTherapy().getTherapyType();
+        Equipment equipment = therapyType.getRequiredEquipment();
+
+        List<Appointment> patientAppointments = appointment.getTherapy().getAppointments()
+                .stream().sorted(Comparator.comparing(Appointment::getDateTime)).toList();
+
+        int numOfSessions = patientAppointments.size();
+        LocalDateTime maxDateTime = patientAppointments.get(0).getDateTime().plusDays(5L * numOfSessions);
+        long days = Duration.between(appointment.getDateTime(), maxDateTime).toDays();
+
+        Map<String, List<Integer>> availability = new LinkedHashMap<>();
+        for (long day = 0; day < days; day++) {
+            LocalDate date = patientAppointments.get(0).getDateTime().toLocalDate().plusDays(day);
+
+            if (date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+                availability.put(date.format(DATE_FORMATTER), new ArrayList<>());
+                continue;
+            }
+
+            List<Integer> availableHours = new ArrayList<>();
+            for (int hour = 8; hour <= 19; hour++) {
+                LocalDateTime dateTime = date.atTime(hour, 0);
+
+                int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
+                int availableEquipment = equipment.getCapacity();
+                int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
+                log("Available equipment: " + availableEquipment);
+                log("Available employees: " + availableEmployees);
+                log("Appointments count: " + appointmentsCount);
+
+                boolean overlap = false;
+                for (Appointment patientAppointment : patientAppointments) {
+                    if (!patientAppointment.getId().equals(appointment.getId())) {
+                        long hoursDifference = Duration.between(patientAppointment.getDateTime(), dateTime).abs().toHours();
+                        if (hoursDifference <= 36) {
+                            log("Overlap with appointment with dateTime: " + patientAppointment.getDateTime());
+                            overlap = true;
+                            break;
+                        }
+                    }
+                }
+
+                int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
+                log("Slots available: " + slotsAvailable);
+                if (slotsAvailable < 0) {
+                    throw new RuntimeException("Error: Negative slots available");
+                }
+                else if(slotsAvailable > 0 && !overlap) {
+                    availableHours.add(hour);
+                }
+            }
+
+            availability.put(date.format(DATE_FORMATTER), availableHours);
+        }
+
+        return ResponseEntity.ok(availability);
+    }
+
+
+    public ResponseEntity<Void> rescheduleAppointment(Long appointmentId, LocalDateTime newDateTime) {
+        Appointment appointment = appointmentRepository.findById(appointmentId)
+                .orElseThrow(() -> new EntityNotFoundException("Appointment not found"));
+
+        appointment.setDateTime(newDateTime);
+        appointmentRepository.save(appointment);
+        return ResponseEntity.ok().build();
+    }
 }

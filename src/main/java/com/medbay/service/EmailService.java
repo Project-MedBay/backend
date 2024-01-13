@@ -233,8 +233,7 @@ public class EmailService {
         MimeMessageHelper helper = new MimeMessageHelper(message, MULTIPART_MODE_RELATED, "UTF-8");
 
         helper.setFrom("noreply@medbay.life", "MedBay Team");
-        //helper.setTo(user.getEmail());
-        helper.setTo("ian.balen6@gmail.com");
+        helper.setTo(user.getEmail());
         helper.setSubject("MedBay - Therapy Request Update");
 
         String emailContent = "<!DOCTYPE html>"

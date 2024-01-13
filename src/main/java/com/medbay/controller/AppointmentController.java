@@ -31,6 +31,17 @@ public class AppointmentController {
         return appointmentService.getAvailability(therapyCode, days);
     }
 
+    @GetMapping("/reschedule/{appointmentId}")
+    public ResponseEntity<Map<String, List<Integer>>> getAvailabilityForReschedule(@PathVariable Long appointmentId) {
+        return appointmentService.getAvailabilityForReschedule(appointmentId);
+    }
+
+    @PutMapping("/reschedule/{appointmentId}")
+    public ResponseEntity<Void> rescheduleAppointment(@PathVariable Long appointmentId,
+                                                      @RequestParam LocalDateTime newDateTime) {
+        return appointmentService.rescheduleAppointment(appointmentId, newDateTime);
+    }
+
     @PutMapping("/session-notes/{appointmentId}")
     public ResponseEntity<Void> updateAppointmentDescription(@PathVariable Long appointmentId,
                                                              @RequestParam String sessionNotes) {
