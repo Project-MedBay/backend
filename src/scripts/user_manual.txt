@@ -1,5 +1,6 @@
 1. Home Page / Dashboard
 Automatically displayed after logging into the system.
+At the top of the homepage, you'll find buttons: "Dashboard," "New Therapy," "My Profile," "Switch" for toggling dark mode, and "Logout."
 My Schedule: Displays the schedule of therapies for the current week.
 Navigate through weeks using left and right arrows.
 The schedule for the selected week is displayed immediately below.
@@ -7,7 +8,7 @@ Below all this, there are cards with upcoming therapies.
 Therapies are chronologically arranged.
 Additional information is available by clicking on a specific therapy in the schedule, which opens it on the right side of the screen.
 Details include the time, name, location on the floor plan, number of therapy, remaining number of therapies (e.g., Session 9/11). The name of the therapist is also displayed.
-The floor plan of the building is shown at the bottom of the window with therapy information so that patients can easily find where the therapy is held.
+Patients can easily find where the therapy is held by clicking the "View location on map" button. The floor plan of the building is shown at the bottom of the window. Close the map by clicking the "Close map" button.
 "View notes" and "Reschedule" buttons are at the bottom of the window.
 "View notes": Displays the doctor's notes about the therapy.
 "Reschedule": Opens a calendar with available dates for rescheduling.
@@ -16,14 +17,30 @@ The question "Are you sure?" is asked with options "Yes" and "No."
 2. Creating New Therapy
 The "New therapy" button leads to the interface for creating a new therapy.
 Therapy selection:
-Choose the type of injury or enter the code given by the doctor.
-Choose dates according to availability and therapy requirements.
-Review the therapy and dates, enter the referral number and MBO.
+Enter the code given by the doctor or mark a body part on a sketch.
+Clicking, for example, on the arm reveals a list of all injuries related to that specific area undergoing therapy. A subsequent click on the marked body part deselects it, while the therapy list displays all treatments (FILTER BY: ANY). Below the therapy name is a code readable from the referral. 
+Clicking the "Next" button, the user selects appointments in the calendar corresponding to the therapy's duration. 
+Choose dates according to availability and therapy requirements. 
+Appointments can be chosen within a 3-month period and the entire therapy must be completed within 40 days.
+Above the list of appointments is a "Picked" counter, indicating the user's selections (e.g., 3/8 means 3 out of 8 appointments chosen).
+Purple highlights signify chosen slots, green denotes available, and gray indicates occupied or filled slots.
+Adjacent to "Picked" is a "Duration" counter tracking therapy duration to ensure it doesn't exceed 40 days. 
+After selecting all appointments, the user can click the "Next" button.
+In the final step (3rd phase) under "My Sessions," the first three chosen appointments are displayed, and by clicking "Expand," the full list is revealed. 
+The user enters the referral number and MBO, and beneath the message stating that the admin will contact them, the user must check "I understand."
+Following this, clicking "Finish" concludes the therapy creation process.
 After submitting the request, wait for approval from the administrator.
 Notification of approval via email.
+At any point, clicking "Cancel" allows the user to abandon the therapy creation process.
 
 3. User Profile
 Clicking on "My Profile" accesses the page with personal data.
-Display and possibility to edit data from registration.
+Display data from registration.
+Clicking "Edit Account Data" in the upper right corner opens a pop-up window for refining registration details. 
+Users have the option to modify their name, surname, email, address, and phone number, as well as update their password. 
+However, the Medical Record Number (MBO) and date of birth are unalterable. 
+Change the password, they must first click "Change Password," enter the old password, and then set a new one. Saving any modified data is accomplished by clicking "Save," while clicking "Cancel" abandons any changes.
+To modify the password, initiate the process by selecting "Edit Account Data," then enter the current password and set a new one. Confirm and save the changes by clicking "Save," or abandon any modifications by clicking "Cancel."
+By clicking on the image icon, upload a profile picture, which proves useful for therapists in noting and recalling patient results and remarks.
 Display of past therapies with details.
 Option to view more information about selected therapies by clicking on "View more."
