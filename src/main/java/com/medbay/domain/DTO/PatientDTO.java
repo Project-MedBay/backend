@@ -26,7 +26,6 @@ public class PatientDTO {
     private LocalDateTime createdAt;
     private String address;
     private LocalDate dateOfBirth;
-    private String OIB;
     private String MBO;
     private String phoneNumber;
     private boolean show;
