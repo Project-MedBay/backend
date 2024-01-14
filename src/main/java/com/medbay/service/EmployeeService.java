@@ -45,12 +45,10 @@ public class EmployeeService {
     }
 
 
-    public ResponseEntity<Void> createEmployee(CreateEmployeeRequest request) {
-
+    public ResponseEntity<Long> createEmployee(CreateEmployeeRequest request) {
         if(userRepository.existsByEmail(request.getEmail())) {
             return ResponseEntity.badRequest().build();
         }
-
 
         Employee employee = Employee.builder()
                 .firstName(request.getFirstName())
@@ -63,9 +61,10 @@ public class EmployeeService {
                 .specialization(Specialization.valueOf(request.getSpecialization().toUpperCase()))
                 .build();
 
-        employeeRepository.save(employee);
-        return ResponseEntity.ok().build();
+        Employee savedEmployee = employeeRepository.save(employee);
+        return ResponseEntity.ok(savedEmployee.getId());
     }
+
 
     public ResponseEntity<Void> deactivateEmployee(Long id) {
 

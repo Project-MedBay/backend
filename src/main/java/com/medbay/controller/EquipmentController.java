@@ -21,7 +21,7 @@ public class EquipmentController {
         return equipmentService.updateEquipment(equipment, id);
     }
     @PostMapping
-    public ResponseEntity<Void> createEquipment(@RequestBody CreateEquipmentRequest equipment){
+    public ResponseEntity<Long> createEquipment(@RequestBody CreateEquipmentRequest equipment){
         return equipmentService.createEquipment(equipment);
     }
     @DeleteMapping("/{id}")
