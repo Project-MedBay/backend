@@ -26,5 +26,11 @@ public class UserController {
         return userService.deleteUser(id);
     }
 
+    @GetMapping("check-password/{id}")
+    public ResponseEntity<Boolean> checkPassword(@RequestParam String password,
+                                                 @PathVariable(required = false) Long id) {
+        return userService.checkPassword(password, id);
+    }
+
 
 }

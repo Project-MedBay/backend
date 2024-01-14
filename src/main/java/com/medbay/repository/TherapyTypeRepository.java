@@ -13,4 +13,6 @@ public interface TherapyTypeRepository extends JpaRepository<TherapyType, Long> 
 
     @Query(value = "SELECT MAX(id) FROM therapy_type", nativeQuery = true)
     Long findByMaxId();
+
+    boolean existsByTherapyCode(String therapyCode);
 }

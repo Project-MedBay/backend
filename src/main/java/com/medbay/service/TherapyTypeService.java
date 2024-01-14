@@ -11,7 +11,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
@@ -19,29 +21,60 @@ public class TherapyTypeService {
     private final TherapyTypeRepository therapyTypeRepository;
     private final EquipmentRepository equipmentRepository;
 
+    private static final String LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final String NUMBERS = "0123456789";
+    private static final int CODE_LENGTH = 5;
+    private final Random random = new Random();
+
     public ResponseEntity<List<TherapyType>> getTherapyType() {
         List<TherapyType> therapyTypes = therapyTypeRepository.findAll();
         return ResponseEntity.ok(therapyTypes);
     }
 
 
-    public ResponseEntity<Long> createTherapyType(CreateTherapyTypeRequest request) {
+    public String generateTherapyCode() {
+        StringBuilder code = new StringBuilder("#");
+
+        for (int i = 0; i < CODE_LENGTH; i++) {
+            if (i % 2 == 0) {
+                int index = random.nextInt(NUMBERS.length());
+                code.append(NUMBERS.charAt(index));
+            } else {
+                int index = random.nextInt(LETTERS.length());
+                code.append(LETTERS.charAt(index));
+            }
+        }
+        return code.toString();
+    }
+
+
+    public ResponseEntity<Map<String, Object>> createTherapyType(CreateTherapyTypeRequest request) {
         Optional<Equipment> equipment = equipmentRepository.findById(request.getRequiredEquipmentId());
         if (equipment.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
 
+        String therapyCode = generateTherapyCode();
+        while(therapyTypeRepository.existsByTherapyCode(therapyCode)){
+            therapyCode = generateTherapyCode();
+        }
+
+
         TherapyType therapyType = TherapyType.builder()
                 .description(request.getDescription())
-                .therapyCode(request.getTherapyCode())
                 .name(request.getName())
+                .therapyCode(therapyCode)
                 .bodyPart(request.getBodyPart())
                 .numOfSessions(request.getNumberOfSessions())
                 .requiredEquipment(equipment.get())
                 .build();
 
         TherapyType savedTherapyType = therapyTypeRepository.save(therapyType);
-        return ResponseEntity.ok(savedTherapyType.getId());
+
+        return ResponseEntity.ok(Map.of(
+                "id", savedTherapyType.getId(),
+                "therapyTypeCode", savedTherapyType.getTherapyCode()
+        ));
     }
 
     public ResponseEntity<Void> deleteTherapyType(Long id) {
