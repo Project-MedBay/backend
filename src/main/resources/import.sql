@@ -536,884 +536,884 @@ INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_da
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (84, 37, 29, 'VERIFIED', '2023-12-26T11:30');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (85, 16, 13, 'PENDING', '2024-01-08T12:40');
 
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (1, '2024-01-16T16:00', 138, 90, 1, 'Initiated post-operative exercises, patient tolerating well.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (2, '2024-01-17T16:00', 134, 90, 1, 'Patient shows early signs of recovery, improved mobility.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (3, '2024-01-22T16:00', 131, 90, 1, 'Good progress, focusing on regaining strength in affected area.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (4, '2024-01-24T16:00', 134, 90, 1, 'Notable improvement in surgical recovery, reduced pain.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (5, '2024-01-26T16:00', 131, 90, 1, 'Patient able to engage in light activities with less discomfort.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (6, '2024-01-29T16:00', 129, 90, 1, 'Continued gains in function, focusing on range of motion.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (7, '2024-01-30T16:00', 134, 90, 1, 'Significant improvement in post-operative recovery.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (8, '2024-02-02T16:00', 138, 90, 1, 'Patient performing more dynamic activities comfortably.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (9, '2024-02-05T16:00', 131, 90, 1, 'Continued progress, excellent adherence to rehabilitation plan.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (10, '2024-02-07T16:00', 129, 90, 1, 'Near-complete recovery, focusing on functional movements.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (11, '2024-02-08T16:00', 129, 90, 1, 'Patient shows great resilience, almost fully recovered.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (12, '2024-02-12T16:00', 129, 90, 1, 'Full recovery from surgery, patient advised on long-term care and maintenance.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (13, '2024-01-17T10:00', 149, 83, 2, 'Began therapy with gentle stretching, pain management strategies in place.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (14, '2024-01-18T10:00', 133, 83, 2, 'Slight reduction in tenderness, patient tolerating exercises well.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (15, '2024-01-22T10:00', 133, 83, 2, 'Patient shows progress in pain reduction and mobility.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (16, '2024-01-24T10:00', 149, 83, 2, 'Further gains in tendon strength, continuing with progressive exercises.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (17, '2024-01-25T10:00', 149, 83, 2, 'Patient reports less pain during activity, improved function.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (18, '2024-01-26T10:00', 150, 83, 2, 'Continued improvement, increased exercise difficulty.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (19, '2024-01-29T10:00', 133, 83, 2, 'Significant reduction in symptoms, focusing on functional movements.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (20, '2024-01-31T10:00', 149, 83, 2, 'Good tolerance to higher intensity exercises, minimal discomfort.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (21, '2024-02-05T10:00', 150, 83, 2, 'Almost full recovery, patient performing daily tasks with ease.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (22, '2024-02-08T10:00', 149, 83, 2, 'Excellent progress, patient advised on how to prevent recurrence.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (23, '2024-01-16T15:00', 150, 47, 3, 'Began with injury assessment and basic mobility exercises.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (24, '2024-01-18T15:00', 133, 47, 3, 'Patient shows early signs of recovery, reduced pain.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (25, '2024-01-22T15:00', 133, 47, 3, 'Good progress, focusing on regaining strength in injured area.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (26, '2024-01-24T15:00', 150, 47, 3, 'Notable improvement in injury recovery, increased exercise intensity.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (27, '2024-01-25T15:00', 149, 47, 3, 'Patient able to engage in light sports activities with minimal discomfort.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (28, '2024-01-26T15:00', 149, 47, 3, 'Continued improvement in sports-specific movements.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (29, '2024-01-29T15:00', 150, 47, 3, 'Significant gains in function, injury healing well.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (30, '2024-02-01T15:00', 150, 47, 3, 'Excellent recovery, patient ready to resume full sports activities.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (31, '2023-12-27T14:00', 139, 42, 4, 'Initiated gentle calf and Achilles stretching.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (32, '2023-12-28T14:00', 144, 42, 4, 'Patient reports less stiffness and pain in Achilles tendon.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (33, '2023-12-29T14:00', 141, 42, 4, 'Good progress, increased exercise intensity for tendon strength.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (34, '2024-01-01T14:00', 145, 42, 4, 'Notable improvement in flexibility and pain reduction.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (35, '2024-01-03T14:00', 137, 42, 4, 'Patient able to engage in light jogging with minimal discomfort.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (36, '2024-01-08T14:00', 141, 42, 4, 'Continued gains in Achilles strength, focusing on dynamic exercises.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (37, '2024-01-10T14:00', 137, 42, 4, 'Significant reduction in symptoms, improved tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (38, '2024-01-12T14:00', 126, 42, 4, 'Patient performing more strenuous activities with ease.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (39, '2024-01-15T14:00', 142, 42, 4, 'Continued improvement, focusing on long-term tendon health.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (40, '2024-01-16T14:00', 146, 42, 4, 'Excellent progress, near-complete recovery in tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (41, '2024-01-18T14:00', 137, 42, 4, 'Achilles tendon showing great resilience, patient resuming most activities.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (42, '2024-01-19T14:00', 141, 42, 4, 'Full recovery from Achilles tendinitis, advised on preventive measures.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (43, '2024-01-03T19:00', 149, 27, 5, 'Initiated post-operative care, focusing on reducing swelling.'); --#5M8P4, 32
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (44, '2024-01-05T19:00', 133, 27, 5, 'Patient shows reduction in swelling, improved comfort.'); --#5M8P4, 32
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (45, '2024-01-08T19:00', 150, 27, 5, 'Good progress, continued with gentle mobilization exercises.'); --#5M8P4, 32
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (46, '2024-01-11T19:00', 133, 27, 5, 'Notable decrease in post-operative swelling, increased range of motion.'); --#5M8P4, 32
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (47, '2024-01-15T19:00', 133, 27, 5, 'Patient reports less discomfort, better overall function.'); --#5M8P4, 32
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (48, '2024-01-18T19:00', 149, 27, 5, 'Excellent recovery, swelling significantly reduced, continue with maintenance exercises.'); --#5M8P4, 32
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (49, '2024-01-16T13:00', 146, 13, 6, 'Initiated gentle calf and Achilles stretching.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (50, '2024-01-18T13:00', 144, 13, 6, 'Patient reports less stiffness and pain in Achilles tendon.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (51, '2024-01-19T13:00', 141, 13, 6, 'Good progress, increased exercise intensity for tendon strength.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (52, '2024-01-22T13:00', 137, 13, 6, 'Notable improvement in flexibility and pain reduction.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (53, '2024-01-23T13:00', 126, 13, 6, 'Patient able to engage in light jogging with minimal discomfort.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (54, '2024-01-24T13:00', 130, 13, 6, 'Continued gains in Achilles strength, focusing on dynamic exercises.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (55, '2024-01-25T13:00', 137, 13, 6, 'Significant reduction in symptoms, improved tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (56, '2024-01-29T13:00', 135, 13, 6, 'Patient performing more strenuous activities with ease.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (57, '2024-02-01T13:00', 135, 13, 6, 'Continued improvement, focusing on long-term tendon health.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (58, '2024-02-05T13:00', 137, 13, 6, 'Excellent progress, near-complete recovery in tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (59, '2024-02-07T13:00', 148, 13, 6, 'Achilles tendon showing great resilience, patient resuming most activities.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (60, '2024-02-08T13:00', 146, 13, 6, 'Full recovery from Achilles tendinitis, advised on preventive measures.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (61, '2023-12-20T11:00', 145, 104, 7, 'Assessment complete, initiated wrist mobility exercises.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (62, '2023-12-22T11:00', 146, 104, 7, 'Patient reports less numbness, improved hand function.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (63, '2023-12-25T11:00', 144, 104, 7, 'Good progress, wrist strength exercises introduced.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (64, '2023-12-26T11:00', 148, 104, 7, 'Notable reduction in nighttime symptoms, ergonomic adjustments helpful.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (65, '2023-12-28T11:00', 144, 104, 7, 'Patient able to perform fine motor tasks more easily.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (66, '2024-01-01T11:00', 137, 104, 7, 'Continued improvement, focusing on flexibility and strength.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (67, '2024-01-02T11:00', 140, 104, 7, 'Significant gains in wrist and hand function.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (68, '2024-01-04T11:00', 142, 104, 7, 'Symptoms greatly reduced, advised on long-term wrist care.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (69, '2024-01-15T14:00', 142, 46, 8, 'Initiated gentle calf and Achilles stretching.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (70, '2024-01-17T14:00', 139, 46, 8, 'Patient reports less stiffness and pain in Achilles tendon.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (71, '2024-01-18T14:00', 145, 46, 8, 'Good progress, increased exercise intensity for tendon strength.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (72, '2024-01-22T14:00', 144, 46, 8, 'Notable improvement in flexibility and pain reduction.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (73, '2024-01-25T14:00', 140, 46, 8, 'Patient able to engage in light jogging with minimal discomfort.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (74, '2024-01-26T14:00', 132, 46, 8, 'Continued gains in Achilles strength, focusing on dynamic exercises.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (75, '2024-01-29T14:00', 148, 46, 8, 'Significant reduction in symptoms, improved tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (76, '2024-01-30T14:00', 141, 46, 8, 'Patient performing more strenuous activities with ease.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (77, '2024-01-31T14:00', 137, 46, 8, 'Continued improvement, focusing on long-term tendon health.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (78, '2024-02-01T14:00', 143, 46, 8, 'Excellent progress, near-complete recovery in tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (79, '2024-02-05T14:00', 140, 46, 8, 'Achilles tendon showing great resilience, patient resuming most activities.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (80, '2024-02-08T14:00', 141, 46, 8, 'Full recovery from Achilles tendinitis, advised on preventive measures.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (81, '2024-01-02T09:00', 147, 68, 9, 'Initiated therapy focusing on pain relief and muscle relaxation.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (82, '2024-01-03T09:00', 128, 68, 9, 'Patient reports less muscle pain, improved sleep quality.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (83, '2024-01-05T09:00', 147, 68, 9, 'Good progress, introduced therapeutic exercises for pain management.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (84, '2024-01-08T09:00', 128, 68, 9, 'Notable reduction in chronic muscle pain, patient more active.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (85, '2024-01-11T09:00', 128, 68, 9, 'Patient engaging in daily tasks with greater ease and comfort.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (86, '2024-01-12T09:00', 128, 68, 9, 'Continued improvement in managing chronic pain.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (87, '2024-01-15T09:00', 128, 68, 9, 'Significant relief from muscle pain, patient advised on long-term pain management strategies.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (88, '2024-01-05T12:00', 136, 6, 10, 'Began with pain assessment and gentle exercises.'); --#7X4N5, 31
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (89, '2024-01-08T12:00', 136, 6, 10, 'Patient reports reduced pain levels, improved mood.'); --#7X4N5, 31
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (90, '2024-01-11T12:00', 136, 6, 10, 'Good progress, introduced pain coping strategies.'); --#7X4N5, 31
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (91, '2024-01-15T12:00', 127, 6, 10, 'Notable improvement in managing chronic pain, increased activity level.'); --#7X4N5, 31
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (92, '2024-01-16T12:00', 136, 6, 10, 'Patient more engaged in daily activities, better pain control.'); --#7X4N5, 31
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (93, '2024-01-17T12:00', 127, 6, 10, 'Significant improvement in quality of life, pain well managed.'); --#7X4N5, 31
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (94, '2024-01-17T17:00', 133, 76, 11, 'Started with low-impact exercises, patient adapting well.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (95, '2024-01-19T17:00', 149, 76, 11, 'Patient reports reduced joint stiffness, especially in the morning.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (96, '2024-01-22T17:00', 150, 76, 11, 'Continued progress with range of motion exercises.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (97, '2024-01-25T17:00', 150, 76, 11, 'Notable decrease in joint pain, increased exercise intensity.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (98, '2024-01-29T17:00', 150, 76, 11, 'Patient more active, managing daily activities with less pain.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (99, '2024-01-31T17:00', 150, 76, 11, 'Further gains in mobility and strength, pain well managed.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (100, '2024-02-05T17:00', 150, 76, 11, 'Significant improvement in overall joint function.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (101, '2024-02-06T17:00', 150, 76, 11, 'Patient reports much improved quality of life, maintain exercise routine.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (102, '2023-12-19T13:00', 126, 12, 12, 'Initial assessment completed, started with stretching and foam rolling.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (103, '2023-12-20T13:00', 141, 12, 12, 'Patient reports reduced hip and knee pain, improvement in mobility.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (104, '2023-12-25T13:00', 144, 12, 12, 'Good progress, introduced strengthening exercises for hip muscles.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (105, '2023-12-28T13:00', 142, 12, 12, 'Notable reduction in pain, increased exercise intensity.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (106, '2024-01-01T13:00', 139, 12, 12, 'Patient performing daily activities more comfortably.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (107, '2024-01-04T13:00', 126, 12, 12, 'Continued improvement, focusing on flexibility and strength.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (108, '2024-01-08T13:00', 143, 12, 12, 'Significant gains in hip and knee function.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (109, '2024-01-10T13:00', 146, 12, 12, 'Symptoms greatly reduced, advised on long-term care and prevention.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (110, '2024-01-01T18:00', 131, 9, 13, 'Initiated post-operative exercises, patient tolerating well.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (111, '2024-01-03T18:00', 129, 9, 13, 'Patient shows early signs of recovery, improved mobility.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (112, '2024-01-04T18:00', 138, 9, 13, 'Good progress, focusing on regaining strength in affected area.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (113, '2024-01-05T18:00', 138, 9, 13, 'Notable improvement in surgical recovery, reduced pain.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (114, '2024-01-08T18:00', 138, 9, 13, 'Patient able to engage in light activities with less discomfort.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (115, '2024-01-09T18:00', 138, 9, 13, 'Continued gains in function, focusing on range of motion.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (116, '2024-01-11T18:00', 129, 9, 13, 'Significant improvement in post-operative recovery.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (117, '2024-01-12T18:00', 129, 9, 13, 'Patient performing more dynamic activities comfortably.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (118, '2024-01-15T18:00', 131, 9, 13, 'Continued progress, excellent adherence to rehabilitation plan.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (119, '2024-01-16T18:00', 129, 9, 13, 'Near-complete recovery, focusing on functional movements.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (120, '2024-01-19T18:00', 134, 9, 13, 'Patient shows great resilience, almost fully recovered.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (121, '2024-01-22T18:00', 134, 9, 13, 'Full recovery from surgery, patient advised on long-term care and maintenance.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (122, '2023-12-19T10:00', 127, 75, 14, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (123, '2023-12-22T10:00', 127, 75, 14, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (124, '2023-12-25T10:00', 136, 75, 14, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (125, '2023-12-26T10:00', 127, 75, 14, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (126, '2023-12-29T10:00', 127, 75, 14, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (127, '2024-01-01T10:00', 136, 75, 14, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (128, '2024-01-04T10:00', 127, 75, 14, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (129, '2024-01-05T10:00', 127, 75, 14, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (130, '2024-01-08T10:00', 136, 75, 14, 'Further gains in independence, improved quality of life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (131, '2024-01-09T10:00', 136, 75, 14, 'Excellent adherence to therapy, notable improvement in speech clarity.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (132, '2024-01-10T10:00', 136, 75, 14, 'Continued progress, patient showing greater mobility and agility.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (133, '2024-01-11T10:00', 136, 75, 14, 'Significant improvement in cognitive functions, better problem-solving skills.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (134, '2024-01-15T10:00', 136, 75, 14, 'Patient more confident in performing daily activities independently.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (135, '2024-01-18T10:00', 127, 75, 14, 'Continued gains in fine motor skills, hand-eye coordination improved.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (136, '2024-01-19T10:00', 136, 75, 14, 'Significant strides in stroke recovery, patient more active and engaged.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (137, '2024-01-22T10:00', 136, 75, 14, 'Excellent progress, patient regaining more normalcy in life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (138, '2024-01-25T10:00', 136, 75, 14, 'Focus now on refining skills and maximizing independence.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (139, '2024-01-29T10:00', 127, 75, 14, 'Patient''s recovery well ahead of expectations, near-complete functional restoration.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (140, '2024-01-31T10:00', 136, 75, 14, 'Continued therapy focusing on long-term maintenance and health.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (141, '2024-02-01T10:00', 136, 75, 14, 'Full recovery from stroke effects, patient advised on preventive measures and lifestyle adjustments.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (142, '2024-01-11T19:00', 145, 3, 15, 'Initial evaluation complete, begun with basic knee stabilization exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (143, '2024-01-15T19:00', 140, 3, 15, 'Patient shows early progress in knee stability, continued with light exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (144, '2024-01-17T19:00', 145, 3, 15, 'Slight improvement in knee strength, introduced balance exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (145, '2024-01-22T19:00', 145, 3, 15, 'Good progress in range of motion, pain reduction noticeable.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (146, '2024-01-24T19:00', 132, 3, 15, 'Patient tolerating increased exercise intensity well, improved stability.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (147, '2024-01-25T19:00', 145, 3, 15, 'Continued gains in knee function, focusing on strengthening.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (148, '2024-01-26T19:00', 148, 3, 15, 'Significant improvement in knee mobility and strength.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (149, '2024-01-29T19:00', 145, 3, 15, 'Patient beginning to perform more dynamic movements.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (150, '2024-01-31T19:00', 146, 3, 15, 'Further improvement in stability, pain management effective.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (151, '2024-02-05T19:00', 140, 3, 15, 'Knee strength and stability much improved, introduced light jogging.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (152, '2024-02-08T19:00', 140, 3, 15, 'Patient reports increased confidence in knee function.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (153, '2024-02-12T19:00', 144, 3, 15, 'Good tolerance to higher intensity and impact exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (154, '2024-02-15T19:00', 130, 3, 15, 'Significant gains in overall knee function, focusing on agility.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (155, '2024-02-19T19:00', 137, 3, 15, 'Patient performing sports-specific exercises with ease.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (156, '2024-02-21T19:00', 144, 3, 15, 'Continued progress, knee nearly at pre-injury strength.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (157, '2024-02-26T19:00', 126, 3, 15, 'Excellent recovery, patient able to perform high-impact activities.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (158, '2024-02-29T19:00', 141, 3, 15, 'Focus on maintaining knee health and preventing re-injury.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (159, '2024-03-04T19:00', 148, 3, 15, 'Patient''s knee function fully restored, excellent progress.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (160, '2024-03-05T19:00', 137, 3, 15, 'Rehabilitation almost complete, patient performing all activities without issue.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (161, '2024-03-07T19:00', 141, 3, 15, 'Complete recovery from ACL injury, advised on long-term knee care.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (162, '2023-12-26T18:00', 146, 26, 16, 'Began therapy with gentle cervical mobilization.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (163, '2023-12-29T18:00', 142, 26, 16, 'Patient reports reduced neck pain and stiffness.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (164, '2024-01-01T18:00', 135, 26, 16, 'Good progress, introduced neck strengthening exercises.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (165, '2024-01-04T18:00', 132, 26, 16, 'Notable improvement in neck mobility and reduced discomfort.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (166, '2024-01-08T18:00', 143, 26, 16, 'Patient able to perform daily tasks with greater ease.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (167, '2024-01-11T18:00', 126, 26, 16, 'Continued improvement in neck function, focusing on flexibility.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (168, '2024-01-15T18:00', 142, 26, 16, 'Significant gains in cervical range of motion and strength.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (169, '2024-01-16T18:00', 132, 26, 16, 'Patient reports minimal neck pain, improved overall function.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (170, '2024-01-18T18:00', 141, 26, 16, 'Continued progress, neck nearly back to pre-injury level.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (171, '2024-01-22T18:00', 130, 26, 16, 'Full recovery from whiplash, patient advised on preventive strategies.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (172, '2023-12-11T14:00', 145, 50, 17, 'Began with basic range of motion exercises, patient coping well.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (173, '2023-12-13T14:00', 144, 50, 17, 'Slight improvement in arm movement, pain management effective.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (174, '2023-12-18T14:00', 141, 50, 17, 'Patient shows progress in strength, pain reducing.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (175, '2023-12-20T14:00', 132, 50, 17, 'Further gains in arm function, reduced discomfort.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (176, '2023-12-22T14:00', 137, 50, 17, 'Patient reports much less pain during daily activities.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (177, '2023-12-25T14:00', 141, 50, 17, 'Increased resistance in exercises, good tolerance.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (178, '2023-12-28T14:00', 144, 50, 17, 'Significant improvement in strength and mobility.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (179, '2024-01-01T14:00', 135, 50, 17, 'Patient performing all exercises with ease, minimal pain.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (180, '2024-01-02T14:00', 144, 50, 17, 'Biceps function greatly improved, focus on maintenance.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (181, '2024-01-03T14:00', 145, 50, 17, 'Excellent recovery, patient advised to continue with exercises at home.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (182, '2023-12-27T09:00', 147, 43, 18, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (183, '2024-01-01T09:00', 128, 43, 18, 'Slight reduction in joint pain and swelling.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (184, '2024-01-04T09:00', 147, 43, 18, 'Patient shows progress in mobility, continuing with prescribed exercises.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (185, '2024-01-08T09:00', 147, 43, 18, 'Further gains in joint function, reduced discomfort.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (186, '2024-01-10T09:00', 128, 43, 18, 'Patient reports significant reduction in pain during movement.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (187, '2024-01-11T09:00', 128, 43, 18, 'Continued improvement, focusing on strengthening surrounding muscles.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (188, '2024-01-15T09:00', 147, 43, 18, 'Significant reduction in inflammation and pain.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (189, '2024-01-18T09:00', 147, 43, 18, 'Joint function nearly back to normal, advised on preventive strategies.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (190, '2023-12-29T16:00', 136, 35, 19, 'Initiated muscle strengthening exercises, patient adapting well.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (191, '2024-01-01T16:00', 127, 35, 19, 'Patient shows early signs of muscle tone improvement.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (192, '2024-01-04T16:00', 136, 35, 19, 'Good progress, focusing on resistance training for muscle growth.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (193, '2024-01-08T16:00', 127, 35, 19, 'Notable improvement in muscle strength, reduced atrophy signs.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (194, '2024-01-09T16:00', 127, 35, 19, 'Patient able to perform exercises with increased resistance.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (195, '2024-01-11T16:00', 127, 35, 19, 'Continued improvement in muscle mass and function.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (196, '2024-01-12T16:00', 127, 35, 19, 'Significant gains in overall muscle tone and strength.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (197, '2024-01-15T16:00', 127, 35, 19, 'Excellent progress in preventing muscle atrophy, patient advised on long-term fitness strategies.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (198, '2024-01-03T15:00', 147, 41, 20, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (199, '2024-01-04T15:00', 147, 41, 20, 'Slight reduction in joint pain and swelling.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (200, '2024-01-08T15:00', 128, 41, 20, 'Patient shows progress in mobility, continuing with prescribed exercises.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (201, '2024-01-09T15:00', 128, 41, 20, 'Further gains in joint function, reduced discomfort.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (202, '2024-01-12T15:00', 147, 41, 20, 'Patient reports significant reduction in pain during movement.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (203, '2024-01-15T15:00', 147, 41, 20, 'Continued improvement, focusing on strengthening surrounding muscles.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (204, '2024-01-17T15:00', 128, 41, 20, 'Significant reduction in inflammation and pain.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (205, '2024-01-18T15:00', 128, 41, 20, 'Joint function nearly back to normal, advised on preventive strategies.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (206, '2023-12-28T12:00', 149, 99, 21, 'Began therapy with gentle stretching, pain management strategies in place.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (207, '2023-12-29T12:00', 133, 99, 21, 'Slight reduction in tenderness, patient tolerating exercises well.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (208, '2024-01-01T12:00', 150, 99, 21, 'Patient shows progress in pain reduction and mobility.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (209, '2024-01-02T12:00', 133, 99, 21, 'Further gains in tendon strength, continuing with progressive exercises.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (210, '2024-01-05T12:00', 150, 99, 21, 'Patient reports less pain during activity, improved function.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (211, '2024-01-08T12:00', 133, 99, 21, 'Continued improvement, increased exercise difficulty.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (212, '2024-01-10T12:00', 149, 99, 21, 'Significant reduction in symptoms, focusing on functional movements.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (213, '2024-01-15T12:00', 133, 99, 21, 'Good tolerance to higher intensity exercises, minimal discomfort.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (214, '2024-01-17T12:00', 133, 99, 21, 'Almost full recovery, patient performing daily tasks with ease.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (215, '2024-01-22T12:00', 150, 99, 21, 'Excellent progress, patient advised on how to prevent recurrence.'); --#1G8Z3, 8
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (216, '2024-01-17T11:00', 144, 105, 22, 'Assessment complete, initiated wrist mobility exercises.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (217, '2024-01-19T11:00', 148, 105, 22, 'Patient reports less numbness, improved hand function.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (218, '2024-01-22T11:00', 139, 105, 22, 'Good progress, wrist strength exercises introduced.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (219, '2024-01-25T11:00', 148, 105, 22, 'Notable reduction in nighttime symptoms, ergonomic adjustments helpful.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (220, '2024-01-29T11:00', 144, 105, 22, 'Patient able to perform fine motor tasks more easily.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (221, '2024-01-31T11:00', 140, 105, 22, 'Continued improvement, focusing on flexibility and strength.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (222, '2024-02-02T11:00', 145, 105, 22, 'Significant gains in wrist and hand function.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (223, '2024-02-05T11:00', 146, 105, 22, 'Symptoms greatly reduced, advised on long-term wrist care.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (224, '2024-01-15T14:00', 133, 66, 23, 'Began with injury assessment and basic mobility exercises.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (225, '2024-01-17T14:00', 149, 66, 23, 'Patient shows early signs of recovery, reduced pain.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (226, '2024-01-18T14:00', 150, 66, 23, 'Good progress, focusing on regaining strength in injured area.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (227, '2024-01-22T14:00', 133, 66, 23, 'Notable improvement in injury recovery, increased exercise intensity.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (228, '2024-01-23T14:00', 150, 66, 23, 'Patient able to engage in light sports activities with minimal discomfort.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (229, '2024-01-24T14:00', 133, 66, 23, 'Continued improvement in sports-specific movements.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (230, '2024-01-26T14:00', 133, 66, 23, 'Significant gains in function, injury healing well.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (231, '2024-01-29T14:00', 150, 66, 23, 'Excellent recovery, patient ready to resume full sports activities.'); --#5Z9B5, 33
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (232, '2024-01-11T11:00', 145, 102, 24, 'Initiated therapy with non-weight bearing exercises.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (233, '2024-01-15T11:00', 146, 102, 24, 'Patient reports reduced pain, slight improvement in mobility.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (234, '2024-01-16T11:00', 137, 102, 24, 'Good progress, introduced gentle weight-bearing activities.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (235, '2024-01-17T11:00', 132, 102, 24, 'Further improvement in function, pain management effective.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (236, '2024-01-18T11:00', 126, 102, 24, 'Patient able to perform daily activities with less discomfort.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (237, '2024-01-19T11:00', 144, 102, 24, 'Continued progress, increased exercise intensity.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (238, '2024-01-22T11:00', 132, 102, 24, 'Significant gains in mobility and strength.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (239, '2024-01-24T11:00', 143, 102, 24, 'Patient performing more dynamic movements comfortably.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (240, '2024-01-25T11:00', 126, 102, 24, 'Excellent progress, focusing on injury prevention.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (241, '2024-01-29T11:00', 141, 102, 24, 'Full recovery from stress fracture, patient advised on bone health.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (242, '2024-01-10T09:00', 137, 88, 25, 'Initiated gentle calf and Achilles stretching.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (243, '2024-01-15T09:00', 139, 88, 25, 'Patient reports less stiffness and pain in Achilles tendon.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (244, '2024-01-18T09:00', 146, 88, 25, 'Good progress, increased exercise intensity for tendon strength.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (245, '2024-01-22T09:00', 130, 88, 25, 'Notable improvement in flexibility and pain reduction.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (246, '2024-01-24T09:00', 145, 88, 25, 'Patient able to engage in light jogging with minimal discomfort.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (247, '2024-01-25T09:00', 140, 88, 25, 'Continued gains in Achilles strength, focusing on dynamic exercises.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (248, '2024-01-29T09:00', 141, 88, 25, 'Significant reduction in symptoms, improved tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (249, '2024-01-30T09:00', 146, 88, 25, 'Patient performing more strenuous activities with ease.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (250, '2024-01-31T09:00', 132, 88, 25, 'Continued improvement, focusing on long-term tendon health.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (251, '2024-02-02T09:00', 141, 88, 25, 'Excellent progress, near-complete recovery in tendon function.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (252, '2024-02-05T09:00', 139, 88, 25, 'Achilles tendon showing great resilience, patient resuming most activities.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (253, '2024-02-07T09:00', 126, 88, 25, 'Full recovery from Achilles tendinitis, advised on preventive measures.'); --#5C3G3, 20
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (254, '2023-12-26T12:00', 139, 19, 26, 'Began with gentle core strengthening and flexibility exercises.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (255, '2023-12-28T12:00', 145, 19, 26, 'Patient reports reduced lower back pain, improved posture.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (256, '2024-01-01T12:00', 135, 19, 26, 'Good progress, introduced modified Pilates exercises.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (257, '2024-01-02T12:00', 141, 19, 26, 'Notable improvement in core strength, reduced sciatic symptoms.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (258, '2024-01-03T12:00', 137, 19, 26, 'Patient able to perform daily activities with less pain.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (259, '2024-01-04T12:00', 143, 19, 26, 'Continued gains in back function, focusing on stability exercises.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (260, '2024-01-08T12:00', 130, 19, 26, 'Significant reduction in back pain, improved spinal alignment.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (261, '2024-01-11T12:00', 137, 19, 26, 'Patient reports increased overall mobility and comfort.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (262, '2024-01-12T12:00', 132, 19, 26, 'Continued improvement, enhanced core stability.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (263, '2024-01-15T12:00', 139, 19, 26, 'Excellent progress, patient reports minimal discomfort.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (264, '2024-01-16T12:00', 140, 19, 26, 'Focus now on maintaining back health and preventing re-injury.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (265, '2024-01-18T12:00', 137, 19, 26, 'Patient''s back function significantly improved, pain well managed.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (266, '2024-01-19T12:00', 140, 19, 26, 'Near-complete recovery, patient performing most activities comfortably.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (267, '2024-01-22T12:00', 132, 19, 26, 'Full recovery from herniated disc, long-term management plan in place.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (268, '2024-01-12T11:00', 147, 36, 27, 'Initiated gentle exercises tailored for joint mobility.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (269, '2024-01-15T11:00', 147, 36, 27, 'Patient reports reduced pain, especially in the mornings.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (270, '2024-01-17T11:00', 128, 36, 27, 'Good progress, introduced more dynamic exercises.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (271, '2024-01-18T11:00', 128, 36, 27, 'Notable improvement in joint flexibility and strength.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (272, '2024-01-22T11:00', 147, 36, 27, 'Patient managing daily activities with less discomfort.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (273, '2024-01-23T11:00', 147, 36, 27, 'Continued improvement, exercises becoming more challenging.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (274, '2024-01-25T11:00', 128, 36, 27, 'Significant gains in joint function, pain management effective.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (275, '2024-01-26T11:00', 147, 36, 27, 'Excellent progress, patient to maintain exercise routine for long-term benefits.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (276, '2023-12-29T08:00', 138, 79, 28, 'Began with gentle core and back strengthening exercises.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (277, '2024-01-01T08:00', 134, 79, 28, 'Patient reports reduced back pain, especially after prolonged sitting.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (278, '2024-01-02T08:00', 134, 79, 28, 'Good progress, increased exercise intensity for back strength.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (279, '2024-01-03T08:00', 138, 79, 28, 'Notable improvement in pain management and flexibility.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (280, '2024-01-05T08:00', 131, 79, 28, 'Patient performing daily tasks with greater ease and less discomfort.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (281, '2024-01-08T08:00', 138, 79, 28, 'Continued gains in back function, focusing on posture correction.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (282, '2024-01-10T08:00', 138, 79, 28, 'Significant reduction in chronic pain, improved spinal health.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (283, '2024-01-12T08:00', 129, 79, 28, 'Patient reports increased overall mobility and quality of life.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (284, '2024-01-15T08:00', 134, 79, 28, 'Continued improvement, back pain well managed.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (285, '2024-01-17T08:00', 131, 79, 28, 'Excellent progress, advised on long-term strategies to manage back pain.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (286, '2023-12-19T19:00', 129, 38, 29, 'Initiated basic cognitive and motor skill exercises.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (287, '2023-12-22T19:00', 138, 38, 29, 'Patient shows early signs of improvement in speech and movement.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (288, '2023-12-25T19:00', 131, 38, 29, 'Good progress, focusing on regaining independence in daily activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (289, '2023-12-27T19:00', 138, 38, 29, 'Notable gains in limb coordination and cognitive functions.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (290, '2024-01-01T19:00', 131, 38, 29, 'Patient more engaged in therapy, showing improvement in self-care skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (291, '2024-01-03T19:00', 129, 38, 29, 'Continued improvement in speech clarity and walking.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (292, '2024-01-04T19:00', 131, 38, 29, 'Significant progress in fine motor skills, patient regaining hand dexterity.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (293, '2024-01-08T19:00', 134, 38, 29, 'Improved balance and coordination, patient can perform tasks more easily.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (294, '2024-01-10T19:00', 134, 38, 29, 'Further gains in cognitive abilities, better memory and problem-solving skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (295, '2024-01-12T19:00', 138, 38, 29, 'Excellent progress in speech, patient communicating more clearly.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (296, '2024-01-15T19:00', 134, 38, 29, 'Patient shows increased independence in daily routines.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (297, '2024-01-16T19:00', 131, 38, 29, 'Continued improvement in walking, less assistance required.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (298, '2024-01-17T19:00', 138, 38, 29, 'Significant strides in overall stroke recovery, patient more confident.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (299, '2024-01-22T19:00', 129, 38, 29, 'Patient actively participating in more complex rehabilitation activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (300, '2024-01-25T19:00', 138, 38, 29, 'Continued gains in cognitive and motor functions, patient more self-reliant.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (301, '2024-01-29T19:00', 131, 38, 29, 'Excellent recovery pace, patient resuming more normal activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (302, '2024-01-30T19:00', 138, 38, 29, 'Focus on refining skills for maximum independence and quality of life.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (303, '2024-02-02T19:00', 134, 38, 29, 'Patient''s resilience evident, near-complete recovery from stroke effects.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (304, '2024-02-05T19:00', 129, 38, 29, 'Therapy focusing on long-term maintenance of health and skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (305, '2024-02-08T19:00', 134, 38, 29, 'Full recovery from stroke, patient advised on lifestyle adjustments and preventive measures.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (306, '2024-01-17T10:00', 146, 14, 30, 'Assessment complete, initiated wrist mobility exercises.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (307, '2024-01-22T10:00', 126, 14, 30, 'Patient reports less numbness, improved hand function.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (308, '2024-01-24T10:00', 132, 14, 30, 'Good progress, wrist strength exercises introduced.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (309, '2024-01-29T10:00', 135, 14, 30, 'Notable reduction in nighttime symptoms, ergonomic adjustments helpful.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (310, '2024-02-01T10:00', 142, 14, 30, 'Patient able to perform fine motor tasks more easily.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (311, '2024-02-02T10:00', 142, 14, 30, 'Continued improvement, focusing on flexibility and strength.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (312, '2024-02-05T10:00', 140, 14, 30, 'Significant gains in wrist and hand function.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (313, '2024-02-08T10:00', 132, 14, 30, 'Symptoms greatly reduced, advised on long-term wrist care.'); --#1R2Y1, 6
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (314, '2023-12-21T14:00', 141, 72, 31, 'Began therapy with gentle cervical mobilization.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (315, '2023-12-22T14:00', 141, 72, 31, 'Patient reports reduced neck pain and stiffness.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (316, '2023-12-25T14:00', 144, 72, 31, 'Good progress, introduced neck strengthening exercises.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (317, '2023-12-27T14:00', 132, 72, 31, 'Notable improvement in neck mobility and reduced discomfort.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (318, '2024-01-01T14:00', 143, 72, 31, 'Patient able to perform daily tasks with greater ease.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (319, '2024-01-03T14:00', 143, 72, 31, 'Continued improvement in neck function, focusing on flexibility.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (320, '2024-01-05T14:00', 126, 72, 31, 'Significant gains in cervical range of motion and strength.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (321, '2024-01-08T14:00', 135, 72, 31, 'Patient reports minimal neck pain, improved overall function.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (322, '2024-01-09T14:00', 145, 72, 31, 'Continued progress, neck nearly back to pre-injury level.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (323, '2024-01-10T14:00', 148, 72, 31, 'Full recovery from whiplash, patient advised on preventive strategies.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (324, '2024-01-01T08:00', 133, 96, 32, 'Started with low-impact exercises, patient adapting well.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (325, '2024-01-02T08:00', 149, 96, 32, 'Patient reports reduced joint stiffness, especially in the morning.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (326, '2024-01-04T08:00', 150, 96, 32, 'Continued progress with range of motion exercises.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (327, '2024-01-05T08:00', 133, 96, 32, 'Notable decrease in joint pain, increased exercise intensity.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (328, '2024-01-08T08:00', 150, 96, 32, 'Patient more active, managing daily activities with less pain.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (329, '2024-01-11T08:00', 133, 96, 32, 'Further gains in mobility and strength, pain well managed.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (330, '2024-01-15T08:00', 150, 96, 32, 'Significant improvement in overall joint function.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (331, '2024-01-16T08:00', 133, 96, 32, 'Patient reports much improved quality of life, maintain exercise routine.'); --#6F6P9, 7
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (332, '2023-12-21T18:00', 141, 28, 33, 'Began therapy with gentle cervical mobilization.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (333, '2023-12-25T18:00', 126, 28, 33, 'Patient reports reduced neck pain and stiffness.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (334, '2023-12-27T18:00', 143, 28, 33, 'Good progress, introduced neck strengthening exercises.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (335, '2024-01-01T18:00', 130, 28, 33, 'Notable improvement in neck mobility and reduced discomfort.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (336, '2024-01-04T18:00', 126, 28, 33, 'Patient able to perform daily tasks with greater ease.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (337, '2024-01-08T18:00', 148, 28, 33, 'Continued improvement in neck function, focusing on flexibility.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (338, '2024-01-11T18:00', 132, 28, 33, 'Significant gains in cervical range of motion and strength.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (339, '2024-01-15T18:00', 130, 28, 33, 'Patient reports minimal neck pain, improved overall function.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (340, '2024-01-18T18:00', 137, 28, 33, 'Continued progress, neck nearly back to pre-injury level.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (341, '2024-01-22T18:00', 141, 28, 33, 'Full recovery from whiplash, patient advised on preventive strategies.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (342, '2024-01-10T13:00', 146, 31, 34, 'Initial assessment completed, started with stretching and foam rolling.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (343, '2024-01-12T13:00', 132, 31, 34, 'Patient reports reduced hip and knee pain, improvement in mobility.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (344, '2024-01-15T13:00', 148, 31, 34, 'Good progress, introduced strengthening exercises for hip muscles.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (345, '2024-01-16T13:00', 142, 31, 34, 'Notable reduction in pain, increased exercise intensity.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (346, '2024-01-19T13:00', 143, 31, 34, 'Patient performing daily activities more comfortably.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (347, '2024-01-22T13:00', 139, 31, 34, 'Continued improvement, focusing on flexibility and strength.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (348, '2024-01-23T13:00', 146, 31, 34, 'Significant gains in hip and knee function.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (349, '2024-01-26T13:00', 146, 31, 34, 'Symptoms greatly reduced, advised on long-term care and prevention.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (350, '2024-01-08T19:00', 147, 97, 35, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (351, '2024-01-09T19:00', 147, 97, 35, 'Slight reduction in joint pain and swelling.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (352, '2024-01-12T19:00', 128, 97, 35, 'Patient shows progress in mobility, continuing with prescribed exercises.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (353, '2024-01-15T19:00', 128, 97, 35, 'Further gains in joint function, reduced discomfort.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (354, '2024-01-16T19:00', 147, 97, 35, 'Patient reports significant reduction in pain during movement.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (355, '2024-01-19T19:00', 147, 97, 35, 'Continued improvement, focusing on strengthening surrounding muscles.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (356, '2024-01-22T19:00', 128, 97, 35, 'Significant reduction in inflammation and pain.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (357, '2024-01-23T19:00', 128, 97, 35, 'Joint function nearly back to normal, advised on preventive strategies.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (358, '2024-01-16T08:00', 139, 8, 36, 'Initial assessment done, started with gentle stretching.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (359, '2024-01-18T08:00', 139, 8, 36, 'Slight improvement in movement, pain management strategies in place.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (360, '2024-01-19T08:00', 141, 8, 36, 'Patient shows increased range of motion, exercises intensified.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (361, '2024-01-22T08:00', 145, 8, 36, 'Further improvement in shoulder flexibility.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (362, '2024-01-23T08:00', 135, 8, 36, 'Patient can perform daily activities with less discomfort.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (363, '2024-01-25T08:00', 130, 8, 36, 'Significant gains in mobility, therapy progressing well.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (364, '2024-01-29T08:00', 126, 8, 36, 'Continued improvement, focusing on strengthening.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (365, '2024-01-31T08:00', 146, 8, 36, 'Patient reports much less pain, improved sleep quality.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (366, '2024-02-02T08:00', 141, 8, 36, 'Near-normal range of motion achieved.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (367, '2024-02-05T08:00', 142, 8, 36, 'Excellent progress, maintain stretching and strengthening exercises.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (368, '2024-01-09T08:00', 131, 73, 37, 'Initiated basic cognitive and motor skill exercises.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (369, '2024-01-11T08:00', 129, 73, 37, 'Patient shows early signs of improvement in speech and movement.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (370, '2024-01-15T08:00', 138, 73, 37, 'Good progress, focusing on regaining independence in daily activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (371, '2024-01-16T08:00', 138, 73, 37, 'Notable gains in limb coordination and cognitive functions.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (372, '2024-01-18T08:00', 138, 73, 37, 'Patient more engaged in therapy, showing improvement in self-care skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (373, '2024-01-22T08:00', 131, 73, 37, 'Continued improvement in speech clarity and walking.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (374, '2024-01-24T08:00', 134, 73, 37, 'Significant progress in fine motor skills, patient regaining hand dexterity.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (375, '2024-01-25T08:00', 138, 73, 37, 'Improved balance and coordination, patient can perform tasks more easily.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (376, '2024-01-29T08:00', 129, 73, 37, 'Further gains in cognitive abilities, better memory and problem-solving skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (377, '2024-01-30T08:00', 138, 73, 37, 'Excellent progress in speech, patient communicating more clearly.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (378, '2024-02-02T08:00', 134, 73, 37, 'Patient shows increased independence in daily routines.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (379, '2024-02-05T08:00', 138, 73, 37, 'Continued improvement in walking, less assistance required.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (380, '2024-02-06T08:00', 129, 73, 37, 'Significant strides in overall stroke recovery, patient more confident.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (381, '2024-02-07T08:00', 131, 73, 37, 'Patient actively participating in more complex rehabilitation activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (382, '2024-02-09T08:00', 131, 73, 37, 'Continued gains in cognitive and motor functions, patient more self-reliant.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (383, '2024-02-12T08:00', 131, 73, 37, 'Excellent recovery pace, patient resuming more normal activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (384, '2024-02-13T08:00', 129, 73, 37, 'Focus on refining skills for maximum independence and quality of life.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (385, '2024-02-16T08:00', 129, 73, 37, 'Patient''s resilience evident, near-complete recovery from stroke effects.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (386, '2024-02-19T08:00', 134, 73, 37, 'Therapy focusing on long-term maintenance of health and skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (387, '2024-02-20T08:00', 134, 73, 37, 'Full recovery from stroke, patient advised on lifestyle adjustments and preventive measures.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (388, '2024-01-09T11:00', 147, 45, 38, 'Initiated therapy focusing on pain relief and muscle relaxation.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (389, '2024-01-10T11:00', 147, 45, 38, 'Patient reports less muscle pain, improved sleep quality.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (390, '2024-01-15T11:00', 147, 45, 38, 'Good progress, introduced therapeutic exercises for pain management.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (391, '2024-01-17T11:00', 128, 45, 38, 'Notable reduction in chronic muscle pain, patient more active.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (392, '2024-01-19T11:00', 128, 45, 38, 'Patient engaging in daily tasks with greater ease and comfort.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (393, '2024-01-22T11:00', 147, 45, 38, 'Continued improvement in managing chronic pain.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (394, '2024-01-25T11:00', 128, 45, 38, 'Significant relief from muscle pain, patient advised on long-term pain management strategies.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (395, '2024-01-10T09:00', 138, 44, 39, 'Initiated basic cognitive and motor skill exercises.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (396, '2024-01-11T09:00', 138, 44, 39, 'Patient shows early signs of improvement in speech and movement.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (397, '2024-01-12T09:00', 134, 44, 39, 'Good progress, focusing on regaining independence in daily activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (398, '2024-01-15T09:00', 138, 44, 39, 'Notable gains in limb coordination and cognitive functions.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (399, '2024-01-16T09:00', 134, 44, 39, 'Patient more engaged in therapy, showing improvement in self-care skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (400, '2024-01-18T09:00', 131, 44, 39, 'Continued improvement in speech clarity and walking.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (401, '2024-01-22T09:00', 129, 44, 39, 'Significant progress in fine motor skills, patient regaining hand dexterity.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (402, '2024-01-23T09:00', 134, 44, 39, 'Improved balance and coordination, patient can perform tasks more easily.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (403, '2024-01-25T09:00', 131, 44, 39, 'Further gains in cognitive abilities, better memory and problem-solving skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (404, '2024-01-29T09:00', 131, 44, 39, 'Excellent progress in speech, patient communicating more clearly.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (405, '2024-01-30T09:00', 138, 44, 39, 'Patient shows increased independence in daily routines.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (406, '2024-02-02T09:00', 138, 44, 39, 'Continued improvement in walking, less assistance required.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (407, '2024-02-05T09:00', 131, 44, 39, 'Significant strides in overall stroke recovery, patient more confident.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (408, '2024-02-07T09:00', 134, 44, 39, 'Patient actively participating in more complex rehabilitation activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (409, '2024-02-12T09:00', 138, 44, 39, 'Continued gains in cognitive and motor functions, patient more self-reliant.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (410, '2024-02-14T09:00', 129, 44, 39, 'Excellent recovery pace, patient resuming more normal activities.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (411, '2024-02-15T09:00', 131, 44, 39, 'Focus on refining skills for maximum independence and quality of life.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (412, '2024-02-19T09:00', 138, 44, 39, 'Patient''s resilience evident, near-complete recovery from stroke effects.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (413, '2024-02-20T09:00', 134, 44, 39, 'Therapy focusing on long-term maintenance of health and skills.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (414, '2024-02-21T09:00', 138, 44, 39, 'Full recovery from stroke, patient advised on lifestyle adjustments and preventive measures.'); --#8D2H9, 34
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (415, '2024-01-17T10:00', 146, 4, 40, 'Initial assessment done, started with gentle stretching.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (416, '2024-01-22T10:00', 139, 4, 40, 'Slight improvement in movement, pain management strategies in place.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (417, '2024-01-24T10:00', 144, 4, 40, 'Patient shows increased range of motion, exercises intensified.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (418, '2024-01-26T10:00', 144, 4, 40, 'Further improvement in shoulder flexibility.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (419, '2024-01-29T10:00', 144, 4, 40, 'Patient can perform daily activities with less discomfort.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (420, '2024-01-31T10:00', 144, 4, 40, 'Significant gains in mobility, therapy progressing well.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (421, '2024-02-01T10:00', 148, 4, 40, 'Continued improvement, focusing on strengthening.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (422, '2024-02-05T10:00', 139, 4, 40, 'Patient reports much less pain, improved sleep quality.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (423, '2024-02-06T10:00', 146, 4, 40, 'Near-normal range of motion achieved.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (424, '2024-02-09T10:00', 144, 4, 40, 'Excellent progress, maintain stretching and strengthening exercises.'); --#7Z8V8, 2
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (425, '2024-01-08T18:00', 147, 48, 41, 'Initiated gentle exercises tailored for joint mobility.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (426, '2024-01-09T18:00', 147, 48, 41, 'Patient reports reduced pain, especially in the mornings.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (427, '2024-01-12T18:00', 128, 48, 41, 'Good progress, introduced more dynamic exercises.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (428, '2024-01-15T18:00', 147, 48, 41, 'Notable improvement in joint flexibility and strength.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (429, '2024-01-18T18:00', 147, 48, 41, 'Patient managing daily activities with less discomfort.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (430, '2024-01-19T18:00', 147, 48, 41, 'Continued improvement, exercises becoming more challenging.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (431, '2024-01-22T18:00', 147, 48, 41, 'Significant gains in joint function, pain management effective.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (432, '2024-01-24T18:00', 128, 48, 41, 'Excellent progress, patient to maintain exercise routine for long-term benefits.'); --#7R3N6, 11
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (433, '2023-12-26T18:00', 127, 95, 42, 'Initiated muscle strengthening exercises, patient adapting well.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (434, '2023-12-28T18:00', 136, 95, 42, 'Patient shows early signs of muscle tone improvement.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (435, '2024-01-01T18:00', 127, 95, 42, 'Good progress, focusing on resistance training for muscle growth.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (436, '2024-01-03T18:00', 136, 95, 42, 'Notable improvement in muscle strength, reduced atrophy signs.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (437, '2024-01-08T18:00', 136, 95, 42, 'Patient able to perform exercises with increased resistance.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (438, '2024-01-10T18:00', 136, 95, 42, 'Continued improvement in muscle mass and function.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (439, '2024-01-12T18:00', 127, 95, 42, 'Significant gains in overall muscle tone and strength.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (440, '2024-01-15T18:00', 127, 95, 42, 'Excellent progress in preventing muscle atrophy, patient advised on long-term fitness strategies.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (441, '2024-01-10T08:00', 128, 84, 43, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (442, '2024-01-11T08:00', 147, 84, 43, 'Slight reduction in joint pain and swelling.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (443, '2024-01-12T08:00', 128, 84, 43, 'Patient shows progress in mobility, continuing with prescribed exercises.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (444, '2024-01-15T08:00', 128, 84, 43, 'Further gains in joint function, reduced discomfort.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (445, '2024-01-18T08:00', 128, 84, 43, 'Patient reports significant reduction in pain during movement.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (446, '2024-01-22T08:00', 128, 84, 43, 'Continued improvement, focusing on strengthening surrounding muscles.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (447, '2024-01-25T08:00', 147, 84, 43, 'Significant reduction in inflammation and pain.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (448, '2024-01-26T08:00', 147, 84, 43, 'Joint function nearly back to normal, advised on preventive strategies.'); --#4N8P5, 10
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (449, '2024-01-15T08:00', 132, 86, 44, 'Initial evaluation complete, begun with basic knee stabilization exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (450, '2024-01-17T08:00', 137, 86, 44, 'Patient shows early progress in knee stability, continued with light exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (451, '2024-01-19T08:00', 142, 86, 44, 'Slight improvement in knee strength, introduced balance exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (452, '2024-01-22T08:00', 137, 86, 44, 'Good progress in range of motion, pain reduction noticeable.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (453, '2024-01-24T08:00', 140, 86, 44, 'Patient tolerating increased exercise intensity well, improved stability.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (454, '2024-01-26T08:00', 126, 86, 44, 'Continued gains in knee function, focusing on strengthening.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (455, '2024-01-29T08:00', 144, 86, 44, 'Significant improvement in knee mobility and strength.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (456, '2024-01-30T08:00', 126, 86, 44, 'Patient beginning to perform more dynamic movements.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (457, '2024-02-02T08:00', 130, 86, 44, 'Further improvement in stability, pain management effective.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (458, '2024-02-05T08:00', 130, 86, 44, 'Knee strength and stability much improved, introduced light jogging.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (459, '2024-02-06T08:00', 126, 86, 44, 'Patient reports increased confidence in knee function.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (460, '2024-02-09T08:00', 135, 86, 44, 'Good tolerance to higher intensity and impact exercises.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (461, '2024-02-12T08:00', 144, 86, 44, 'Significant gains in overall knee function, focusing on agility.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (462, '2024-02-14T08:00', 142, 86, 44, 'Patient performing sports-specific exercises with ease.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (463, '2024-02-16T08:00', 146, 86, 44, 'Continued progress, knee nearly at pre-injury strength.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (464, '2024-02-19T08:00', 139, 86, 44, 'Excellent recovery, patient able to perform high-impact activities.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (465, '2024-02-21T08:00', 148, 86, 44, 'Focus on maintaining knee health and preventing re-injury.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (466, '2024-02-26T08:00', 132, 86, 44, 'Patient''s knee function fully restored, excellent progress.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (467, '2024-02-28T08:00', 141, 86, 44, 'Rehabilitation almost complete, patient performing all activities without issue.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (468, '2024-02-29T08:00', 126, 86, 44, 'Complete recovery from ACL injury, advised on long-term knee care.'); --#3H4O2, 12
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (469, '2024-01-05T17:00', 139, 2, 45, 'Initial assessment completed, beginning targeted exercises for spinal alignment.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (470, '2024-01-08T17:00', 148, 2, 45, 'Patient is adapting well to exercises, showing early signs of improved posture.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (471, '2024-01-10T17:00', 135, 2, 45, 'Notable progress in spinal alignment, patient demonstrates increased awareness of posture.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (472, '2024-01-11T17:00', 130, 2, 45, 'Continued improvement in alignment, encouraged by patient''s commitment to exercises.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (473, '2024-01-12T17:00', 143, 2, 45, 'Significant reduction in discomfort, spinal curvature showing gradual correction.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (474, '2024-01-15T17:00', 140, 2, 45, 'Patient''s flexibility and range of motion have improved, exercises are being well maintained.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (475, '2024-01-16T17:00', 141, 2, 45, 'Excellent progress, spinal alignment much closer to normal, patient reports less pain.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (476, '2024-01-19T17:00', 148, 2, 45, 'Substantial improvement in scoliosis condition, maintain exercise routine to prevent regression.'); --#5R9N7, 24
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (477, '2024-01-16T12:00', 145, 11, 46, 'Began gentle mobilization exercises, patient tolerating well.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (478, '2024-01-17T12:00', 141, 11, 46, 'Slight improvement in shoulder mobility, continuing with prescribed exercises.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (479, '2024-01-19T12:00', 130, 11, 46, 'Patient showing progress in range of motion, pain slightly reduced.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (480, '2024-01-22T12:00', 137, 11, 46, 'Notable improvement in shoulder strength, exercises becoming more challenging.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (481, '2024-01-25T12:00', 130, 11, 46, 'Patient reports less discomfort, improved daily function.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (482, '2024-01-29T12:00', 143, 11, 46, 'Continued progress, increased exercise intensity.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (483, '2024-02-01T12:00', 126, 11, 46, 'Significant improvement in mobility and strength.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (484, '2024-02-05T12:00', 141, 11, 46, 'Patient can perform most exercises with minimal discomfort.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (485, '2024-02-08T12:00', 137, 11, 46, 'Further gains in shoulder function, pain management effective.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (486, '2024-02-12T12:00', 126, 11, 46, 'Almost full range of motion achieved, focusing on muscle strengthening.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (487, '2024-02-14T12:00', 146, 11, 46, 'Patient reports minimal pain, excellent progress in rehabilitation.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (488, '2024-02-19T12:00', 146, 11, 46, 'Shoulder function nearly restored to pre-injury level, continue maintenance exercises.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (489, '2024-01-10T08:00', 146, 71, 47, 'Began with gentle core strengthening and flexibility exercises.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (490, '2024-01-11T08:00', 135, 71, 47, 'Patient reports reduced lower back pain, improved posture.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (491, '2024-01-12T08:00', 148, 71, 47, 'Good progress, introduced modified Pilates exercises.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (492, '2024-01-15T08:00', 135, 71, 47, 'Notable improvement in core strength, reduced sciatic symptoms.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (493, '2024-01-18T08:00', 140, 71, 47, 'Patient able to perform daily activities with less pain.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (494, '2024-01-22T08:00', 142, 71, 47, 'Continued gains in back function, focusing on stability exercises.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (495, '2024-01-25T08:00', 142, 71, 47, 'Significant reduction in back pain, improved spinal alignment.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (496, '2024-01-26T08:00', 139, 71, 47, 'Patient reports increased overall mobility and comfort.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (497, '2024-01-29T08:00', 148, 71, 47, 'Continued improvement, enhanced core stability.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (498, '2024-02-01T08:00', 141, 71, 47, 'Excellent progress, patient reports minimal discomfort.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (499, '2024-02-02T08:00', 126, 71, 47, 'Focus now on maintaining back health and preventing re-injury.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (500, '2024-02-05T08:00', 144, 71, 47, 'Patient''s back function significantly improved, pain well managed.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (501, '2024-02-08T08:00', 135, 71, 47, 'Near-complete recovery, patient performing most activities comfortably.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (502, '2024-02-09T08:00', 141, 71, 47, 'Full recovery from herniated disc, long-term management plan in place.'); --#3N4P6, 21
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (503, '2024-01-15T10:00', 126, 25, 48, 'Initiated therapy with basic ankle mobilization.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (504, '2024-01-17T10:00', 148, 25, 48, 'Patient reports reduced swelling and pain, improvement in stability.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (505, '2024-01-22T10:00', 137, 25, 48, 'Good progress, introduced balance and proprioception exercises.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (506, '2024-01-23T10:00', 142, 25, 48, 'Notable gains in ankle strength and mobility.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (507, '2024-01-25T10:00', 145, 25, 48, 'Patient able to perform daily activities with less discomfort.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (508, '2024-01-26T10:00', 141, 25, 48, 'Continued improvement, focusing on dynamic movements.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (509, '2024-01-29T10:00', 126, 25, 48, 'Significant improvement in ankle function, pain well managed.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (510, '2024-02-01T10:00', 145, 25, 48, 'Ankle nearly back to pre-injury level, advised on preventive exercises.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (511, '2024-01-08T11:00', 135, 92, 49, 'Began gentle mobilization exercises, patient tolerating well.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (512, '2024-01-10T11:00', 139, 92, 49, 'Slight improvement in shoulder mobility, continuing with prescribed exercises.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (513, '2024-01-11T11:00', 144, 92, 49, 'Patient showing progress in range of motion, pain slightly reduced.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (514, '2024-01-15T11:00', 130, 92, 49, 'Notable improvement in shoulder strength, exercises becoming more challenging.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (515, '2024-01-17T11:00', 146, 92, 49, 'Patient reports less discomfort, improved daily function.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (516, '2024-01-19T11:00', 140, 92, 49, 'Continued progress, increased exercise intensity.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (517, '2024-01-22T11:00', 146, 92, 49, 'Significant improvement in mobility and strength.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (518, '2024-01-25T11:00', 135, 92, 49, 'Patient can perform most exercises with minimal discomfort.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (519, '2024-01-29T11:00', 137, 92, 49, 'Further gains in shoulder function, pain management effective.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (520, '2024-01-31T11:00', 126, 92, 49, 'Almost full range of motion achieved, focusing on muscle strengthening.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (521, '2024-02-05T11:00', 145, 92, 49, 'Patient reports minimal pain, excellent progress in rehabilitation.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (522, '2024-02-06T11:00', 144, 92, 49, 'Shoulder function nearly restored to pre-injury level, continue maintenance exercises.'); --#5G3Y4, 1
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (523, '2024-01-01T13:00', 145, 94, 50, 'Began therapy with gentle cervical mobilization.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (524, '2024-01-02T13:00', 130, 94, 50, 'Patient reports reduced neck pain and stiffness.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (525, '2024-01-04T13:00', 145, 94, 50, 'Good progress, introduced neck strengthening exercises.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (526, '2024-01-08T13:00', 142, 94, 50, 'Notable improvement in neck mobility and reduced discomfort.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (527, '2024-01-11T13:00', 144, 94, 50, 'Patient able to perform daily tasks with greater ease.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (528, '2024-01-12T13:00', 141, 94, 50, 'Continued improvement in neck function, focusing on flexibility.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (529, '2024-01-15T13:00', 130, 94, 50, 'Significant gains in cervical range of motion and strength.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (530, '2024-01-16T13:00', 132, 94, 50, 'Patient reports minimal neck pain, improved overall function.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (531, '2024-01-18T13:00', 130, 94, 50, 'Continued progress, neck nearly back to pre-injury level.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (532, '2024-01-22T13:00', 130, 94, 50, 'Full recovery from whiplash, patient advised on preventive strategies.'); --#8H6H1, 27
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (533, '2024-01-15T18:00', 147, 33, 51, 'Initiated therapy focusing on pain relief and muscle relaxation.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (534, '2024-01-18T18:00', 128, 33, 51, 'Patient reports less muscle pain, improved sleep quality.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (535, '2024-01-19T18:00', 147, 33, 51, 'Good progress, introduced therapeutic exercises for pain management.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (536, '2024-01-22T18:00', 147, 33, 51, 'Notable reduction in chronic muscle pain, patient more active.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (537, '2024-01-25T18:00', 147, 33, 51, 'Patient engaging in daily tasks with greater ease and comfort.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (538, '2024-01-29T18:00', 128, 33, 51, 'Continued improvement in managing chronic pain.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (539, '2024-02-01T18:00', 128, 33, 51, 'Significant relief from muscle pain, patient advised on long-term pain management strategies.'); --#2K6H8, 37
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (540, '2023-12-21T15:00', 142, 85, 52, 'Initiated therapy with gentle stretching and strengthening.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (541, '2023-12-25T15:00', 135, 85, 52, 'Patient reports reduced pain, improved elbow mobility.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (542, '2023-12-26T15:00', 140, 85, 52, 'Progressing with exercises, pain decreasing gradually.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (543, '2023-12-27T15:00', 130, 85, 52, 'Notable improvement in strength, daily activities easier to perform.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (544, '2023-12-29T15:00', 137, 85, 52, 'Continued reduction in pain, especially during wrist movements.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (545, '2024-01-01T15:00', 126, 85, 52, 'Patient able to lift heavier objects with less discomfort.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (546, '2024-01-04T15:00', 141, 85, 52, 'Significant gains in elbow function and strength.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (547, '2024-01-05T15:00', 135, 85, 52, 'Elbow nearly back to normal function, continue with preventive exercises.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (548, '2024-01-11T18:00', 140, 89, 53, 'Assessment completed, initiated posture correction exercises.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (549, '2024-01-15T18:00', 130, 89, 53, 'Patient shows early signs of improved posture, reduced discomfort.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (550, '2024-01-17T18:00', 144, 89, 53, 'Good progress, focusing on strengthening core and back muscles.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (551, '2024-01-18T18:00', 137, 89, 53, 'Notable improvement in posture, reduced neck and back strain.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (552, '2024-01-22T18:00', 146, 89, 53, 'Patient more aware of proper posture, continuing with exercises.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (553, '2024-01-24T18:00', 148, 89, 53, 'Continued improvement, significant reduction in pain and tension.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (554, '2024-01-25T18:00', 130, 89, 53, 'Excellent progress, patient demonstrates much improved posture.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (555, '2024-01-02T13:00', 142, 1, 54, 'Initiated therapy with non-weight bearing exercises.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (556, '2024-01-04T13:00', 130, 1, 54, 'Patient reports reduced pain, slight improvement in mobility.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (557, '2024-01-08T13:00', 148, 1, 54, 'Good progress, introduced gentle weight-bearing activities.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (558, '2024-01-11T13:00', 143, 1, 54, 'Further improvement in function, pain management effective.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (559, '2024-01-12T13:00', 144, 1, 54, 'Patient able to perform daily activities with less discomfort.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (560, '2024-01-15T13:00', 141, 1, 54, 'Continued progress, increased exercise intensity.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (561, '2024-01-16T13:00', 130, 1, 54, 'Significant gains in mobility and strength.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (562, '2024-01-19T13:00', 144, 1, 54, 'Patient performing more dynamic movements comfortably.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (563, '2024-01-22T13:00', 142, 1, 54, 'Excellent progress, focusing on injury prevention.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (564, '2024-01-24T13:00', 132, 1, 54, 'Full recovery from stress fracture, patient advised on bone health.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (565, '2024-01-05T08:00', 144, 17, 55, 'Initiated therapy with basic ankle mobilization.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (566, '2024-01-08T08:00', 146, 17, 55, 'Patient reports reduced swelling and pain, improvement in stability.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (567, '2024-01-11T08:00', 130, 17, 55, 'Good progress, introduced balance and proprioception exercises.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (568, '2024-01-15T08:00', 145, 17, 55, 'Notable gains in ankle strength and mobility.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (569, '2024-01-16T08:00', 145, 17, 55, 'Patient able to perform daily activities with less discomfort.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (570, '2024-01-19T08:00', 137, 17, 55, 'Continued improvement, focusing on dynamic movements.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (571, '2024-01-22T08:00', 146, 17, 55, 'Significant improvement in ankle function, pain well managed.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (572, '2024-01-24T08:00', 130, 17, 55, 'Ankle nearly back to pre-injury level, advised on preventive exercises.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (573, '2024-01-09T14:00', 140, 24, 56, 'Initiated therapy with gentle stretching and strengthening.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (574, '2024-01-12T14:00', 145, 24, 56, 'Patient reports reduced pain, improved elbow mobility.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (575, '2024-01-15T14:00', 144, 24, 56, 'Progressing with exercises, pain decreasing gradually.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (576, '2024-01-18T14:00', 142, 24, 56, 'Notable improvement in strength, daily activities easier to perform.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (577, '2024-01-19T14:00', 126, 24, 56, 'Continued reduction in pain, especially during wrist movements.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (578, '2024-01-22T14:00', 145, 24, 56, 'Patient able to lift heavier objects with less discomfort.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (579, '2024-01-25T14:00', 148, 24, 56, 'Significant gains in elbow function and strength.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (580, '2024-01-26T14:00', 143, 24, 56, 'Elbow nearly back to normal function, continue with preventive exercises.'); --#8I5F5, 4
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (581, '2023-12-29T18:00', 130, 39, 57, 'Started with gentle hip mobilization exercises.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (582, '2024-01-01T18:00', 142, 39, 57, 'Patient reports reduced hip pain, improved mobility.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (583, '2024-01-03T18:00', 135, 39, 57, 'Good progress, introduced hip strengthening exercises.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (584, '2024-01-08T18:00', 143, 39, 57, 'Notable improvement in hip function, pain reducing.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (585, '2024-01-11T18:00', 144, 39, 57, 'Patient able to walk and sit with less discomfort.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (586, '2024-01-15T18:00', 143, 39, 57, 'Continued improvement, focusing on flexibility and strength.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (587, '2024-01-17T18:00', 139, 39, 57, 'Significant reduction in hip pain and inflammation.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (588, '2024-01-18T18:00', 126, 39, 57, 'Hip mobility nearly back to normal, pain well managed.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (589, '2024-01-22T18:00', 132, 39, 57, 'Patient performing all exercises with ease, minimal discomfort.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (590, '2024-01-23T18:00', 146, 39, 57, 'Excellent recovery, advised on long-term hip care.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (591, '2024-01-15T15:00', 139, 80, 58, 'Assessment completed, started with isometric exercises.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (592, '2024-01-17T15:00', 137, 80, 58, 'Patient reports less pain when gripping, improvement in strength.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (593, '2024-01-18T15:00', 130, 80, 58, 'Good progress, introduced more dynamic exercises.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (594, '2024-01-22T15:00', 142, 80, 58, 'Significant reduction in pain, increased grip strength.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (595, '2024-01-24T15:00', 142, 80, 58, 'Patient performing daily tasks more easily.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (596, '2024-01-29T15:00', 140, 80, 58, 'Continued improvement, pain mostly during heavy lifting only.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (597, '2024-01-31T15:00', 135, 80, 58, 'Almost full recovery in function, minimal discomfort.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (598, '2024-02-01T15:00', 144, 80, 58, 'Patient has regained normal elbow function, advised on preventive measures.'); --#1V2V2, 3
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (599, '2024-01-17T09:00', 147, 87, 59, 'Began with relaxation techniques and gentle stretching.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (600, '2024-01-22T09:00', 147, 87, 59, 'Patient reports reduced muscle spasms and tension.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (601, '2024-01-24T09:00', 147, 87, 59, 'Good progress, focusing on stress reduction and muscle relaxation.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (602, '2024-01-26T09:00', 128, 87, 59, 'Notable improvement in managing muscle spasms, patient more comfortable.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (603, '2024-01-29T09:00', 147, 87, 59, 'Patient able to engage in activities with less muscle tension.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (604, '2024-02-01T09:00', 128, 87, 59, 'Significant improvement in quality of life, muscle spasms well managed.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (605, '2024-01-12T10:00', 136, 29, 60, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (606, '2024-01-15T10:00', 127, 29, 60, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (607, '2024-01-17T10:00', 127, 29, 60, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (608, '2024-01-18T10:00', 127, 29, 60, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (609, '2024-01-22T10:00', 136, 29, 60, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (610, '2024-01-25T10:00', 136, 29, 60, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (611, '2024-01-29T10:00', 136, 29, 60, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (612, '2024-01-30T10:00', 136, 29, 60, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (613, '2024-02-02T10:00', 136, 29, 60, 'Further gains in independence, improved quality of life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (614, '2024-02-05T10:00', 136, 29, 60, 'Excellent adherence to therapy, notable improvement in speech clarity.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (615, '2024-02-06T10:00', 136, 29, 60, 'Continued progress, patient showing greater mobility and agility.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (616, '2024-02-09T10:00', 127, 29, 60, 'Significant improvement in cognitive functions, better problem-solving skills.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (617, '2024-02-12T10:00', 136, 29, 60, 'Patient more confident in performing daily activities independently.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (618, '2024-02-15T10:00', 127, 29, 60, 'Continued gains in fine motor skills, hand-eye coordination improved.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (619, '2024-02-16T10:00', 127, 29, 60, 'Significant strides in stroke recovery, patient more active and engaged.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (620, '2024-02-19T10:00', 136, 29, 60, 'Excellent progress, patient regaining more normalcy in life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (621, '2024-02-20T10:00', 127, 29, 60, 'Focus now on refining skills and maximizing independence.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (622, '2024-02-23T10:00', 127, 29, 60, 'Patient''s recovery well ahead of expectations, near-complete functional restoration.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (623, '2024-02-26T10:00', 127, 29, 60, 'Continued therapy focusing on long-term maintenance and health.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (624, '2024-02-28T10:00', 127, 29, 60, 'Full recovery from stroke effects, patient advised on preventive measures and lifestyle adjustments.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (625, '2024-01-01T18:00', 145, 18, 61, 'Began with basic knee mobilization, patient tolerating well.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (626, '2024-01-02T18:00', 135, 18, 61, 'Slight improvement in knee movement, pain management effective.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (627, '2024-01-03T18:00', 126, 18, 61, 'Patient shows progress in strength, introduced more dynamic exercises.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (628, '2024-01-04T18:00', 144, 18, 61, 'Notable improvement in knee function, reduced discomfort.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (629, '2024-01-05T18:00', 145, 18, 61, 'Patient able to perform daily activities with less pain.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (630, '2024-01-08T18:00', 146, 18, 61, 'Continued progress, focusing on knee stability.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (631, '2024-01-09T18:00', 140, 18, 61, 'Significant gains in knee mobility and strength.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (632, '2024-01-11T18:00', 132, 18, 61, 'Knee function nearly back to normal, continue with strengthening exercises.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (633, '2024-01-16T16:00', 127, 15, 62, 'Initiated post-operative exercises, patient tolerating well.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (634, '2024-01-19T16:00', 127, 15, 62, 'Patient shows early signs of recovery, improved mobility.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (635, '2024-01-22T16:00', 127, 15, 62, 'Good progress, focusing on regaining strength in affected area.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (636, '2024-01-25T16:00', 136, 15, 62, 'Notable improvement in surgical recovery, reduced pain.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (637, '2024-01-26T16:00', 136, 15, 62, 'Patient able to engage in light activities with less discomfort.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (638, '2024-01-29T16:00', 127, 15, 62, 'Continued gains in function, focusing on range of motion.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (639, '2024-02-01T16:00', 127, 15, 62, 'Significant improvement in post-operative recovery.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (640, '2024-02-05T16:00', 127, 15, 62, 'Patient performing more dynamic activities comfortably.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (641, '2024-02-08T16:00', 136, 15, 62, 'Continued progress, excellent adherence to rehabilitation plan.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (642, '2024-02-12T16:00', 136, 15, 62, 'Near-complete recovery, focusing on functional movements.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (643, '2024-02-15T16:00', 127, 15, 62, 'Patient shows great resilience, almost fully recovered.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (644, '2024-02-16T16:00', 127, 15, 62, 'Full recovery from surgery, patient advised on long-term care and maintenance.'); --#3J6K2, 28
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (645, '2023-12-21T10:00', 148, 32, 63, 'Began therapy with gentle calf and shin stretching.'); --#7P3Y5, 15
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (646, '2023-12-25T10:00', 143, 32, 63, 'Patient reports less shin pain during walking, good progress.'); --#7P3Y5, 15
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (647, '2023-12-27T10:00', 132, 32, 63, 'Continued improvement, focusing on strengthening lower leg muscles.'); --#7P3Y5, 15
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (648, '2023-12-29T10:00', 148, 32, 63, 'Notable reduction in discomfort, introduced impact control exercises.'); --#7P3Y5, 15
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (649, '2024-01-01T10:00', 142, 32, 63, 'Patient able to engage in light jogging with minimal pain.'); --#7P3Y5, 15
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (650, '2024-01-04T10:00', 145, 32, 63, 'Excellent recovery, advised on proper footwear and running techniques.'); --#7P3Y5, 15
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (651, '2024-01-08T10:00', 126, 22, 64, 'Assessment completed, initiated posture correction exercises.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (652, '2024-01-09T10:00', 139, 22, 64, 'Patient shows early signs of improved posture, reduced discomfort.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (653, '2024-01-12T10:00', 139, 22, 64, 'Good progress, focusing on strengthening core and back muscles.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (654, '2024-01-15T10:00', 130, 22, 64, 'Notable improvement in posture, reduced neck and back strain.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (655, '2024-01-18T10:00', 132, 22, 64, 'Patient more aware of proper posture, continuing with exercises.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (656, '2024-01-22T10:00', 139, 22, 64, 'Continued improvement, significant reduction in pain and tension.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (657, '2024-01-25T10:00', 146, 22, 64, 'Excellent progress, patient demonstrates much improved posture.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (658, '2024-01-12T12:00', 143, 10, 65, 'Initial assessment completed, started with stretching and foam rolling.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (659, '2024-01-15T12:00', 143, 10, 65, 'Patient reports reduced hip and knee pain, improvement in mobility.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (660, '2024-01-18T12:00', 130, 10, 65, 'Good progress, introduced strengthening exercises for hip muscles.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (661, '2024-01-22T12:00', 140, 10, 65, 'Notable reduction in pain, increased exercise intensity.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (662, '2024-01-23T12:00', 130, 10, 65, 'Patient performing daily activities more comfortably.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (663, '2024-01-24T12:00', 143, 10, 65, 'Continued improvement, focusing on flexibility and strength.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (664, '2024-01-29T12:00', 140, 10, 65, 'Significant gains in hip and knee function.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (665, '2024-02-01T12:00', 140, 10, 65, 'Symptoms greatly reduced, advised on long-term care and prevention.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (666, '2024-01-09T19:00', 136, 78, 66, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (667, '2024-01-12T19:00', 127, 78, 66, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (668, '2024-01-15T19:00', 127, 78, 66, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (669, '2024-01-16T19:00', 127, 78, 66, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (670, '2024-01-18T19:00', 127, 78, 66, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (671, '2024-01-22T19:00', 127, 78, 66, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (672, '2024-01-24T19:00', 127, 78, 66, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (673, '2024-01-26T19:00', 127, 78, 66, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (674, '2024-01-29T19:00', 127, 78, 66, 'Further gains in independence, improved quality of life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (675, '2024-01-31T19:00', 127, 78, 66, 'Excellent adherence to therapy, notable improvement in speech clarity.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (676, '2024-02-01T19:00', 136, 78, 66, 'Continued progress, patient showing greater mobility and agility.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (677, '2024-02-05T19:00', 127, 78, 66, 'Significant improvement in cognitive functions, better problem-solving skills.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (678, '2024-02-07T19:00', 127, 78, 66, 'Patient more confident in performing daily activities independently.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (679, '2024-02-08T19:00', 127, 78, 66, 'Continued gains in fine motor skills, hand-eye coordination improved.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (680, '2024-02-12T19:00', 136, 78, 66, 'Significant strides in stroke recovery, patient more active and engaged.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (681, '2024-02-15T19:00', 136, 78, 66, 'Excellent progress, patient regaining more normalcy in life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (682, '2024-02-19T19:00', 136, 78, 66, 'Focus now on refining skills and maximizing independence.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (683, '2024-02-20T19:00', 136, 78, 66, 'Patient''s recovery well ahead of expectations, near-complete functional restoration.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (684, '2024-02-23T19:00', 136, 78, 66, 'Continued therapy focusing on long-term maintenance and health.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (685, '2024-02-26T19:00', 136, 78, 66, 'Full recovery from stroke effects, patient advised on preventive measures and lifestyle adjustments.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (686, '2024-01-11T13:00', 146, 5, 67, 'Assessment completed, initiated posture correction exercises.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (687, '2024-01-12T13:00', 142, 5, 67, 'Patient shows early signs of improved posture, reduced discomfort.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (688, '2024-01-15T13:00', 148, 5, 67, 'Good progress, focusing on strengthening core and back muscles.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (689, '2024-01-17T13:00', 141, 5, 67, 'Notable improvement in posture, reduced neck and back strain.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (690, '2024-01-22T13:00', 142, 5, 67, 'Patient more aware of proper posture, continuing with exercises.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (691, '2024-01-24T13:00', 141, 5, 67, 'Continued improvement, significant reduction in pain and tension.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (692, '2024-01-25T13:00', 146, 5, 67, 'Excellent progress, patient demonstrates much improved posture.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (693, '2024-01-05T19:00', 129, 7, 68, 'Began with gentle core and back strengthening exercises.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (694, '2024-01-08T19:00', 138, 7, 68, 'Patient reports reduced back pain, especially after prolonged sitting.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (695, '2024-01-11T19:00', 129, 7, 68, 'Good progress, increased exercise intensity for back strength.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (696, '2024-01-15T19:00', 134, 7, 68, 'Notable improvement in pain management and flexibility.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (697, '2024-01-17T19:00', 129, 7, 68, 'Patient performing daily tasks with greater ease and less discomfort.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (698, '2024-01-22T19:00', 131, 7, 68, 'Continued gains in back function, focusing on posture correction.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (699, '2024-01-24T19:00', 131, 7, 68, 'Significant reduction in chronic pain, improved spinal health.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (700, '2024-01-29T19:00', 134, 7, 68, 'Patient reports increased overall mobility and quality of life.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (701, '2024-02-01T19:00', 131, 7, 68, 'Continued improvement, back pain well managed.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (702, '2024-02-02T19:00', 129, 7, 68, 'Excellent progress, advised on long-term strategies to manage back pain.'); --#4W3F2, 23
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (703, '2024-01-01T17:00', 134, 93, 69, 'Initiated post-operative exercises, patient tolerating well.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (704, '2024-01-04T17:00', 134, 93, 69, 'Patient shows early signs of recovery, improved mobility.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (705, '2024-01-08T17:00', 131, 93, 69, 'Good progress, focusing on regaining strength in affected area.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (706, '2024-01-09T17:00', 134, 93, 69, 'Notable improvement in surgical recovery, reduced pain.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (707, '2024-01-12T17:00', 138, 93, 69, 'Patient able to engage in light activities with less discomfort.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (708, '2024-01-15T17:00', 129, 93, 69, 'Continued gains in function, focusing on range of motion.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (709, '2024-01-18T17:00', 138, 93, 69, 'Significant improvement in post-operative recovery.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (710, '2024-01-19T17:00', 129, 93, 69, 'Patient performing more dynamic activities comfortably.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (711, '2024-01-22T17:00', 138, 93, 69, 'Continued progress, excellent adherence to rehabilitation plan.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (712, '2024-01-24T17:00', 129, 93, 69, 'Near-complete recovery, focusing on functional movements.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (713, '2024-01-26T17:00', 131, 93, 69, 'Patient shows great resilience, almost fully recovered.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (714, '2024-01-29T17:00', 138, 93, 69, 'Full recovery from surgery, patient advised on long-term care and maintenance.'); --#5I9K8, 35
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (715, '2023-12-25T12:00', 127, 21, 70, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (716, '2023-12-27T12:00', 127, 21, 70, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (717, '2024-01-01T12:00', 127, 21, 70, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (718, '2024-01-03T12:00', 136, 21, 70, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (719, '2024-01-08T12:00', 127, 21, 70, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (720, '2024-01-11T12:00', 136, 21, 70, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (721, '2024-01-12T12:00', 127, 21, 70, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (722, '2024-01-15T12:00', 136, 21, 70, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (723, '2024-01-16T12:00', 127, 21, 70, 'Further gains in independence, improved quality of life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (724, '2024-01-19T12:00', 136, 21, 70, 'Excellent adherence to therapy, notable improvement in speech clarity.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (725, '2024-01-22T12:00', 136, 21, 70, 'Continued progress, patient showing greater mobility and agility.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (726, '2024-01-25T12:00', 136, 21, 70, 'Significant improvement in cognitive functions, better problem-solving skills.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (727, '2024-01-26T12:00', 136, 21, 70, 'Patient more confident in performing daily activities independently.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (728, '2024-01-29T12:00', 127, 21, 70, 'Continued gains in fine motor skills, hand-eye coordination improved.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (729, '2024-01-31T12:00', 127, 21, 70, 'Significant strides in stroke recovery, patient more active and engaged.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (730, '2024-02-02T12:00', 127, 21, 70, 'Excellent progress, patient regaining more normalcy in life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (731, '2024-02-05T12:00', 136, 21, 70, 'Focus now on refining skills and maximizing independence.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (732, '2024-02-07T12:00', 136, 21, 70, 'Patient''s recovery well ahead of expectations, near-complete functional restoration.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (733, '2024-02-08T12:00', 136, 21, 70, 'Continued therapy focusing on long-term maintenance and health.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (734, '2024-02-09T12:00', 127, 21, 70, 'Full recovery from stroke effects, patient advised on preventive measures and lifestyle adjustments.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (735, '2023-12-21T19:00', 143, 20, 71, 'Initial assessment completed, started with stretching and foam rolling.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (736, '2023-12-22T19:00', 137, 20, 71, 'Patient reports reduced hip and knee pain, improvement in mobility.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (737, '2023-12-25T19:00', 146, 20, 71, 'Good progress, introduced strengthening exercises for hip muscles.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (738, '2023-12-27T19:00', 145, 20, 71, 'Notable reduction in pain, increased exercise intensity.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (739, '2024-01-01T19:00', 148, 20, 71, 'Patient performing daily activities more comfortably.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (740, '2024-01-03T19:00', 132, 20, 71, 'Continued improvement, focusing on flexibility and strength.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (741, '2024-01-05T19:00', 137, 20, 71, 'Significant gains in hip and knee function.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (742, '2024-01-08T19:00', 126, 20, 71, 'Symptoms greatly reduced, advised on long-term care and prevention.'); --#8L2Q4, 14
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (743, '2024-01-10T18:00', 130, 100, 72, 'Began with basic range of motion exercises, patient coping well.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (744, '2024-01-12T18:00', 140, 100, 72, 'Slight improvement in arm movement, pain management effective.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (745, '2024-01-15T18:00', 144, 100, 72, 'Patient shows progress in strength, pain reducing.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (746, '2024-01-18T18:00', 139, 100, 72, 'Further gains in arm function, reduced discomfort.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (747, '2024-01-22T18:00', 126, 100, 72, 'Patient reports much less pain during daily activities.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (748, '2024-01-25T18:00', 145, 100, 72, 'Increased resistance in exercises, good tolerance.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (749, '2024-01-26T18:00', 135, 100, 72, 'Significant improvement in strength and mobility.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (750, '2024-01-29T18:00', 148, 100, 72, 'Patient performing all exercises with ease, minimal pain.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (751, '2024-02-01T18:00', 132, 100, 72, 'Biceps function greatly improved, focus on maintenance.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (752, '2024-02-02T18:00', 140, 100, 72, 'Excellent recovery, patient advised to continue with exercises at home.'); --#4C7X3, 5
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (753, '2024-01-16T16:00', 127, 40, 73, 'Initiated muscle strengthening exercises, patient adapting well.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (754, '2024-01-19T16:00', 127, 40, 73, 'Patient shows early signs of muscle tone improvement.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (755, '2024-01-22T16:00', 127, 40, 73, 'Good progress, focusing on resistance training for muscle growth.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (756, '2024-01-24T16:00', 136, 40, 73, 'Notable improvement in muscle strength, reduced atrophy signs.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (757, '2024-01-25T16:00', 127, 40, 73, 'Patient able to perform exercises with increased resistance.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (758, '2024-01-29T16:00', 136, 40, 73, 'Continued improvement in muscle mass and function.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (759, '2024-02-01T16:00', 136, 40, 73, 'Significant gains in overall muscle tone and strength.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (760, '2024-02-05T16:00', 127, 40, 73, 'Excellent progress in preventing muscle atrophy, patient advised on long-term fitness strategies.'); --#2J6Z7, 30
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (761, '2023-12-22T19:00', 140, 74, 74, 'Began therapy with foot and calf stretching.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (762, '2023-12-25T19:00', 143, 74, 74, 'Patient reports less heel pain, especially in the mornings.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (763, '2023-12-26T19:00', 132, 74, 74, 'Good progress, introduced strengthening exercises for foot arch.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (764, '2023-12-28T19:00', 148, 74, 74, 'Notable reduction in heel pain, arch support exercises effective.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (765, '2024-01-01T19:00', 132, 74, 74, 'Patient performing daily activities with less discomfort.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (766, '2024-01-04T19:00', 144, 74, 74, 'Continued improvement in foot function, focusing on flexibility.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (767, '2024-01-05T19:00', 139, 74, 74, 'Significant gains in foot strength and mobility.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (768, '2024-01-08T19:00', 146, 74, 74, 'Excellent recovery, patient advised to continue with supportive footwear.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (769, '2024-01-04T08:00', 145, 91, 75, 'Initiated therapy with basic ankle mobilization.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (770, '2024-01-08T08:00', 142, 91, 75, 'Patient reports reduced swelling and pain, improvement in stability.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (771, '2024-01-09T08:00', 139, 91, 75, 'Good progress, introduced balance and proprioception exercises.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (772, '2024-01-11T08:00', 130, 91, 75, 'Notable gains in ankle strength and mobility.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (773, '2024-01-15T08:00', 143, 91, 75, 'Patient able to perform daily activities with less discomfort.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (774, '2024-01-16T08:00', 142, 91, 75, 'Continued improvement, focusing on dynamic movements.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (775, '2024-01-17T08:00', 148, 91, 75, 'Significant improvement in ankle function, pain well managed.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (776, '2024-01-18T08:00', 132, 91, 75, 'Ankle nearly back to pre-injury level, advised on preventive exercises.'); --#6W1E6, 18
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (777, '2024-01-03T11:00', 147, 77, 76, 'Began with relaxation techniques and gentle stretching.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (778, '2024-01-05T11:00', 128, 77, 76, 'Patient reports reduced muscle spasms and tension.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (1, '2024-01-12T15:00', 134, 90, 1, 'Initiated post-operative exercises, patient tolerating well.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (2, '2024-01-15T15:00', 129, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (3, '2024-01-18T15:00', 138, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (4, '2024-01-22T15:00', 138, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (5, '2024-01-24T15:00', 131, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (6, '2024-01-26T15:00', 131, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (7, '2024-01-29T15:00', 131, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (8, '2024-01-31T15:00', 138, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (9, '2024-02-02T15:00', 138, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (10, '2024-02-05T15:00', 138, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (11, '2024-02-06T15:00', 131, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (12, '2024-02-07T15:00', 138, 90, 1, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (13, '2024-01-08T18:00', 149, 83, 2, 'Began therapy with gentle stretching, pain management strategies in place.'); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (14, '2024-01-09T18:00', 150, 83, 2, 'Slight reduction in tenderness, patient tolerating exercises well.'); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (15, '2024-01-12T18:00', 149, 83, 2, 'Patient shows progress in pain reduction and mobility.'); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (16, '2024-01-15T18:00', 150, 83, 2, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (17, '2024-01-16T18:00', 133, 83, 2, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (18, '2024-01-17T18:00', 149, 83, 2, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (19, '2024-01-22T18:00', 149, 83, 2, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (20, '2024-01-23T18:00', 150, 83, 2, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (21, '2024-01-25T18:00', 149, 83, 2, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (22, '2024-01-29T18:00', 149, 83, 2, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (23, '2024-01-11T18:00', 150, 47, 3, 'Began with injury assessment and basic mobility exercises.'); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (24, '2024-01-12T18:00', 149, 47, 3, 'Patient shows early signs of recovery, reduced pain.'); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (25, '2024-01-15T18:00', 149, 47, 3, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (26, '2024-01-17T18:00', 149, 47, 3, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (27, '2024-01-19T18:00', 133, 47, 3, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (28, '2024-01-22T18:00', 133, 47, 3, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (29, '2024-01-24T18:00', 133, 47, 3, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (30, '2024-01-25T18:00', 133, 47, 3, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (31, '2024-01-04T09:00', 146, 42, 4, 'Initiated gentle calf and Achilles stretching.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (32, '2024-01-08T09:00', 142, 42, 4, 'Patient reports less stiffness and pain in Achilles tendon.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (33, '2024-01-11T09:00', 146, 42, 4, 'Good progress, increased exercise intensity for tendon strength.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (34, '2024-01-12T09:00', 144, 42, 4, 'Notable improvement in flexibility and pain reduction.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (35, '2024-01-15T09:00', 146, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (36, '2024-01-16T09:00', 145, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (37, '2024-01-17T09:00', 148, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (38, '2024-01-22T09:00', 130, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (39, '2024-01-25T09:00', 135, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (40, '2024-01-29T09:00', 142, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (41, '2024-02-01T09:00', 132, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (42, '2024-02-05T09:00', 141, 42, 4, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (43, '2024-01-01T14:00', 149, 27, 5, 'Initiated post-operative care, focusing on reducing swelling.'); --#5M8P4, 32
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (44, '2024-01-04T14:00', 150, 27, 5, 'Patient shows reduction in swelling, improved comfort.'); --#5M8P4, 32
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (45, '2024-01-08T14:00', 149, 27, 5, 'Good progress, continued with gentle mobilization exercises.'); --#5M8P4, 32
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (46, '2024-01-10T14:00', 149, 27, 5, 'Notable decrease in post-operative swelling, increased range of motion.'); --#5M8P4, 32
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (47, '2024-01-11T14:00', 150, 27, 5, 'Patient reports less discomfort, better overall function.'); --#5M8P4, 32
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (48, '2024-01-12T14:00', 133, 27, 5, 'Excellent recovery, swelling significantly reduced, continue with maintenance exercises.'); --#5M8P4, 32
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (49, '2024-01-15T11:00', 139, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (50, '2024-01-17T11:00', 141, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (51, '2024-01-19T11:00', 143, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (52, '2024-01-22T11:00', 141, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (53, '2024-01-25T11:00', 140, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (54, '2024-01-29T11:00', 146, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (55, '2024-02-01T11:00', 148, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (56, '2024-02-05T11:00', 137, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (57, '2024-02-06T11:00', 140, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (58, '2024-02-09T11:00', 142, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (59, '2024-02-12T11:00', 141, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (60, '2024-02-14T11:00', 137, 13, 6, ''); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (61, '2023-12-13T08:00', 135, 104, 7, 'Assessment complete, initiated wrist mobility exercises.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (62, '2023-12-14T08:00', 141, 104, 7, 'Patient reports less numbness, improved hand function.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (63, '2023-12-18T08:00', 141, 104, 7, 'Good progress, wrist strength exercises introduced.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (64, '2023-12-19T08:00', 148, 104, 7, 'Notable reduction in nighttime symptoms, ergonomic adjustments helpful.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (65, '2023-12-22T08:00', 126, 104, 7, 'Patient able to perform fine motor tasks more easily.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (66, '2023-12-25T08:00', 142, 104, 7, 'Continued improvement, focusing on flexibility and strength.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (67, '2023-12-28T08:00', 144, 104, 7, 'Significant gains in wrist and hand function.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (68, '2024-01-01T08:00', 146, 104, 7, 'Symptoms greatly reduced, advised on long-term wrist care.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (69, '2023-12-14T10:00', 141, 46, 8, 'Initiated gentle calf and Achilles stretching.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (70, '2023-12-15T10:00', 137, 46, 8, 'Patient reports less stiffness and pain in Achilles tendon.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (71, '2023-12-18T10:00', 146, 46, 8, 'Good progress, increased exercise intensity for tendon strength.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (72, '2023-12-19T10:00', 143, 46, 8, 'Notable improvement in flexibility and pain reduction.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (73, '2023-12-22T10:00', 144, 46, 8, 'Patient able to engage in light jogging with minimal discomfort.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (74, '2023-12-25T10:00', 142, 46, 8, 'Continued gains in Achilles strength, focusing on dynamic exercises.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (75, '2023-12-27T10:00', 146, 46, 8, 'Significant reduction in symptoms, improved tendon function.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (76, '2023-12-29T10:00', 139, 46, 8, 'Patient performing more strenuous activities with ease.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (77, '2024-01-01T10:00', 126, 46, 8, 'Continued improvement, focusing on long-term tendon health.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (78, '2024-01-03T10:00', 141, 46, 8, 'Excellent progress, near-complete recovery in tendon function.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (79, '2024-01-04T10:00', 142, 46, 8, 'Achilles tendon showing great resilience, patient resuming most activities.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (80, '2024-01-08T10:00', 135, 46, 8, 'Full recovery from Achilles tendinitis, advised on preventive measures.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (81, '2024-01-10T13:00', 147, 68, 9, 'Initiated therapy focusing on pain relief and muscle relaxation.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (82, '2024-01-12T13:00', 128, 68, 9, 'Patient reports less muscle pain, improved sleep quality.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (83, '2024-01-15T13:00', 147, 68, 9, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (84, '2024-01-16T13:00', 147, 68, 9, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (85, '2024-01-18T13:00', 147, 68, 9, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (86, '2024-01-22T13:00', 128, 68, 9, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (87, '2024-01-23T13:00', 147, 68, 9, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (88, '2023-12-25T13:00', 127, 6, 10, 'Began with pain assessment and gentle exercises.'); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (89, '2023-12-28T13:00', 127, 6, 10, 'Patient reports reduced pain levels, improved mood.'); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (90, '2024-01-01T13:00', 136, 6, 10, 'Good progress, introduced pain coping strategies.'); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (91, '2024-01-02T13:00', 127, 6, 10, 'Notable improvement in managing chronic pain, increased activity level.'); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (92, '2024-01-03T13:00', 136, 6, 10, 'Patient more engaged in daily activities, better pain control.'); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (93, '2024-01-04T13:00', 136, 6, 10, 'Significant improvement in quality of life, pain well managed.'); --#7X4N5, 31
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (94, '2024-01-09T15:00', 149, 76, 11, 'Started with low-impact exercises, patient adapting well.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (95, '2024-01-11T15:00', 133, 76, 11, 'Patient reports reduced joint stiffness, especially in the morning.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (96, '2024-01-15T15:00', 150, 76, 11, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (97, '2024-01-16T15:00', 149, 76, 11, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (98, '2024-01-19T15:00', 149, 76, 11, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (99, '2024-01-22T15:00', 133, 76, 11, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (100, '2024-01-25T15:00', 133, 76, 11, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (101, '2024-01-29T15:00', 133, 76, 11, ''); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (102, '2024-01-15T12:00', 135, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (103, '2024-01-18T12:00', 130, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (104, '2024-01-19T12:00', 148, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (105, '2024-01-22T12:00', 146, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (106, '2024-01-25T12:00', 139, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (107, '2024-01-29T12:00', 148, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (108, '2024-02-01T12:00', 144, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (109, '2024-02-05T12:00', 144, 12, 12, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (110, '2023-12-12T17:00', 134, 9, 13, 'Initiated post-operative exercises, patient tolerating well.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (111, '2023-12-15T17:00', 131, 9, 13, 'Patient shows early signs of recovery, improved mobility.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (112, '2023-12-18T17:00', 129, 9, 13, 'Good progress, focusing on regaining strength in affected area.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (113, '2023-12-21T17:00', 131, 9, 13, 'Notable improvement in surgical recovery, reduced pain.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (114, '2023-12-25T17:00', 138, 9, 13, 'Patient able to engage in light activities with less discomfort.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (115, '2023-12-28T17:00', 134, 9, 13, 'Continued gains in function, focusing on range of motion.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (116, '2024-01-01T17:00', 131, 9, 13, 'Significant improvement in post-operative recovery.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (117, '2024-01-04T17:00', 134, 9, 13, 'Patient performing more dynamic activities comfortably.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (118, '2024-01-05T17:00', 138, 9, 13, 'Continued progress, excellent adherence to rehabilitation plan.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (119, '2024-01-08T17:00', 134, 9, 13, 'Near-complete recovery, focusing on functional movements.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (120, '2024-01-11T17:00', 131, 9, 13, 'Patient shows great resilience, almost fully recovered.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (121, '2024-01-15T17:00', 134, 9, 13, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (122, '2023-12-28T15:00', 127, 75, 14, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (123, '2024-01-01T15:00', 136, 75, 14, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (124, '2024-01-03T15:00', 127, 75, 14, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (125, '2024-01-04T15:00', 127, 75, 14, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (126, '2024-01-08T15:00', 127, 75, 14, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (127, '2024-01-11T15:00', 127, 75, 14, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (128, '2024-01-15T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (129, '2024-01-18T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (130, '2024-01-22T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (131, '2024-01-24T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (132, '2024-01-26T15:00', 127, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (133, '2024-01-29T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (134, '2024-02-01T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (135, '2024-02-05T15:00', 127, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (136, '2024-02-07T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (137, '2024-02-09T15:00', 127, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (138, '2024-02-12T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (139, '2024-02-14T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (140, '2024-02-19T15:00', 127, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (141, '2024-02-21T15:00', 136, 75, 14, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (142, '2024-01-15T19:00', 142, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (143, '2024-01-17T19:00', 132, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (144, '2024-01-18T19:00', 141, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (145, '2024-01-22T19:00', 148, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (146, '2024-01-23T19:00', 137, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (147, '2024-01-26T19:00', 148, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (148, '2024-01-29T19:00', 126, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (149, '2024-02-01T19:00', 126, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (150, '2024-02-05T19:00', 126, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (151, '2024-02-06T19:00', 132, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (152, '2024-02-09T19:00', 142, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (153, '2024-02-12T19:00', 145, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (154, '2024-02-13T19:00', 132, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (155, '2024-02-16T19:00', 145, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (156, '2024-02-19T19:00', 141, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (157, '2024-02-22T19:00', 132, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (158, '2024-02-26T19:00', 145, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (159, '2024-02-28T19:00', 141, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (160, '2024-03-04T19:00', 140, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (161, '2024-03-05T19:00', 140, 3, 15, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (162, '2024-01-11T14:00', 141, 26, 16, 'Began therapy with gentle cervical mobilization.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (163, '2024-01-15T14:00', 139, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (164, '2024-01-17T14:00', 148, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (165, '2024-01-22T14:00', 145, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (166, '2024-01-25T14:00', 132, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (167, '2024-01-26T14:00', 135, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (168, '2024-01-29T14:00', 145, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (169, '2024-01-31T14:00', 141, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (170, '2024-02-05T14:00', 140, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (171, '2024-02-07T14:00', 139, 26, 16, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (172, '2023-12-20T12:00', 146, 50, 17, 'Began with basic range of motion exercises, patient coping well.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (173, '2023-12-22T12:00', 141, 50, 17, 'Slight improvement in arm movement, pain management effective.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (174, '2023-12-25T12:00', 137, 50, 17, 'Patient shows progress in strength, pain reducing.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (175, '2023-12-27T12:00', 137, 50, 17, 'Further gains in arm function, reduced discomfort.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (176, '2024-01-01T12:00', 146, 50, 17, 'Patient reports much less pain during daily activities.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (177, '2024-01-04T12:00', 130, 50, 17, 'Increased resistance in exercises, good tolerance.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (178, '2024-01-08T12:00', 145, 50, 17, 'Significant improvement in strength and mobility.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (179, '2024-01-09T12:00', 139, 50, 17, 'Patient performing all exercises with ease, minimal pain.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (180, '2024-01-10T12:00', 148, 50, 17, 'Biceps function greatly improved, focus on maintenance.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (181, '2024-01-11T12:00', 139, 50, 17, 'Excellent recovery, patient advised to continue with exercises at home.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (182, '2024-01-08T19:00', 147, 43, 18, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (183, '2024-01-10T19:00', 147, 43, 18, 'Slight reduction in joint pain and swelling.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (184, '2024-01-15T19:00', 128, 43, 18, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (185, '2024-01-18T19:00', 128, 43, 18, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (186, '2024-01-22T19:00', 128, 43, 18, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (187, '2024-01-24T19:00', 147, 43, 18, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (188, '2024-01-29T19:00', 128, 43, 18, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (189, '2024-01-30T19:00', 128, 43, 18, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (190, '2023-12-27T19:00', 136, 35, 19, 'Initiated muscle strengthening exercises, patient adapting well.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (191, '2023-12-29T19:00', 127, 35, 19, 'Patient shows early signs of muscle tone improvement.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (192, '2024-01-01T19:00', 127, 35, 19, 'Good progress, focusing on resistance training for muscle growth.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (193, '2024-01-03T19:00', 127, 35, 19, 'Notable improvement in muscle strength, reduced atrophy signs.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (194, '2024-01-08T19:00', 136, 35, 19, 'Patient able to perform exercises with increased resistance.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (195, '2024-01-09T19:00', 127, 35, 19, 'Continued improvement in muscle mass and function.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (196, '2024-01-10T19:00', 136, 35, 19, 'Significant gains in overall muscle tone and strength.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (197, '2024-01-12T19:00', 127, 35, 19, 'Excellent progress in preventing muscle atrophy, patient advised on long-term fitness strategies.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (198, '2023-12-26T13:00', 128, 41, 20, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (199, '2023-12-28T13:00', 147, 41, 20, 'Slight reduction in joint pain and swelling.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (200, '2023-12-29T13:00', 128, 41, 20, 'Patient shows progress in mobility, continuing with prescribed exercises.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (201, '2024-01-01T13:00', 128, 41, 20, 'Further gains in joint function, reduced discomfort.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (202, '2024-01-03T13:00', 128, 41, 20, 'Patient reports significant reduction in pain during movement.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (203, '2024-01-05T13:00', 128, 41, 20, 'Continued improvement, focusing on strengthening surrounding muscles.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (204, '2024-01-08T13:00', 147, 41, 20, 'Significant reduction in inflammation and pain.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (205, '2024-01-10T13:00', 128, 41, 20, 'Joint function nearly back to normal, advised on preventive strategies.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (206, '2024-01-05T09:00', 133, 99, 21, 'Began therapy with gentle stretching, pain management strategies in place.'); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (207, '2024-01-08T09:00', 149, 99, 21, 'Slight reduction in tenderness, patient tolerating exercises well.'); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (208, '2024-01-11T09:00', 150, 99, 21, 'Patient shows progress in pain reduction and mobility.'); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (209, '2024-01-12T09:00', 149, 99, 21, 'Further gains in tendon strength, continuing with progressive exercises.'); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (210, '2024-01-15T09:00', 149, 99, 21, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (211, '2024-01-18T09:00', 149, 99, 21, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (212, '2024-01-22T09:00', 150, 99, 21, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (213, '2024-01-24T09:00', 150, 99, 21, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (214, '2024-01-25T09:00', 150, 99, 21, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (215, '2024-01-26T09:00', 149, 99, 21, ''); --#1G8Z3, 8
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (216, '2024-01-15T17:00', 141, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (217, '2024-01-17T17:00', 146, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (218, '2024-01-22T17:00', 137, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (219, '2024-01-24T17:00', 137, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (220, '2024-01-25T17:00', 146, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (221, '2024-01-29T17:00', 141, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (222, '2024-01-30T17:00', 143, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (223, '2024-02-01T17:00', 145, 105, 22, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (224, '2024-01-11T12:00', 149, 66, 23, 'Began with injury assessment and basic mobility exercises.'); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (225, '2024-01-15T12:00', 133, 66, 23, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (226, '2024-01-18T12:00', 133, 66, 23, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (227, '2024-01-19T12:00', 149, 66, 23, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (228, '2024-01-22T12:00', 149, 66, 23, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (229, '2024-01-24T12:00', 150, 66, 23, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (230, '2024-01-26T12:00', 149, 66, 23, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (231, '2024-01-29T12:00', 150, 66, 23, ''); --#5Z9B5, 33
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (232, '2024-01-10T13:00', 144, 102, 24, 'Initiated therapy with non-weight bearing exercises.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (233, '2024-01-15T13:00', 137, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (234, '2024-01-17T13:00', 145, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (235, '2024-01-22T13:00', 137, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (236, '2024-01-24T13:00', 132, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (237, '2024-01-29T13:00', 132, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (238, '2024-01-31T13:00', 145, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (239, '2024-02-02T13:00', 139, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (240, '2024-02-05T13:00', 144, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (241, '2024-02-08T13:00', 126, 102, 24, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (242, '2023-12-14T11:00', 145, 88, 25, 'Initiated gentle calf and Achilles stretching.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (243, '2023-12-18T11:00', 126, 88, 25, 'Patient reports less stiffness and pain in Achilles tendon.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (244, '2023-12-19T11:00', 148, 88, 25, 'Good progress, increased exercise intensity for tendon strength.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (245, '2023-12-22T11:00', 130, 88, 25, 'Notable improvement in flexibility and pain reduction.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (246, '2023-12-25T11:00', 146, 88, 25, 'Patient able to engage in light jogging with minimal discomfort.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (247, '2023-12-27T11:00', 141, 88, 25, 'Continued gains in Achilles strength, focusing on dynamic exercises.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (248, '2023-12-28T11:00', 130, 88, 25, 'Significant reduction in symptoms, improved tendon function.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (249, '2024-01-01T11:00', 146, 88, 25, 'Patient performing more strenuous activities with ease.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (250, '2024-01-04T11:00', 142, 88, 25, 'Continued improvement, focusing on long-term tendon health.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (251, '2024-01-05T11:00', 144, 88, 25, 'Excellent progress, near-complete recovery in tendon function.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (252, '2024-01-08T11:00', 143, 88, 25, 'Achilles tendon showing great resilience, patient resuming most activities.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (253, '2024-01-09T11:00', 132, 88, 25, 'Full recovery from Achilles tendinitis, advised on preventive measures.'); --#5C3G3, 20
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (254, '2023-12-26T15:00', 130, 19, 26, 'Began with gentle core strengthening and flexibility exercises.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (255, '2023-12-28T15:00', 130, 19, 26, 'Patient reports reduced lower back pain, improved posture.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (256, '2023-12-29T15:00', 137, 19, 26, 'Good progress, introduced modified Pilates exercises.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (257, '2024-01-01T15:00', 140, 19, 26, 'Notable improvement in core strength, reduced sciatic symptoms.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (258, '2024-01-03T15:00', 142, 19, 26, 'Patient able to perform daily activities with less pain.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (259, '2024-01-05T15:00', 142, 19, 26, 'Continued gains in back function, focusing on stability exercises.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (260, '2024-01-08T15:00', 148, 19, 26, 'Significant reduction in back pain, improved spinal alignment.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (261, '2024-01-11T15:00', 140, 19, 26, 'Patient reports increased overall mobility and comfort.'); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (262, '2024-01-15T15:00', 148, 19, 26, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (263, '2024-01-16T15:00', 139, 19, 26, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (264, '2024-01-19T15:00', 132, 19, 26, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (265, '2024-01-22T15:00', 135, 19, 26, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (266, '2024-01-25T15:00', 148, 19, 26, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (267, '2024-01-29T15:00', 137, 19, 26, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (268, '2024-01-15T09:00', 128, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (269, '2024-01-16T09:00', 128, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (270, '2024-01-19T09:00', 147, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (271, '2024-01-22T09:00', 147, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (272, '2024-01-23T09:00', 128, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (273, '2024-01-26T09:00', 147, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (274, '2024-01-29T09:00', 147, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (275, '2024-02-01T09:00', 147, 36, 27, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (276, '2023-12-29T19:00', 134, 79, 28, 'Began with gentle core and back strengthening exercises.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (277, '2024-01-01T19:00', 129, 79, 28, 'Patient reports reduced back pain, especially after prolonged sitting.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (278, '2024-01-04T19:00', 134, 79, 28, 'Good progress, increased exercise intensity for back strength.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (279, '2024-01-08T19:00', 129, 79, 28, 'Notable improvement in pain management and flexibility.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (280, '2024-01-09T19:00', 138, 79, 28, 'Patient performing daily tasks with greater ease and less discomfort.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (281, '2024-01-11T19:00', 138, 79, 28, 'Continued gains in back function, focusing on posture correction.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (282, '2024-01-15T19:00', 129, 79, 28, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (283, '2024-01-16T19:00', 131, 79, 28, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (284, '2024-01-18T19:00', 131, 79, 28, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (285, '2024-01-22T19:00', 134, 79, 28, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (286, '2023-12-22T14:00', 134, 38, 29, 'Initiated basic cognitive and motor skill exercises.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (287, '2023-12-25T14:00', 129, 38, 29, 'Patient shows early signs of improvement in speech and movement.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (288, '2023-12-28T14:00', 134, 38, 29, 'Good progress, focusing on regaining independence in daily activities.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (289, '2023-12-29T14:00', 134, 38, 29, 'Notable gains in limb coordination and cognitive functions.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (290, '2024-01-01T14:00', 129, 38, 29, 'Patient more engaged in therapy, showing improvement in self-care skills.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (291, '2024-01-03T14:00', 131, 38, 29, 'Continued improvement in speech clarity and walking.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (292, '2024-01-08T14:00', 134, 38, 29, 'Significant progress in fine motor skills, patient regaining hand dexterity.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (293, '2024-01-11T14:00', 134, 38, 29, 'Improved balance and coordination, patient can perform tasks more easily.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (294, '2024-01-12T14:00', 138, 38, 29, 'Further gains in cognitive abilities, better memory and problem-solving skills.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (295, '2024-01-15T14:00', 129, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (296, '2024-01-16T14:00', 138, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (297, '2024-01-19T14:00', 131, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (298, '2024-01-22T14:00', 138, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (299, '2024-01-24T14:00', 131, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (300, '2024-01-26T14:00', 129, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (301, '2024-01-29T14:00', 134, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (302, '2024-01-31T14:00', 134, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (303, '2024-02-01T14:00', 138, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (304, '2024-02-05T14:00', 129, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (305, '2024-02-07T14:00', 129, 38, 29, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (306, '2024-01-11T18:00', 139, 14, 30, 'Assessment complete, initiated wrist mobility exercises.'); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (307, '2024-01-15T18:00', 143, 14, 30, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (308, '2024-01-17T18:00', 130, 14, 30, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (309, '2024-01-18T18:00', 141, 14, 30, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (310, '2024-01-22T18:00', 148, 14, 30, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (311, '2024-01-25T18:00', 135, 14, 30, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (312, '2024-01-29T18:00', 146, 14, 30, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (313, '2024-01-31T18:00', 146, 14, 30, ''); --#1R2Y1, 6
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (314, '2024-01-01T09:00', 145, 72, 31, 'Began therapy with gentle cervical mobilization.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (315, '2024-01-02T09:00', 142, 72, 31, 'Patient reports reduced neck pain and stiffness.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (316, '2024-01-03T09:00', 146, 72, 31, 'Good progress, introduced neck strengthening exercises.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (317, '2024-01-04T09:00', 140, 72, 31, 'Notable improvement in neck mobility and reduced discomfort.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (318, '2024-01-08T09:00', 137, 72, 31, 'Patient able to perform daily tasks with greater ease.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (319, '2024-01-11T09:00', 143, 72, 31, 'Continued improvement in neck function, focusing on flexibility.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (320, '2024-01-12T09:00', 140, 72, 31, 'Significant gains in cervical range of motion and strength.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (321, '2024-01-15T09:00', 137, 72, 31, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (322, '2024-01-16T09:00', 142, 72, 31, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (323, '2024-01-17T09:00', 146, 72, 31, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (324, '2023-12-08T17:00', 150, 96, 32, 'Started with low-impact exercises, patient adapting well.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (325, '2023-12-11T17:00', 149, 96, 32, 'Patient reports reduced joint stiffness, especially in the morning.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (326, '2023-12-12T17:00', 149, 96, 32, 'Continued progress with range of motion exercises.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (327, '2023-12-13T17:00', 133, 96, 32, 'Notable decrease in joint pain, increased exercise intensity.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (328, '2023-12-18T17:00', 133, 96, 32, 'Patient more active, managing daily activities with less pain.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (329, '2023-12-20T17:00', 150, 96, 32, 'Further gains in mobility and strength, pain well managed.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (330, '2023-12-25T17:00', 149, 96, 32, 'Significant improvement in overall joint function.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (331, '2023-12-27T17:00', 150, 96, 32, 'Patient reports much improved quality of life, maintain exercise routine.'); --#6F6P9, 7
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (332, '2023-12-27T08:00', 126, 28, 33, 'Began therapy with gentle cervical mobilization.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (333, '2024-01-01T08:00', 146, 28, 33, 'Patient reports reduced neck pain and stiffness.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (334, '2024-01-03T08:00', 139, 28, 33, 'Good progress, introduced neck strengthening exercises.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (335, '2024-01-08T08:00', 135, 28, 33, 'Notable improvement in neck mobility and reduced discomfort.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (336, '2024-01-11T08:00', 143, 28, 33, 'Patient able to perform daily tasks with greater ease.'); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (337, '2024-01-15T08:00', 137, 28, 33, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (338, '2024-01-16T08:00', 142, 28, 33, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (339, '2024-01-18T08:00', 148, 28, 33, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (340, '2024-01-22T08:00', 146, 28, 33, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (341, '2024-01-24T08:00', 144, 28, 33, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (342, '2024-01-10T13:00', 139, 31, 34, 'Initial assessment completed, started with stretching and foam rolling.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (343, '2024-01-15T13:00', 135, 31, 34, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (344, '2024-01-18T13:00', 146, 31, 34, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (345, '2024-01-22T13:00', 137, 31, 34, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (346, '2024-01-24T13:00', 140, 31, 34, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (347, '2024-01-29T13:00', 137, 31, 34, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (348, '2024-01-31T13:00', 126, 31, 34, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (349, '2024-02-02T13:00', 143, 31, 34, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (350, '2024-01-12T10:00', 147, 97, 35, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (351, '2024-01-15T10:00', 128, 97, 35, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (352, '2024-01-18T10:00', 128, 97, 35, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (353, '2024-01-22T10:00', 128, 97, 35, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (354, '2024-01-24T10:00', 147, 97, 35, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (355, '2024-01-26T10:00', 147, 97, 35, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (356, '2024-01-29T10:00', 147, 97, 35, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (357, '2024-01-30T10:00', 128, 97, 35, ''); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (358, '2024-01-02T18:00', 148, 8, 36, 'Initial assessment done, started with gentle stretching.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (359, '2024-01-05T18:00', 141, 8, 36, 'Slight improvement in movement, pain management strategies in place.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (360, '2024-01-08T18:00', 126, 8, 36, 'Patient shows increased range of motion, exercises intensified.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (361, '2024-01-11T18:00', 143, 8, 36, 'Further improvement in shoulder flexibility.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (362, '2024-01-15T18:00', 137, 8, 36, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (363, '2024-01-18T18:00', 148, 8, 36, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (364, '2024-01-22T18:00', 141, 8, 36, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (365, '2024-01-25T18:00', 126, 8, 36, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (366, '2024-01-29T18:00', 142, 8, 36, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (367, '2024-01-30T18:00', 132, 8, 36, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (368, '2024-01-12T16:00', 129, 73, 37, 'Initiated basic cognitive and motor skill exercises.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (369, '2024-01-15T16:00', 131, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (370, '2024-01-17T16:00', 138, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (371, '2024-01-18T16:00', 134, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (372, '2024-01-19T16:00', 134, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (373, '2024-01-22T16:00', 129, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (374, '2024-01-23T16:00', 134, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (375, '2024-01-24T16:00', 129, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (376, '2024-01-26T16:00', 134, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (377, '2024-01-29T16:00', 129, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (378, '2024-01-31T16:00', 129, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (379, '2024-02-05T16:00', 138, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (380, '2024-02-08T16:00', 134, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (381, '2024-02-12T16:00', 138, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (382, '2024-02-13T16:00', 131, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (383, '2024-02-14T16:00', 138, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (384, '2024-02-16T16:00', 129, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (385, '2024-02-19T16:00', 138, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (386, '2024-02-22T16:00', 134, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (387, '2024-02-26T16:00', 129, 73, 37, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (388, '2023-12-13T18:00', 128, 45, 38, 'Initiated therapy focusing on pain relief and muscle relaxation.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (389, '2023-12-15T18:00', 147, 45, 38, 'Patient reports less muscle pain, improved sleep quality.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (390, '2023-12-18T18:00', 147, 45, 38, 'Good progress, introduced therapeutic exercises for pain management.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (391, '2023-12-21T18:00', 147, 45, 38, 'Notable reduction in chronic muscle pain, patient more active.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (392, '2023-12-22T18:00', 128, 45, 38, 'Patient engaging in daily tasks with greater ease and comfort.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (393, '2023-12-25T18:00', 147, 45, 38, 'Continued improvement in managing chronic pain.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (394, '2023-12-26T18:00', 147, 45, 38, 'Significant relief from muscle pain, patient advised on long-term pain management strategies.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (395, '2024-01-02T09:00', 131, 44, 39, 'Initiated basic cognitive and motor skill exercises.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (396, '2024-01-03T09:00', 129, 44, 39, 'Patient shows early signs of improvement in speech and movement.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (397, '2024-01-08T09:00', 129, 44, 39, 'Good progress, focusing on regaining independence in daily activities.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (398, '2024-01-09T09:00', 138, 44, 39, 'Notable gains in limb coordination and cognitive functions.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (399, '2024-01-12T09:00', 131, 44, 39, 'Patient more engaged in therapy, showing improvement in self-care skills.'); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (400, '2024-01-15T09:00', 129, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (401, '2024-01-17T09:00', 138, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (402, '2024-01-22T09:00', 131, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (403, '2024-01-25T09:00', 131, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (404, '2024-01-29T09:00', 131, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (405, '2024-02-01T09:00', 131, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (406, '2024-02-05T09:00', 129, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (407, '2024-02-08T09:00', 138, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (408, '2024-02-12T09:00', 129, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (409, '2024-02-13T09:00', 129, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (410, '2024-02-14T09:00', 138, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (411, '2024-02-16T09:00', 129, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (412, '2024-02-19T09:00', 129, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (413, '2024-02-22T09:00', 129, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (414, '2024-02-26T09:00', 131, 44, 39, ''); --#8D2H9, 34
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (415, '2023-12-26T16:00', 132, 4, 40, 'Initial assessment done, started with gentle stretching.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (416, '2023-12-29T16:00', 144, 4, 40, 'Slight improvement in movement, pain management strategies in place.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (417, '2024-01-01T16:00', 145, 4, 40, 'Patient shows increased range of motion, exercises intensified.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (418, '2024-01-02T16:00', 140, 4, 40, 'Further improvement in shoulder flexibility.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (419, '2024-01-05T16:00', 141, 4, 40, 'Patient can perform daily activities with less discomfort.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (420, '2024-01-08T16:00', 140, 4, 40, 'Significant gains in mobility, therapy progressing well.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (421, '2024-01-10T16:00', 143, 4, 40, 'Continued improvement, focusing on strengthening.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (422, '2024-01-11T16:00', 126, 4, 40, 'Patient reports much less pain, improved sleep quality.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (423, '2024-01-12T16:00', 144, 4, 40, 'Near-normal range of motion achieved.'); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (424, '2024-01-15T16:00', 132, 4, 40, ''); --#7Z8V8, 2
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (425, '2024-01-12T19:00', 128, 48, 41, 'Initiated gentle exercises tailored for joint mobility.'); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (426, '2024-01-15T19:00', 147, 48, 41, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (427, '2024-01-18T19:00', 147, 48, 41, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (428, '2024-01-19T19:00', 128, 48, 41, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (429, '2024-01-22T19:00', 128, 48, 41, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (430, '2024-01-24T19:00', 147, 48, 41, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (431, '2024-01-26T19:00', 128, 48, 41, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (432, '2024-01-29T19:00', 128, 48, 41, ''); --#7R3N6, 11
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (433, '2024-01-05T09:00', 127, 95, 42, 'Initiated muscle strengthening exercises, patient adapting well.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (434, '2024-01-08T09:00', 136, 95, 42, 'Patient shows early signs of muscle tone improvement.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (435, '2024-01-11T09:00', 127, 95, 42, 'Good progress, focusing on resistance training for muscle growth.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (436, '2024-01-15T09:00', 136, 95, 42, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (437, '2024-01-16T09:00', 136, 95, 42, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (438, '2024-01-18T09:00', 127, 95, 42, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (439, '2024-01-19T09:00', 136, 95, 42, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (440, '2024-01-22T09:00', 127, 95, 42, ''); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (441, '2023-12-22T19:00', 128, 84, 43, 'Started with gentle range of motion exercises, patient coping well.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (442, '2023-12-25T19:00', 147, 84, 43, 'Slight reduction in joint pain and swelling.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (443, '2023-12-26T19:00', 128, 84, 43, 'Patient shows progress in mobility, continuing with prescribed exercises.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (444, '2023-12-28T19:00', 128, 84, 43, 'Further gains in joint function, reduced discomfort.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (445, '2023-12-29T19:00', 128, 84, 43, 'Patient reports significant reduction in pain during movement.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (446, '2024-01-01T19:00', 128, 84, 43, 'Continued improvement, focusing on strengthening surrounding muscles.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (447, '2024-01-02T19:00', 147, 84, 43, 'Significant reduction in inflammation and pain.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (448, '2024-01-05T19:00', 147, 84, 43, 'Joint function nearly back to normal, advised on preventive strategies.'); --#4N8P5, 10
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (449, '2024-01-10T12:00', 132, 86, 44, 'Initial evaluation complete, begun with basic knee stabilization exercises.'); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (450, '2024-01-15T12:00', 144, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (451, '2024-01-18T12:00', 137, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (452, '2024-01-22T12:00', 146, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (453, '2024-01-24T12:00', 142, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (454, '2024-01-25T12:00', 137, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (455, '2024-01-26T12:00', 141, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (456, '2024-01-29T12:00', 143, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (457, '2024-01-30T12:00', 139, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (458, '2024-02-02T12:00', 140, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (459, '2024-02-05T12:00', 135, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (460, '2024-02-07T12:00', 130, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (461, '2024-02-08T12:00', 130, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (462, '2024-02-12T12:00', 145, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (463, '2024-02-13T12:00', 144, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (464, '2024-02-14T12:00', 126, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (465, '2024-02-16T12:00', 144, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (466, '2024-02-19T12:00', 135, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (467, '2024-02-22T12:00', 145, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (468, '2024-02-26T12:00', 141, 86, 44, ''); --#3H4O2, 12
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (469, '2024-01-01T17:00', 130, 2, 45, 'Initial assessment completed, beginning targeted exercises for spinal alignment.'); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (470, '2024-01-02T17:00', 148, 2, 45, 'Patient is adapting well to exercises, showing early signs of improved posture.'); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (471, '2024-01-04T17:00', 144, 2, 45, 'Notable progress in spinal alignment, patient demonstrates increased awareness of posture.'); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (472, '2024-01-08T17:00', 143, 2, 45, 'Continued improvement in alignment, encouraged by patient''s commitment to exercises.'); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (473, '2024-01-11T17:00', 144, 2, 45, 'Significant reduction in discomfort, spinal curvature showing gradual correction.'); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (474, '2024-01-15T17:00', 139, 2, 45, ''); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (475, '2024-01-18T17:00', 143, 2, 45, ''); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (476, '2024-01-22T17:00', 140, 2, 45, ''); --#5R9N7, 24
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (477, '2024-01-03T19:00', 132, 11, 46, 'Began gentle mobilization exercises, patient tolerating well.'); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (478, '2024-01-04T19:00', 139, 11, 46, 'Slight improvement in shoulder mobility, continuing with prescribed exercises.'); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (479, '2024-01-08T19:00', 140, 11, 46, 'Patient showing progress in range of motion, pain slightly reduced.'); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (480, '2024-01-11T19:00', 143, 11, 46, 'Notable improvement in shoulder strength, exercises becoming more challenging.'); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (481, '2024-01-15T19:00', 132, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (482, '2024-01-16T19:00', 143, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (483, '2024-01-18T19:00', 126, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (484, '2024-01-19T19:00', 126, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (485, '2024-01-22T19:00', 142, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (486, '2024-01-24T19:00', 140, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (487, '2024-01-26T19:00', 143, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (488, '2024-01-29T19:00', 144, 11, 46, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (489, '2024-01-15T19:00', 143, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (490, '2024-01-17T19:00', 141, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (491, '2024-01-18T19:00', 144, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (492, '2024-01-22T19:00', 139, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (493, '2024-01-24T19:00', 130, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (494, '2024-01-26T19:00', 132, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (495, '2024-01-29T19:00', 146, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (496, '2024-01-31T19:00', 141, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (497, '2024-02-02T19:00', 126, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (498, '2024-02-05T19:00', 135, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (499, '2024-02-06T19:00', 141, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (500, '2024-02-07T19:00', 132, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (501, '2024-02-12T19:00', 130, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (502, '2024-02-15T19:00', 142, 71, 47, ''); --#3N4P6, 21
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (503, '2023-12-29T16:00', 135, 25, 48, 'Initiated therapy with basic ankle mobilization.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (504, '2024-01-01T16:00', 132, 25, 48, 'Patient reports reduced swelling and pain, improvement in stability.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (505, '2024-01-03T16:00', 144, 25, 48, 'Good progress, introduced balance and proprioception exercises.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (506, '2024-01-04T16:00', 145, 25, 48, 'Notable gains in ankle strength and mobility.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (507, '2024-01-08T16:00', 139, 25, 48, 'Patient able to perform daily activities with less discomfort.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (508, '2024-01-09T16:00', 145, 25, 48, 'Continued improvement, focusing on dynamic movements.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (509, '2024-01-12T16:00', 135, 25, 48, 'Significant improvement in ankle function, pain well managed.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (510, '2024-01-15T16:00', 143, 25, 48, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (511, '2024-01-12T14:00', 148, 92, 49, 'Began gentle mobilization exercises, patient tolerating well.'); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (512, '2024-01-15T14:00', 139, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (513, '2024-01-18T14:00', 146, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (514, '2024-01-19T14:00', 146, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (515, '2024-01-22T14:00', 143, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (516, '2024-01-24T14:00', 148, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (517, '2024-01-29T14:00', 140, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (518, '2024-02-01T14:00', 148, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (519, '2024-02-05T14:00', 130, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (520, '2024-02-08T14:00', 145, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (521, '2024-02-09T14:00', 140, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (522, '2024-02-12T14:00', 139, 92, 49, ''); --#5G3Y4, 1
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (523, '2024-01-15T17:00', 148, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (524, '2024-01-16T17:00', 139, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (525, '2024-01-18T17:00', 144, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (526, '2024-01-22T17:00', 135, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (527, '2024-01-25T17:00', 126, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (528, '2024-01-29T17:00', 137, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (529, '2024-01-30T17:00', 135, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (530, '2024-02-02T17:00', 145, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (531, '2024-02-05T17:00', 140, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (532, '2024-02-06T17:00', 144, 94, 50, ''); --#8H6H1, 27
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (533, '2024-01-12T13:00', 128, 33, 51, 'Initiated therapy focusing on pain relief and muscle relaxation.'); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (534, '2024-01-15T13:00', 147, 33, 51, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (535, '2024-01-18T13:00', 128, 33, 51, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (536, '2024-01-22T13:00', 128, 33, 51, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (537, '2024-01-23T13:00', 147, 33, 51, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (538, '2024-01-25T13:00', 128, 33, 51, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (539, '2024-01-29T13:00', 128, 33, 51, ''); --#2K6H8, 37
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (540, '2023-12-22T19:00', 140, 85, 52, 'Initiated therapy with gentle stretching and strengthening.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (541, '2023-12-25T19:00', 137, 85, 52, 'Patient reports reduced pain, improved elbow mobility.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (542, '2023-12-27T19:00', 126, 85, 52, 'Progressing with exercises, pain decreasing gradually.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (543, '2024-01-01T19:00', 137, 85, 52, 'Notable improvement in strength, daily activities easier to perform.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (544, '2024-01-03T19:00', 130, 85, 52, 'Continued reduction in pain, especially during wrist movements.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (545, '2024-01-04T19:00', 140, 85, 52, 'Patient able to lift heavier objects with less discomfort.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (546, '2024-01-08T19:00', 145, 85, 52, 'Significant gains in elbow function and strength.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (547, '2024-01-09T19:00', 142, 85, 52, 'Elbow nearly back to normal function, continue with preventive exercises.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (548, '2024-01-08T12:00', 130, 89, 53, 'Assessment completed, initiated posture correction exercises.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (549, '2024-01-10T12:00', 142, 89, 53, 'Patient shows early signs of improved posture, reduced discomfort.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (550, '2024-01-11T12:00', 135, 89, 53, 'Good progress, focusing on strengthening core and back muscles.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (551, '2024-01-15T12:00', 145, 89, 53, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (552, '2024-01-18T12:00', 142, 89, 53, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (553, '2024-01-22T12:00', 146, 89, 53, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (554, '2024-01-24T12:00', 140, 89, 53, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (555, '2024-01-02T17:00', 148, 1, 54, 'Initiated therapy with non-weight bearing exercises.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (556, '2024-01-04T17:00', 148, 1, 54, 'Patient reports reduced pain, slight improvement in mobility.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (557, '2024-01-05T17:00', 142, 1, 54, 'Good progress, introduced gentle weight-bearing activities.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (558, '2024-01-08T17:00', 126, 1, 54, 'Further improvement in function, pain management effective.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (559, '2024-01-09T17:00', 144, 1, 54, 'Patient able to perform daily activities with less discomfort.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (560, '2024-01-10T17:00', 135, 1, 54, 'Continued progress, increased exercise intensity.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (561, '2024-01-11T17:00', 130, 1, 54, 'Significant gains in mobility and strength.'); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (562, '2024-01-15T17:00', 145, 1, 54, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (563, '2024-01-16T17:00', 141, 1, 54, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (564, '2024-01-19T17:00', 139, 1, 54, ''); --#9M8D2, 16
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (565, '2024-01-02T19:00', 144, 17, 55, 'Initiated therapy with basic ankle mobilization.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (566, '2024-01-03T19:00', 130, 17, 55, 'Patient reports reduced swelling and pain, improvement in stability.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (567, '2024-01-08T19:00', 145, 17, 55, 'Good progress, introduced balance and proprioception exercises.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (568, '2024-01-09T19:00', 143, 17, 55, 'Notable gains in ankle strength and mobility.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (569, '2024-01-10T19:00', 140, 17, 55, 'Patient able to perform daily activities with less discomfort.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (570, '2024-01-11T19:00', 126, 17, 55, 'Continued improvement, focusing on dynamic movements.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (571, '2024-01-15T19:00', 132, 17, 55, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (572, '2024-01-16T19:00', 126, 17, 55, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (573, '2024-01-08T19:00', 135, 24, 56, 'Initiated therapy with gentle stretching and strengthening.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (574, '2024-01-09T19:00', 132, 24, 56, 'Patient reports reduced pain, improved elbow mobility.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (575, '2024-01-10T19:00', 148, 24, 56, 'Progressing with exercises, pain decreasing gradually.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (576, '2024-01-12T19:00', 130, 24, 56, 'Notable improvement in strength, daily activities easier to perform.'); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (577, '2024-01-15T19:00', 141, 24, 56, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (578, '2024-01-17T19:00', 130, 24, 56, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (579, '2024-01-18T19:00', 144, 24, 56, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (580, '2024-01-22T19:00', 142, 24, 56, ''); --#8I5F5, 4
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (581, '2024-01-04T08:00', 145, 39, 57, 'Started with gentle hip mobilization exercises.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (582, '2024-01-08T08:00', 145, 39, 57, 'Patient reports reduced hip pain, improved mobility.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (583, '2024-01-11T08:00', 139, 39, 57, 'Good progress, introduced hip strengthening exercises.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (584, '2024-01-12T08:00', 148, 39, 57, 'Notable improvement in hip function, pain reducing.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (585, '2024-01-15T08:00', 143, 39, 57, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (586, '2024-01-17T08:00', 139, 39, 57, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (587, '2024-01-18T08:00', 130, 39, 57, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (588, '2024-01-22T08:00', 137, 39, 57, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (589, '2024-01-25T08:00', 126, 39, 57, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (590, '2024-01-26T08:00', 142, 39, 57, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (591, '2024-01-04T16:00', 142, 80, 58, 'Assessment completed, started with isometric exercises.'); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (592, '2024-01-08T16:00', 130, 80, 58, 'Patient reports less pain when gripping, improvement in strength.'); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (593, '2024-01-10T16:00', 130, 80, 58, 'Good progress, introduced more dynamic exercises.'); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (594, '2024-01-11T16:00', 126, 80, 58, 'Significant reduction in pain, increased grip strength.'); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (595, '2024-01-12T16:00', 139, 80, 58, 'Patient performing daily tasks more easily.'); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (596, '2024-01-15T16:00', 135, 80, 58, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (597, '2024-01-17T16:00', 146, 80, 58, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (598, '2024-01-18T16:00', 144, 80, 58, ''); --#1V2V2, 3
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (599, '2023-12-26T16:00', 128, 87, 59, 'Began with relaxation techniques and gentle stretching.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (600, '2023-12-27T16:00', 128, 87, 59, 'Patient reports reduced muscle spasms and tension.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (601, '2023-12-28T16:00', 128, 87, 59, 'Good progress, focusing on stress reduction and muscle relaxation.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (602, '2023-12-29T16:00', 128, 87, 59, 'Notable improvement in managing muscle spasms, patient more comfortable.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (603, '2024-01-01T16:00', 147, 87, 59, 'Patient able to engage in activities with less muscle tension.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (604, '2024-01-02T16:00', 147, 87, 59, 'Significant improvement in quality of life, muscle spasms well managed.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (605, '2024-01-15T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (606, '2024-01-16T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (607, '2024-01-18T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (608, '2024-01-22T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (609, '2024-01-24T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (610, '2024-01-26T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (611, '2024-01-29T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (612, '2024-01-30T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (613, '2024-02-01T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (614, '2024-02-02T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (615, '2024-02-05T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (616, '2024-02-08T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (617, '2024-02-09T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (618, '2024-02-12T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (619, '2024-02-14T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (620, '2024-02-15T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (621, '2024-02-16T10:00', 136, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (622, '2024-02-19T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (623, '2024-02-22T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (624, '2024-02-23T10:00', 127, 29, 60, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (625, '2024-01-11T15:00', 126, 18, 61, 'Began with basic knee mobilization, patient tolerating well.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (626, '2024-01-15T15:00', 140, 18, 61, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (627, '2024-01-16T15:00', 145, 18, 61, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (628, '2024-01-19T15:00', 141, 18, 61, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (629, '2024-01-22T15:00', 132, 18, 61, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (630, '2024-01-24T15:00', 146, 18, 61, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (631, '2024-01-25T15:00', 144, 18, 61, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (632, '2024-01-29T15:00', 140, 18, 61, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (633, '2024-01-03T12:00', 127, 15, 62, 'Initiated post-operative exercises, patient tolerating well.'); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (634, '2024-01-08T12:00', 127, 15, 62, 'Patient shows early signs of recovery, improved mobility.'); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (635, '2024-01-09T12:00', 136, 15, 62, 'Good progress, focusing on regaining strength in affected area.'); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (636, '2024-01-11T12:00', 136, 15, 62, 'Notable improvement in surgical recovery, reduced pain.'); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (637, '2024-01-12T12:00', 136, 15, 62, 'Patient able to engage in light activities with less discomfort.'); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (638, '2024-01-15T12:00', 136, 15, 62, ''); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (639, '2024-01-18T12:00', 127, 15, 62, ''); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (640, '2024-01-22T12:00', 136, 15, 62, ''); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (641, '2024-01-24T12:00', 136, 15, 62, ''); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (642, '2024-01-26T12:00', 127, 15, 62, ''); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (643, '2024-01-29T12:00', 136, 15, 62, ''); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (644, '2024-01-30T12:00', 136, 15, 62, ''); --#3J6K2, 28
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (645, '2024-01-01T17:00', 140, 32, 63, 'Began therapy with gentle calf and shin stretching.'); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (646, '2024-01-03T17:00', 143, 32, 63, 'Patient reports less shin pain during walking, good progress.'); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (647, '2024-01-04T17:00', 143, 32, 63, 'Continued improvement, focusing on strengthening lower leg muscles.'); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (648, '2024-01-08T17:00', 141, 32, 63, 'Notable reduction in discomfort, introduced impact control exercises.'); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (649, '2024-01-09T17:00', 144, 32, 63, 'Patient able to engage in light jogging with minimal pain.'); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (650, '2024-01-10T17:00', 148, 32, 63, 'Excellent recovery, advised on proper footwear and running techniques.'); --#7P3Y5, 15
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (651, '2023-12-22T08:00', 142, 22, 64, 'Assessment completed, initiated posture correction exercises.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (652, '2023-12-25T08:00', 130, 22, 64, 'Patient shows early signs of improved posture, reduced discomfort.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (653, '2023-12-28T08:00', 141, 22, 64, 'Good progress, focusing on strengthening core and back muscles.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (654, '2024-01-01T08:00', 132, 22, 64, 'Notable improvement in posture, reduced neck and back strain.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (655, '2024-01-03T08:00', 126, 22, 64, 'Patient more aware of proper posture, continuing with exercises.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (656, '2024-01-05T08:00', 146, 22, 64, 'Continued improvement, significant reduction in pain and tension.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (657, '2024-01-08T08:00', 130, 22, 64, 'Excellent progress, patient demonstrates much improved posture.'); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (658, '2024-01-09T08:00', 130, 10, 65, 'Initial assessment completed, started with stretching and foam rolling.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (659, '2024-01-10T08:00', 148, 10, 65, 'Patient reports reduced hip and knee pain, improvement in mobility.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (660, '2024-01-11T08:00', 145, 10, 65, 'Good progress, introduced strengthening exercises for hip muscles.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (661, '2024-01-12T08:00', 145, 10, 65, 'Notable reduction in pain, increased exercise intensity.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (662, '2024-01-15T08:00', 140, 10, 65, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (663, '2024-01-17T08:00', 148, 10, 65, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (664, '2024-01-19T08:00', 141, 10, 65, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (665, '2024-01-22T08:00', 145, 10, 65, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (666, '2023-12-26T16:00', 136, 78, 66, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (667, '2023-12-29T16:00', 136, 78, 66, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (668, '2024-01-01T16:00', 136, 78, 66, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (669, '2024-01-04T16:00', 127, 78, 66, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (670, '2024-01-05T16:00', 136, 78, 66, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (671, '2024-01-08T16:00', 127, 78, 66, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (672, '2024-01-09T16:00', 127, 78, 66, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (673, '2024-01-12T16:00', 127, 78, 66, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (674, '2024-01-15T16:00', 136, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (675, '2024-01-16T16:00', 127, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (676, '2024-01-19T16:00', 127, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (677, '2024-01-22T16:00', 127, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (678, '2024-01-24T16:00', 136, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (679, '2024-01-26T16:00', 127, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (680, '2024-01-29T16:00', 136, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (681, '2024-02-01T16:00', 127, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (682, '2024-02-05T16:00', 136, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (683, '2024-02-06T16:00', 136, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (684, '2024-02-09T16:00', 127, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (685, '2024-02-12T16:00', 127, 78, 66, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (686, '2024-01-15T10:00', 145, 5, 67, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (687, '2024-01-16T10:00', 144, 5, 67, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (688, '2024-01-19T10:00', 146, 5, 67, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (689, '2024-01-22T10:00', 148, 5, 67, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (690, '2024-01-24T10:00', 130, 5, 67, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (691, '2024-01-26T10:00', 146, 5, 67, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (692, '2024-01-29T10:00', 145, 5, 67, ''); --#8K1H7, 25
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (693, '2023-12-29T10:00', 138, 7, 68, 'Began with gentle core and back strengthening exercises.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (694, '2024-01-01T10:00', 138, 7, 68, 'Patient reports reduced back pain, especially after prolonged sitting.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (695, '2024-01-02T10:00', 138, 7, 68, 'Good progress, increased exercise intensity for back strength.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (696, '2024-01-04T10:00', 134, 7, 68, 'Notable improvement in pain management and flexibility.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (697, '2024-01-08T10:00', 131, 7, 68, 'Patient performing daily tasks with greater ease and less discomfort.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (698, '2024-01-09T10:00', 134, 7, 68, 'Continued gains in back function, focusing on posture correction.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (699, '2024-01-11T10:00', 134, 7, 68, 'Significant reduction in chronic pain, improved spinal health.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (700, '2024-01-12T10:00', 129, 7, 68, 'Patient reports increased overall mobility and quality of life.'); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (701, '2024-01-15T10:00', 134, 7, 68, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (702, '2024-01-17T10:00', 129, 7, 68, ''); --#4W3F2, 23
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (703, '2023-12-28T13:00', 131, 93, 69, 'Initiated post-operative exercises, patient tolerating well.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (704, '2024-01-01T13:00', 129, 93, 69, 'Patient shows early signs of recovery, improved mobility.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (705, '2024-01-03T13:00', 129, 93, 69, 'Good progress, focusing on regaining strength in affected area.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (706, '2024-01-04T13:00', 134, 93, 69, 'Notable improvement in surgical recovery, reduced pain.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (707, '2024-01-08T13:00', 134, 93, 69, 'Patient able to engage in light activities with less discomfort.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (708, '2024-01-10T13:00', 134, 93, 69, 'Continued gains in function, focusing on range of motion.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (709, '2024-01-11T13:00', 131, 93, 69, 'Significant improvement in post-operative recovery.'); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (710, '2024-01-15T13:00', 138, 93, 69, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (711, '2024-01-17T13:00', 138, 93, 69, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (712, '2024-01-22T13:00', 131, 93, 69, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (713, '2024-01-24T13:00', 131, 93, 69, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (714, '2024-01-26T13:00', 134, 93, 69, ''); --#5I9K8, 35
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (715, '2024-01-09T08:00', 127, 21, 70, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (716, '2024-01-12T08:00', 136, 21, 70, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (717, '2024-01-15T08:00', 136, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (718, '2024-01-17T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (719, '2024-01-18T08:00', 136, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (720, '2024-01-22T08:00', 136, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (721, '2024-01-25T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (722, '2024-01-26T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (723, '2024-01-29T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (724, '2024-01-30T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (725, '2024-01-31T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (726, '2024-02-01T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (727, '2024-02-05T08:00', 136, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (728, '2024-02-06T08:00', 136, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (729, '2024-02-08T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (730, '2024-02-12T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (731, '2024-02-14T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (732, '2024-02-19T08:00', 136, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (733, '2024-02-21T08:00', 136, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (734, '2024-02-22T08:00', 127, 21, 70, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (735, '2024-01-08T18:00', 142, 20, 71, 'Initial assessment completed, started with stretching and foam rolling.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (736, '2024-01-09T18:00', 140, 20, 71, 'Patient reports reduced hip and knee pain, improvement in mobility.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (737, '2024-01-12T18:00', 135, 20, 71, 'Good progress, introduced strengthening exercises for hip muscles.'); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (738, '2024-01-15T18:00', 146, 20, 71, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (739, '2024-01-17T18:00', 137, 20, 71, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (740, '2024-01-19T18:00', 143, 20, 71, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (741, '2024-01-22T18:00', 132, 20, 71, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (742, '2024-01-23T18:00', 139, 20, 71, ''); --#8L2Q4, 14
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (743, '2024-01-11T12:00', 132, 100, 72, 'Began with basic range of motion exercises, patient coping well.'); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (744, '2024-01-15T12:00', 141, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (745, '2024-01-17T12:00', 142, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (746, '2024-01-18T12:00', 137, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (747, '2024-01-22T12:00', 139, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (748, '2024-01-23T12:00', 141, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (749, '2024-01-25T12:00', 143, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (750, '2024-01-29T12:00', 139, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (751, '2024-01-31T12:00', 145, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (752, '2024-02-01T12:00', 141, 100, 72, ''); --#4C7X3, 5
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (753, '2023-12-26T15:00', 136, 40, 73, 'Initiated muscle strengthening exercises, patient adapting well.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (754, '2023-12-27T15:00', 136, 40, 73, 'Patient shows early signs of muscle tone improvement.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (755, '2024-01-01T15:00', 127, 40, 73, 'Good progress, focusing on resistance training for muscle growth.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (756, '2024-01-04T15:00', 136, 40, 73, 'Notable improvement in muscle strength, reduced atrophy signs.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (757, '2024-01-05T15:00', 136, 40, 73, 'Patient able to perform exercises with increased resistance.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (758, '2024-01-08T15:00', 127, 40, 73, 'Continued improvement in muscle mass and function.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (759, '2024-01-09T15:00', 127, 40, 73, 'Significant gains in overall muscle tone and strength.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (760, '2024-01-10T15:00', 136, 40, 73, 'Excellent progress in preventing muscle atrophy, patient advised on long-term fitness strategies.'); --#2J6Z7, 30
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (761, '2024-01-05T08:00', 135, 74, 74, 'Began therapy with foot and calf stretching.'); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (762, '2024-01-08T08:00', 135, 74, 74, 'Patient reports less heel pain, especially in the mornings.'); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (763, '2024-01-10T08:00', 137, 74, 74, 'Good progress, introduced strengthening exercises for foot arch.'); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (764, '2024-01-12T08:00', 126, 74, 74, 'Notable reduction in heel pain, arch support exercises effective.'); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (765, '2024-01-15T08:00', 142, 74, 74, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (766, '2024-01-17T08:00', 139, 74, 74, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (767, '2024-01-22T08:00', 140, 74, 74, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (768, '2024-01-25T08:00', 142, 74, 74, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (769, '2024-01-11T11:00', 145, 91, 75, 'Initiated therapy with basic ankle mobilization.'); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (770, '2024-01-15T11:00', 132, 91, 75, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (771, '2024-01-17T11:00', 143, 91, 75, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (772, '2024-01-22T11:00', 126, 91, 75, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (773, '2024-01-23T11:00', 126, 91, 75, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (774, '2024-01-24T11:00', 148, 91, 75, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (775, '2024-01-29T11:00', 132, 91, 75, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (776, '2024-01-30T11:00', 141, 91, 75, ''); --#6W1E6, 18
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (777, '2024-01-02T11:00', 147, 77, 76, 'Began with relaxation techniques and gentle stretching.'); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (778, '2024-01-04T11:00', 128, 77, 76, 'Patient reports reduced muscle spasms and tension.'); --#6L2M9, 36
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (779, '2024-01-08T11:00', 147, 77, 76, 'Good progress, focusing on stress reduction and muscle relaxation.'); --#6L2M9, 36
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (780, '2024-01-11T11:00', 147, 77, 76, 'Notable improvement in managing muscle spasms, patient more comfortable.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (781, '2024-01-15T11:00', 147, 77, 76, 'Patient able to engage in activities with less muscle tension.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (782, '2024-01-18T11:00', 147, 77, 76, 'Significant improvement in quality of life, muscle spasms well managed.'); --#6L2M9, 36
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (783, '2023-12-18T11:00', 127, 70, 77, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (784, '2023-12-21T11:00', 136, 70, 77, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (785, '2023-12-25T11:00', 127, 70, 77, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (786, '2023-12-26T11:00', 136, 70, 77, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (787, '2023-12-28T11:00', 136, 70, 77, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (788, '2024-01-01T11:00', 136, 70, 77, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (789, '2024-01-04T11:00', 127, 70, 77, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (790, '2024-01-05T11:00', 127, 70, 77, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (791, '2024-01-08T11:00', 136, 70, 77, 'Further gains in independence, improved quality of life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (792, '2024-01-09T11:00', 136, 70, 77, 'Excellent adherence to therapy, notable improvement in speech clarity.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (793, '2024-01-12T11:00', 127, 70, 77, 'Continued progress, patient showing greater mobility and agility.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (794, '2024-01-15T11:00', 136, 70, 77, 'Significant improvement in cognitive functions, better problem-solving skills.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (795, '2024-01-17T11:00', 136, 70, 77, 'Patient more confident in performing daily activities independently.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (796, '2024-01-19T11:00', 136, 70, 77, 'Continued gains in fine motor skills, hand-eye coordination improved.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (797, '2024-01-22T11:00', 136, 70, 77, 'Significant strides in stroke recovery, patient more active and engaged.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (798, '2024-01-24T11:00', 127, 70, 77, 'Excellent progress, patient regaining more normalcy in life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (799, '2024-01-29T11:00', 136, 70, 77, 'Focus now on refining skills and maximizing independence.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (800, '2024-01-30T11:00', 127, 70, 77, 'Patient''s recovery well ahead of expectations, near-complete functional restoration.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (801, '2024-02-01T11:00', 127, 70, 77, 'Continued therapy focusing on long-term maintenance and health.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (802, '2024-02-05T11:00', 136, 70, 77, 'Full recovery from stroke effects, patient advised on preventive measures and lifestyle adjustments.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (803, '2024-01-05T17:00', 135, 51, 78, 'Began with basic knee mobilization, patient tolerating well.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (804, '2024-01-08T17:00', 142, 51, 78, 'Slight improvement in knee movement, pain management effective.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (805, '2024-01-09T17:00', 145, 51, 78, 'Patient shows progress in strength, introduced more dynamic exercises.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (806, '2024-01-10T17:00', 132, 51, 78, 'Notable improvement in knee function, reduced discomfort.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (807, '2024-01-12T17:00', 140, 51, 78, 'Patient able to perform daily activities with less pain.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (808, '2024-01-15T17:00', 140, 51, 78, 'Continued progress, focusing on knee stability.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (809, '2024-01-17T17:00', 137, 51, 78, 'Significant gains in knee mobility and strength.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (810, '2024-01-22T17:00', 140, 51, 78, 'Knee function nearly back to normal, continue with strengthening exercises.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (811, '2023-12-25T15:00', 130, 30, 79, 'Started with gentle hip mobilization exercises.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (812, '2023-12-28T15:00', 126, 30, 79, 'Patient reports reduced hip pain, improved mobility.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (813, '2024-01-01T15:00', 141, 30, 79, 'Good progress, introduced hip strengthening exercises.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (814, '2024-01-04T15:00', 140, 30, 79, 'Notable improvement in hip function, pain reducing.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (815, '2024-01-08T15:00', 139, 30, 79, 'Patient able to walk and sit with less discomfort.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (816, '2024-01-10T15:00', 143, 30, 79, 'Continued improvement, focusing on flexibility and strength.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (817, '2024-01-12T15:00', 148, 30, 79, 'Significant reduction in hip pain and inflammation.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (818, '2024-01-15T15:00', 130, 30, 79, 'Hip mobility nearly back to normal, pain well managed.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (819, '2024-01-16T15:00', 141, 30, 79, 'Patient performing all exercises with ease, minimal discomfort.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (820, '2024-01-18T15:00', 139, 30, 79, 'Excellent recovery, advised on long-term hip care.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (821, '2024-01-03T18:00', 144, 67, 80, 'Initiated therapy focusing on sciatic nerve relief.'); --#9P1H4, 22
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (822, '2024-01-08T18:00', 135, 67, 80, 'Patient reports less leg pain and improved comfort while sitting.'); --#9P1H4, 22
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (823, '2024-01-11T18:00', 143, 67, 80, 'Good progress, introduced back and hip stretching.'); --#9P1H4, 22
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (824, '2024-01-15T18:00', 143, 67, 80, 'Notable reduction in sciatic pain, improved mobility.'); --#9P1H4, 22
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (825, '2024-01-17T18:00', 126, 67, 80, 'Patient able to walk and sit for longer periods with less discomfort.'); --#9P1H4, 22
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (826, '2024-01-22T18:00', 146, 67, 80, 'Continued improvement, focusing on back and hip strength.'); --#9P1H4, 22
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (827, '2024-01-24T18:00', 143, 67, 80, 'Significant relief from sciatica symptoms, patient advised on long-term care.'); --#9P1H4, 22
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (828, '2023-12-15T19:00', 144, 23, 81, 'Began with basic knee mobilization, patient tolerating well.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (829, '2023-12-18T19:00', 130, 23, 81, 'Slight improvement in knee movement, pain management effective.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (830, '2023-12-20T19:00', 142, 23, 81, 'Patient shows progress in strength, introduced more dynamic exercises.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (831, '2023-12-22T19:00', 141, 23, 81, 'Notable improvement in knee function, reduced discomfort.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (832, '2023-12-25T19:00', 148, 23, 81, 'Patient able to perform daily activities with less pain.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (833, '2023-12-26T19:00', 146, 23, 81, 'Continued progress, focusing on knee stability.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (834, '2023-12-28T19:00', 132, 23, 81, 'Significant gains in knee mobility and strength.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (835, '2024-01-01T19:00', 143, 23, 81, 'Knee function nearly back to normal, continue with strengthening exercises.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (836, '2024-01-03T18:00', 144, 34, 82, 'Began therapy with foot and calf stretching.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (837, '2024-01-08T18:00', 143, 34, 82, 'Patient reports less heel pain, especially in the mornings.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (838, '2024-01-11T18:00', 144, 34, 82, 'Good progress, introduced strengthening exercises for foot arch.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (839, '2024-01-12T18:00', 144, 34, 82, 'Notable reduction in heel pain, arch support exercises effective.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (840, '2024-01-15T18:00', 143, 34, 82, 'Patient performing daily activities with less discomfort.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (841, '2024-01-17T18:00', 148, 34, 82, 'Continued improvement in foot function, focusing on flexibility.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (842, '2024-01-19T18:00', 141, 34, 82, 'Significant gains in foot strength and mobility.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (843, '2024-01-22T18:00', 145, 34, 82, 'Excellent recovery, patient advised to continue with supportive footwear.'); --#6B5Q3, 19
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (844, '2024-01-10T14:00', 146, 101, 83, 'Started with gentle hip mobilization exercises.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (845, '2024-01-12T14:00', 139, 101, 83, 'Patient reports reduced hip pain, improved mobility.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (846, '2024-01-15T14:00', 144, 101, 83, 'Good progress, introduced hip strengthening exercises.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (847, '2024-01-17T14:00', 135, 101, 83, 'Notable improvement in hip function, pain reducing.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (848, '2024-01-18T14:00', 145, 101, 83, 'Patient able to walk and sit with less discomfort.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (849, '2024-01-22T14:00', 143, 101, 83, 'Continued improvement, focusing on flexibility and strength.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (850, '2024-01-23T14:00', 140, 101, 83, 'Significant reduction in hip pain and inflammation.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (851, '2024-01-26T14:00', 142, 101, 83, 'Hip mobility nearly back to normal, pain well managed.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (852, '2024-01-29T14:00', 141, 101, 83, 'Patient performing all exercises with ease, minimal discomfort.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (853, '2024-02-01T14:00', 137, 101, 83, 'Excellent recovery, advised on long-term hip care.'); --#2T8L4, 17
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (854, '2024-01-03T15:00', 136, 37, 84, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (855, '2024-01-05T15:00', 136, 37, 84, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (856, '2024-01-08T15:00', 127, 37, 84, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (857, '2024-01-09T15:00', 127, 37, 84, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (858, '2024-01-12T15:00', 136, 37, 84, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (859, '2024-01-15T15:00', 136, 37, 84, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (860, '2024-01-17T15:00', 127, 37, 84, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (861, '2024-01-19T15:00', 127, 37, 84, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (862, '2024-01-22T15:00', 136, 37, 84, 'Further gains in independence, improved quality of life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (863, '2024-01-23T15:00', 136, 37, 84, 'Excellent adherence to therapy, notable improvement in speech clarity.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (864, '2024-01-26T15:00', 136, 37, 84, 'Continued progress, patient showing greater mobility and agility.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (865, '2024-01-29T15:00', 127, 37, 84, 'Significant improvement in cognitive functions, better problem-solving skills.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (866, '2024-01-31T15:00', 127, 37, 84, 'Patient more confident in performing daily activities independently.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (867, '2024-02-05T15:00', 127, 37, 84, 'Continued gains in fine motor skills, hand-eye coordination improved.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (868, '2024-02-07T15:00', 127, 37, 84, 'Significant strides in stroke recovery, patient more active and engaged.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (869, '2024-02-08T15:00', 136, 37, 84, 'Excellent progress, patient regaining more normalcy in life.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (870, '2024-02-12T15:00', 136, 37, 84, 'Focus now on refining skills and maximizing independence.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (871, '2024-02-14T15:00', 136, 37, 84, 'Patient''s recovery well ahead of expectations, near-complete functional restoration.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (872, '2024-02-15T15:00', 136, 37, 84, 'Continued therapy focusing on long-term maintenance and health.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (873, '2024-02-19T15:00', 127, 37, 84, 'Full recovery from stroke effects, patient advised on preventive measures and lifestyle adjustments.'); --#9P3R1, 29
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (874, '2024-01-08T08:00', 145, 16, 85, 'Began with basic knee mobilization, patient tolerating well.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (875, '2024-01-11T08:00', 142, 16, 85, 'Slight improvement in knee movement, pain management effective.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (876, '2024-01-15T08:00', 135, 16, 85, 'Patient shows progress in strength, introduced more dynamic exercises.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (877, '2024-01-16T08:00', 141, 16, 85, 'Notable improvement in knee function, reduced discomfort.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (878, '2024-01-19T08:00', 126, 16, 85, 'Patient able to perform daily activities with less pain.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (879, '2024-01-22T08:00', 145, 16, 85, 'Continued progress, focusing on knee stability.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (880, '2024-01-25T08:00', 145, 16, 85, 'Significant gains in knee mobility and strength.'); --#6F2G1, 13
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (881, '2024-01-29T08:00', 141, 16, 85, 'Knee function nearly back to normal, continue with strengthening exercises.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (781, '2024-01-15T11:00', 147, 77, 76, ''); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (782, '2024-01-18T11:00', 147, 77, 76, ''); --#6L2M9, 36
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (783, '2023-12-21T14:00', 136, 70, 77, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (784, '2023-12-25T14:00', 136, 70, 77, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (785, '2023-12-26T14:00', 136, 70, 77, 'Patient demonstrates increased ability in daily tasks.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (786, '2023-12-28T14:00', 136, 70, 77, 'Good progress in regaining motor control, focusing on balance.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (787, '2024-01-01T14:00', 136, 70, 77, 'Notable gains in speech and cognitive functions.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (788, '2024-01-02T14:00', 127, 70, 77, 'Continued improvement in walking and movement coordination.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (789, '2024-01-03T14:00', 127, 70, 77, 'Significant progress in overall recovery from stroke.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (790, '2024-01-05T14:00', 127, 70, 77, 'Patient able to perform more complex tasks with less difficulty.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (791, '2024-01-08T14:00', 127, 70, 77, 'Further gains in independence, improved quality of life.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (792, '2024-01-09T14:00', 136, 70, 77, 'Excellent adherence to therapy, notable improvement in speech clarity.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (793, '2024-01-11T14:00', 136, 70, 77, 'Continued progress, patient showing greater mobility and agility.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (794, '2024-01-15T14:00', 127, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (795, '2024-01-18T14:00', 127, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (796, '2024-01-22T14:00', 136, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (797, '2024-01-25T14:00', 136, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (798, '2024-01-29T14:00', 136, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (799, '2024-01-31T14:00', 127, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (800, '2024-02-01T14:00', 127, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (801, '2024-02-02T14:00', 127, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (802, '2024-02-05T14:00', 136, 70, 77, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (803, '2024-01-15T13:00', 148, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (804, '2024-01-16T13:00', 144, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (805, '2024-01-18T13:00', 145, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (806, '2024-01-22T13:00', 139, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (807, '2024-01-25T13:00', 143, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (808, '2024-01-26T13:00', 141, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (809, '2024-01-29T13:00', 144, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (810, '2024-01-30T13:00', 132, 51, 78, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (811, '2024-01-04T19:00', 145, 30, 79, 'Started with gentle hip mobilization exercises.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (812, '2024-01-08T19:00', 146, 30, 79, 'Patient reports reduced hip pain, improved mobility.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (813, '2024-01-10T19:00', 144, 30, 79, 'Good progress, introduced hip strengthening exercises.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (814, '2024-01-11T19:00', 137, 30, 79, 'Notable improvement in hip function, pain reducing.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (815, '2024-01-15T19:00', 146, 30, 79, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (816, '2024-01-17T19:00', 130, 30, 79, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (817, '2024-01-18T19:00', 142, 30, 79, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (818, '2024-01-19T19:00', 135, 30, 79, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (819, '2024-01-22T19:00', 146, 30, 79, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (820, '2024-01-24T19:00', 135, 30, 79, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (821, '2023-12-29T11:00', 137, 67, 80, 'Initiated therapy focusing on sciatic nerve relief.'); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (822, '2024-01-01T11:00', 140, 67, 80, 'Patient reports less leg pain and improved comfort while sitting.'); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (823, '2024-01-03T11:00', 132, 67, 80, 'Good progress, introduced back and hip stretching.'); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (824, '2024-01-04T11:00', 139, 67, 80, 'Notable reduction in sciatic pain, improved mobility.'); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (825, '2024-01-05T11:00', 144, 67, 80, 'Patient able to walk and sit for longer periods with less discomfort.'); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (826, '2024-01-08T11:00', 141, 67, 80, 'Continued improvement, focusing on back and hip strength.'); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (827, '2024-01-09T11:00', 142, 67, 80, 'Significant relief from sciatica symptoms, patient advised on long-term care.'); --#9P1H4, 22
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (828, '2023-12-13T15:00', 144, 23, 81, 'Began with basic knee mobilization, patient tolerating well.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (829, '2023-12-15T15:00', 148, 23, 81, 'Slight improvement in knee movement, pain management effective.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (830, '2023-12-18T15:00', 140, 23, 81, 'Patient shows progress in strength, introduced more dynamic exercises.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (831, '2023-12-21T15:00', 146, 23, 81, 'Notable improvement in knee function, reduced discomfort.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (832, '2023-12-22T15:00', 142, 23, 81, 'Patient able to perform daily activities with less pain.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (833, '2023-12-25T15:00', 140, 23, 81, 'Continued progress, focusing on knee stability.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (834, '2023-12-27T15:00', 137, 23, 81, 'Significant gains in knee mobility and strength.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (835, '2023-12-29T15:00', 146, 23, 81, 'Knee function nearly back to normal, continue with strengthening exercises.'); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (836, '2024-01-09T13:00', 137, 34, 82, 'Began therapy with foot and calf stretching.'); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (837, '2024-01-11T13:00', 132, 34, 82, 'Patient reports less heel pain, especially in the mornings.'); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (838, '2024-01-12T13:00', 130, 34, 82, 'Good progress, introduced strengthening exercises for foot arch.'); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (839, '2024-01-15T13:00', 137, 34, 82, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (840, '2024-01-17T13:00', 135, 34, 82, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (841, '2024-01-18T13:00', 144, 34, 82, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (842, '2024-01-22T13:00', 140, 34, 82, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (843, '2024-01-24T13:00', 144, 34, 82, ''); --#6B5Q3, 19
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (844, '2024-01-08T13:00', 141, 101, 83, 'Started with gentle hip mobilization exercises.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (845, '2024-01-11T13:00', 140, 101, 83, 'Patient reports reduced hip pain, improved mobility.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (846, '2024-01-12T13:00', 126, 101, 83, 'Good progress, introduced hip strengthening exercises.'); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (847, '2024-01-15T13:00', 130, 101, 83, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (848, '2024-01-16T13:00', 145, 101, 83, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (849, '2024-01-17T13:00', 145, 101, 83, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (850, '2024-01-19T13:00', 142, 101, 83, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (851, '2024-01-22T13:00', 139, 101, 83, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (852, '2024-01-24T13:00', 135, 101, 83, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (853, '2024-01-26T13:00', 143, 101, 83, ''); --#2T8L4, 17
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (854, '2024-01-09T14:00', 136, 37, 84, 'Began with basic motor skill exercises, patient showing initial progress.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (855, '2024-01-12T14:00', 136, 37, 84, 'Slight improvement in limb coordination and strength.'); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (856, '2024-01-15T14:00', 136, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (857, '2024-01-16T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (858, '2024-01-17T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (859, '2024-01-18T14:00', 136, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (860, '2024-01-19T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (861, '2024-01-22T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (862, '2024-01-24T14:00', 136, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (863, '2024-01-26T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (864, '2024-01-29T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (865, '2024-01-30T14:00', 136, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (866, '2024-02-01T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (867, '2024-02-02T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (868, '2024-02-05T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (869, '2024-02-08T14:00', 136, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (870, '2024-02-12T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (871, '2024-02-15T14:00', 136, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (872, '2024-02-19T14:00', 136, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (873, '2024-02-21T14:00', 127, 37, 84, ''); --#9P3R1, 29
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (874, '2024-01-15T09:00', 144, 16, 85, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (875, '2024-01-18T09:00', 143, 16, 85, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (876, '2024-01-19T09:00', 141, 16, 85, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (877, '2024-01-22T09:00', 142, 16, 85, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (878, '2024-01-25T09:00', 139, 16, 85, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (879, '2024-01-26T09:00', 142, 16, 85, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (880, '2024-01-29T09:00', 142, 16, 85, ''); --#6F2G1, 13
+INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (881, '2024-02-01T09:00', 130, 16, 85, ''); --#6F2G1, 13
