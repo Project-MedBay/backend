@@ -2,6 +2,7 @@ package com.medbay.domain.request;
 
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 public class CreateEmployeeRequest {
 
     private String email;
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
     private String password;
     private String firstName;
     private String lastName;

@@ -25,17 +25,16 @@ import static org.springframework.http.HttpStatus.*;
 public class SecurityService {
 
     private final UserRepository userRepository;
-    private final EmployeeRepository employeeRepository;
     private final BCryptPasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     private final PatientRepository patientRepository;
-    private final TherapyTypeRepository therapyTypeRepository;
-    private final TherapyRepository therapyRepository;
     private final PasswordResetTokenRepository passwordResetTokenRepository;
     private final EmailService emailService;
 
     public ResponseEntity<Void> register(CreatePatientRequest request) {
+
+        //TODO registration of deactivated users
 
         if(userRepository.existsByEmail(request.getEmail())) {
             return ResponseEntity.badRequest().build();
