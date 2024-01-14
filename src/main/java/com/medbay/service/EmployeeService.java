@@ -54,7 +54,7 @@ public class EmployeeService {
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
                 .email(request.getEmail())
-                .createdAt(LocalDateTime.now())
+                .createdAt(request.getCreatedAt())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .status(ActivityStatus.ACTIVE)
                 .role(Role.STAFF)

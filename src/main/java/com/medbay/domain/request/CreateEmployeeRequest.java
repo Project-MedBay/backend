@@ -2,6 +2,8 @@ package com.medbay.domain.request;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -9,6 +11,7 @@ import lombok.*;
 public class CreateEmployeeRequest {
 
     private String email;
+    private LocalDateTime createdAt;
     private String password;
     private String firstName;
     private String lastName;

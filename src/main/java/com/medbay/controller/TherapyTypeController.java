@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/therapyType")
@@ -28,7 +29,7 @@ public class TherapyTypeController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Long> createTherapyType(@RequestBody CreateTherapyTypeRequest therapyType) {
+    public ResponseEntity<Map<String, Object>> createTherapyType(@RequestBody CreateTherapyTypeRequest therapyType) {
         return therapyTypeService.createTherapyType(therapyType);
     }
 
