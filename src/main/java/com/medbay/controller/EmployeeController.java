@@ -43,7 +43,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> createEmployee(@RequestBody CreateEmployeeRequest employee){
+    public ResponseEntity<Long> createEmployee(@RequestBody CreateEmployeeRequest employee){
         return employeeService.createEmployee(employee);
     }
 

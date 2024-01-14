@@ -25,7 +25,7 @@ public class TherapyTypeService {
     }
 
 
-    public ResponseEntity<Void> createTherapyType(CreateTherapyTypeRequest request) {
+    public ResponseEntity<Long> createTherapyType(CreateTherapyTypeRequest request) {
         Optional<Equipment> equipment = equipmentRepository.findById(request.getRequiredEquipmentId());
         if (equipment.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
@@ -33,14 +33,15 @@ public class TherapyTypeService {
 
         TherapyType therapyType = TherapyType.builder()
                 .description(request.getDescription())
+                .therapyCode(request.getTherapyCode())
                 .name(request.getName())
                 .bodyPart(request.getBodyPart())
                 .numOfSessions(request.getNumberOfSessions())
                 .requiredEquipment(equipment.get())
                 .build();
 
-        therapyTypeRepository.save(therapyType);
-        return ResponseEntity.ok().build();
+        TherapyType savedTherapyType = therapyTypeRepository.save(therapyType);
+        return ResponseEntity.ok(savedTherapyType.getId());
     }
 
     public ResponseEntity<Void> deleteTherapyType(Long id) {

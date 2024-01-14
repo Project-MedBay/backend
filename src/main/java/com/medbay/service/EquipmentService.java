@@ -31,7 +31,7 @@ public class EquipmentService {
         return ResponseEntity.ok(facilityDTO);
     }
 
-    public ResponseEntity<Void> createEquipment(CreateEquipmentRequest request) {
+    public ResponseEntity<Long> createEquipment(CreateEquipmentRequest request) {
 
         Equipment equipment = Equipment.builder()
                 .name(request.getName())
@@ -41,8 +41,8 @@ public class EquipmentService {
                 .specialization(Specialization.valueOf(request.getSpecialization().toUpperCase()))
                 .build();
 
-        equipmentRepository.save(equipment);
-        return ResponseEntity.ok().build();
+        Equipment savedEquipment = equipmentRepository.save(equipment);
+        return ResponseEntity.ok(savedEquipment.getId());
     }
 
     public ResponseEntity<Void> deleteEquipment(Long id) {
