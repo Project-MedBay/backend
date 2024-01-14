@@ -1,7 +1,5 @@
-INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 6000, 'admin@medbay.life', 'John', 'Doe', '$2a$12$SeGau0IRVXpWhR/ISf6D1.p3.MhM4MGftXAwpkuN3g9oATdCEbjeO', 'ADMIN'); --med123bay
+INSERT INTO _user (status, id, email, first_name, last_name, password, role) VALUES ('ACTIVE', 1, 'admin@medbay.life', 'John', 'Doe', '$2a$12$SeGau0IRVXpWhR/ISf6D1.p3.MhM4MGftXAwpkuN3g9oATdCEbjeO', 'ADMIN'); --med123bay
 --password : password
-INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-01-08T01:07', 1, 'željana.šimić@yahoo.com', 'Željana', 'Šimić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
-INSERT INTO patient (id, date_of_birth, address, mbo, phone_number) VALUES (1, '1955-06-08', 'Ulica kneza Mislava 43', '5770257924', '0956017346');
 INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2023-12-07T05:13', 2, 'korina.grubišić@outlook.com', 'Korina', 'Grubišić', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
 INSERT INTO patient (id, date_of_birth, address, mbo, phone_number) VALUES (2, '1970-01-03', 'Krvavi most 16', '9431489538', '0925040995');
 INSERT INTO _user (created_at, id, email, first_name, last_name, password, role, status) VALUES ('2022-09-09T10:08', 3, 'regina.petrović@yahoo.com', 'Regina', 'Petrović', '$2a$12$MlnyH21ePO39K3ufi9qxO.MXpbIJqThmjnuR0J8mqqhxizKIeqeC6', 'PATIENT', 'ACTIVE');
@@ -576,7 +574,6 @@ INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_da
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (51, 33, 37, 'VERIFIED', '2024-01-02T09:11');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (52, 85, 4, 'VERIFIED', '2023-12-07T19:27');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (53, 89, 25, 'VERIFIED', '2024-01-07T15:18');
-INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (54, 1, 16, 'VERIFIED', '2023-12-17T11:23');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (55, 17, 18, 'VERIFIED', '2023-12-31T11:38');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (56, 24, 4, 'VERIFIED', '2024-01-07T19:06');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (57, 39, 17, 'VERIFIED', '2023-12-28T11:18');
@@ -1163,16 +1160,6 @@ INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, ses
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (552, '2024-01-22T18:00', 146, 89, 53, 'Patient more aware of proper posture, continuing with exercises.'); --#8K1H7, 25
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (553, '2024-01-24T18:00', 148, 89, 53, 'Continued improvement, significant reduction in pain and tension.'); --#8K1H7, 25
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (554, '2024-01-25T18:00', 130, 89, 53, 'Excellent progress, patient demonstrates much improved posture.'); --#8K1H7, 25
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (555, '2024-01-02T13:00', 142, 1, 54, 'Initiated therapy with non-weight bearing exercises.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (556, '2024-01-04T13:00', 130, 1, 54, 'Patient reports reduced pain, slight improvement in mobility.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (557, '2024-01-08T13:00', 148, 1, 54, 'Good progress, introduced gentle weight-bearing activities.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (558, '2024-01-11T13:00', 143, 1, 54, 'Further improvement in function, pain management effective.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (559, '2024-01-12T13:00', 144, 1, 54, 'Patient able to perform daily activities with less discomfort.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (560, '2024-01-15T13:00', 141, 1, 54, 'Continued progress, increased exercise intensity.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (561, '2024-01-16T13:00', 130, 1, 54, 'Significant gains in mobility and strength.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (562, '2024-01-19T13:00', 144, 1, 54, 'Patient performing more dynamic movements comfortably.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (563, '2024-01-22T13:00', 142, 1, 54, 'Excellent progress, focusing on injury prevention.'); --#9M8D2, 16
-INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (564, '2024-01-24T13:00', 132, 1, 54, 'Full recovery from stress fracture, patient advised on bone health.'); --#9M8D2, 16
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (565, '2024-01-05T08:00', 144, 17, 55, 'Initiated therapy with basic ankle mobilization.'); --#6W1E6, 18
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (566, '2024-01-08T08:00', 146, 17, 55, 'Patient reports reduced swelling and pain, improvement in stability.'); --#6W1E6, 18
 INSERT INTO appointment (id, date_time, employee_id, patient_id, therapy_id, session_notes) VALUES (567, '2024-01-11T08:00', 130, 17, 55, 'Good progress, introduced balance and proprioception exercises.'); --#6W1E6, 18

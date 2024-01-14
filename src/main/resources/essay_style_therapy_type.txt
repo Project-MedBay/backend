@@ -1,0 +1,74 @@
+Rotator cuff tear: Num of sessions is 12, Id is 1, Required equipment id is 1, Body part is shoulder, Description is Physical therapy focuses on strengthening the shoulder muscles, improving range of motion, and reducing pain through targeted exercises., Therapy code is #5G3Y4.
+
+Frozen shoulder: Num of sessions is 10, Id is 2, Required equipment id is 1, Body part is shoulder, Description is Therapy aims to restore shoulder mobility through stretching and range of motion exercises., Therapy code is #7Z8V8.
+
+Tennis elbow: Num of sessions is 8, Id is 3, Required equipment id is 1, Body part is arm, Description is Treatment includes strengthening forearm muscles., Therapy code is #1V2V2.
+
+Golfers elbow: Num of sessions is 8, Id is 4, Required equipment id is 1, Body part is arm, Description is Physical therapy involves strengthening and stretching exercises for the forearm muscles and may include modalities for pain relief., Therapy code is #8I5F5.
+
+Biceps tendinitis: Num of sessions is 10, Id is 5, Required equipment id is 1, Body part is arm, Description is Therapy focuses on strengthening the biceps and shoulder muscles while reducing inflammation through modalities., Therapy code is #4C7X3.
+
+Carpal tunnel: Num of sessions is 8, Id is 6, Required equipment id is 1, Body part is hand, Description is Exercises to improve wrist and hand flexibility, along with techniques to relieve pressure on the median nerve., Therapy code is #1R2Y1.
+
+Arthritis pain management: Num of sessions is 8, Id is 7, Required equipment id is 3, Body part is hand, Description is Cryotherapy helps alleviate arthritis pain by numbing the affected joints, reducing inflammation, and temporarily easing discomfort and stiffness., Therapy code is #6F6P9.
+
+Tendinitis: Num of sessions is 10, Id is 8, Required equipment id is 3, Body part is hand, Description is Cryotherapy can be employed to reduce inflammation and alleviate pain associated with tendinitis by constricting blood vessels and diminishing tissue swelling in the affected area., Therapy code is #1G8Z3.
+
+Osteoarthritis management: Num of sessions is 8, Id is 9, Required equipment id is 4, Body part is hand, Description is Hydrotherapy provides a low-impact environment for joint mobility exercises and pain relief, helping individuals with osteoarthritis improve joint function and reduce discomfort., Therapy code is #4D5C2.
+
+Bursitis: Num of sessions is 8, Id is 10, Required equipment id is 5, Body part is hand, Description is Thermotherapy may be used to alleviate pain and inflammation associated with bursitis by increasing blood flow and promoting the relaxation of affected tissues, often applied through warm compresses or therapeutic ultrasound., Therapy code is #4N8P5.
+
+Rheumatoid Arthritis: Num of sessions is 8, Id is 11, Required equipment id is 5, Body part is hand, Description is Thermotherapy, such as paraffin wax baths, can help ease joint stiffness and reduce pain in individuals with rheumatoid arthritis by enhancing joint flexibility and reducing inflammation., Therapy code is #7R3N6.
+
+ACL injury: Num of sessions is 20, Id is 12, Required equipment id is 1, Body part is leg, Description is Rehabilitation includes exercises to strengthen the knee and improve stability, often following surgical repair., Therapy code is #3H4O2.
+
+Meniscus tear: Num of sessions is 8, Id is 13, Required equipment id is 1, Body part is leg, Description is Therapy emphasizes range of motion exercises and strengthening of the muscles around the knee., Therapy code is #6F2G1.
+
+IT band syndrome: Num of sessions is 8, Id is 14, Required equipment id is 1, Body part is leg, Description is Treatment involves stretching and strengthening the IT band and hip muscles., Therapy code is #8L2Q4.
+
+Shin splints: Num of sessions is 6, Id is 15, Required equipment id is 1, Body part is leg, Description is Rehabilitation focuses on reducing inflammation and improving lower leg strength and flexibility., Therapy code is #7P3Y5.
+
+Stress fractures: Num of sessions is 10, Id is 16, Required equipment id is 1, Body part is leg, Description is Rest and gradual return to weight-bearing activities are essential, along with exercises to maintain bone density., Therapy code is #9M8D2.
+
+Hip bursitis: Num of sessions is 10, Id is 17, Required equipment id is 1, Body part is leg, Description is Exercises to improve hip muscle strength and flexibility, along with modalities for pain management., Therapy code is #2T8L4.
+
+Ankle sprain: Num of sessions is 8, Id is 18, Required equipment id is 1, Body part is foot, Description is Therapy includes balance exercises, strengthening the ankle, and improving flexibility., Therapy code is #6W1E6.
+
+Plantar fasciitis : Num of sessions is 8, Id is 19, Required equipment id is 1, Body part is foot, Description is Treatment involves stretching and strengthening exercises for the calf and foot muscles, along with modalities for pain relief., Therapy code is #6B5Q3.
+
+Achilles tendinitis : Num of sessions is 12, Id is 20, Required equipment id is 1, Body part is foot, Description is Therapy aims to strengthen the calf muscles and Achilles tendon while reducing inflammation., Therapy code is #5C3G3.
+
+Lumbar herniated disc : Num of sessions is 14, Id is 21, Required equipment id is 1, Body part is lower torso, Description is Physical therapy focuses on relieving pain and improving spinal stability through exercises., Therapy code is #3N4P6.
+
+Sciatica: Num of sessions is 7, Id is 22, Required equipment id is 1, Body part is lower torso, Description is Treatment involves exercises to alleviate sciatic nerve compression and improve lumbar spine function., Therapy code is #9P1H4.
+
+Chronic low back pain management: Num of sessions is 10, Id is 23, Required equipment id is 4, Body part is lower_torso, Description is Hydrotherapy involves warm water exercises and aquatic therapy techniques to improve flexibility, reduce pain, and enhance core strength in individuals with chronic low back pain., Therapy code is #4W3F2.
+
+Scoliosis: Num of sessions is 8, Id is 24, Required equipment id is 1, Body part is upper torso, Description is Therapy includes exercises to improve spinal alignment, flexibility, and muscle balance., Therapy code is #5R9N7.
+
+Postural disorders: Num of sessions is 7, Id is 25, Required equipment id is 1, Body part is upper torso, Description is Treatment includes exercises to correct posture and improve muscle balance to relieve pain and prevent future issues., Therapy code is #8K1H7.
+
+Cervical radiculopathy : Num of sessions is 8, Id is 26, Required equipment id is 1, Body part is head, Description is Rehabilitation aims to reduce neck pain and nerve symptoms through neck exercises and modalities., Therapy code is #8G5H3.
+
+Whiplash: Num of sessions is 10, Id is 27, Required equipment id is 1, Body part is head, Description is Physical therapy focuses on neck strengthening and range of motion exercises to alleviate pain and stiffness., Therapy code is #8H6H1.
+
+Post-Operative rehabilitation: Num of sessions is 12, Id is 28, Required equipment id is 2, Body part is any, Description is EMS therapy aids in muscle activation and circulation for post-operative patients, helping to prevent muscle atrophy and accelerate recovery through controlled electrical muscle contractions., Therapy code is #3J6K2.
+
+Stroke rehabilitation: Num of sessions is 20, Id is 29, Required equipment id is 2, Body part is any, Description is EMS can be used to stimulate paralyzed or weakened muscles, aiding in muscle re-education and motor function recovery for stroke survivors., Therapy code is #9P3R1.
+
+Muscle atrophy prevention: Num of sessions is 8, Id is 30, Required equipment id is 2, Body part is any, Description is EMS assists in maintaining muscle strength and mass in individuals with limited mobility, such as bedridden or immobilized patients, by providing passive muscle contractions, Therapy code is #2J6Z7.
+
+Chronic pain management: Num of sessions is 6, Id is 31, Required equipment id is 2, Body part is any, Description is EMS therapy can help manage chronic pain conditions by stimulating endorphin release, reducing pain perception, and improving blood circulation in targeted areas., Therapy code is #7X4N5.
+
+Post-Operative swelling minimization: Num of sessions is 6, Id is 32, Required equipment id is 3, Body part is any, Description is Cryotherapy involves the application of cold therapy to reduce post-operative swelling and inflammation, promoting faster healing and pain relief., Therapy code is #5M8P4.
+
+Acute sports injury: Num of sessions is 8, Id is 33, Required equipment id is 3, Body part is any, Description is Cryotherapy is used immediately after an acute sports injury to minimize swelling, numb the area, and provide pain relief while facilitating faster recovery., Therapy code is #5Z9B5.
+
+Post-Stroke rehabilitation: Num of sessions is 20, Id is 34, Required equipment id is 4, Body part is any, Description is Hydrotherapy offers a supportive and buoyant environment for stroke survivors to work on regaining , Therapy code is #8D2H9.
+
+Post-Operative Rehabilitation: Num of sessions is 12, Id is 35, Required equipment id is 4, Body part is any, Description is Hydrotherapy can aid in the recovery process after surgery by offering a gentle way to regain mobility, reduce swelling, and improve overall conditioning through aquatic exercises and controlled movements in warm water., Therapy code is #5I9K8.
+
+Muscle spasms and tension management: Num of sessions is 6, Id is 36, Required equipment id is 5, Body part is any, Description is Thermotherapy in a wax bath involves immersing affected muscles in warm wax to relax and soothe muscle spasms, reduce tension, and promote blood flow for pain relief., Therapy code is #6L2M9.
+
+Chronic muscle pain management: Num of sessions is 7, Id is 37, Required equipment id is 5, Body part is any, Description is Regular heat therapy, including hot baths, warm packs, or infrared heat, may be part of a comprehensive pain management strategy for chronic muscle pain, providing temporary relief and improving muscle relaxation., Therapy code is #2K6H8.
+
