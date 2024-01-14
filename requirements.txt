@@ -1,3 +1,4 @@
+swig
 openai==1.6.1
 langchain==0.0.352
 langchain-community==0.0.6
