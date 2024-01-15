@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
@@ -25,7 +26,7 @@ import java.util.stream.IntStream;
 public class PatientService {
 
     private final PatientRepository patientRepository;
-
+    private final BCryptPasswordEncoder passwordEncoder;
 
     public ResponseEntity<List<PatientDTO>> getPatients() {
         List<Patient> patients = patientRepository.findAllByStatus(ActivityStatus.ACTIVE);
@@ -121,6 +122,7 @@ public class PatientService {
 
         patientToUpdate.setFirstName(patient.getFirstName());
         patientToUpdate.setLastName(patient.getLastName());
+        patientToUpdate.setPassword(passwordEncoder.encode(patient.getPassword()));
         patientToUpdate.setEmail(patient.getEmail());
         patientToUpdate.setAddress(patient.getAddress());
         patientToUpdate.setDateOfBirth(patient.getDateOfBirth());
