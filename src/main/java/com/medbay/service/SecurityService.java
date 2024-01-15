@@ -92,7 +92,7 @@ public class SecurityService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         String token = UUID.randomUUID().toString();
         PasswordResetToken resetToken = PasswordResetToken.builder()
-                .token(UUID.randomUUID().toString())
+                .token(token)
                 .user(user)
                 .build();
         passwordResetTokenRepository.save(resetToken);
@@ -106,6 +106,7 @@ public class SecurityService {
         User user = resetToken.getUser();
         user.setPassword(passwordEncoder.encode(password));
         userRepository.save(user);
+        passwordResetTokenRepository.delete(resetToken);
         return ResponseEntity.ok().build();
     }
 
