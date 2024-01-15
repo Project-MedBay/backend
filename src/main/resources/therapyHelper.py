@@ -14,6 +14,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 patient_id = sys.argv[1]
 input = sys.argv[2]
+chat_history = sys.argv[3]
 
 loader = TextLoader("src/main/resources/essay_style_therapy_type.txt")
 docsFull = loader.load()
@@ -31,13 +32,16 @@ docs_page_content = " ".join([d.page_content for d in docs])
 llm = ChatOpenAI(temperature=0.3, model_name = 'gpt-4', max_tokens=1024, openai_api_key=openai_api_key)
 
 prompt = PromptTemplate(
-    input_variables=["patient_id", "input", "docs"],
+    input_variables=["patient_id", "input", "docs", "chat_history"],
     template="""
         You are a friendly chatbot for Medical Rehabilitation system that gives info about therapies or therapy recommendations to patients based on their symptoms. 
 
         Patient's name: {patient_id}. 
         Patient's question: {input}.
         Create clear, emphathetic answer by searching for information on user input here: {docs}
+
+        For reference and context, here is the chat history:
+        {chat_history}
 
         For totally uncorrelated questions:
             - Respond briefly and guide the patient back to therapy-related topics.
@@ -49,5 +53,5 @@ prompt = PromptTemplate(
 )
 
 chain = LLMChain(llm=llm, prompt=prompt)
-response = chain.run(input=input, docs=docsFull, patient_id=patient_id)
+response = chain.run(input=input, docs=docsFull, patient_id=patient_id, chat_history=chat_history)
 print(response)
