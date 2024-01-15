@@ -163,7 +163,7 @@ public class AppointmentService {
                 for (Appointment patientAppointment : patientAppointments) {
                     if (!patientAppointment.getId().equals(appointment.getId())) {
                         long hoursDifference = Duration.between(patientAppointment.getDateTime(), dateTime).abs().toHours();
-                        if (hoursDifference <= 36) {
+                        if (hoursDifference <= 24) {
                             log("Overlap with appointment with dateTime: " + patientAppointment.getDateTime());
                             overlap = true;
                             break;
