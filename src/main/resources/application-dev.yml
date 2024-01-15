@@ -21,4 +21,6 @@ spring:
     host: smtppro.zoho.eu
     username: noreply@medbay.life
     port: '587'
-
+  servlet:
+    multipart:
+      max-file-size: 20MB
