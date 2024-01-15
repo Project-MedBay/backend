@@ -7,6 +7,7 @@ import com.medbay.domain.DTO.VerificationsDTO;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Specialization;
 import com.medbay.domain.enums.TherapyStatus;
+import com.medbay.domain.request.ChatRequest;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.repository.*;
 import jakarta.transaction.Transactional;

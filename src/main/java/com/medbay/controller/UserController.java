@@ -1,5 +1,6 @@
 package com.medbay.controller;
 
+import com.medbay.domain.request.ChatRequest;
 import com.medbay.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -26,10 +27,15 @@ public class UserController {
         return userService.deleteUser(id);
     }
 
-    @GetMapping("check-password/{id}")
+    @GetMapping("check-password")
     public ResponseEntity<Boolean> checkPassword(@RequestParam String password,
-                                                 @PathVariable(required = false) Long id) {
+                                                 @RequestParam Long id) {
         return userService.checkPassword(password, id);
+    }
+
+    @PostMapping("/chat")
+    public ResponseEntity<String> askBot(@RequestBody ChatRequest request) {
+        return userService.askBot(request);
     }
 
 
