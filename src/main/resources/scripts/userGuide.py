@@ -8,7 +8,6 @@ from langchain.vectorstores import FAISS
 from langchain.chains import LLMChain
 from langchain_community.document_loaders import TextLoader
 
-
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
@@ -16,7 +15,7 @@ patient_id = sys.argv[1]
 input = sys.argv[2]
 chat_history = sys.argv[3]
 
-loader = TextLoader("src/main/resources/scripts/essay_style_therapy_type.txt")
+loader = TextLoader("src/main/resources/scripts/user_manual.txt")
 docsFull = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
@@ -34,21 +33,20 @@ llm = ChatOpenAI(temperature=0.3, model_name = 'gpt-4', max_tokens=1024, openai_
 prompt = PromptTemplate(
     input_variables=["patient_id", "input", "docs", "chat_history"],
     template="""
-        You are a friendly chatbot for Medical Rehabilitation system that gives info about therapies or therapy recommendations to patients based on their symptoms. 
+        You are a friendly chatbot for Medical Rehabilitation system that helps user to find information about the system and how to use it.
 
         Patient's name: {patient_id}. 
         Patient's question: {input}.
-        Create clear, empathetic answer by searching for information on user input here: {docs}
+        Create clear, emphathetic answer by searching for information about user question from the following user manual: {docs}
 
-        For reference and context, here is the chat history:
+        For reference and context, here is the history of current conversation:
         {chat_history}
 
+        Only respond to what was asked. Do not add any additional information.
         For totally uncorrelated questions:
-            - Respond briefly and guide the patient back to therapy-related topics.
-            - Example: "I'm here to assist with your therapy questions. Let's focus on your rehabilitation needs."
+            - Respond briefly and guide the patient back to system-related topics.
+            - Example: "I'm here to assist with your MedBay experience. Let's focus on that."
 
-        Disclaimer to always include:
-            - This is not medical advice. Always consult a doctor before starting any therapy.
     """
 )
 

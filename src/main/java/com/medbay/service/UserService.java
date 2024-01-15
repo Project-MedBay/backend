@@ -1,8 +1,10 @@
 package com.medbay.service;
 
+import com.medbay.config.PythonScriptRunner;
 import com.medbay.domain.Patient;
 import com.medbay.domain.User;
 import com.medbay.domain.enums.ActivityStatus;
+import com.medbay.domain.request.ChatRequest;
 import com.medbay.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final EmailService emailService;
     private final BCryptPasswordEncoder passwordEncoder;
+    private final PythonScriptRunner pythonScriptRunner;
 
 
     public ResponseEntity<Void> changeActivityStatus(String status, Long id, String rejectionReason) {
@@ -73,7 +76,7 @@ public class UserService {
                 .stream()
                 .anyMatch(auth -> "ROLE_ADMIN".equals(auth.getAuthority()));
 
-        if (id == null) {
+        if (id == 0) {
             if (isAdmin) {
                 return null;
             }
@@ -83,4 +86,14 @@ public class UserService {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
     }
 
+    public ResponseEntity<String> askBot(ChatRequest request) {
+        Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String response;
+        if(request.isMedBot()) {
+            response = pythonScriptRunner.runMedBotScript(request.getChatHistory(), request.getMessage(), patient.getFirstName());
+        } else{
+            response = pythonScriptRunner.runBayBotScript(request.getChatHistory(), request.getMessage(), patient.getFirstName());
+        }
+        return ResponseEntity.ok(response);
+    }
 }
