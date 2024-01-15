@@ -162,11 +162,9 @@ public class AppointmentService {
                 boolean overlap = false;
                 for (Appointment patientAppointment : patientAppointments) {
                     if (!patientAppointment.getId().equals(appointment.getId())) {
-                        LocalDateTime existingAppointmentStart = patientAppointment.getDateTime().minusHours(23);
-                        LocalDateTime existingAppointmentEnd = patientAppointment.getDateTime().plusHours(23);
-                        if ((dateTime.isAfter(existingAppointmentStart) || dateTime.isEqual(existingAppointmentStart)) &&
-                                (dateTime.isBefore(existingAppointmentEnd))) {
-                            log("Overlap within 24-hour period of appointment at: " + patientAppointment.getDateTime());
+                        long hoursDifference = Duration.between(patientAppointment.getDateTime(), dateTime).abs().toHours();
+                        if (hoursDifference < 24) {
+                            log("Overlap with appointment with dateTime: " + patientAppointment.getDateTime());
                             overlap = true;
                             break;
                         }
