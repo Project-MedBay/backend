@@ -16,6 +16,9 @@ public class LoggingAspect {
 
     @Before("within((com.medbay..*..*Controller))")
     public void logBefore(JoinPoint joinPoint) {
+        if(joinPoint.getSignature().getName().equals("updateProfilePicture")) {
+            return;
+        }
         log.info("REQUEST RECEIVED - " + getRequest(joinPoint));
     }
 
