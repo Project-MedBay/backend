@@ -8,13 +8,23 @@ import com.medbay.domain.Therapy;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.repository.*;
+import javax.imageio.IIOImage;
+import javax.imageio.ImageIO;
+import javax.imageio.ImageWriteParam;
+import javax.imageio.ImageWriter;
+import javax.imageio.stream.ImageOutputStream;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.*;
@@ -180,4 +190,36 @@ public class PatientService {
     }
 
 
+    public ResponseEntity<Void> updateProfilePicture(MultipartFile file) {
+        Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        patient.setPhoto(compressPhoto(file));
+        patientRepository.save(patient);
+        return ResponseEntity.ok().build();
+    }
+
+    @SneakyThrows
+    private static byte[] compressPhoto(MultipartFile photo) {
+        final long MAX_SIZE = 5 * 1024 * 1024; // 5 MB
+        float compressionQuality = photo.getSize() > MAX_SIZE ? 0.5f : 0.75f; // More compression if larger than 5MB
+
+        // Read the MultipartFile into a BufferedImage
+        InputStream inputFileStream = photo.getInputStream();
+        BufferedImage inputImage = ImageIO.read(inputFileStream);
+
+        // Compress the image
+        ByteArrayOutputStream compressedOutputStream = new ByteArrayOutputStream();
+        Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(Objects.requireNonNull(photo.getContentType()).split("/")[1]);
+        ImageWriter writer = writers.next();
+        ImageOutputStream imageOutputStream = ImageIO.createImageOutputStream(compressedOutputStream);
+        writer.setOutput(imageOutputStream);
+        ImageWriteParam params = writer.getDefaultWriteParam();
+        params.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
+        params.setCompressionQuality(compressionQuality); // Adjust the compression quality
+        writer.write(null, new IIOImage(inputImage, null, null), params);
+        writer.dispose();
+        imageOutputStream.close();
+
+        // Convert the compressed image to a byte array
+        return compressedOutputStream.toByteArray();
+    }
 }
