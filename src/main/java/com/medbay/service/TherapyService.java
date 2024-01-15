@@ -25,6 +25,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 import static com.medbay.domain.enums.TherapyStatus.PENDING;
+import static com.medbay.util.Helper.log;
 import static org.springframework.http.HttpStatus.CONFLICT;
 
 @Service
@@ -182,9 +183,11 @@ public class TherapyService {
             List<Employee> employees = employeeRepository.findAllByAppointmentsDateTimeAndSpecialization(
                     dateTime, specialization);
 
+            employees.forEach(employee -> log(specialization.toString()));
 
-
-            if (employees.isEmpty() || equipmentRepository.isCapacityReachedForEquipmentOnDate(equipment.getId(), dateTime) != null) {
+            List<Appointment> appointmentsByDate = appointmentRepository.findAllByDateTime(dateTime);
+            int availableSlots = appointmentsByDate.size() - Math.min(equipment.getCapacity(), employees.size());
+            if (employees.isEmpty() || availableSlots <= 0) {
                 return new ArrayList<>();
             }
 

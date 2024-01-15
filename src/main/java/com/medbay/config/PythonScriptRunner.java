@@ -17,15 +17,10 @@ import static com.medbay.util.Helper.log;
 @RequiredArgsConstructor
 public class PythonScriptRunner {
 
-    private final Environment environment;
 
-    @PostConstruct
     @SneakyThrows
-    public void runScript(//String patientId, String input
-                          ) {
-        String[] activeProfiles = environment.getActiveProfiles();
-        String patientId = "1";
-        String input = "I just had a surgery on my ACL. I need to know what I can do to recover faster.";
+    public void runScript(String patientId, String input) {
+
         try {
             ProcessBuilder processBuilder = new ProcessBuilder("python", "src/main/resources/therapyHelper.py", patientId, input);
             processBuilder.redirectErrorStream(true);

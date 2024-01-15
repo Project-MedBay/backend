@@ -22,7 +22,6 @@ public class TherapyController {
         return therapyService.getTherapies();
     }
 
-    @PutMapping
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTherapy(@PathVariable("id") Long id) {
