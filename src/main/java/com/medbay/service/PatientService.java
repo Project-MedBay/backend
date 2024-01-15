@@ -31,6 +31,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static com.medbay.util.Helper.log;
+
 @Service
 @RequiredArgsConstructor
 public class PatientService {
@@ -44,11 +46,12 @@ public class PatientService {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         boolean isEmployee = authentication.getAuthorities()
                 .stream()
-                .anyMatch(auth -> "ROLE_STAFF".equals(auth.getAuthority()));
+                .anyMatch(auth -> "STAFF".equals(auth.getAuthority()));
 
         boolean isAdmin = authentication.getAuthorities()
                 .stream()
-                .anyMatch(auth -> "ROLE_ADMIN".equals(auth.getAuthority()));
+                .anyMatch(auth -> "ADMIN".equals(auth.getAuthority()));
+
 
         Employee employee = isEmployee ? (Employee) authentication.getPrincipal() : null;
 
@@ -61,7 +64,7 @@ public class PatientService {
 
     private PatientDTO createPatientDTO(Patient patient, boolean isEmployee, boolean isAdmin, Employee employee) {
         boolean hasAppointmentWithEmployee = isEmployee && patient.getAppointments().stream()
-                .anyMatch(appointment -> appointment.getEmployee() != null && appointment.getEmployee().equals(employee));
+                .anyMatch(appointment ->  appointment.getEmployee().getId().equals(employee.getId()));
 
         return PatientDTO.builder()
                 .id(patient.getId())
