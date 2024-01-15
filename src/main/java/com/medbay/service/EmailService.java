@@ -150,7 +150,6 @@ public class EmailService {
                 + "<h1>Password Reset</h1>"
                 + "</div>"
                 + "<div class=\"content\">"
-                + "<p>Hello, Karlo</p>"
                 + "<p>We've received a request to reset your password. If you did not request this, please ignore this email, and your password will remain the same. Otherwise, please click the button below to choose a new password:</p>"
                 + "<div style=\"text-align: center; margin-top: 30px; margin-bottom: 20px;\">"
                 + "<a href='" + resetLink + "' style='display: inline-block; padding: 10px 20px; margin: 10px 0; background-color: #0d6efd; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;'>Reset Password</a>"
