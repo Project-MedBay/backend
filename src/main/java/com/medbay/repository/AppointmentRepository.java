@@ -13,14 +13,12 @@ import java.util.List;
 
 @Repository
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
-    List<Appointment> findByEmployeeAndDateTimeAfter(Employee employee, LocalDateTime dateTime);
     List<Appointment> findByDateTime(LocalDateTime dateTime);
     List<Appointment> findByEmployee(Employee employee);
 
     @Query("SELECT COUNT(a) FROM Appointment a WHERE a.therapy.therapyType = :therapyType AND a.dateTime = :dateTime")
     int countAppointmentsByTherapyTypeAndDateTime(@Param("therapyType") TherapyType therapyType, @Param("dateTime") LocalDateTime dateTime);
 
-    int countAppointmentsByDateTime(LocalDateTime dateTime);
 
     @Query(value = "SELECT MAX(id) FROM appointment", nativeQuery = true)
     Long findByMaxId();

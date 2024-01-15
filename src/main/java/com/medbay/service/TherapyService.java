@@ -34,10 +34,8 @@ import static org.springframework.http.HttpStatus.CONFLICT;
 public class TherapyService {
     private final TherapyRepository therapyRepository;
     private final TherapyTypeRepository therapyTypeRepository;
-    private final PatientService patientService;
     private final EmailService emailService;
     private final AppointmentRepository appointmentRepository;
-    private final EquipmentRepository equipmentRepository;
     private final PatientRepository patientRepository;
     private final EmployeeRepository employeeRepository;
     private final HealthReferralRepository healthReferralRepository;

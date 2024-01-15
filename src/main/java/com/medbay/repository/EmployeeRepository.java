@@ -17,8 +17,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query(value = "SELECT MAX(id) FROM _user", nativeQuery = true)
     Long findByMaxId();
 
-    @Query("SELECT COUNT(e) FROM Employee e")
-    int employeeCapacity();
 
     @Query("SELECT e FROM Employee e WHERE e NOT IN " +
             "(SELECT a.employee FROM Appointment a WHERE a.dateTime = :dateTime)" +
