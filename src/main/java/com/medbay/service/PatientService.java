@@ -178,7 +178,7 @@ public class PatientService {
     private PatientSessionsDTO buildPatientSessionsDTO(Appointment appointment, List<Appointment> appointments, int numOfSessions, int index) {
         return PatientSessionsDTO.builder()
                 .equipmentRoomName(appointment.getTherapy().getTherapyType().getRequiredEquipment().getRoomName())
-                .appointmentId(appointments.indexOf(appointment) + 1)
+                .appointmentId(appointments.indexOf(appointment))
                 .dateTime(appointment.getDateTime())
                 .sessionNotes(appointment.getSessionNotes())
                 .numberOfSessions(numOfSessions)
