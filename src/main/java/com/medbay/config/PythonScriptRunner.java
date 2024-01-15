@@ -1,15 +1,11 @@
 package com.medbay.config;
 
-import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 import static com.medbay.util.Helper.log;
 
@@ -19,7 +15,9 @@ public class PythonScriptRunner {
 
 
     @SneakyThrows
-    public void runScript(String patientId, String input) {
+    public String runTherapyScript(String patientId, String input) {
+
+        StringBuilder sb = new StringBuilder();
 
         try {
             ProcessBuilder processBuilder = new ProcessBuilder("python", "src/main/resources/therapyHelper.py", patientId, input);
@@ -30,7 +28,7 @@ public class PythonScriptRunner {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                log(line);
+                sb.append(line);
             }
 
             int exitCode = process.waitFor();
@@ -39,5 +37,6 @@ public class PythonScriptRunner {
             log(e.getMessage());
             throw e;
         }
+        return sb.toString();
     }
 }

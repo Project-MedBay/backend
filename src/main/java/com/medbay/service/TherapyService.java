@@ -183,10 +183,8 @@ public class TherapyService {
             List<Employee> employees = employeeRepository.findAllByAppointmentsDateTimeAndSpecialization(
                     dateTime, specialization);
 
-            employees.forEach(employee -> log(specialization.toString()));
-
             List<Appointment> appointmentsByDate = appointmentRepository.findAllByDateTime(dateTime);
-            int availableSlots = appointmentsByDate.size() - Math.min(equipment.getCapacity(), employees.size());
+            int availableSlots = Math.min(equipment.getCapacity(), employees.size()) - appointmentsByDate.size();
             if (employees.isEmpty() || availableSlots <= 0) {
                 return new ArrayList<>();
             }
