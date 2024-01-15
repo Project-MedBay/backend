@@ -20,7 +20,7 @@ public class Employee extends User {
     @Enumerated(EnumType.STRING)
     private Specialization specialization;
 
-    @OneToMany(mappedBy = "employee")
+    @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
     @JsonIgnoreProperties({"patient", "therapy", "employee", "session"})
     private List<Appointment> appointments;
 

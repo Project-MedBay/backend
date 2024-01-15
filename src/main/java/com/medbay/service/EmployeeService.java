@@ -11,6 +11,7 @@ import com.medbay.domain.request.CreateEmployeeRequest;
 import com.medbay.repository.AppointmentRepository;
 import com.medbay.repository.EmployeeRepository;
 import com.medbay.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -94,6 +95,7 @@ public class EmployeeService {
         return date.with(DayOfWeek.MONDAY);
     }
 
+    @Transactional
     public ResponseEntity<Map<LocalDate, List<EmployeeSessionsDTO>>> getEmployeesAppointments() {
         Employee employee = (Employee) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         List<Appointment> appointments = employee.getAppointments();
