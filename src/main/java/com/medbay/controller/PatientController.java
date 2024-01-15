@@ -9,6 +9,7 @@ import com.medbay.service.PatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -39,6 +40,11 @@ public class PatientController {
     @GetMapping("/logged-in")
     public ResponseEntity<PatientProfileDTO> getLoggedInPatient(){
         return patientService.getLoggedInPatient();
+    }
+
+    @PutMapping("/profile-picture")
+    public ResponseEntity<Void> updateProfilePicture(@RequestParam MultipartFile file){
+        return patientService.updateProfilePicture(file);
     }
 
 }
