@@ -24,4 +24,6 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
 
     @Query(value = "SELECT MAX(id) FROM appointment", nativeQuery = true)
     Long findByMaxId();
+
+    List<Appointment> findAllByDateTime(LocalDateTime dateTime);
 }
