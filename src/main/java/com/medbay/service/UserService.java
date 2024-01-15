@@ -12,6 +12,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -88,11 +91,19 @@ public class UserService {
 
     public ResponseEntity<String> askBot(ChatRequest request) {
         Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String chatHistory;
+        if(request.getChatHistory() == null || request.getChatHistory().isEmpty()) {
+            chatHistory = "This is the first message.";
+        } else {
+            StringJoiner joiner = new StringJoiner("\n");
+            request.getChatHistory().forEach(joiner::add);
+            chatHistory = joiner.toString();
+        }
         String response;
         if(request.isMedBot()) {
-            response = pythonScriptRunner.runMedBotScript(request.getChatHistory(), request.getMessage(), patient.getFirstName());
+            response = pythonScriptRunner.runMedBotScript(chatHistory, request.getMessage(), patient.getFirstName());
         } else{
-            response = pythonScriptRunner.runBayBotScript(request.getChatHistory(), request.getMessage(), patient.getFirstName());
+            response = pythonScriptRunner.runBayBotScript(chatHistory, request.getMessage(), patient.getFirstName());
         }
         return ResponseEntity.ok(response);
     }

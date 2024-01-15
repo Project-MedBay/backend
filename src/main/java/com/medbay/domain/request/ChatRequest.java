@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class ChatRequest {
 
     private String message;
-    private String chatHistory;
+    private List<String> chatHistory;
     private boolean medBot;
 
 }
