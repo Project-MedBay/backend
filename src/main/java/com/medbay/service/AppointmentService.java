@@ -155,16 +155,12 @@ public class AppointmentService {
                 int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
                 int availableEquipment = equipment.getCapacity();
                 int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
-                log("Available equipment: " + availableEquipment);
-                log("Available employees: " + availableEmployees);
-                log("Appointments count: " + appointmentsCount);
 
                 boolean overlap = false;
                 for (Appointment patientAppointment : patientAppointments) {
                     if (!patientAppointment.getId().equals(appointment.getId())) {
                         long hoursDifference = Duration.between(patientAppointment.getDateTime(), dateTime).abs().toHours();
                         if (hoursDifference < 24) {
-                            log("Overlap with appointment with dateTime: " + patientAppointment.getDateTime());
                             overlap = true;
                             break;
                         }
@@ -172,7 +168,6 @@ public class AppointmentService {
                 }
 
                 int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
-                log("Slots available: " + slotsAvailable);
                 if (slotsAvailable < 0) {
                     throw new RuntimeException("Error: Negative slots available");
                 }
