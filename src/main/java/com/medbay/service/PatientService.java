@@ -115,10 +115,7 @@ public class PatientService {
     }
 
     public ResponseEntity<Void> updatePatient(PatientDTO patient) {
-        Patient patientToUpdate = patientRepository.findById(patient.getId()).orElse(null);
-        if (patientToUpdate == null) {
-            return ResponseEntity.notFound().build();
-        }
+        Patient patientToUpdate = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         patientToUpdate.setFirstName(patient.getFirstName());
         patientToUpdate.setLastName(patient.getLastName());

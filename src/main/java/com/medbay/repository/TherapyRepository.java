@@ -11,7 +11,6 @@ import java.util.List;
 
 @Repository
 public interface TherapyRepository extends JpaRepository<Therapy, Long> {
-    Therapy findByTherapyType(TherapyType therapyType);
     List<Therapy> findByTherapyStatus(TherapyStatus therapyStatus);
 
     @Query(value = "SELECT MAX(id) FROM therapy", nativeQuery = true)
