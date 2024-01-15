@@ -19,7 +19,7 @@ public class PythonScriptRunner {
         StringBuilder sb = new StringBuilder();
 
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("python", "src/main/resources/therapyHelper.py", patientName, input, chatHistory);
+            ProcessBuilder processBuilder = new ProcessBuilder("python", "src/main/resources/scripts/therapyHelper.py", patientName, input, chatHistory);
             processBuilder.redirectErrorStream(true);
 
             Process process = processBuilder.start();
@@ -45,7 +45,7 @@ public class PythonScriptRunner {
         StringBuilder sb = new StringBuilder();
 
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("python", "src/main/resources/userGuide.py", patientName, input, chatHistory);
+            ProcessBuilder processBuilder = new ProcessBuilder("python", "src/main/resources/scripts/userGuide.py", patientName, input, chatHistory);
             processBuilder.redirectErrorStream(true);
 
             Process process = processBuilder.start();

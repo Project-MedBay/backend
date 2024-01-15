@@ -27,3 +27,6 @@ spring:
     username: noreply@medbay.life
     password: "#W4p.%G#&hQA93v"
     port: '587'
+  servlet:
+    multipart:
+      max-file-size: 20MB
