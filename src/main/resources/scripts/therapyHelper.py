@@ -15,6 +15,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 patient_id = sys.argv[1]
 input = sys.argv[2]
 chat_history = sys.argv[3]
+user_language = sys.argv[4]
 
 loader = TextLoader("src/main/resources/scripts/essay_style_therapy_type.txt")
 docsFull = loader.load()
@@ -40,6 +41,8 @@ prompt = PromptTemplate(
         Patient's question: {input}.
         Create clear, empathetic answer by searching for information on user input here: {docs}
 
+        Respond in ${user_language} language.
+        
         For reference and context, here is the chat history:
         {chat_history}
 
@@ -53,5 +56,5 @@ prompt = PromptTemplate(
 )
 
 chain = LLMChain(llm=llm, prompt=prompt)
-response = chain.run(input=input, docs=docsFull, patient_id=patient_id, chat_history=chat_history)
+response = chain.run(input=input, docs=docsFull, patient_id=patient_id, chat_history=chat_history, user_language = user_language)
 print(response)
