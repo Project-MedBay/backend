@@ -98,11 +98,14 @@ public class UserService {
             request.getChatHistory().forEach(joiner::add);
             chatHistory = joiner.toString();
         }
+
+        String language = request.getLanguage().equals("hrv") ? "croatian" : "english";
+
         String response;
         if(request.isMedBot()) {
-            response = pythonScriptRunner.runMedBotScript(chatHistory, request.getMessage(), patient.getFirstName());
+            response = pythonScriptRunner.runMedBotScript(chatHistory, request.getMessage(), patient.getFirstName(), language);
         } else{
-            response = pythonScriptRunner.runBayBotScript(chatHistory, request.getMessage(), patient.getFirstName());
+            response = pythonScriptRunner.runBayBotScript(chatHistory, request.getMessage(), patient.getFirstName(), language);
         }
         return ResponseEntity.ok(response);
     }
