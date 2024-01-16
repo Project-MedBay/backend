@@ -3,10 +3,12 @@ package com.medbay.service;
 import com.medbay.domain.DTO.AppointmentDTO;
 import com.medbay.domain.DTO.EmployeeSessionsDTO;
 import com.medbay.domain.*;
+import com.medbay.domain.DTO.EmployeeStatisticsDTO;
 import com.medbay.domain.DTO.PatientDTO;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Role;
 import com.medbay.domain.enums.Specialization;
+import com.medbay.domain.enums.TherapyStatus;
 import com.medbay.domain.request.CreateEmployeeRequest;
 import com.medbay.repository.AppointmentRepository;
 import com.medbay.repository.EmployeeRepository;
@@ -19,14 +21,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
+import java.time.Duration;
 import java.time.LocalDate;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.time.LocalDateTime;
+import java.util.*;
 import java.util.stream.Collectors;
-import java.util.LinkedHashMap;
 import java.util.stream.IntStream;
+
+import static com.medbay.util.Helper.log;
 
 @Service
 @RequiredArgsConstructor
@@ -177,5 +179,63 @@ public class EmployeeService {
 
         employeeRepository.save(employeeToUpdate);
         return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity<EmployeeStatisticsDTO> getEmployeeStatistics() {
+        List<Employee> employees = employeeRepository.findAllByStatus(ActivityStatus.ACTIVE);
+
+        Map<String, Double> percentageOfHoursWorkedLastMonth = new HashMap<>();
+        Map<String, Long> employeesNumberOfAppointments = new HashMap<>();
+        LocalDateTime thirtyDaysAgo = LocalDateTime.now().minusDays(30);
+
+        for (Employee employee : employees) {
+            String fullname = employee.getFirstName() + " " + employee.getLastName();
+            long appointmentsHadLastMonth = employee.getAppointments().stream()
+                    .filter(appointment -> appointment.getDateTime().isAfter(thirtyDaysAgo)
+                                        && appointment.getTherapy().getTherapyStatus().equals(TherapyStatus.VERIFIED))
+                    .count();
+
+            long appointmentsCouldHaveHad = 0;
+            if(employee.getCreatedAt().isBefore(thirtyDaysAgo)) {
+                appointmentsCouldHaveHad += 8 * 30;
+            } else {
+                appointmentsCouldHaveHad += 8 * Duration.between(employee.getCreatedAt(), LocalDateTime.now()).toDays();
+            }
+
+            double percentage = Math.ceil(((double) appointmentsHadLastMonth / appointmentsCouldHaveHad) * 100);
+            percentageOfHoursWorkedLastMonth.put(fullname, percentage);
+
+            long numberOfAppointments = employee.getAppointments().stream()
+                    .filter(appointment -> appointment.getTherapy().getTherapyStatus().equals(TherapyStatus.VERIFIED)
+                                        && appointment.getDateTime().isBefore(LocalDateTime.now()))
+                    .map(appointment -> appointment.getTherapy().getPatient().getId())
+                    .distinct()
+                    .count();
+
+            employeesNumberOfAppointments.put(fullname, numberOfAppointments);
+        }
+
+        employeesNumberOfAppointments = employeesNumberOfAppointments.entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+        percentageOfHoursWorkedLastMonth = percentageOfHoursWorkedLastMonth.entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+        EmployeeStatisticsDTO employeeStatisticsDTO = EmployeeStatisticsDTO.builder()
+                .percentageOfHoursWorkedLastMonth(percentageOfHoursWorkedLastMonth)
+                .numberOfSessions(employeesNumberOfAppointments)
+                .build();
+
+        return ResponseEntity.ok(employeeStatisticsDTO);
     }
 }

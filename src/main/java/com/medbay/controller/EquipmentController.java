@@ -1,5 +1,6 @@
 package com.medbay.controller;
 
+import com.medbay.domain.DTO.EquipmentStatisticsDTO;
 import com.medbay.domain.DTO.FacilityDTO;
 import com.medbay.domain.request.CreateEquipmentRequest;
 import com.medbay.service.EquipmentService;
@@ -32,4 +33,10 @@ public class EquipmentController {
     public ResponseEntity<FacilityDTO> getResources() {
         return equipmentService.getFacilities();
     }
+
+    @GetMapping("/statistics")
+    public ResponseEntity<EquipmentStatisticsDTO> getEquipmentStatistics(){
+        return equipmentService.getEquipmentStatistics();
+    }
+
 }

@@ -29,7 +29,7 @@ db = FAISS.from_documents(therapies, embeddings)
 docs = db.similarity_search(input, k=8)
 docs_page_content = " ".join([d.page_content for d in docs])
 
-llm = ChatOpenAI(temperature=0.3, model_name = 'gpt-4', max_tokens=1024, openai_api_key=openai_api_key)
+llm = ChatOpenAI(temperature=0.3, model_name = 'gpt-3.5-turbo', max_tokens=1024, openai_api_key=openai_api_key)
 
 prompt = PromptTemplate(
     input_variables=["patient_id", "input", "docs", "chat_history", "user_language"],

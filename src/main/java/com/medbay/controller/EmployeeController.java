@@ -1,6 +1,7 @@
 package com.medbay.controller;
 
 import com.medbay.domain.DTO.EmployeeSessionsDTO;
+import com.medbay.domain.DTO.EmployeeStatisticsDTO;
 import com.medbay.domain.Employee;
 import com.medbay.domain.Patient;
 import com.medbay.domain.request.CreateEmployeeRequest;
@@ -50,6 +51,11 @@ public class EmployeeController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deactivateEmployee(@PathVariable("id") Long id){
         return employeeService.deactivateEmployee(id);
+    }
+
+    @GetMapping("/statistics")
+    public ResponseEntity<EmployeeStatisticsDTO> getEmployeeStatistics(){
+        return employeeService.getEmployeeStatistics();
     }
 
 
