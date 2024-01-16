@@ -1,7 +1,6 @@
 package com.medbay.domain.DTO;
 
 import com.medbay.domain.Equipment;
-import com.medbay.domain.Therapy;
 import com.medbay.domain.TherapyType;
 import com.medbay.domain.enums.Specialization;
 import lombok.AllArgsConstructor;

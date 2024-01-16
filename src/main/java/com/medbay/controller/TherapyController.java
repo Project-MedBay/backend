@@ -2,7 +2,6 @@ package com.medbay.controller;
 
 import com.medbay.domain.DTO.VerificationsDTO;
 import com.medbay.domain.Therapy;
-import com.medbay.domain.request.ChatRequest;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.service.TherapyService;
 import lombok.RequiredArgsConstructor;

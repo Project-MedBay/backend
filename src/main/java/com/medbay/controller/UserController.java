@@ -35,7 +35,7 @@ public class UserController {
 
     @PostMapping("/chat")
     public ResponseEntity<String> askBot(@RequestBody ChatRequest request) {
-        return userService.askBot(request);
+        return userService.askChatBot(request);
     }
 
 

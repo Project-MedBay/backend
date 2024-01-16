@@ -7,7 +7,6 @@ import com.medbay.domain.DTO.VerificationsDTO;
 import com.medbay.domain.enums.ActivityStatus;
 import com.medbay.domain.enums.Specialization;
 import com.medbay.domain.enums.TherapyStatus;
-import com.medbay.domain.request.ChatRequest;
 import com.medbay.domain.request.CreateTherapyRequest;
 import com.medbay.repository.*;
 import jakarta.transaction.Transactional;
@@ -26,7 +25,6 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 import static com.medbay.domain.enums.TherapyStatus.PENDING;
-import static com.medbay.util.Helper.log;
 import static org.springframework.http.HttpStatus.CONFLICT;
 
 @Service
