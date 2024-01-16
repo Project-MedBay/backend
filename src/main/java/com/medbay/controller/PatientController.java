@@ -4,7 +4,6 @@ package com.medbay.controller;
 import com.medbay.domain.DTO.PatientDTO;
 import com.medbay.domain.DTO.PatientProfileDTO;
 import com.medbay.domain.DTO.PatientSessionsDTO;
-import com.medbay.domain.Patient;
 import com.medbay.service.PatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

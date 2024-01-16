@@ -3,7 +3,6 @@ package com.medbay.repository;
 import com.medbay.domain.Equipment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import java.time.LocalDateTime;
 
 public interface EquipmentRepository extends JpaRepository<Equipment, Long> {
 

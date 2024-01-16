@@ -1,6 +1,5 @@
 package com.medbay.config;
 
-import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +14,6 @@ public class PythonScriptRunner {
 
     @SneakyThrows
     public String runMedBotScript(String chatHistory, String input, String patientName) {
-
         StringBuilder sb = new StringBuilder();
 
         try {
@@ -28,14 +26,14 @@ public class PythonScriptRunner {
             String line;
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
+                sb.append("\n");
             }
 
-            int exitCode = process.waitFor();
-            log("\nExited with code: " + exitCode);
         } catch (Exception e) {
             log(e.getMessage());
             throw e;
         }
+        log(sb.toString());
         return sb.toString();
     }
 
@@ -54,10 +52,9 @@ public class PythonScriptRunner {
             String line;
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
+                sb.append("\n");
             }
 
-            int exitCode = process.waitFor();
-            log("\nExited with code: " + exitCode);
         } catch (Exception e) {
             log(e.getMessage());
             throw e;

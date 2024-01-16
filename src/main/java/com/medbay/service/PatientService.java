@@ -31,8 +31,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static com.medbay.util.Helper.log;
-
 @Service
 @RequiredArgsConstructor
 public class PatientService {

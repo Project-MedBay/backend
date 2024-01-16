@@ -13,7 +13,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.StringJoiner;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -89,7 +88,7 @@ public class UserService {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
     }
 
-    public ResponseEntity<String> askBot(ChatRequest request) {
+    public ResponseEntity<String> askChatBot(ChatRequest request) {
         Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String chatHistory;
         if(request.getChatHistory() == null || request.getChatHistory().isEmpty()) {
