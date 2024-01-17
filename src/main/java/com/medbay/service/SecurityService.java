@@ -69,9 +69,11 @@ public class SecurityService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
 
-//        if(user.getStatus().equals(ActivityStatus.PENDING)) {
-//            return ResponseEntity.status(UNAUTHORIZED).build();
-//        }
+        if(user.getStatus().equals(ActivityStatus.PENDING)) {
+            return ResponseEntity.status(UNAUTHORIZED).build();
+        } else if(user.getStatus().equals(ActivityStatus.DEACTIVATED)) {
+            return ResponseEntity.status(NOT_FOUND).build();
+        }
 
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
