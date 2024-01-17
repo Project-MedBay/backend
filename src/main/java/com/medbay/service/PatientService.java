@@ -27,9 +27,13 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import static com.medbay.util.Helper.log;
 
 @Service
 @RequiredArgsConstructor
@@ -56,6 +60,14 @@ public class PatientService {
         List<PatientDTO> patientDTOs = patients.stream()
                 .map(patient -> createPatientDTO(patient, isEmployee, isAdmin, employee))
                 .collect(Collectors.toList());
+
+        if(isEmployee){
+            patientDTOs.stream()
+                    .filter(patient -> patient.getAppointments() != null)
+                    .flatMap(patient -> patient.getAppointments().stream())
+                    .filter(appointment -> appointment.getAppointmentDate().isBefore(LocalDateTime.now().minusMonths(6)))
+                    .forEach(appointment -> appointment.setShow(false));
+        }
 
         return ResponseEntity.ok(patientDTOs);
     }
@@ -98,6 +110,7 @@ public class PatientService {
                 .address(patient.getAddress())
                 .dateOfBirth(patient.getDateOfBirth())
                 .MBO(patient.getMBO())
+                .photo(patient.getPhoto())
                 .phoneNumber(patient.getPhoneNumber())
                 .build();
 
@@ -144,7 +157,6 @@ public class PatientService {
         patientToUpdate.setDateOfBirth(patient.getDateOfBirth());
         patientToUpdate.setPhoneNumber(patient.getPhoneNumber());
         patientToUpdate.setMBO(patient.getMBO());
-        patientToUpdate.setPhoto(patient.getPhoto());
 
         patientRepository.save(patientToUpdate);
         return ResponseEntity.ok().build();
@@ -200,6 +212,9 @@ public class PatientService {
 
 
     public ResponseEntity<Void> updateProfilePicture(MultipartFile file) {
+        log(String.valueOf(file.isEmpty()));
+        log(String.valueOf(file.getSize()));
+        log(file.getContentType());
         Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         patient.setPhoto(compressPhoto(file));
         patientRepository.save(patient);

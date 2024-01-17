@@ -9,7 +9,9 @@ import lombok.Data;
 
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.JdbcTypeCode;
 
+import java.sql.Types;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -26,6 +28,7 @@ public class Patient extends User {
     private LocalDate dateOfBirth;
     private String MBO;
     private String phoneNumber;
+    @JdbcTypeCode(Types.VARBINARY)
     private byte[] photo;
 
     @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
