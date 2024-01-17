@@ -212,9 +212,6 @@ public class PatientService {
 
 
     public ResponseEntity<Void> updateProfilePicture(MultipartFile file) {
-        log(String.valueOf(file.isEmpty()));
-        log(String.valueOf(file.getSize()));
-        log(file.getContentType());
         Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         patient.setPhoto(compressPhoto(file));
         patientRepository.save(patient);

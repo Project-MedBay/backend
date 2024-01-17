@@ -18,6 +18,8 @@ public class LoggingAspect {
     public void logBefore(JoinPoint joinPoint) {
         if(joinPoint.getSignature().getName().equals("updateProfilePicture")) {
             return;
+        } else if(joinPoint.getSignature().getName().equals("getLoggedInPatient")){
+            return;
         }
         log.info("REQUEST RECEIVED - " + getRequest(joinPoint));
     }
@@ -36,6 +38,8 @@ public class LoggingAspect {
     @AfterReturning(pointcut = "within((com.medbay..*..*Controller))", returning = "result")
     public void logAfter(JoinPoint joinPoint, Object result) {
         if(joinPoint.getSignature().getName().equals("updateProfilePicture")) {
+            return;
+        } else if(joinPoint.getSignature().getName().equals("getLoggedInPatient")){
             return;
         }
         log.info("RESPONSE RETURNED - " + getResponse(joinPoint, result));
