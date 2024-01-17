@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -139,7 +140,7 @@ public class TherapyService {
         }
 
         Therapy therapy = Therapy.builder()
-                .requestDate(LocalDateTime.now())
+                .requestDate(LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime())
                 .therapyStatus(PENDING)
                 .patient(patient)
                 .therapyType(therapyType)

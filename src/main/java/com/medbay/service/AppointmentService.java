@@ -3,6 +3,7 @@ package com.medbay.service;
 import com.medbay.domain.Appointment;
 import com.medbay.domain.DTO.AdminCalendarDTO;
 import com.medbay.domain.Equipment;
+import com.medbay.domain.Therapy;
 import com.medbay.domain.TherapyType;
 import com.medbay.repository.*;
 import jakarta.persistence.EntityNotFoundException;
@@ -62,6 +63,9 @@ public class AppointmentService {
     }
 
     private AdminCalendarDTO createAdminCalendarDTO(Appointment appointment) {
+        List<Appointment> appointments = appointment.getTherapy().getAppointments().stream()
+                .sorted(Comparator.comparing(Appointment::getDateTime))
+                .toList();
         return AdminCalendarDTO.builder()
                 .appointmentId(appointment.getId())
                 .therapyId(appointment.getTherapy().getId())
@@ -70,6 +74,7 @@ public class AppointmentService {
                 .employeeFirstName(appointment.getEmployee().getFirstName())
                 .employeeLastName(appointment.getEmployee().getLastName())
                 .therapyTypeName(appointment.getTherapy().getTherapyType().getName())
+                .appointmentDates(appointments.stream().map(Appointment::getDateTime).toList())
                 .build();
     }
 
