@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import static com.medbay.util.Helper.log;
+
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
@@ -22,7 +24,7 @@ public class UserController {
     }
 
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping({"/", "/{id}"})
     public ResponseEntity<Void> deleteUser(@PathVariable(required = false) Long id) {
         return userService.deleteUser(id);
     }
