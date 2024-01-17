@@ -63,6 +63,7 @@ public class AppointmentService {
 
     private AdminCalendarDTO createAdminCalendarDTO(Appointment appointment) {
         return AdminCalendarDTO.builder()
+                .appointmentId(appointment.getId())
                 .therapyId(appointment.getTherapy().getId())
                 .patientFirstName(appointment.getTherapy().getPatient().getFirstName())
                 .patientLastName(appointment.getTherapy().getPatient().getLastName())
