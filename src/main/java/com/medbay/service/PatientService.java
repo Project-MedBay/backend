@@ -77,6 +77,7 @@ public class PatientService {
                 .show(hasAppointmentWithEmployee || isAdmin)
                 .appointments(patient.getAppointments().stream()
                         .map(appointment -> AppointmentDTO.builder()
+                                .appointmentId(appointment.getId())
                                 .appointmentDate(appointment.getDateTime())
                                 .sessionNotes(appointment.getSessionNotes())
                                 .therapyName(appointment.getTherapy().getTherapyType().getName())
