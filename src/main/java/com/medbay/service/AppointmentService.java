@@ -1,14 +1,12 @@
 package com.medbay.service;
 
-import com.medbay.domain.Appointment;
+import com.medbay.domain.*;
 import com.medbay.domain.DTO.AdminCalendarDTO;
-import com.medbay.domain.Equipment;
-import com.medbay.domain.Therapy;
-import com.medbay.domain.TherapyType;
 import com.medbay.repository.*;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
@@ -64,6 +62,7 @@ public class AppointmentService {
 
     private AdminCalendarDTO createAdminCalendarDTO(Appointment appointment) {
         List<Appointment> appointments = appointment.getTherapy().getAppointments().stream()
+                .filter(app -> !Objects.equals(app.getId(), appointment.getId()))
                 .sorted(Comparator.comparing(Appointment::getDateTime))
                 .toList();
         return AdminCalendarDTO.builder()
@@ -85,6 +84,11 @@ public class AppointmentService {
                 .orElseThrow(() -> new EntityNotFoundException("Therapy type with code " + therapyCode + " not found"));
 
         Equipment equipment = therapyType.getRequiredEquipment();
+        Patient patient = (Patient) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        List<Appointment> patientAppointments = patient.getAppointments().stream()
+                .sorted(Comparator.comparing(Appointment::getDateTime))
+                .toList();
 
         LocalDate today = LocalDate.now();
         for (int day = 0; day < days; day++) {
@@ -103,12 +107,16 @@ public class AppointmentService {
                 int availableEquipment = equipment.getCapacity();
                 int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
 
-
-                int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
-                if (slotsAvailable < 0) {
-                    throw new RuntimeException("Error: Negative slots available");
+                boolean overlap = false;
+                for (Appointment patientAppointment : patientAppointments) {
+                    long hoursDifference = Duration.between(patientAppointment.getDateTime(), dateTime).abs().toHours();
+                    if (hoursDifference < 24) {
+                        overlap = true;
+                        break;
+                    }
                 }
-                else if(slotsAvailable > 0) {
+                int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
+                if(slotsAvailable > 0 && !overlap) {
                     availableHours.add(hour);
                 }
             }
@@ -133,15 +141,18 @@ public class AppointmentService {
         Appointment appointment = appointmentRepository.findById(appointmentId)
                 .orElseThrow(() -> new EntityNotFoundException("Appointment not found"));
 
+        List<Appointment> therapyAppointments = appointment.getTherapy().getAppointments()
+                .stream().sorted(Comparator.comparing(Appointment::getDateTime)).toList();
+
         TherapyType therapyType = appointment.getTherapy().getTherapyType();
         Equipment equipment = therapyType.getRequiredEquipment();
 
-        List<Appointment> patientAppointments = appointment.getTherapy().getAppointments()
+        List<Appointment> patientAppointments = appointment.getTherapy().getPatient().getAppointments()
                 .stream().sorted(Comparator.comparing(Appointment::getDateTime)).toList();
 
-        int numOfSessions = patientAppointments.size();
+        int numOfSessions = therapyType.getNumOfSessions();
         LocalDate dateNow = LocalDate.now().plusDays(2);
-        LocalDate maxDateTime = patientAppointments.get(0).getDateTime().toLocalDate().plusDays(5L * numOfSessions);
+        LocalDate maxDateTime = therapyAppointments.get(0).getDateTime().toLocalDate().plusDays(5L * numOfSessions);
         long days = ChronoUnit.DAYS.between(dateNow, maxDateTime);
 
 
@@ -175,10 +186,7 @@ public class AppointmentService {
                 }
 
                 int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
-                if (slotsAvailable < 0) {
-                    throw new RuntimeException("Error: Negative slots available");
-                }
-                else if(slotsAvailable > 0 && !overlap) {
+                if(slotsAvailable > 0 && !overlap) {
                     availableHours.add(hour);
                 }
             }
