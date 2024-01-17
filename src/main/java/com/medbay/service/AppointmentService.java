@@ -137,7 +137,7 @@ public class AppointmentService {
 
         int numOfSessions = patientAppointments.size();
         LocalDate date = LocalDate.now().plusDays(2);
-        LocalDateTime maxDateTime = patientAppointments.get(0).getDateTime().plusDays(5L * numOfSessions);
+        LocalDate maxDateTime = patientAppointments.get(0).getDateTime().toLocalDate().plusDays(5L * numOfSessions);
         long days = Duration.between(date, maxDateTime).toDays();
 
         Map<String, List<Integer>> availability = new LinkedHashMap<>();
