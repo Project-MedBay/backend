@@ -136,12 +136,13 @@ public class AppointmentService {
                 .stream().sorted(Comparator.comparing(Appointment::getDateTime)).toList();
 
         int numOfSessions = patientAppointments.size();
+        LocalDate date = LocalDate.now().plusDays(2);
         LocalDateTime maxDateTime = patientAppointments.get(0).getDateTime().plusDays(5L * numOfSessions);
-        long days = Duration.between(appointment.getDateTime(), maxDateTime).toDays();
+        long days = Duration.between(date, maxDateTime).toDays();
 
         Map<String, List<Integer>> availability = new LinkedHashMap<>();
         for (long day = 0; day < days; day++) {
-            LocalDate date = patientAppointments.get(0).getDateTime().toLocalDate().plusDays(day);
+            date = date.plusDays(day);
 
             if (date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY) {
                 availability.put(date.format(DATE_FORMATTER), new ArrayList<>());
