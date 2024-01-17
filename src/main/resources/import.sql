@@ -368,7 +368,7 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167823', 'HR005951', '567890123', '#8H6H1');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167824', 'HR211078', '678901234', '#8K1H7');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167825', 'HR026260', '789012345', '#3J6K2'); --inactive
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167826', 'HR166491', '890123456', '#9P3R1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167826', 'HR166491', '890123456', '#9P3R1'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167827', 'HR095677', '901234567', '#4W3F2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167828', 'HR233633', '987654321', '#4D5C2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167829', 'HR206450', '876543210', '#8D2H9'); --inactive
@@ -383,7 +383,7 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167838', 'HR177695', '901234567', '#9M8D2');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_167839', 'HR219873', '876543210', '#6W1E6'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_793727', 'HR185246', '625318536', '#2T8L4'); --t
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_636693', 'HR160786', '428948708', '#8D2H9'); --t
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_636693', 'HR160786', '428948708', '#8D2H9'); --inactive
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_390107', 'HR256292', '386699177', '#6L2M9'); --t
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_565429', 'HR059632', '458958883', '#8H6H1'); --t
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_032759', 'HR163325', '250603145', '#6F6P9'); --t
