@@ -96,12 +96,9 @@ public class AppointmentService {
                 int appointmentsCount = appointmentRepository.countAppointmentsByTherapyTypeAndDateTime(therapyType, dateTime);
                 int availableEquipment = equipment.getCapacity();
                 int availableEmployees = employeeRepository.countBySpecialization(equipment.getSpecialization());
-                log("Available equipment: " + availableEquipment);
-                log("Available employees: " + availableEmployees);
-                log("Appointments count: " + appointmentsCount);
+
 
                 int slotsAvailable = Math.min(availableEquipment, availableEmployees) - appointmentsCount;
-                log("Slots available: " + slotsAvailable);
                 if (slotsAvailable < 0) {
                     throw new RuntimeException("Error: Negative slots available");
                 }
@@ -137,14 +134,15 @@ public class AppointmentService {
                 .stream().sorted(Comparator.comparing(Appointment::getDateTime)).toList();
 
         int numOfSessions = patientAppointments.size();
-        LocalDate date = LocalDate.now().plusDays(2);
+        LocalDate dateNow = LocalDate.now().plusDays(2);
         LocalDate maxDateTime = patientAppointments.get(0).getDateTime().toLocalDate().plusDays(5L * numOfSessions);
-        long days = ChronoUnit.DAYS.between(date, maxDateTime);
+        long days = ChronoUnit.DAYS.between(dateNow, maxDateTime);
 
 
+        LocalDate date;
         Map<String, List<Integer>> availability = new LinkedHashMap<>();
         for (long day = 0; day < days; day++) {
-            date = date.plusDays(day);
+            date = dateNow.plusDays(day);
 
             if (date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY) {
                 availability.put(date.format(DATE_FORMATTER), new ArrayList<>());
