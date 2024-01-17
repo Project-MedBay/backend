@@ -175,15 +175,13 @@ public class TherapyService {
     private List<Appointment> createAppointments(CreateTherapyRequest request, Patient patient, TherapyType therapyType) {
         List<Appointment> appointments = new ArrayList<>();
         Specialization specialization = therapyType.getRequiredEquipment().getSpecialization();
-        Equipment equipment = therapyType.getRequiredEquipment();
 
         for (LocalDateTime dateTime : request.getAppointmentDates()) {
             List<Employee> employees = employeeRepository.findAllByAppointmentsDateTimeAndSpecialization(
                     dateTime, specialization);
 
-            List<Appointment> appointmentsByDate = appointmentRepository.findAllByDateTime(dateTime);
-            int availableSlots = Math.min(equipment.getCapacity(), employees.size()) - appointmentsByDate.size();
-            if (employees.isEmpty() || availableSlots <= 0) {
+
+            if (employees.isEmpty()) {
                 return new ArrayList<>();
             }
 
