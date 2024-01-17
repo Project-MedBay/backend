@@ -75,6 +75,13 @@ public class PatientService {
                 .MBO(patient.getMBO())
                 .phoneNumber(patient.getPhoneNumber())
                 .show(hasAppointmentWithEmployee || isAdmin)
+                .appointments(patient.getAppointments().stream()
+                        .map(appointment -> AppointmentDTO.builder()
+                                .appointmentDate(appointment.getDateTime())
+                                .sessionNotes(appointment.getSessionNotes())
+                                .therapyName(appointment.getTherapy().getTherapyType().getName())
+                                .build())
+                        .collect(Collectors.toList()))
                 .build();
     }
 
