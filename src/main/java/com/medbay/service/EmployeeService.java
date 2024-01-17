@@ -20,10 +20,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.DayOfWeek;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -186,7 +183,7 @@ public class EmployeeService {
 
         Map<String, Double> percentageOfHoursWorkedLastMonth = new HashMap<>();
         Map<String, Long> employeesNumberOfAppointments = new HashMap<>();
-        LocalDateTime thirtyDaysAgo = LocalDateTime.now().minusDays(30);
+        LocalDateTime thirtyDaysAgo = LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime().minusDays(30);
 
         for (Employee employee : employees) {
             String fullname = employee.getFirstName() + " " + employee.getLastName();
@@ -207,7 +204,7 @@ public class EmployeeService {
 
             long numberOfAppointments = employee.getAppointments().stream()
                     .filter(appointment -> appointment.getTherapy().getTherapyStatus().equals(TherapyStatus.VERIFIED)
-                                        && appointment.getDateTime().isBefore(LocalDateTime.now()))
+                                        && appointment.getDateTime().isBefore(LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime()))
                     .map(appointment -> appointment.getTherapy().getPatient().getId())
                     .distinct()
                     .count();

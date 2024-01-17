@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -85,7 +86,7 @@ public class EquipmentService {
 
         Map<String, Double> percentageOfHoursWorkedLastMonth = new HashMap<>();
         Map<String, Long> employeesNumberOfAppointments = new HashMap<>();
-        LocalDateTime thirtyDaysAgo = LocalDateTime.now().minusDays(30);
+        LocalDateTime thirtyDaysAgo = LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime().minusDays(30);
 
         for (Equipment equipment : equipments) {
             String name = equipment.getName();
@@ -101,7 +102,7 @@ public class EquipmentService {
 
             long numberOfAppointments = appointments.stream()
                     .filter(appointment -> appointment.getTherapy().getTherapyStatus().equals(TherapyStatus.VERIFIED)
-                            && appointment.getDateTime().isBefore(LocalDateTime.now())
+                            && appointment.getDateTime().isBefore(LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime())
                             && appointment.getTherapy().getTherapyType().getRequiredEquipment().getName().equals(name))
                     .map(appointment -> appointment.getTherapy().getPatient().getId())
                     .distinct()

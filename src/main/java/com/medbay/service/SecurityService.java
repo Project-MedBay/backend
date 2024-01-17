@@ -14,6 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Map;
 import java.util.UUID;
 
@@ -54,7 +55,7 @@ public class SecurityService {
                 .phoneNumber(request.getPhoneNumber())
                 .dateOfBirth(request.getDateOfBirth())
                 .status(ActivityStatus.PENDING)
-                .createdAt(LocalDateTime.now())
+                .createdAt(LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime())
                 .role(PATIENT)
                 .build();
 
