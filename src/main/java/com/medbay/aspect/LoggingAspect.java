@@ -35,6 +35,9 @@ public class LoggingAspect {
 
     @AfterReturning(pointcut = "within((com.medbay..*..*Controller))", returning = "result")
     public void logAfter(JoinPoint joinPoint, Object result) {
+        if(joinPoint.getSignature().getName().equals("updateProfilePicture")) {
+            return;
+        }
         log.info("RESPONSE RETURNED - " + getResponse(joinPoint, result));
     }
 
