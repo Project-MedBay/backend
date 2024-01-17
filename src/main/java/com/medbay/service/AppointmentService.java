@@ -15,6 +15,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -138,7 +139,8 @@ public class AppointmentService {
         int numOfSessions = patientAppointments.size();
         LocalDate date = LocalDate.now().plusDays(2);
         LocalDate maxDateTime = patientAppointments.get(0).getDateTime().toLocalDate().plusDays(5L * numOfSessions);
-        long days = Duration.between(date, maxDateTime).toDays();
+        long days = ChronoUnit.DAYS.between(date, maxDateTime);
+
 
         Map<String, List<Integer>> availability = new LinkedHashMap<>();
         for (long day = 0; day < days; day++) {
