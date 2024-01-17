@@ -17,6 +17,7 @@ public class AdminCalendarDTO {
     private String patientLastName;
     private String employeeFirstName;
     private String employeeLastName;
+    private Long appointmentId;
 
 
 }
