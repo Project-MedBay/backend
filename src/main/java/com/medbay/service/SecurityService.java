@@ -55,7 +55,7 @@ public class SecurityService {
                 .phoneNumber(request.getPhoneNumber())
                 .dateOfBirth(request.getDateOfBirth())
                 .status(ActivityStatus.PENDING)
-                .createdAt(LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime())
+                .createdAt(LocalDateTime.now().plusHours(1))
                 .role(PATIENT)
                 .build();
 

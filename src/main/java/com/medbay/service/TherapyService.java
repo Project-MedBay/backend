@@ -140,7 +140,7 @@ public class TherapyService {
         }
 
         Therapy therapy = Therapy.builder()
-                .requestDate(LocalDateTime.now().atZone(ZoneId.of("UTC+1")).toLocalDateTime())
+                .requestDate(LocalDateTime.now().plusHours(1))
                 .therapyStatus(PENDING)
                 .patient(patient)
                 .therapyType(therapyType)
