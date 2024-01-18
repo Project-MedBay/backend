@@ -99,8 +99,7 @@ public class UserService {
             chatHistory = joiner.toString();
         }
 
-        //String language = request.getLanguage().equals("hrv") ? "croatian" : "english";
-        String language = "english/croatian";
+        String language = request.getLanguage().equals("hr") ? "croatian" : "english";
         String response;
         if(request.isMedBot()) {
             response = pythonScriptRunner.runMedBotScript(chatHistory, request.getMessage(), patient.getFirstName(), language);

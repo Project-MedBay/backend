@@ -17,7 +17,7 @@ public class ChatRequest {
     private String message;
     private List<String> chatHistory;
     private boolean medBot;
-//    @NotNull
-//    private String language;
+    @NotNull
+    private String language;
 
 }
