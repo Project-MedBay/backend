@@ -361,95 +361,95 @@ INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code
 INSERT INTO therapy_type (required_equipment_id, name, description, therapy_Code, num_of_sessions, body_part, id) VALUES (5, 'Chronic muscle pain management', 'Regular heat therapy, including hot baths, warm packs, or infrared heat, may be part of a comprehensive pain management strategy for chronic muscle pain, providing temporary relief and improving muscle relaxation.', '#2K6H8', 7, 'any', 37);
 
 
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_804133', 'HR156385', '2552467727', '#1G8Z3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_981149', 'HR279458', '2966449615', '#6F2G1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_315407', 'HR137727', '7198394283', '#6W1E6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_206986', 'HR266719', '7601573758', '#5M8P4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_655284', 'HR057036', '4469828133', '#1R2Y1'); --inactive, 5
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_975238', 'HR281063', '0902546427', '#5C3G3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_803043', 'HR138609', '0902546427', '#2K6H8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_143461', 'HR228995', '9905831140', '#6W1E6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_474678', 'HR186108', '4259054123', '#5C3G3'); --inactive, 9
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_046307', 'HR078889', '1630218518', '#4C7X3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_082792', 'HR141776', '1239320124', '#2J6Z7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_318799', 'HR206931', '2077565098', '#8K1H7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_557448', 'HR166145', '7548622384', '#4D5C2'); --inactive, 13
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_333104', 'HR178606', '9895283067', '#9P3R1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_811358', 'HR176047', '3601968408', '#4N8P5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_525352', 'HR208092', '5789702449', '#2T8L4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_658381', 'HR075665', '7253802385', '#6F6P9');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_201181', 'HR059904', '4315689241', '#2K6H8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_699572', 'HR227120', '6009078399', '#1V2V2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_293370', 'HR294139', '2784035108', '#4C7X3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_711056', 'HR003239', '9723911676', '#1V2V2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_615371', 'HR021862', '3576599745', '#1G8Z3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_082767', 'HR188550', '5428302999', '#2J6Z7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_550430', 'HR192397', '2197194677', '#8D2H9');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_723486', 'HR207573', '5657687916', '#5R9N7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_755965', 'HR281670', '4453575095', '#8G5H3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_785519', 'HR166928', '6952783293', '#1G8Z3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_802230', 'HR173886', '3454521744', '#4C7X3'); --inactive, 28
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_263858', 'HR197341', '4453575095', '#9P1H4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_032892', 'HR256151', '0657418346', '#6F6P9');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_939779', 'HR149682', '9725750876', '#6W1E6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_438761', 'HR093216', '1439898801', '#8H6H1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_947413', 'HR083114', '9325464321', '#8I5F5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_334343', 'HR189198', '6211425502', '#7Z8V8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_357341', 'HR156795', '9750546775', '#3H4O2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_485193', 'HR220013', '7198394283', '#1G8Z3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_792409', 'HR099012', '6211425502', '#4W3F2'); --inactive, 37
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_663757', 'HR079038', '0376528707', '#2K6H8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_927865', 'HR171497', '9226487941', '#6L2M9');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_992911', 'HR191095', '1239320124', '#5G3Y4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_174860', 'HR101241', '6009078399', '#7P3Y5'); --inactive, 41
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_895655', 'HR236883', '8063211382', '#2J6Z7'); --inactive, 42
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_331865', 'HR272039', '1239320124', '#8K1H7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_735461', 'HR253216', '2784035108', '#9P3R1'); --inactive, 44
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_062131', 'HR202753', '9173929050', '#6F2G1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_852503', 'HR203570', '9226487941', '#6F2G1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_618432', 'HR146238', '1945494187', '#8I5F5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_858670', 'HR148866', '4453575095', '#5G3Y4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_743761', 'HR254215', '1945494187', '#7Z8V8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_197254', 'HR241012', '6120632490', '#2T8L4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_978113', 'HR127284', '1728840072', '#7X4N5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_061745', 'HR257390', '2102634128', '#6L2M9');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_077370', 'HR209518', '5564061312', '#5C3G3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_273730', 'HR244457', '2784035108', '#8D2H9');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_659029', 'HR165683', '9389841365', '#8K1H7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_984135', 'HR179318', '4453575095', '#5R9N7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_828273', 'HR117643', '1630218518', '#4D5C2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_834389', 'HR167513', '8210149171', '#8K1H7');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_768614', 'HR002936', '3185571925', '#7Z8V8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_570104', 'HR247206', '3403347443', '#2K6H8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_174545', 'HR217559', '1393000849', '#9P3R1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_476584', 'HR099789', '9226487941', '#4N8P5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_734300', 'HR149875', '5461376299', '#4N8P5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_664416', 'HR166985', '2285196338', '#7R3N6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_362601', 'HR220950', '3060373849', '#6B5Q3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_811935', 'HR274010', '6613981921', '#7P3Y5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_410950', 'HR214247', '6891723134', '#3J6K2'); --inactive, 67
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_961207', 'HR260980', '0901656844', '#9M8D2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_872954', 'HR063194', '9750546775', '#3J6K2'); --inactive, 69
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_603226', 'HR233957', '1945494187', '#8H6H1'); --inactive, 70
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_446159', 'HR015375', '6268486916', '#7P3Y5'); --inactive, 71
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_999657', 'HR149344', '6075500048', '#2T8L4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_516218', 'HR279345', '3403347443', '#5G3Y4');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_651818', 'HR158660', '0762728409', '#6F2G1');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_900573', 'HR073594', '2784035108', '#6F6P9');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_642910', 'HR209778', '5564061312', '#5Z9B5');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_271544', 'HR221686', '0762728409', '#4D5C2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_158510', 'HR187852', '8328945121', '#7R3N6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_162270', 'HR198297', '8041741740', '#3N4P6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_385828', 'HR155147', '9895283067', '#5C3G3'); --inactive, 80
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_474635', 'HR290076', '0376528707', '#1V2V2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_335644', 'HR258315', '1239320124', '#6B5Q3');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_252620', 'HR271302', '9015662392', '#1V2V2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_862892', 'HR097978', '1945494187', '#6W1E6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_951943', 'HR255589', '3185571925', '#3H4O2');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_806224', 'HR248063', '6858724683', '#3N4P6');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_487732', 'HR050325', '6696963399', '#7Z8V8');
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_398236', 'HR047661', '5799538838', '#3H4O2'); --inactive, 88
-INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_667327', 'HR018133', '2102634128', '#5C3G3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_804133', 'HR156385', '127314835', '#1G8Z3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_981149', 'HR279458', '641458599', '#6F2G1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_315407', 'HR137727', '262399953', '#6W1E6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_206986', 'HR266719', '395678258', '#5M8P4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_655284', 'HR057036', '570449780', '#1R2Y1'); --inactive, 5
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_975238', 'HR281063', '703049599', '#5C3G3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_803043', 'HR138609', '366673053', '#2K6H8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_143461', 'HR228995', '007499770', '#6W1E6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_474678', 'HR186108', '885070898', '#5C3G3'); --inactive, 9
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_046307', 'HR078889', '222533668', '#4C7X3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_082792', 'HR141776', '997102585', '#2J6Z7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_318799', 'HR206931', '830282320', '#8K1H7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_557448', 'HR166145', '783009836', '#4D5C2'); --inactive, 13
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_333104', 'HR178606', '287582552', '#9P3R1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_811358', 'HR176047', '996584942', '#4N8P5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_525352', 'HR208092', '894637165', '#2T8L4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_658381', 'HR075665', '184854123', '#6F6P9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_201181', 'HR059904', '647626808', '#2K6H8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_699572', 'HR227120', '687876463', '#1V2V2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_293370', 'HR294139', '582028798', '#4C7X3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_711056', 'HR003239', '109472194', '#1V2V2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_615371', 'HR021862', '340945232', '#1G8Z3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_082767', 'HR188550', '688757548', '#2J6Z7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_550430', 'HR192397', '271017030', '#8D2H9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_723486', 'HR207573', '983725877', '#5R9N7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_755965', 'HR281670', '546818077', '#8G5H3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_785519', 'HR166928', '130104982', '#1G8Z3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_802230', 'HR173886', '168809794', '#4C7X3'); --inactive, 28
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_263858', 'HR197341', '829908366', '#9P1H4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_032892', 'HR256151', '621073616', '#6F6P9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_939779', 'HR149682', '524506508', '#6W1E6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_438761', 'HR093216', '647526618', '#8H6H1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_947413', 'HR083114', '328434825', '#8I5F5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_334343', 'HR189198', '487040210', '#7Z8V8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_357341', 'HR156795', '789610460', '#3H4O2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_485193', 'HR220013', '060338040', '#1G8Z3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_792409', 'HR099012', '549559652', '#4W3F2'); --inactive, 37
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_663757', 'HR079038', '144089064', '#2K6H8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_927865', 'HR171497', '298821773', '#6L2M9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_992911', 'HR191095', '152538121', '#5G3Y4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_174860', 'HR101241', '357274909', '#7P3Y5'); --inactive, 41
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_895655', 'HR236883', '496379712', '#2J6Z7'); --inactive, 42
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_331865', 'HR272039', '205239269', '#8K1H7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_735461', 'HR253216', '293300548', '#9P3R1'); --inactive, 44
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_062131', 'HR202753', '729319666', '#6F2G1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_852503', 'HR203570', '592119574', '#6F2G1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_618432', 'HR146238', '486030104', '#8I5F5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_858670', 'HR148866', '031802162', '#5G3Y4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_743761', 'HR254215', '083106320', '#7Z8V8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_197254', 'HR241012', '040817795', '#2T8L4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_978113', 'HR127284', '898053300', '#7X4N5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_061745', 'HR257390', '211725750', '#6L2M9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_077370', 'HR209518', '757015785', '#5C3G3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_273730', 'HR244457', '687315538', '#8D2H9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_659029', 'HR165683', '220854889', '#8K1H7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_984135', 'HR179318', '832106460', '#5R9N7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_828273', 'HR117643', '472254491', '#4D5C2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_834389', 'HR167513', '753883734', '#8K1H7');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_768614', 'HR002936', '542597712', '#7Z8V8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_570104', 'HR247206', '446312410', '#2K6H8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_174545', 'HR217559', '881144857', '#9P3R1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_476584', 'HR099789', '295052546', '#4N8P5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_734300', 'HR149875', '483949569', '#4N8P5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_664416', 'HR166985', '945884447', '#7R3N6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_362601', 'HR220950', '867821280', '#6B5Q3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_811935', 'HR274010', '423171818', '#7P3Y5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_410950', 'HR214247', '105842753', '#3J6K2'); --inactive, 67
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_961207', 'HR260980', '268198841', '#9M8D2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_872954', 'HR063194', '655587267', '#3J6K2'); --inactive, 69
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_603226', 'HR233957', '498887923', '#8H6H1'); --inactive, 70
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_446159', 'HR015375', '144163333', '#7P3Y5'); --inactive, 71
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_999657', 'HR149344', '317874748', '#2T8L4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_516218', 'HR279345', '024527729', '#5G3Y4');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_651818', 'HR158660', '561805012', '#6F2G1');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_900573', 'HR073594', '178177368', '#6F6P9');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_642910', 'HR209778', '027083702', '#5Z9B5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_271544', 'HR221686', '441424433', '#4D5C2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_158510', 'HR187852', '808880890', '#7R3N6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_162270', 'HR198297', '289625367', '#3N4P6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_385828', 'HR155147', '211854516', '#5C3G3'); --inactive, 80
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_474635', 'HR290076', '008301823', '#1V2V2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_335644', 'HR258315', '517334661', '#6B5Q3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_252620', 'HR271302', '579332964', '#1V2V2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_862892', 'HR097978', '266588725', '#6W1E6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_951943', 'HR255589', '978324426', '#3H4O2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_806224', 'HR248063', '535097712', '#3N4P6');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_487732', 'HR050325', '512765038', '#7Z8V8');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_398236', 'HR047661', '119690400', '#3H4O2'); --inactive, 88
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_667327', 'HR018133', '908235059', '#5C3G3');
 
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (1, 73, 8, 'VERIFIED', '2023-12-31T19:06');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (2, 71, 13, 'VERIFIED', '2023-12-31T08:19');
