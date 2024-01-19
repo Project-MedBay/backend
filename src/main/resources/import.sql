@@ -450,6 +450,10 @@ INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUE
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_487732', 'HR050325', '512765038', '#7Z8V8');
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_398236', 'HR047661', '119690400', '#3H4O2'); --inactive, 88
 INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_667327', 'HR018133', '908235059', '#5C3G3');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_951943', 'HR271302', '978328326', '#5Z9B5');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_862892', 'HR097978', '266598725', '#3H4O2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_951943', 'HR255589', '978724426', '#4D5C2');
+INSERT INTO health_referral (health_referral_id, hlkid, mbo, therapy_code) VALUES ('DGC_806224', 'HR248063', '531097712', '#3N4P6');
 
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (1, 73, 8, 'VERIFIED', '2023-12-31T19:06');
 INSERT INTO therapy (id, patient_id, therapy_type_id, therapy_status, request_date) VALUES (2, 71, 13, 'VERIFIED', '2023-12-31T08:19');
