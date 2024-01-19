@@ -93,12 +93,19 @@ public class SecurityService {
     public ResponseEntity<Void> sendTokenEmailForForgotPassword(String email) {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        String token = UUID.randomUUID().toString();
-        PasswordResetToken resetToken = PasswordResetToken.builder()
-                .token(token)
-                .user(user)
-                .build();
-        passwordResetTokenRepository.save(resetToken);
+
+        String token;
+        if(passwordResetTokenRepository.existsByUser(user)){
+            PasswordResetToken resetToken = passwordResetTokenRepository.findByUser(user).get();
+            token = resetToken.getToken();
+        } else {
+            token = UUID.randomUUID().toString();
+            PasswordResetToken resetToken = PasswordResetToken.builder()
+                    .token(token)
+                    .user(user)
+                    .build();
+            passwordResetTokenRepository.save(resetToken);
+        }
         emailService.sendChangePasswordEmail(email, token);
         return ResponseEntity.ok().build();
     }
