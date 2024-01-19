@@ -152,7 +152,6 @@ public class EmailService {
                 + "<div style=\"text-align: center; margin-top: 30px; margin-bottom: 20px;\">"
                 + "<a href='" + resetLink + "' style='display: inline-block; padding: 10px 20px; margin: 10px 0; background-color: #0d6efd; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;'>Reset Password</a>"
                 + "</div>"
-                + "<p>This password reset link will expire in 24 hours for your protection.</p>"
                 + "<p>If you're having trouble with the button above, copy and paste the URL below into your web browser:</p>"
                 + "<p><a href='" + resetLink + "'>" + resetLink + "</a></p>"
                 + "</div>"
@@ -166,7 +165,7 @@ public class EmailService {
 
         helper.setText(emailContent, true);
 
-        helper.addInline("logo", new ClassPathResource("MedBay.png"));
+        helper.addInline("logo", imageClassPathResource);
 
         try {
             mailSender.send(message);
@@ -215,7 +214,7 @@ public class EmailService {
 
         helper.setText(emailContent, true);
 
-        helper.addInline("logo", new ClassPathResource("MedBay.png"));
+        helper.addInline("logo", imageClassPathResource);
 
         try {
             mailSender.send(message);
