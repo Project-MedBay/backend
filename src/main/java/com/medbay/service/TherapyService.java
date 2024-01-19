@@ -110,7 +110,9 @@ public class TherapyService {
             if(rejectionReason == null || rejectionReason.isEmpty()) {
                 return ResponseEntity.status(CONFLICT).body("Rejection reason is required.");
             }
+            List<Appointment> appointments = therapy.getAppointments();
             therapyRepository.delete(therapy);
+            appointmentRepository.deleteAll(appointments);
             emailService.sendTherapyRejectionEmail(therapy.getPatient(), rejectionReason);
         }
         else{
