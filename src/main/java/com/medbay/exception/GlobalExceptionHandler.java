@@ -8,7 +8,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public String handleException(Exception e){
-        return e.getMessage();
+        throw new RuntimeException(e.getMessage());
     }
 
 }
