@@ -189,6 +189,7 @@ public class TherapyService {
 
             Appointment appointment = Appointment.builder()
                     .patient(patient)
+                    .sessionNotes("")
                     .dateTime(dateTime.plusHours(1))
                     .employee(employees.get(random.nextInt(employees.size())))
                     .build();
