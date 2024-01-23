@@ -27,7 +27,7 @@ Purple highlights signify chosen slots, green denotes available, and gray indica
 Adjacent to "Picked"(odabrani) is a "Duration"(Trajanje) counter tracking therapy duration to ensure it doesn't exceed (x number) of days.
 After selecting all appointments, the user can click the "Next" button.
 In the final step (3rd phase) under "My Sessions"(Moji termini), the first three chosen appointments are displayed, and by clicking "Expand"(Proširi), the full list is revealed.
-The user enters the referral number and MBO, and beneath the message stating that the admin will contact them, the user must check "I understand."(Razumijem)
+The user enters the referral number and hlkid, and beneath the message stating that the admin will contact them, the user must check "I understand."(Razumijem)
 Following this, clicking "Finish"(Završi) concludes the therapy creation process.
 After submitting the request, wait for approval from the administrator.
 Notification of approval via email.
