@@ -3,9 +3,9 @@ spring:
     servlet:
       path: /api
   datasource:
-    url: jdbc:postgresql://c3gavqucrhq10.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d3s4h3kcm8f1rd?sslmode=require
-    username: u7ubt6fu0nmm80
-    password: p25187fe4cb813704f34643bcfd8c7e4dd899b048ddd481a36a71e7fb75ed0842
+    url: jdbc:postgresql://c8fjkh5jgmh0gl.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/db0dpqnvcdshtm?sslmode=require
+    username: ubgnqt5u3o5dq9
+    password: p0e5697aadd4b380ffd959d7be0ab8f07a8eb7f94fa681aefea0f74047a1542ed
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
