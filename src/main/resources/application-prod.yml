@@ -23,9 +23,9 @@ spring:
           starttls:
             enable: true
           auth: true
-    host: smtp.zoho.eu
-    username: noreply@medbay.life
-    password: "#W4p.%G#&hQA93v"
+    host: smtp.gmail.com
+    username: ian.balen6@gmail.com
+    password: rzhp ahsr vphc urhi
     port: 587
   servlet:
     multipart:
