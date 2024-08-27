@@ -16,17 +16,13 @@ spring:
         format_sql: true
     database: postgresql
   mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ian.balen6@gmail.com
+    password: rzhpahsrvphcurhi
     properties:
       mail:
         smtp:
           auth: true
-          ssl:
+          starttls:
             enable: true
-    host: smtp.gmail.com
-    username: ian.balen6@gmail.com
-    password: rzhp ahsr vphc urhi
-    port: 465
-  servlet:
-    multipart:
-      max-file-size: 20MB
-      max-request-size: 20MB
