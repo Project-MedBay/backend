@@ -18,15 +18,15 @@ spring:
   mail:
     properties:
       mail:
-        debug: 'true'
+        debug: true
         smtp:
           starttls:
-            enable: 'true'
-          auth: 'true'
-    host: smtppro.zoho.eu
+            enable: true
+          auth: true
+    host: smtp.zoho.eu
     username: noreply@medbay.life
     password: "#W4p.%G#&hQA93v"
-    port: '587'
+    port: 587
   servlet:
     multipart:
       max-file-size: 20MB
