@@ -22,11 +22,6 @@ public class SecurityConfig {
     private final UserRepository userRepository;
 
     @Bean
-    public JavaMailSender javaMailSender(){
-        return new JavaMailSenderImpl();
-    }
-
-    @Bean
     public UserDetailsService userDetailsService() {
         return email -> userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));

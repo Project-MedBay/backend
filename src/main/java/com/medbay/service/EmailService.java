@@ -20,7 +20,6 @@ public class EmailService {
 
     ClassPathResource imageClassPathResource = new ClassPathResource("MedBay.png");
 
-
     @SneakyThrows
     public void sendConfirmationEmail(User user) {
         MimeMessage message = mailSender.createMimeMessage();
@@ -67,6 +66,7 @@ public class EmailService {
         try {
             mailSender.send(message);
         } catch (Exception e) {
+            e.printStackTrace();
             log("Error sending email: " + e.getMessage());
         }
     }

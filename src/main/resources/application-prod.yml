@@ -16,16 +16,17 @@ spring:
         format_sql: true
     database: postgresql
   mail:
-    host: smtp.gmail.com
-    port: 587
-    username: ian.balen6@gmail.com
-    password: rzhpahsrvphcurhi
     properties:
       mail:
+        debug: true
         smtp:
-          auth: true
           starttls:
             enable: true
+          auth: true
+    host: smtp.zoho.eu
+    username: noreply@medbay.life
+    password: "#W4p.%G#&hQA93v"
+    port: 587
 
 logging:
   level:
